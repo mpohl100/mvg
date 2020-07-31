@@ -79,7 +79,11 @@ class MVG:
         dest_lines = self.lines_per_station[dest]
         common_lines = set(start_lines).intersection(set(dest_lines))
         if len(common_lines) > 0:
-            return accumulate_stations(self.network[list(common_lines)[0]], start, dest)
+            routes = []
+            for common_line in common_lines:
+                routes.append( accumulate_stations(self.network[common_line], start, dest) )
+            routes.sort(key=lambda x : len(x))
+            return routes[0]
         
         for start_line in start_lines:
             for dest_line in dest_lines:
@@ -87,7 +91,12 @@ class MVG:
                 dest_switches = self.switches_per_line[dest_line]
                 common_switches = set(start_switches).intersection(set(dest_switches))
                 if len(common_switches) > 0:
-                    return self.find_route(start, list(common_switches)[0]) + self.find_route(list(common_switches)[0], dest)
+                    routes = []
+                    for common_switch in common_switches:
+                        routes.append( [self.find_route(start, common_switch), self.find_route(common_switch, dest)] )
+                    # erst sortieren wir nach der Länge der  Gesamtstrecke und dann nach der Länge des ersten Abschnitts
+                    routes.sort(key=lambda x : (len(x[0]) + len(x[1]), len(x[0])) )
+                    return routes[0][0] + routes[0][1]
         return route        
         # Falls zwei Stationen nicht mit einmal Umsteigen erreicht werden können, muss noch was gemacht werden
         #for start_line in start_lines:
@@ -95,16 +104,16 @@ class MVG:
         #        start_switches = self.switches_per_line[start_line]
         #        dest_switches = self.switches_per_line[dest_line]
 
-
-
-
-
-
-
 def main():
     mvg = MVG()
-    route = mvg.find_route("Erding", "Ebersberg")
-    print(json.dumps(route))
+    all_routes = {}
+    for start in mvg.all_stations:
+        for dest in mvg.all_stations:
+            route = mvg.find_route(start,dest)
+            all_routes[start + " | " + dest] = route
+    outfile = open("all_routes.txt","w")
+    import json
+    outfile.write(json.dumps(all_routes))
 
 if __name__=="__main__":
     main()
