@@ -36,11 +36,34 @@ def find_possible_switch_stations(lines_per_station, line):
     for station, lines in lines_per_station.items():
         if line in lines and len(lines) >= 2:
             ret.append(station)
+    return ret
 
-def find_all_switches(network, lines_per_station)
+def find_all_switches(network, lines_per_station):
     ret = {}
     for line, stations in network.items():
         ret[line] = find_possible_switch_stations(lines_per_station, line)
+    return ret
+
+def find_index_in_list(lst, el):
+    for i, e in enumerate(lst):
+        if e == el:
+            return i
+    return -1
+
+def accumulate_stations(stations, start, dest):
+    start_index = find_index_in_list(stations, start)
+    dest_index = find_index_in_list(stations, dest)
+    assert start_index >= 0
+    assert dest_index >= 0
+    ret = []
+    indeces = []
+    if start_index < dest_index:
+        indeces = range(start_index, dest_index + 1)
+    else:
+        indeces = range(start_index, dest_index - 1, -1)
+    for i in indeces:
+        ret.append(stations[i])
+    return ret
 
 class MVG:
     def __init__(self):
@@ -56,24 +79,22 @@ class MVG:
         dest_lines = self.lines_per_station[dest]
         common_lines = set(start_lines).intersection(set(dest_lines))
         if len(common_lines) > 0:
-            return accumulate_stations(self, common_lines[0], start, dest)
+            return accumulate_stations(self.network[list(common_lines)[0]], start, dest)
         
         for start_line in start_lines:
             for dest_line in dest_lines:
                 start_switches = self.switches_per_line[start_line]
                 dest_switches = self.switches_per_line[dest_line]
-                common_switches = start_switches.intersection(dest_switches)
+                common_switches = set(start_switches).intersection(set(dest_switches))
                 if len(common_switches) > 0:
-                    return find_route(start, common_switches[0]) + find_route(common_switches[0], dest)
-        
+                    return self.find_route(start, list(common_switches)[0]) + self.find_route(list(common_switches)[0], dest)
+        return route        
         # Falls zwei Stationen nicht mit einmal Umsteigen erreicht werden können, muss noch was gemacht werden
         #for start_line in start_lines:
         #    for dest_line in dest_lines:
         #        start_switches = self.switches_per_line[start_line]
         #        dest_switches = self.switches_per_line[dest_line]
-                
 
-        return route
 
 
 
@@ -82,9 +103,8 @@ class MVG:
 
 def main():
     mvg = MVG()
-    route = mvg.find_route(mvg.all_stations[0], mvg.all_stations[1])
+    route = mvg.find_route("Erding", "Ebersberg")
     print(json.dumps(route))
-    print(json.dumps(mvg.all_stations))
 
 if __name__=="__main__":
     main()
