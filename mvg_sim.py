@@ -71,7 +71,7 @@ class Network:
         self.all_stations = find_all_stations(self.all_lines)
         self.lines_per_station = index_network_by_line(self.all_lines)
         self.switches_per_line = find_all_switches(self.all_lines, self.lines_per_station)
-        #self.all_routes = {}
+        self.all_routes = {}
         #for start in self.all_stations:
         #    for dest in self.all_stations:
         #        route = self.find_route(start,dest)
@@ -148,6 +148,41 @@ class Train:
         else:
             self.arrive()
 
+def find_neighbours(network, station):
+    ret = {}
+    for line, stations in network.all_lines.items():
+        index = find_index_in_list(stations, station)
+        if index == -1:
+            continue
+        first_neighbour_index = index - 1
+        if first_neighbour_index >= 0:
+            first_neighbour = stations[first_neighbour_index]
+            if first_neighbour in ret:
+                ret[first_neighbour].append(line)
+            else:
+                ret[first_neighbour] = [line]
+        second_neighbour_index = index + 1
+        if second_neighbour_index < len(stations):
+            second_neighbour = stations[second_neighbour_index]
+            if second_neighbour in ret:
+                ret[second_neighbour].append(line)
+            else:
+                ret[second_neighbour] = [line]
+    return ret
+
+class Station:
+    def __init__(self, name, network: Network):
+        self.name = name
+        self.network = network
+        self.lanes = find_neighbours(self.network, name)
+        self.trains = []
+
+    def register_arrival(self, train):
+        pass
+
+    def register_departure(self, train):
+        pass
+
 class Simulation:
     def __init__(self, network: Network):
         self.network = network
@@ -160,6 +195,10 @@ class Simulation:
             direction = -1
             for i in range(len(stations) -1, 0, -10):
                 self.trains.append(Train(self.network,line, stations[i],direction))
+        self.stations = []
+        for station in self.network.all_stations:
+            self.stations.append(Station(station, self.network))
+
 
     def update(self):
         self.time += 1
