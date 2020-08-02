@@ -1,0 +1,138 @@
+U1   
+>> Olympia-Einkaufszentrum 
+>> Georg-Brauchle-Ring 
+>> Westfriedhof 
+>> Gern 
+>> Rotkreuzplatz 
+>> Maillingerstraße 
+>> Stiglmaierplatz 
+>> Hauptbahnhof 
+>> Sendlinger Tor 
+>> Fraunhoferstraße 
+>> Kolumbusplatz 
+>> Candidplatz 
+>> Wettersteinplatz 
+>> St.-Quirin-Platz 
+>> Mangfallplatz 
+U2
+>> Feldmoching 
+>> Hasenbergl 
+>> Dülferstraße 
+>> Harthof 
+>> Am Hart 
+>> Frankfurter Ring 
+>> Milbertshofen 
+>> Scheidplatz 	
+>> Hohenzollernplatz 	
+>> Josephsplatz 	
+>> Theresienstraße 	
+>> Königsplatz 	
+>> Hauptbahnhof 	
+>> Sendlinger Tor 	
+>> Fraunhoferstraße 	
+>> Kolumbusplatz 	
+>> Silberhornstraße 	
+>> Untersbergstraße 	
+>> Giesing (Bahnhof) 	
+>> Karl-Preis-Platz 	
+>> Innsbrucker Ring 	
+>> Josephsburg 	
+>> Kreillerstraße 	
+>> Trudering 	
+>> Moosfeld 	
+>> Messestadt West 	
+>> Messestadt Ost 
+U3
+>> Moosach 	
+>> Moosacher St.-Martins-Platz 	
+>> Olympia-Einkaufszentrum 	
+>> Oberwiesenfeld 	
+>> Olympiazentrum 	
+>> Petuelring 	
+>> Scheidplatz 
+>> Bonner Platz 	
+>> Münchner Freiheit 	
+>> Giselastraße 	
+>> Universität 	
+>> Odeonsplatz 	
+>> Marienplatz 	
+>> Sendlinger Tor 	
+>> Goetheplatz 	
+>> Poccistraße 	
+>> Implerstraße 	
+>> Brudermühlstraße 	
+>> Thalkirchen 	
+>> Obersendling 	
+>> Aidenbachstraße 	
+>> Machtlfinger Straße 	
+>> Forstenrieder Allee 	
+>> Basler Straße 	
+>> Fürstenried West 
+U4
+>> Westendstraße
+>> Heimeranplatz
+>> Schwanthalerhöhe
+>> Theresienwiese
+>> Hauptbahnhof
+>> Karlsplatz (Stachus)
+>> Odeonsplatz
+>> Lehel
+>> Max-Weber-Platz
+>> Prinzregentenplatz
+>> Böhmerwaldplatz
+>> Richard-Strauss-Straße
+>> Arabellapark
+U5
+>> Laimer Platz
+>> Friedenheimer Straße
+>> Westendstraße
+>> Heimeranplatz
+>> Schwanthalerhöhe
+>> Theresienwiese
+>> Hauptbahnhof
+>> Karlsplatz (Stachus)
+>> Odeonsplatz
+>> Lehel
+>> Max-Weber-Platz
+>> Ostbahnhof
+>> Innsbrucker Ring
+>> Michaelibad
+>> Quiddestraße
+>> Neuperlach Zentrum
+>> Therese-Giehse-Allee
+>> Neuperlach Süd
+U6
+>> Garching-Forschungszentrum
+>> Garching
+>> Garching-Hochbrück
+>> Fröttmaning
+>> Kieferngarten
+>> Freimann
+>> Studentenstadt
+>> Alte Heide
+>> Nordfriedhof
+>> Dietlindenstraße
+>> Münchner Freiheit
+>> Giselastraße
+>> Universität
+>> Odeonsplatz
+>> Marienplatz
+>> Sendlinger Tor
+>> Goetheplatz
+>> Poccistraße
+>> Implerstraße
+>> Harras
+>> Partnachplatz
+>> Westpark
+>> Holzapfelkreuth
+>> Haderner Stern
+>> Großhadern
+>> Klinikum Großhadern
+
+
+
+
+
+
+
+	

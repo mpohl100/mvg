@@ -4,11 +4,11 @@ import copy
 def read_network():
     network_raw = {}
     # read U-Bahn
-    with open('UBahn.txt', 'r') as infile:
+    with open('data/UBahn.txt', 'r') as infile:
         ubahn_data = json.load(infile)
         network_raw = ubahn_data
     # read S-Bahn
-    with open('SBahn.txt', 'r') as infile:
+    with open('data/SBahn.txt', 'r') as infile:
         sbahn_data = json.load(infile)
         for lineName, stations in sbahn_data.items():
             network_raw[lineName] = stations
@@ -111,7 +111,7 @@ def main():
         for dest in mvg.all_stations:
             route = mvg.find_route(start,dest)
             all_routes[start + " | " + dest] = route
-    outfile = open("all_routes.txt","w")
+    outfile = open("data/all_routes.txt","w")
     import json
     outfile.write(json.dumps(all_routes))
 
