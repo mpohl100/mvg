@@ -65,12 +65,18 @@ def accumulate_stations(stations, start, dest):
         ret.append(stations[i])
     return ret
 
-class MVG:
+class Network:
     def __init__(self):
-        self.network = read_network()
-        self.all_stations = find_all_stations(self.network)
-        self.lines_per_station = index_network_by_line(self.network)
-        self.switches_per_line = find_all_switches(self.network, self.lines_per_station)
+        self.all_lines = read_network()
+        self.all_stations = find_all_stations(self.all_lines)
+        self.lines_per_station = index_network_by_line(self.all_lines)
+        self.switches_per_line = find_all_switches(self.all_lines, self.lines_per_station)
+        #self.all_routes = {}
+        #for start in self.all_stations:
+        #    for dest in self.all_stations:
+        #        route = self.find_route(start,dest)
+        #        self.all_routes[start + " | " + dest] = route
+    
 
 
     def find_route(self, start, dest):
@@ -81,7 +87,7 @@ class MVG:
         if len(common_lines) > 0:
             routes = []
             for common_line in common_lines:
-                routes.append( accumulate_stations(self.network[common_line], start, dest) )
+                routes.append( accumulate_stations(self.all_lines[common_line], start, dest) )
             routes.sort(key=lambda x : len(x))
             return routes[0]
         
@@ -104,16 +110,74 @@ class MVG:
         #        start_switches = self.switches_per_line[start_line]
         #        dest_switches = self.switches_per_line[dest_line]
 
+def find_next_station(current_station, stations, direction):
+    current_index = find_index_in_list(stations, current_station)
+    current_index += direction
+    if current_index < 0:
+        direction *= -1
+        current_index += 2
+    if current_index >= len(stations):
+        direction *= -1
+        current_index -= 2
+    return stations[current_index]
+
+class Train:
+    def __init__(self, network, line, starting_station, direction):
+        self.line = line
+        self.stations = network.all_lines[line]
+        self.current_station = starting_station
+        self.taget_station = starting_station
+        self.direction = direction
+        self.waiting = True # a train will always wait for one update call before leaving the station
+        self.network = network
+        self.passengers = []
+
+    def arrive(self):
+        self.waiting = True
+        self.current_station = self.target_station
+        for passenger in self.passengers:
+            passenger.leave(self.current_station)
+
+    def leave(self):
+        self.waiting = False
+        self.target_station = find_next_station(self.current_station, self.stations, self.direction)
+
+    def update(self):
+        if self.waiting:
+            self.leave()
+        else:
+            self.arrive()
+
+class Simulation:
+    def __init__(self, network: Network):
+        self.network = network
+        self.trains = []
+        self.time = 0
+        for line, stations in self.network.all_lines.items():
+            direction = 1
+            for i in range(0,len(stations), 10):
+                self.trains.append(Train(self.network,line, stations[i],direction))
+            direction = -1
+            for i in range(len(stations) -1, 0, -10):
+                self.trains.append(Train(self.network,line, stations[i],direction))
+
+    def update(self):
+        self.time += 1
+        for t in self.trains:
+            t.update()
+
+    def run(self):
+        for i in range(0,24*60):
+            print(self.time)
+            self.update()
+
+
+
+
 def main():
-    mvg = MVG()
-    all_routes = {}
-    for start in mvg.all_stations:
-        for dest in mvg.all_stations:
-            route = mvg.find_route(start,dest)
-            all_routes[start + " | " + dest] = route
-    outfile = open("data/all_routes.txt","w")
-    import json
-    outfile.write(json.dumps(all_routes))
+    mvg = Network()
+    simulation = Simulation(mvg)
+    simulation.run()
 
 if __name__=="__main__":
     main()
