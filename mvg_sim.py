@@ -110,94 +110,21 @@ class Network:
         #        start_switches = self.switches_per_line[start_line]
         #        dest_switches = self.switches_per_line[dest_line]
 
-def find_next_station(current_station, stations, direction):
-    current_index = find_index_in_list(stations, current_station)
-    current_index += direction
-    if current_index < 0:
-        direction *= -1
-        current_index += 2
-    if current_index >= len(stations):
-        direction *= -1
-        current_index -= 2
-    return stations[current_index]
-
-class Train:
-    def __init__(self, network, line, starting_station, direction):
-        self.line = line
-        self.stations = network.all_lines[line]
-        self.current_station = starting_station
-        self.taget_station = starting_station
-        self.direction = direction
-        self.waiting = True # a train will always wait for one update call before leaving the station
-        self.network = network
-        self.passengers = []
-
-    def arrive(self):
-        self.waiting = True
-        self.current_station = self.target_station
-        for passenger in self.passengers:
-            passenger.leave(self.current_station)
-
-    def leave(self):
-        self.waiting = False
-        self.target_station = find_next_station(self.current_station, self.stations, self.direction)
-
-    def update(self):
-        if self.waiting:
-            self.leave()
-        else:
-            self.arrive()
-
-def find_neighbours(network, station):
-    ret = {}
-    for line, stations in network.all_lines.items():
-        index = find_index_in_list(stations, station)
-        if index == -1:
-            continue
-        first_neighbour_index = index - 1
-        if first_neighbour_index >= 0:
-            first_neighbour = stations[first_neighbour_index]
-            if first_neighbour in ret:
-                ret[first_neighbour].append(line)
-            else:
-                ret[first_neighbour] = [line]
-        second_neighbour_index = index + 1
-        if second_neighbour_index < len(stations):
-            second_neighbour = stations[second_neighbour_index]
-            if second_neighbour in ret:
-                ret[second_neighbour].append(line)
-            else:
-                ret[second_neighbour] = [line]
-    return ret
-
-class Station:
-    def __init__(self, name, network: Network):
-        self.name = name
-        self.network = network
-        self.lanes = find_neighbours(self.network, name)
-        self.trains = []
-
-    def register_arrival(self, train):
-        pass
-
-    def register_departure(self, train):
-        pass
-
 class Simulation:
     def __init__(self, network: Network):
         self.network = network
-        self.trains = []
         self.time = 0
+        self.all_stations = {}
+        for station in self.network.all_stations:
+            self.all_stations[station] = Station(station, self)
+        self.trains = []
         for line, stations in self.network.all_lines.items():
             direction = 1
             for i in range(0,len(stations), 10):
-                self.trains.append(Train(self.network,line, stations[i],direction))
+                self.trains.append(Train(self, line, stations[i],direction))
             direction = -1
             for i in range(len(stations) -1, 0, -10):
-                self.trains.append(Train(self.network,line, stations[i],direction))
-        self.stations = []
-        for station in self.network.all_stations:
-            self.stations.append(Station(station, self.network))
+                self.trains.append(Train(self, line, stations[i],direction))
 
 
     def update(self):
@@ -211,7 +138,80 @@ class Simulation:
             self.update()
 
 
+def find_next_station(current_station, stations, direction):
+    current_index = find_index_in_list(stations, current_station)
+    current_index += direction
+    if current_index < 0:
+        direction *= -1
+        current_index += 2
+    if current_index >= len(stations):
+        direction *= -1
+        current_index -= 2
+    return stations[current_index]
 
+class Train:
+    def __init__(self, sim: Simulation, line, starting_station, direction):
+        self.line = line
+        self.stations = sim.network.all_lines[line]
+        self.current_station = starting_station
+        self.target_station = starting_station
+        self.direction = direction
+        self.waiting = True # a train will always wait for one update call before leaving the station
+        self.sim = sim
+
+    def arrive(self):
+        self.waiting = True
+        self.current_station = self.target_station
+        self.sim.all_stations[self.current_station].register_arrival(self)
+
+    def depart(self):
+        # nur beim ersten depart Aufruf die nächste Station suchen
+        if self.target_station == self.current_station:
+            self.target_station = find_next_station(self.current_station, self.stations, self.direction)
+        next_station_free = self.sim.all_stations[self.target_station].can_arrive(self)
+        if next_station_free:
+            self.sim.all_stations[self.current_station].register_departure(self)
+            self.waiting = False
+
+    def update(self):
+        if self.waiting:
+            self.depart()
+        else:
+            self.arrive()
+
+def find_neighbour(lanes, stations, index, line):
+    if index >= 0 and index < len(stations):
+            neighbour_station = stations[index]
+            if neighbour_station in lanes:
+                lanes[neighbour_station].append(line)
+            else:
+                lanes[neighbour_station] = [line]
+    
+def find_neighbours(network, station):
+    lanes = {}
+    for line, stations in network.all_lines.items():
+        index = find_index_in_list(stations, station)
+        if index == -1:
+            continue
+        find_neighbour(lanes, stations, index - 1, line)
+        find_neighbour(lanes, stations, index + 1, line)
+    return lanes
+
+class Station:
+    def __init__(self, name, sim: Simulation):
+        self.name = name
+        self.sim = sim
+        self.lanes = find_neighbours(self.sim.network, name)
+        self.trains = []
+
+    def register_arrival(self, train: Train):
+        pass
+
+    def register_departure(self, train: Train):
+        pass
+
+    def can_arrive(self, train: Train):
+        return True
 
 def main():
     mvg = Network()
