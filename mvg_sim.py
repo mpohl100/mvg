@@ -118,16 +118,20 @@ class Simulation:
         for station in self.network.all_stations:
             self.all_stations[station] = Station(station, self)
         self.trains = []
+        nb_trains = 0
         for line, stations in self.network.all_lines.items():
             direction = 1
-            for i in range(0,len(stations), 10):
-                train = Train(self, line, stations[i],direction)
+            nb_skip = 10
+            for i in range(0,len(stations), nb_skip):
+                train = Train(self, line, stations[i], direction, nb_trains)
                 train.update()
+                nb_trains += 1
                 self.trains.append(train)
             direction = -1
-            for i in range(len(stations) -1, 0, -10):
-                train = Train(self, line, stations[i],direction)
+            for i in range(len(stations) -1, 0, -nb_skip):
+                train = Train(self, line, stations[i], direction, nb_trains)
                 train.update()
+                nb_trains += 1
                 self.trains.append(train)
 
 
@@ -154,7 +158,8 @@ def find_next_station(current_station, stations, direction):
     return stations[current_index]
 
 class Train:
-    def __init__(self, sim: Simulation, line, starting_station, direction):
+    def __init__(self, sim: Simulation, line, starting_station, direction, number):
+        self.number = number
         self.line = line
         self.stations = sim.network.all_lines[line]
         self.current_station = starting_station
@@ -163,15 +168,16 @@ class Train:
         self.waiting = False # a train will always wait for one update call before leaving the station
         self.sim = sim
 
+    def __str__(self):
+        return str(self.number) + ": " + self.line + " " + self.current_station + " -> " + self.target_station
+
     def arrive(self):
         self.waiting = True
         self.current_station = self.target_station
+        self.target_station = find_next_station(self.current_station, self.stations, self.direction)
         self.sim.all_stations[self.current_station].register_arrival(self)
 
     def depart(self):
-        # nur beim ersten depart Aufruf die nächste Station suchen
-        if self.target_station == self.current_station:
-            self.target_station = find_next_station(self.current_station, self.stations, self.direction)
         next_station_free = self.sim.all_stations[self.target_station].can_arrive(self)
         if next_station_free:
             self.sim.all_stations[self.current_station].register_departure(self)
@@ -208,6 +214,9 @@ class Station:
         self.lanes = find_neighbours(self.sim.network, name)
         self.trains = []
 
+    def __str__(self):
+        return self.name
+
     def register_arrival(self, train: Train):
         self.trains.append(train)
 
@@ -217,9 +226,18 @@ class Station:
     def can_arrive(self, train: Train):
         relevant_lines = self.lanes[train.current_station]
         can_arrive = True
+        #reason = ""
         for t in self.trains:
-            if t.line in relevant_lines:
+            # Die Zielstation der Blockierenden darf nicht meine aktuelle Station sein.
+            if t.line in relevant_lines and t.target_station != train.current_station:
+                reason = str(t)
                 can_arrive = False
+        #if train.line == "S2":
+        #    print("Can train " + str(train) + " arrive at " + str(self) + "?")
+        #    if can_arrive:
+        #        print("    Yes.")
+        #    else: 
+        #        print("    No, because of " + reason)
         return can_arrive
 
 def main():
