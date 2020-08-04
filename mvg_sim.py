@@ -121,10 +121,14 @@ class Simulation:
         for line, stations in self.network.all_lines.items():
             direction = 1
             for i in range(0,len(stations), 10):
-                self.trains.append(Train(self, line, stations[i],direction))
+                train = Train(self, line, stations[i],direction)
+                train.update()
+                self.trains.append(train)
             direction = -1
             for i in range(len(stations) -1, 0, -10):
-                self.trains.append(Train(self, line, stations[i],direction))
+                train = Train(self, line, stations[i],direction)
+                train.update()
+                self.trains.append(train)
 
 
     def update(self):
@@ -156,7 +160,7 @@ class Train:
         self.current_station = starting_station
         self.target_station = starting_station
         self.direction = direction
-        self.waiting = True # a train will always wait for one update call before leaving the station
+        self.waiting = False # a train will always wait for one update call before leaving the station
         self.sim = sim
 
     def arrive(self):
@@ -205,13 +209,18 @@ class Station:
         self.trains = []
 
     def register_arrival(self, train: Train):
-        pass
+        self.trains.append(train)
 
     def register_departure(self, train: Train):
-        pass
+        self.trains.remove(train)
 
     def can_arrive(self, train: Train):
-        return True
+        relevant_lines = self.lanes[train.current_station]
+        can_arrive = True
+        for t in self.trains:
+            if t.line in relevant_lines:
+                can_arrive = False
+        return can_arrive
 
 def main():
     mvg = Network()
