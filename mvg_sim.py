@@ -155,7 +155,7 @@ def find_next_station(current_station, stations, direction):
     if current_index >= len(stations):
         direction *= -1
         current_index -= 2
-    return stations[current_index]
+    return stations[current_index], direction
 
 class Train:
     def __init__(self, sim: Simulation, line, starting_station, direction, number):
@@ -174,7 +174,7 @@ class Train:
     def arrive(self):
         self.waiting = True
         self.current_station = self.target_station
-        self.target_station = find_next_station(self.current_station, self.stations, self.direction)
+        self.target_station, self.direction = find_next_station(self.current_station, self.stations, self.direction)
         self.sim.all_stations[self.current_station].register_arrival(self)
 
     def depart(self):
@@ -226,18 +226,18 @@ class Station:
     def can_arrive(self, train: Train):
         relevant_lines = self.lanes[train.current_station]
         can_arrive = True
-        #reason = ""
+        reason = ""
         for t in self.trains:
             # Die Zielstation der Blockierenden darf nicht meine aktuelle Station sein.
             if t.line in relevant_lines and t.target_station != train.current_station:
                 reason = str(t)
                 can_arrive = False
-        #if train.line == "S2":
-        #    print("Can train " + str(train) + " arrive at " + str(self) + "?")
-        #    if can_arrive:
-        #        print("    Yes.")
-        #    else: 
-        #        print("    No, because of " + reason)
+        if train.line:
+            print("Can train " + str(train) + " arrive at " + str(self) + "?")
+            if can_arrive:
+                print("    Yes.")
+            else: 
+                print("    No, because of " + reason)
         return can_arrive
 
 def main():
