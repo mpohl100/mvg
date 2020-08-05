@@ -1,5 +1,6 @@
 import json
 import copy
+from collections import defaultdict
 
 def read_network():
     network_raw = {}
@@ -142,8 +143,23 @@ class Simulation:
 
     def run(self):
         for _ in range(0,24*60):
-            print(self.time)
             self.update()
+        self.print_stats()
+
+    def print_stats(self):
+        self.delay_per_train()
+        self.delay_per_station()
+
+    def delay_per_station(self):
+        stations = defaultdict(int)
+        for t in self.trains:
+            for station, delay in t.delay.items():
+                stations[station] += delay
+        print({k:v for k,v in sorted(stations.items(), key=lambda item : item[1], reverse=True)})
+
+    def delay_per_train(self):
+        for t in sorted(self.trains, key=lambda x : sum(x.delay.values())):
+            print(str(t) + " has " + str(sum(t.delay.values())) + " minutes delay.")
 
 
 def find_next_station(current_station, stations, direction):
@@ -167,6 +183,7 @@ class Train:
         self.direction = direction
         self.waiting = False # a train will always wait for one update call before leaving the station
         self.sim = sim
+        self.delay = defaultdict(int)
 
     def __str__(self):
         return str(self.number) + ": " + self.line + " " + self.current_station + " -> " + self.target_station
@@ -182,6 +199,8 @@ class Train:
         if next_station_free:
             self.sim.all_stations[self.current_station].register_departure(self)
             self.waiting = False
+        else:
+            self.delay[self.current_station] += 1
 
     def update(self):
         if self.waiting:
@@ -232,12 +251,12 @@ class Station:
             if t.line in relevant_lines and t.target_station != train.current_station:
                 reason = str(t)
                 can_arrive = False
-        if train.line:
-            print("Can train " + str(train) + " arrive at " + str(self) + "?")
-            if can_arrive:
-                print("    Yes.")
-            else: 
-                print("    No, because of " + reason)
+        # if train.line:
+        #     print("Can train " + str(train) + " arrive at " + str(self) + "?")
+        #     if can_arrive:
+        #         print("    Yes.")
+        #     else: 
+        #         print("    No, because of " + reason)
         return can_arrive
 
 def main():
