@@ -7,9 +7,9 @@ for x in f:
         data[current_line] = []
     else:
         data[current_line].append(x.replace(">>","").replace(" ","").replace("\n","").replace("\t",""))
-w = open("data/UBahn.txt", "w")
+w = open("data/UBahn.json", "w")
 import json
-w.write(json.dumps(data))
+w.write(json.dumps(data, indent=4))
 
 
 

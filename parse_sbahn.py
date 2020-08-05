@@ -1,4 +1,4 @@
-f = open("data/SBahnhoefe.txt", "r")
+f = open("data/HH_UBahnhoefe.txt", "r")
 data = {}
 current_line = ""
 for i,x in enumerate(f):
@@ -9,6 +9,6 @@ for i,x in enumerate(f):
         xx = x.split('>>')
         for bahnhof in xx:
             data[current_line].append(bahnhof.replace(" ","").replace("\n","").replace("\t",""))
-w = open("data/SBahn.txt", "w")
+w = open("data/HH_UBahn.json", "w")
 import json
-w.write(json.dumps(data))
+w.write(json.dumps(data, indent=4))

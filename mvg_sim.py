@@ -4,11 +4,11 @@ import copy
 def read_network():
     network_raw = {}
     # read U-Bahn
-    with open('data/UBahn.txt', 'r') as infile:
+    with open('data/UBahn.json', 'r') as infile:
         ubahn_data = json.load(infile)
         network_raw = ubahn_data
     # read S-Bahn
-    with open('data/SBahn.txt', 'r') as infile:
+    with open('data/SBahn.json', 'r') as infile:
         sbahn_data = json.load(infile)
         for lineName, stations in sbahn_data.items():
             network_raw[lineName] = stations
