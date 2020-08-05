@@ -16,7 +16,7 @@ def read_network():
 
 def find_all_stations(network):
     all_stations = []
-    for line, stations in network.items():
+    for _, stations in network.items():
         all_stations.extend(stations)
     return set(all_stations)
 
@@ -40,7 +40,7 @@ def find_possible_switch_stations(lines_per_station, line):
 
 def find_all_switches(network, lines_per_station):
     ret = {}
-    for line, stations in network.items():
+    for line, _ in network.items():
         ret[line] = find_possible_switch_stations(lines_per_station, line)
     return ret
 
@@ -141,7 +141,7 @@ class Simulation:
             t.update()
 
     def run(self):
-        for i in range(0,24*60):
+        for _ in range(0,24*60):
             print(self.time)
             self.update()
 
