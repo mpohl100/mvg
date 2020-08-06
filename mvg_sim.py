@@ -282,11 +282,11 @@ class Station:
     def can_arrive(self, train: Train):
         relevant_lines = self.lanes[train.current_station]
         can_arrive = True
-        reason = ""
+        #reason = ""
         for t in self.trains:
             # Die Zielstation der Blockierenden darf nicht meine aktuelle Station sein.
             if t.line in relevant_lines and t.target_station != train.current_station:
-                reason = str(t)
+                #reason = str(t)
                 can_arrive = False
         # if train.line:
         #     print("Can train " + str(train) + " arrive at " + str(self) + "?")
