@@ -1,14 +1,20 @@
-f = open("data/HH_UBahnhoefe.txt", "r")
+f = open("data/MUC_SBahnhoefe.txt", "r")
 data = {}
 current_line = ""
 for i,x in enumerate(f):
-    if i % 2 == 0:
+    if i % 3 == 0:
         current_line = x.replace(" ", "").replace("\n","").replace("\t","")
-        data[current_line] = []
+        data[current_line] = { 'all_stations': [], 'switches': [] }
+    elif i % 3 == 1:
+        all_stations = x.split('>>')
+        for bahnhof in all_stations:
+            data[current_line]['all_stations'].append(bahnhof.replace(" ","").replace("\n","").replace("\t",""))
+    elif i % 3 == 2:
+        switches = x.split('>>')
+        for bahnhof in switches:
+            data[current_line]['switches'].append(bahnhof.replace(" ","").replace("\n","").replace("\t",""))
     else:
-        xx = x.split('>>')
-        for bahnhof in xx:
-            data[current_line].append(bahnhof.replace(" ","").replace("\n","").replace("\t",""))
-w = open("data/HH_UBahn.json", "w")
+        raise ValueError("Eigentlich ist alles abgedeckt.")
+w = open("data/MUC_SBahn.json", "w")
 import json
 w.write(json.dumps(data, indent=4))

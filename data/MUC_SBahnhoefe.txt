@@ -1,20 +1,30 @@
 S1 	
 Freising >> Pulling >> Neufahrn >> Eching >> Lohhof >> Unterschleißheim >> Oberschleißheim >> Feldmoching >> Fasanerie >> Moosach >> Laim >> Hirschgarten >> Donnersbergerbrücke >> Hackerbrücke >> Hauptbahnhof >> Karlsplatz (Stachus) >> Marienplatz >> Isartor >> Rosenheimer Platz >> Ostbahnhof >> Leuchtenbergring
+Freising >> Flughafen München >> Ostbahnhof >> Leuchtenbergring
 S1.2
 Schwaigerloh (Wendeanlage) >> Flughafen München >> Flughafen Besucherpark >> Neufahrn >> Eching >> Lohhof >> Unterschleißheim >> Oberschleißheim >> Feldmoching >> Fasanerie >> Moosach >> Laim >> Hirschgarten >> Donnersbergerbrücke >> Hackerbrücke >> Hauptbahnhof >> Karlsplatz (Stachus) >> Marienplatz >> Isartor >> Rosenheimer Platz >> Ostbahnhof >> Leuchtenbergring
+Flughafen München >>  Ostbahnhof >> Leuchtenbergring
 S2 	
 Petershausen >> Vierkirchen-Esterhofen >> Röhrmoos >> Hebertshausen >> Dachau Bahnhof >> Karlsfeld >> Allach >> Untermenzing >> Obermenzing >> Laim >> Hirschgarten >> Donnersbergerbrücke >> Hackerbrücke >> Hauptbahnhof >> Karlsplatz (Stachus) >> Marienplatz >> Isartor >> Rosenheimer Platz >> Ostbahnhof >> Leuchtenbergring >> Berg am Laim >> Riem >> Feldkirchen >> Heimstetten >> Grub >> Poing >> Markt Schwaben >> Ottenhofen >> St. Koloman >> Aufhausen >> Altenerding >> Erding
+Petershausen >> Dachau Bahnhof >> Ostbahnhof >> Markt Schwaben >> Erding 
 S2.2
 Altomünster >> Kleinberghofen >> Erdweg >> Arnbach >> Markt Indersdorf >> Niederroth >> Schwabhausen >> Bachern >> Dachau Stadt >> Dachau Bahnhof >> Karlsfeld >> Allach >> Untermenzing >> Obermenzing >> Laim >> Hirschgarten >> Donnersbergerbrücke >> Hackerbrücke >> Hauptbahnhof >> Karlsplatz (Stachus) >> Marienplatz >> Isartor >> Rosenheimer Platz >> Ostbahnhof >> Leuchtenbergring >> Berg am Laim >> Riem >> Feldkirchen >> Heimstetten >> Grub >> Poing >> Markt Schwaben >> Ottenhofen >> St. Koloman >> Aufhausen >> Altenerding >> Erding
+Altomünster >> Dachau Bahnhof >> Ostbahnhof >> Markt Schwaben >> Erding 
 S3 	
 Mammendorf >> Malching >> Maisach >> Gernlinden >> Esting >> Olching >> Gröbenzell >> Lochhausen >> Langwied >> Pasing >> Laim >> Hirschgarten >> Donnersbergerbrücke >> Hackerbrücke >> Hauptbahnhof >> Karlsplatz-Stachus >> Marienplatz >> Isartor >> Rosenheimer Platz >> Ostbahnhof >> St.-Martin-Straße >> Giesing Bhf. >> Fasangarten >> Fasanenpark >> Unterhaching >> Taufkirchen >> Furth >> Deisenhofen >> Sauerlach >> Otterfing >> Holzkirchen
+Mammendorf >> Maisach >> Ostbahnhof >> Deisenhofen >> Holzkirchen 
 S4 	
 Geltendorf >> Türkenfeld >> Grafrath >> Schöngeising >> Buchenau >> Fürstenfeldbruck >> Eichenau >> Puchheim >> Aubing >> Leienfelsstraße >> Pasing >> Laim >> Hirschgarten >> Donnersbergerbrücke >> Hackerbrücke >> Hauptbahnhof >> Karlsplatz (Stachus) >> Marienplatz >> Isartor >> Rosenheimer Platz >> Ostbahnhof >> Leuchtenbergring >> Berg am Laim >> Trudering >> Gronsdorf >> Haar >> Vaterstetten >> Baldham >> Zorneding >> Eglharting >> Kirchseeon >> Grafing Bahnhof >> Grafing Stadt >> Ebersberg
+Geltendorf >> Grafrath >> Buchenau >> Ostbahnhof >> Leuchtenbergring >> Trudering >> Zorneding >> Grafing Bahnhof >> Ebersberg
 S6 	
 Tutzing >> Feldafing >> Possenhofen >> Starnberg >> Starnberg Nord >> Mühltal (stillgelegt) >> Gauting >> Stockdorf >> Planegg >> Gräfelfing >> Lochham >> Westkreuz >> Pasing >> Laim >> Hirschgarten >> Donnersbergerbrücke >> Hackerbrücke >> Hauptbahnhof >> Karlsplatz (Stachus) >> Marienplatz >> Isartor >> Rosenheimer Platz >> Ostbahnhof >> Leuchtenbergring >> Berg am Laim >> Trudering >> Gronsdorf >> Haar >> Vaterstetten >> Baldham >> Zorneding >> Eglharting >> Kirchseeon >> Grafing Bahnhof >> Grafing Stadt >> Ebersberg
+Tutzing >> Starnberg >> Ostbahnhof >> Leuchtenbergring >> Zorneding >> Grafing Bahnhof >> Ebersberg
 S7 	
 Geretsried Süd >> Geretsried Mitte >> Gelting >> Wolfratshausen >> Icking >> Ebenhausen-Schäftlarn >> Hohenschäftlarn >> Baierbrunn >> Buchenhain >> Höllriegelskreuth >> Pullach >> Großhesselohe Isartalbahnhof >> Solln >> Siemenswerke >> Mittersendling >> Harras >> Heimeranplatz >> Donnersbergerbrücke >> Hackerbrücke >> Hauptbahnhof >> Karlsplatz-Stachus >> Marienplatz >> Isartor >> Rosenheimer Platz >> Ostbahnhof >> St.-Martin-Straße >> Giesing >> Perlach >> Neuperlach Süd >> Neubiberg >> Ottobrunn >> Hohenbrunn >> Wächterhof >> Höhenkirchen-Siegertsbrunn >> Dürrnhaar >> Aying >> Peiß >> Großhelfendorf >> Kreuzstraße
+Wolfratshausen >> Höllriegelskreuth >> Höhenkirchen-Siegertsbrunn >> Aying >> Kreuzstraße
 S8 	
 Herrsching >> Seefeld-Hechendorf >> Steinebach >> Weßling >> Neugilching >> Gilching-Argelsried >> Geisenbrunn >> Germering-Unterpfaffenhofen >> Harthaus >> Freiham >> Neuaubing >> Westkreuz >> Pasing >> Laim >> Hirschgarten >> Donnersbergerbrücke >> Hackerbrücke >> Hauptbahnhof >> Karlsplatz (Stachus) >> Marienplatz >> Isartor >> Rosenheimer Platz >> Ostbahnhof >> Leuchtenbergring >> Daglfing >> Englschalking >> Johanneskirchen >> Unterföhring >> Ismaning >> Hallbergmoos >> Flughafen Besucherpark >> Flughafen München >> Schwaigerloh (Wendeanlage)
+Herrsching >> Weßling >> Gilching-Argelsried >> Germering-Unterpfaffenhofen >> Ostbahnhof >> Flughafen München
 S20 	
 Geltendorf >> Türkenfeld >> Grafrath >> Schöngeising >> Buchenau >> Fürstenfeldbruck >> Eichenau >> Puchheim >> Aubing >> Leienfelsstraße >> Pasing >> Heimeranplatz >> Mittersendling >> Siemenswerke >> Solln >> Großhesselohe Isartalbahnhof >> Pullach >> Höllriegelskreuth
+Geltendorf >> Grafrath >> Pasing >> Solln >> Höllriegelskreuth
