@@ -161,6 +161,43 @@ class Simulation:
         for t in sorted(self.trains, key=lambda x : sum(x.delay.values())):
             print(str(t) + " has " + str(sum(t.delay.values())) + " minutes delay.")
 
+class Route:
+    def __init__(self, from_station, to_station):
+        self.from_station = from_station
+        self.to_station = to_station
+
+    def __eq__(self, other):
+        return self.from_station == other.from_station and self.to_station == other.to_station
+    def __hash__(self):
+        return hash(self.from_station + self.to_station)
+
+def find_subline(stations, route: Route, linename):
+    ret = []
+    from_index = find_index_in_list(stations, route.from_station)
+    to_index = find_index_in_list(stations, route.to_station)
+    if from_index < 0 or to_index < 0:
+        raise ValueError(str(route) + " not found in line " + linename)
+    if from_index < to_index:
+        for i in range(from_index, to_index+1):
+            ret.append(stations[i])
+    else:
+        for i in range(from_index, to_index-1, -1):
+            ret.append(stations[i])
+    return ret
+
+def find_sublines(all_stations, routes, linename):
+    sublines = {}
+    for route in routes:
+        sublines[linename + " " + route.to_station] = find_subline(all_stations, route, linename)
+    return sublines
+
+class Line:
+    def __init__(self, name, all_stations, routes):
+        self.name = name
+        self.all_stations = all_stations
+        self.routes = routes
+        self.sublines = find_sublines(all_stations, routes, name)
+
 
 def find_next_station(current_station, stations, direction):
     current_index = find_index_in_list(stations, current_station)
@@ -200,7 +237,7 @@ class Train:
             self.sim.all_stations[self.current_station].register_departure(self)
             self.waiting = False
         else:
-            self.delay[self.current_station] += 1
+            self.delay[self.target_station] += 1
 
     def update(self):
         if self.waiting:
