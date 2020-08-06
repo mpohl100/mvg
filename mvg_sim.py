@@ -2,14 +2,14 @@ import json
 import copy
 from collections import defaultdict
 
-def read_network():
+def read_network(city):
     network_raw = {}
     # read U-Bahn
-    with open('data/UBahn.json', 'r') as infile:
+    with open('data/' + city + '_UBahn.json', 'r') as infile:
         ubahn_data = json.load(infile)
         network_raw = ubahn_data
     # read S-Bahn
-    with open('data/SBahn.json', 'r') as infile:
+    with open('data/' + city + '_SBahn.json', 'r') as infile:
         sbahn_data = json.load(infile)
         for lineName, stations in sbahn_data.items():
             network_raw[lineName] = stations
@@ -67,8 +67,8 @@ def accumulate_stations(stations, start, dest):
     return ret
 
 class Network:
-    def __init__(self):
-        self.all_lines = read_network()
+    def __init__(self, city):
+        self.all_lines = read_network(city)
         self.all_stations = find_all_stations(self.all_lines)
         self.lines_per_station = index_network_by_line(self.all_lines)
         self.switches_per_line = find_all_switches(self.all_lines, self.lines_per_station)
@@ -297,7 +297,7 @@ class Station:
         return can_arrive
 
 def main():
-    mvg = Network()
+    mvg = Network("MUC")
     simulation = Simulation(mvg)
     simulation.run()
 
