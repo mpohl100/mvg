@@ -117,9 +117,16 @@ class Simulation:
     def __init__(self, network: Network):
         self.network = network
         self.time = 0
+        self.read_all_lines()
+        self.read_all_stations()
+        self.read_trains()
+
+    def read_all_stations(self):
         self.all_stations = {}
         for station in self.network.all_stations:
             self.all_stations[station] = Station(station, self)
+
+    def read_trains(self):
         self.trains = []
         nb_trains = 0
         for line, stations in self.network.all_lines.items():
@@ -137,6 +144,10 @@ class Simulation:
                 nb_trains += 1
                 self.trains.append(train)
 
+    def read_all_lines(self):
+        self.all_lines = {}
+        for line, info in self.network.all_info.items():
+            self.all_lines[line] = Line(line, info['all_stations'], info['switches'])
 
     def update(self):
         self.time += 1
@@ -200,16 +211,16 @@ def find_sublines(all_stations, routes, linename):
         sublines[linename + " " + route.to_station] = find_subline(all_stations, route, linename)
     return sublines
 
-def find_routes(switches, stations):
+def find_routes(switches, stations, linename):
     routes = []
-    if len(switches.remove("")) == 0:
+    if len(switches) == 1:
         return [Route(stations[0], stations[-1])]
     for begin in switches:
         for end in switches:
             if begin != end:
                 route = Route(begin, end)
                 # nur wenn eine Route durch den Tunnel geht wollen wir von dort nach dort S Bahnen fahren lassen
-                if "Hauptbahnhof" in find_subline(stations, route, 'bla'):
+                if "Hauptbahnhof" in find_subline(stations, route, linename):
                     routes.append(route)
     return routes
 
@@ -219,7 +230,7 @@ class Line:
         self.is_subway = self.name.startswith('U')
         self.all_stations = all_stations
         self.switches = switches
-        self.routes = find_routes(self.switches, self.all_stations)
+        self.routes = find_routes(self.switches, self.all_stations, self.name)
         self.sublines = find_sublines(self.all_stations, self.routes, self.name)
 
 

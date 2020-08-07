@@ -1,6 +1,6 @@
 S1 	
 Freising >> Pulling >> Neufahrn >> Eching >> Lohhof >> Unterschleißheim >> Oberschleißheim >> Feldmoching >> Fasanerie >> Moosach >> Laim >> Hirschgarten >> Donnersbergerbrücke >> Hackerbrücke >> Hauptbahnhof >> Karlsplatz (Stachus) >> Marienplatz >> Isartor >> Rosenheimer Platz >> Ostbahnhof >> Leuchtenbergring
-Freising >> Flughafen München >> Ostbahnhof >> Leuchtenbergring
+Freising >> Ostbahnhof >> Leuchtenbergring
 S1.2
 Schwaigerloh (Wendeanlage) >> Flughafen München >> Flughafen Besucherpark >> Neufahrn >> Eching >> Lohhof >> Unterschleißheim >> Oberschleißheim >> Feldmoching >> Fasanerie >> Moosach >> Laim >> Hirschgarten >> Donnersbergerbrücke >> Hackerbrücke >> Hauptbahnhof >> Karlsplatz (Stachus) >> Marienplatz >> Isartor >> Rosenheimer Platz >> Ostbahnhof >> Leuchtenbergring
 Flughafen München >>  Ostbahnhof >> Leuchtenbergring
