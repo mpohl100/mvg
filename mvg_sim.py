@@ -5,9 +5,9 @@ from collections import defaultdict
 def read_network(city):
     network_raw = {}
     # read U-Bahn
-    #with open('data/' + city + '_UBahn.json', 'r') as infile:
-    #    ubahn_data = json.load(infile)
-    #    network_raw = ubahn_data
+    with open('data/' + city + '_UBahn.json', 'r') as infile:
+        ubahn_data = json.load(infile)
+        network_raw = ubahn_data
     # read S-Bahn
     with open('data/' + city + '_SBahn.json', 'r') as infile:
         sbahn_data = json.load(infile)

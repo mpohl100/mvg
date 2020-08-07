@@ -1,4 +1,4 @@
-f = open("data/MUC_SBahnhoefe.txt", "r")
+f = open("data/MUC_UBahnhoefe.txt", "r")
 data = {}
 current_line = ""
 for i,x in enumerate(f):
@@ -15,6 +15,6 @@ for i,x in enumerate(f):
             data[current_line]['switches'].append(bahnhof.replace(" ","").replace("\n","").replace("\t",""))
     else:
         raise ValueError("Eigentlich ist alles abgedeckt.")
-w = open("data/MUC_SBahn.json", "w")
+w = open("data/MUC_UBahn.json", "w")
 import json
 w.write(json.dumps(data, indent=4))
