@@ -131,6 +131,8 @@ class Simulation:
         for line, info in self.network.all_info.items():
             all_station_names = info['all_stations']
             switch_names = info['switches']
+            if '' in switch_names:
+                switch_names.remove('')
             all_stations = [self.all_stations[station] for station in all_station_names] 
             switches = [self.all_stations[station] for station in switch_names] 
             self.all_lines.append(Line(line, all_stations, switches))
@@ -139,20 +141,20 @@ class Simulation:
         self.trains = []
         nb_trains = 0
         for line in self.all_lines:
-            for stations in line.sublines:
-                direction = 1
-                nb_skip = 10
-                for i in range(0,len(stations), nb_skip):
-                    train = Train(self, line, stations[i], direction, nb_trains)
-                    train.update()
-                    nb_trains += 1
-                    self.trains.append(train)
-                direction = -1
-                for i in range(len(stations) -1, 0, -nb_skip):
-                    train = Train(self, line, stations[i], direction, nb_trains)
-                    train.update()
-                    nb_trains += 1
-                    self.trains.append(train)
+            stations = line.all_stations
+            direction = 1
+            nb_skip = 10
+            for i in range(0,len(stations), nb_skip):
+                train = Train( line, stations[i], direction, nb_trains)
+                train.update()
+                nb_trains += 1
+                self.trains.append(train)
+            direction = -1
+            for i in range(len(stations) -1, 0, -nb_skip):
+                train = Train(line, stations[i], direction, nb_trains)
+                train.update()
+                nb_trains += 1
+                self.trains.append(train)
 
     def update(self):
         self.time += 1
@@ -302,12 +304,12 @@ class Train:
         self.waiting = True
         self.current_station = self.target_station
         self.target_station, self.direction = find_next_station(self.current_station, self.stations, self.direction)
-        self.sim.all_stations[self.current_station].register_arrival(self)
+        self.line.all_stations[self.current_station].register_arrival(self)
 
     def depart(self):
-        next_station_free = self.sim.all_stations[self.target_station].can_arrive(self)
+        next_station_free = self.line.all_stations[self.target_station].can_arrive(self)
         if next_station_free:
-            self.sim.all_stations[self.current_station].register_departure(self)
+            self.line.all_stations[self.current_station].register_departure(self)
             self.waiting = False
         else:
             self.delay[self.target_station] += 1
