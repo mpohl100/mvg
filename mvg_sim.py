@@ -117,8 +117,8 @@ class Simulation:
     def __init__(self, network: Network):
         self.network = network
         self.time = 0
-        self.read_all_lines()
         self.read_all_stations()
+        self.read_all_lines()
         self.read_trains()
 
     def read_all_stations(self):
@@ -126,28 +126,33 @@ class Simulation:
         for station in self.network.all_stations:
             self.all_stations[station] = Station(station, self)
 
+    def read_all_lines(self):
+        self.all_lines = []
+        for line, info in self.network.all_info.items():
+            all_station_names = info['all_stations']
+            switch_names = info['switches']
+            all_stations = [self.all_stations[station] for station in all_station_names] 
+            switches = [self.all_stations[station] for station in switch_names] 
+            self.all_lines.append(Line(line, all_stations, switches))
+
     def read_trains(self):
         self.trains = []
         nb_trains = 0
-        for line, stations in self.network.all_lines.items():
-            direction = 1
-            nb_skip = 10
-            for i in range(0,len(stations), nb_skip):
-                train = Train(self, line, stations[i], direction, nb_trains)
-                train.update()
-                nb_trains += 1
-                self.trains.append(train)
-            direction = -1
-            for i in range(len(stations) -1, 0, -nb_skip):
-                train = Train(self, line, stations[i], direction, nb_trains)
-                train.update()
-                nb_trains += 1
-                self.trains.append(train)
-
-    def read_all_lines(self):
-        self.all_lines = {}
-        for line, info in self.network.all_info.items():
-            self.all_lines[line] = Line(line, info['all_stations'], info['switches'])
+        for line in self.all_lines:
+            for stations in line.sublines:
+                direction = 1
+                nb_skip = 10
+                for i in range(0,len(stations), nb_skip):
+                    train = Train(self, line, stations[i], direction, nb_trains)
+                    train.update()
+                    nb_trains += 1
+                    self.trains.append(train)
+                direction = -1
+                for i in range(len(stations) -1, 0, -nb_skip):
+                    train = Train(self, line, stations[i], direction, nb_trains)
+                    train.update()
+                    nb_trains += 1
+                    self.trains.append(train)
 
     def update(self):
         self.time += 1
@@ -180,6 +185,39 @@ class Simulation:
     def delay_per_train(self):
         for t in sorted(self.trains, key=lambda x : sum(x.delay.values())):
             print(str(t) + " has " + str(sum(t.delay.values())) + " minutes delay.")
+
+class Station:
+    def __init__(self, name, sim: Simulation):
+        self.name = name
+        self.sim = sim
+        self.lanes = find_neighbours(self.sim.network, name)
+        self.trains = []
+
+    def __str__(self):
+        return self.name
+
+    def register_arrival(self, train):
+        self.trains.append(train)
+
+    def register_departure(self, train):
+        self.trains.remove(train)
+
+    def can_arrive(self, train):
+        relevant_lines = self.lanes[train.current_station]
+        can_arrive = True
+        #reason = ""
+        for t in self.trains:
+            # Die Zielstation der Blockierenden darf nicht meine aktuelle Station sein.
+            if t.line in relevant_lines and t.target_station != train.current_station:
+                #reason = str(t)
+                can_arrive = False
+        # if train.line:
+        #     print("Can train " + str(train) + " arrive at " + str(self) + "?")
+        #     if can_arrive:
+        #         print("    Yes.")
+        #     else: 
+        #         print("    No, because of " + reason)
+        return can_arrive
 
 class Route:
     def __init__(self, from_station, to_station):
@@ -230,8 +268,9 @@ class Line:
         self.is_subway = self.name.startswith('U')
         self.all_stations = all_stations
         self.switches = switches
-        self.routes = find_routes(self.switches, self.all_stations, self.name)
-        self.sublines = find_sublines(self.all_stations, self.routes, self.name)
+        #TODO
+        #self.routes = find_routes(self.switches, self.all_stations, self.name)
+        #self.sublines = find_sublines(self.all_stations, self.routes, self.name)
 
 
 def find_next_station(current_station, stations, direction):
@@ -246,19 +285,18 @@ def find_next_station(current_station, stations, direction):
     return stations[current_index], direction
 
 class Train:
-    def __init__(self, sim: Simulation, line, starting_station, direction, number):
+    def __init__(self, line:Line, starting_station, direction, number):
         self.number = number
         self.line = line
-        self.stations = sim.network.all_lines[line]
+        self.stations = line.all_stations #todo make subline available here
         self.current_station = starting_station
         self.target_station = starting_station
         self.direction = direction
         self.waiting = False # a train will always wait for one update call before leaving the station
-        self.sim = sim
         self.delay = defaultdict(int)
 
     def __str__(self):
-        return str(self.number) + ": " + self.line + " " + self.current_station + " -> " + self.target_station
+        return str(self.number) + ": " + self.line.name + " " + self.current_station + " -> " + self.target_station
 
     def arrive(self):
         self.waiting = True
@@ -297,39 +335,6 @@ def find_neighbours(network, station):
         find_neighbour(lanes, stations, index - 1, line)
         find_neighbour(lanes, stations, index + 1, line)
     return lanes
-
-class Station:
-    def __init__(self, name, sim: Simulation):
-        self.name = name
-        self.sim = sim
-        self.lanes = find_neighbours(self.sim.network, name)
-        self.trains = []
-
-    def __str__(self):
-        return self.name
-
-    def register_arrival(self, train: Train):
-        self.trains.append(train)
-
-    def register_departure(self, train: Train):
-        self.trains.remove(train)
-
-    def can_arrive(self, train: Train):
-        relevant_lines = self.lanes[train.current_station]
-        can_arrive = True
-        #reason = ""
-        for t in self.trains:
-            # Die Zielstation der Blockierenden darf nicht meine aktuelle Station sein.
-            if t.line in relevant_lines and t.target_station != train.current_station:
-                #reason = str(t)
-                can_arrive = False
-        # if train.line:
-        #     print("Can train " + str(train) + " arrive at " + str(self) + "?")
-        #     if can_arrive:
-        #         print("    Yes.")
-        #     else: 
-        #         print("    No, because of " + reason)
-        return can_arrive
 
 def main():
     mvg = Network("MUC")
