@@ -151,6 +151,13 @@ class Simulation:
     def print_stats(self):
         self.delay_per_train()
         self.delay_per_station()
+        self.print_lanes()
+
+    def print_lanes(self):
+        for name, station in self.all_stations.items():
+            print('station ' + station.name + ' has following lanes')
+            print(station.lanes)
+            print()
 
     def delay_per_station(self):
         stations = defaultdict(int)
@@ -193,12 +200,27 @@ def find_sublines(all_stations, routes, linename):
         sublines[linename + " " + route.to_station] = find_subline(all_stations, route, linename)
     return sublines
 
+def find_routes(switches, stations):
+    routes = []
+    if len(switches.remove("")) == 0:
+        return [Route(stations[0], stations[-1])]
+    for begin in switches:
+        for end in switches:
+            if begin != end:
+                route = Route(begin, end)
+                # nur wenn eine Route durch den Tunnel geht wollen wir von dort nach dort S Bahnen fahren lassen
+                if "Hauptbahnhof" in find_subline(stations, route, 'bla'):
+                    routes.append(route)
+    return routes
+
 class Line:
-    def __init__(self, name, all_stations, routes):
+    def __init__(self, name, all_stations, switches):
         self.name = name
+        self.is_subway = self.name.startswith('U')
         self.all_stations = all_stations
-        self.routes = routes
-        self.sublines = find_sublines(all_stations, routes, name)
+        self.switches = switches
+        self.routes = find_routes(self.switches, self.all_stations)
+        self.sublines = find_sublines(self.all_stations, self.routes, self.name)
 
 
 def find_next_station(current_station, stations, direction):

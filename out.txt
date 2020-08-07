@@ -1,0 +1,829 @@
+15: U3 Olympiazentrum -> Oberwiesenfeld has 0 minutes delay.
+25: U6 Partnachplatz -> Harras has 0 minutes delay.
+26: U6 MünchnerFreiheit -> Dietlindenstraße has 0 minutes delay.
+105: S20 Pullach -> Höllriegelskreuth has 0 minutes delay.
+0: U1 Fraunhoferstraße -> SendlingerTor has 1 minutes delay.
+10: U3 MoosacherSt.-Martins-Platz -> Moosach has 2 minutes delay.
+27: U6 Studentenstadt -> Freimann has 2 minutes delay.
+31: U7 Fraunhoferstraße -> Kolumbusplatz has 2 minutes delay.
+106: S20 Mittersendling -> Heimeranplatz has 2 minutes delay.
+2: U1 Rotkreuzplatz -> Maillingerstraße has 3 minutes delay.
+7: U2 Silberhornstraße -> Untersbergstraße has 3 minutes delay.
+24: U6 Implerstraße -> Harras has 3 minutes delay.
+30: U7 Westfriedhof -> Georg-Brauchle-Ring has 3 minutes delay.
+11: U3 MünchnerFreiheit -> Giselastraße has 4 minutes delay.
+14: U3 Implerstraße -> Poccistraße has 4 minutes delay.
+4: U2 Königsplatz -> Theresienstraße has 5 minutes delay.
+5: U2 Hasenbergl -> Feldmoching has 5 minutes delay.
+6: U2 Josephsplatz -> Theresienstraße has 5 minutes delay.
+12: U3 Brudermühlstraße -> Thalkirchen has 5 minutes delay.
+28: U6 Garching-Hochbrück -> Fröttmaning has 5 minutes delay.
+29: U6 Universität -> Odeonsplatz has 5 minutes delay.
+33: U7 Silberhornstraße -> Kolumbusplatz has 5 minutes delay.
+107: S20 Buchenau -> Schöngeising has 5 minutes delay.
+3: U1 St.-Quirin-Platz -> Mangfallplatz has 6 minutes delay.
+9: U2 Untersbergstraße -> Silberhornstraße has 6 minutes delay.
+32: U7 InnsbruckerRing -> Michaelibad has 6 minutes delay.
+1: U1 Westfriedhof -> Georg-Brauchle-Ring has 7 minutes delay.
+13: U3 Aidenbachstraße -> MachtlfingerStraße has 7 minutes delay.
+34: U8 Josephsplatz -> Hohenzollernplatz has 7 minutes delay.
+35: U8 Königsplatz -> Hauptbahnhof has 8 minutes delay.
+85: S6 Gräfelfing -> Planegg has 8 minutes delay.
+8: U2 Trudering -> Moosfeld has 9 minutes delay.
+36: U8 Giesing -> Karl-Preis-Platz has 9 minutes delay.
+86: S6 Tutzing -> Feldafing has 9 minutes delay.
+104: S20 Türkenfeld -> Grafrath has 9 minutes delay.
+80: S6 Hirschgarten -> Donnersbergerbrücke has 11 minutes delay.
+88: S7 Ottobrunn -> Hohenbrunn has 11 minutes delay.
+37: U8 Karl-Preis-Platz -> Giesing has 12 minutes delay.
+57: S2.2 Schwabhausen -> Niederroth has 12 minutes delay.
+65: S3 Gröbenzell -> Olching has 12 minutes delay.
+74: S4 Aubing -> Leienfelsstraße has 12 minutes delay.
+49: S2 Erding -> Altenerding has 13 minutes delay.
+50: S2 Riem -> BergamLaim has 13 minutes delay.
+60: S2.2 Ostbahnhof -> Leuchtenbergring has 13 minutes delay.
+62: S2.2 St.Koloman -> Ottenhofen has 13 minutes delay.
+84: S6 Ostbahnhof -> RosenheimerPlatz has 13 minutes delay.
+90: S7 Perlach -> Giesing has 13 minutes delay.
+53: S2 Petershausen -> Vierkirchen-Esterhofen has 14 minutes delay.
+56: S2 Altenerding -> Erding has 14 minutes delay.
+82: S6 GrafingBahnhof -> GrafingStadt has 14 minutes delay.
+55: S2 Leuchtenbergring -> BergamLaim has 15 minutes delay.
+98: S8 Ismaning -> Hallbergmoos has 15 minutes delay.
+59: S2.2 Untermenzing -> Obermenzing has 16 minutes delay.
+61: S2.2 Heimstetten -> Grub has 16 minutes delay.
+63: S2.2 Leuchtenbergring -> Ostbahnhof has 16 minutes delay.
+93: S7 GeretsriedSüd -> GeretsriedMitte has 16 minutes delay.
+54: S2 Obermenzing -> Laim has 17 minutes delay.
+81: S6 RosenheimerPlatz -> Ostbahnhof has 17 minutes delay.
+51: S2 Hauptbahnhof -> Hackerbrücke has 18 minutes delay.
+58: S2.2 Kleinberghofen -> Erdweg has 18 minutes delay.
+77: S4 Zorneding -> Eglharting has 18 minutes delay.
+83: S6 Baldham -> Vaterstetten has 18 minutes delay.
+91: S7 Hauptbahnhof -> Hackerbrücke has 18 minutes delay.
+95: S7 Hauptbahnhof -> Karlsplatz(Stachus) has 18 minutes delay.
+71: S3 St.-Martin-Straße -> Ostbahnhof has 19 minutes delay.
+73: S4 Eichenau -> Fürstenfeldbruck has 19 minutes delay.
+52: S2 DachauBahnhof -> Hebertshausen has 20 minutes delay.
+92: S7 Solln -> GroßhesseloheIsartalbahnhof has 20 minutes delay.
+94: S7 Buchenhain -> Höllriegelskreuth has 20 minutes delay.
+43: S1.2 Lohhof -> Eching has 21 minutes delay.
+64: S2.2 Hackerbrücke -> Donnersbergerbrücke has 21 minutes delay.
+78: S4 Kirchseeon -> Eglharting has 21 minutes delay.
+103: S8 Weßling -> Neugilching has 21 minutes delay.
+39: S1 Pulling -> Freising has 22 minutes delay.
+48: S1.2 Unterschleißheim -> Lohhof has 22 minutes delay.
+67: S3 Pasing -> Laim has 22 minutes delay.
+96: S8 Gilching-Argelsried -> Geisenbrunn has 22 minutes delay.
+100: S8 Unterföhring -> Johanneskirchen has 22 minutes delay.
+38: S1 Donnersbergerbrücke -> Hirschgarten has 23 minutes delay.
+68: S3 RosenheimerPlatz -> Ostbahnhof has 23 minutes delay.
+69: S3 RosenheimerPlatz -> Ostbahnhof has 23 minutes delay.
+87: S6 Starnberg -> StarnbergNord has 23 minutes delay.
+97: S8 Hirschgarten -> Donnersbergerbrücke has 23 minutes delay.
+99: S8 FlughafenBesucherpark -> Hallbergmoos has 23 minutes delay.
+102: S8 Harthaus -> Germering-Unterpfaffenhofen has 23 minutes delay.
+46: S1.2 Hauptbahnhof -> Karlsplatz(Stachus) has 24 minutes delay.
+75: S4 Hirschgarten -> Donnersbergerbrücke has 24 minutes delay.
+101: S8 Karlsplatz(Stachus) -> Hauptbahnhof has 24 minutes delay.
+45: S1.2 Donnersbergerbrücke -> Hackerbrücke has 25 minutes delay.
+89: S7 Höhenkirchen-Siegertsbrunn -> Dürrnhaar has 25 minutes delay.
+70: S3 Deisenhofen -> Sauerlach has 26 minutes delay.
+76: S4 Hackerbrücke -> Hauptbahnhof has 26 minutes delay.
+79: S4 BergamLaim -> Leuchtenbergring has 26 minutes delay.
+47: S1.2 RosenheimerPlatz -> Isartor has 27 minutes delay.
+66: S3 Esting -> Gernlinden has 27 minutes delay.
+17: U4 Karlsplatz(Stachus) -> Hauptbahnhof has 29 minutes delay.
+23: U5 Therese-Giehse-Allee -> NeuperlachZentrum has 29 minutes delay.
+18: U4 Theresienwiese -> Schwanthalerhöhe has 30 minutes delay.
+40: S1 Unterschleißheim -> Oberschleißheim has 30 minutes delay.
+41: S1 Unterschleißheim -> Oberschleißheim has 30 minutes delay.
+72: S4 Leuchtenbergring -> Ostbahnhof has 30 minutes delay.
+19: U4 Odeonsplatz -> Lehel has 32 minutes delay.
+22: U5 Karlsplatz(Stachus) -> Odeonsplatz has 32 minutes delay.
+44: S1.2 FlughafenMünchen -> Schwaigerloh(Wendeanlage) has 33 minutes delay.
+16: U4 Lehel -> Max-Weber-Platz has 34 minutes delay.
+42: S1 Donnersbergerbrücke -> Hackerbrücke has 35 minutes delay.
+21: U5 Westendstraße -> FriedenheimerStraße has 36 minutes delay.
+20: U5 Michaelibad -> InnsbruckerRing has 38 minutes delay.
+{'Hauptbahnhof': 246, 'Karlsplatz(Stachus)': 229, 'Hirschgarten': 213, 'Ostbahnhof': 172, 'RosenheimerPlatz': 149, 'Laim': 120, 'Hackerbrücke': 115, 'Donnersbergerbrücke': 63, 'Marienplatz': 43, 'Leuchtenbergring': 31, 'Isartor': 30, 'Karl-Preis-Platz': 27, 'Fraunhoferstraße': 24, 'Eching': 24, 'Pasing': 23, 'SendlingerTor': 19, 'Poccistraße': 19, 'Lehel': 19, 'Michaelibad': 17, 'Petuelring': 15, 'Quiddestraße': 14, 'Giselastraße': 11, 'FlughafenMünchen': 11, 'Leienfelsstraße': 11, 'Karlsfeld': 9, 'Heimeranplatz': 8, 'Hohenzollernplatz': 6, 'Siemenswerke': 6, 'Theresienwiese': 5, 'Odeonsplatz': 5, 'BergamLaim': 5, 'Pullach': 4, 'Max-Weber-Platz': 3, 'Kolumbusplatz': 3, 'Neufahrn': 3, 'InnsbruckerRing': 2, 'Moosach': 2, 'FlughafenBesucherpark': 2, 'Silberhornstraße': 1, 'Altenerding': 1, 'DachauBahnhof': 1}
+station Oberwiesenfeld has following lanes
+{'Olympia-Einkaufszentrum': ['U3'], 'Olympiazentrum': ['U3']}
+
+station Garching-Forschungszentrum has following lanes
+{'Garching': ['U6']}
+
+station Therese-Giehse-Allee has following lanes
+{'NeuperlachZentrum': ['U5'], 'NeuperlachSüd': ['U5']}
+
+station Partnachplatz has following lanes
+{'Harras': ['U6'], 'Westpark': ['U6']}
+
+station Neugilching has following lanes
+{'Weßling': ['S8'], 'Gilching-Argelsried': ['S8']}
+
+station Ottenhofen has following lanes
+{'MarktSchwaben': ['S2', 'S2.2'], 'St.Koloman': ['S2', 'S2.2']}
+
+station Westpark has following lanes
+{'Partnachplatz': ['U6'], 'Holzapfelkreuth': ['U6']}
+
+station Deisenhofen has following lanes
+{'Furth': ['S3'], 'Sauerlach': ['S3']}
+
+station Eglharting has following lanes
+{'Zorneding': ['S4', 'S6'], 'Kirchseeon': ['S4', 'S6']}
+
+station Scheidplatz has following lanes
+{'Milbertshofen': ['U2'], 'Hohenzollernplatz': ['U2', 'U8'], 'Petuelring': ['U3', 'U8'], 'BonnerPlatz': ['U3']}
+
+station BergamLaim has following lanes
+{'Leuchtenbergring': ['S2', 'S2.2', 'S4', 'S6'], 'Riem': ['S2', 'S2.2'], 'Trudering': ['S4', 'S6']}
+
+station Lohhof has following lanes
+{'Eching': ['S1', 'S1.2'], 'Unterschleißheim': ['S1', 'S1.2']}
+
+station Geltendorf has following lanes
+{'Türkenfeld': ['S4', 'S20']}
+
+station Oberschleißheim has following lanes
+{'Unterschleißheim': ['S1', 'S1.2'], 'Feldmoching': ['S1', 'S1.2']}
+
+station Donnersbergerbrücke has following lanes
+{'Hirschgarten': ['S1', 'S1.2', 'S2', 'S2.2', 'S3', 'S4', 'S6', 'S8'], 'Hackerbrücke': ['S1', 'S1.2', 'S2', 'S2.2', 'S3', 'S4', 'S6', 'S7', 'S8'], 'Heimeranplatz': ['S7']}
+
+station Hohenschäftlarn has following lanes
+{'Ebenhausen-Schäftlarn': ['S7'], 'Baierbrunn': ['S7']}
+
+station Olympia-Einkaufszentrum has following lanes
+{'Georg-Brauchle-Ring': ['U1', 'U7'], 'MoosacherSt.-Martins-Platz': ['U3'], 'Oberwiesenfeld': ['U3']}
+
+station Aufhausen has following lanes
+{'St.Koloman': ['S2', 'S2.2'], 'Altenerding': ['S2', 'S2.2']}
+
+station Daglfing has following lanes
+{'Leuchtenbergring': ['S8'], 'Englschalking': ['S8']}
+
+station Nordfriedhof has following lanes
+{'AlteHeide': ['U6'], 'Dietlindenstraße': ['U6']}
+
+station Fasangarten has following lanes
+{'GiesingBhf.': ['S3'], 'Fasanenpark': ['S3']}
+
+station Harras has following lanes
+{'Implerstraße': ['U6'], 'Partnachplatz': ['U6'], 'Mittersendling': ['S7'], 'Heimeranplatz': ['S7']}
+
+station Unterschleißheim has following lanes
+{'Lohhof': ['S1', 'S1.2'], 'Oberschleißheim': ['S1', 'S1.2']}
+
+station Röhrmoos has following lanes
+{'Vierkirchen-Esterhofen': ['S2'], 'Hebertshausen': ['S2']}
+
+station Karlsplatz(Stachus) has following lanes
+{'Hauptbahnhof': ['U4', 'U5', 'S1', 'S1.2', 'S2', 'S2.2', 'S3', 'S4', 'S6', 'S7', 'S8'], 'Odeonsplatz': ['U4', 'U5'], 'Marienplatz': ['S1', 'S1.2', 'S2', 'S2.2', 'S3', 'S4', 'S6', 'S7', 'S8']}
+
+station Neufahrn has following lanes
+{'Pulling': ['S1'], 'Eching': ['S1', 'S1.2'], 'FlughafenBesucherpark': ['S1.2']}
+
+station Quiddestraße has following lanes
+{'Michaelibad': ['U5', 'U7', 'U8'], 'NeuperlachZentrum': ['U5', 'U7', 'U8']}
+
+station Olching has following lanes
+{'Esting': ['S3'], 'Gröbenzell': ['S3']}
+
+station Ebersberg has following lanes
+{'GrafingStadt': ['S4', 'S6']}
+
+station Candidplatz has following lanes
+{'Kolumbusplatz': ['U1'], 'Wettersteinplatz': ['U1']}
+
+station Maisach has following lanes
+{'Malching': ['S3'], 'Gernlinden': ['S3']}
+
+station Gernlinden has following lanes
+{'Maisach': ['S3'], 'Esting': ['S3']}
+
+station Taufkirchen has following lanes
+{'Unterhaching': ['S3'], 'Furth': ['S3']}
+
+station Possenhofen has following lanes
+{'Feldafing': ['S6'], 'Starnberg': ['S6']}
+
+station Josephsburg has following lanes
+{'InnsbruckerRing': ['U2'], 'Kreillerstraße': ['U2']}
+
+station Mammendorf has following lanes
+{'Malching': ['S3']}
+
+station MoosacherSt.-Martins-Platz has following lanes
+{'Moosach': ['U3'], 'Olympia-Einkaufszentrum': ['U3']}
+
+station Obermenzing has following lanes
+{'Untermenzing': ['S2', 'S2.2'], 'Laim': ['S2', 'S2.2']}
+
+station InnsbruckerRing has following lanes
+{'Karl-Preis-Platz': ['U2', 'U7', 'U8'], 'Josephsburg': ['U2'], 'Ostbahnhof': ['U5'], 'Michaelibad': ['U5', 'U7', 'U8']}
+
+station Dürrnhaar has following lanes
+{'Höhenkirchen-Siegertsbrunn': ['S7'], 'Aying': ['S7']}
+
+station Großhelfendorf has following lanes
+{'Peiß': ['S7'], 'Kreuzstraße': ['S7']}
+
+station Ostbahnhof has following lanes
+{'Max-Weber-Platz': ['U5'], 'InnsbruckerRing': ['U5'], 'RosenheimerPlatz': ['S1', 'S1.2', 'S2', 'S2.2', 'S3', 'S4', 'S6', 'S7', 'S8'], 'Leuchtenbergring': ['S1', 'S1.2', 'S2', 'S2.2', 'S4', 'S6', 'S8'], 'St.-Martin-Straße': ['S3', 'S7']}
+
+station Kolumbusplatz has following lanes
+{'Fraunhoferstraße': ['U1', 'U2', 'U7', 'U8'], 'Candidplatz': ['U1'], 'Silberhornstraße': ['U2', 'U7', 'U8']}
+
+station Dülferstraße has following lanes
+{'Hasenbergl': ['U2'], 'Harthof': ['U2']}
+
+station Isartor has following lanes
+{'Marienplatz': ['S1', 'S1.2', 'S2', 'S2.2', 'S3', 'S4', 'S6', 'S7', 'S8'], 'RosenheimerPlatz': ['S1', 'S1.2', 'S2', 'S2.2', 'S3', 'S4', 'S6', 'S7', 'S8']}
+
+station Universität has following lanes
+{'Giselastraße': ['U3', 'U6'], 'Odeonsplatz': ['U3', 'U6']}
+
+station Maillingerstraße has following lanes
+{'Rotkreuzplatz': ['U1', 'U7'], 'Stiglmaierplatz': ['U1', 'U7']}
+
+station AmHart has following lanes
+{'Harthof': ['U2'], 'FrankfurterRing': ['U2']}
+
+station Michaelibad has following lanes
+{'InnsbruckerRing': ['U5', 'U7', 'U8'], 'Quiddestraße': ['U5', 'U7', 'U8']}
+
+station Bachern has following lanes
+{'Schwabhausen': ['S2.2'], 'DachauStadt': ['S2.2']}
+
+station Buchenau has following lanes
+{'Schöngeising': ['S4', 'S20'], 'Fürstenfeldbruck': ['S4', 'S20']}
+
+station Eichenau has following lanes
+{'Fürstenfeldbruck': ['S4', 'S20'], 'Puchheim': ['S4', 'S20']}
+
+station Perlach has following lanes
+{'Giesing': ['S7'], 'NeuperlachSüd': ['S7']}
+
+station Georg-Brauchle-Ring has following lanes
+{'Olympia-Einkaufszentrum': ['U1', 'U7'], 'Westfriedhof': ['U1', 'U7']}
+
+station Karlsfeld has following lanes
+{'DachauBahnhof': ['S2', 'S2.2'], 'Allach': ['S2', 'S2.2']}
+
+station Lochham has following lanes
+{'Gräfelfing': ['S6'], 'Westkreuz': ['S6']}
+
+station Holzkirchen has following lanes
+{'Otterfing': ['S3']}
+
+station MarktIndersdorf has following lanes
+{'Arnbach': ['S2.2'], 'Niederroth': ['S2.2']}
+
+station Arabellapark has following lanes
+{'Richard-Strauss-Straße': ['U4']}
+
+station Malching has following lanes
+{'Mammendorf': ['S3'], 'Maisach': ['S3']}
+
+station Fraunhoferstraße has following lanes
+{'SendlingerTor': ['U1', 'U2', 'U7', 'U8'], 'Kolumbusplatz': ['U1', 'U2', 'U7', 'U8']}
+
+station FriedenheimerStraße has following lanes
+{'LaimerPlatz': ['U5'], 'Westendstraße': ['U5']}
+
+station Allach has following lanes
+{'Karlsfeld': ['S2', 'S2.2'], 'Untermenzing': ['S2', 'S2.2']}
+
+station GroßhesseloheIsartalbahnhof has following lanes
+{'Pullach': ['S7', 'S20'], 'Solln': ['S7', 'S20']}
+
+station Höllriegelskreuth has following lanes
+{'Buchenhain': ['S7'], 'Pullach': ['S7', 'S20']}
+
+station Gelting has following lanes
+{'GeretsriedMitte': ['S7'], 'Wolfratshausen': ['S7']}
+
+station Pulling has following lanes
+{'Freising': ['S1'], 'Neufahrn': ['S1']}
+
+station MachtlfingerStraße has following lanes
+{'Aidenbachstraße': ['U3'], 'ForstenriederAllee': ['U3']}
+
+station Westendstraße has following lanes
+{'Heimeranplatz': ['U4', 'U5'], 'FriedenheimerStraße': ['U5']}
+
+station Max-Weber-Platz has following lanes
+{'Lehel': ['U4', 'U5'], 'Prinzregentenplatz': ['U4'], 'Ostbahnhof': ['U5']}
+
+station AlteHeide has following lanes
+{'Studentenstadt': ['U6'], 'Nordfriedhof': ['U6']}
+
+station Mittersendling has following lanes
+{'Siemenswerke': ['S7', 'S20'], 'Harras': ['S7'], 'Heimeranplatz': ['S20']}
+
+station Studentenstadt has following lanes
+{'Freimann': ['U6'], 'AlteHeide': ['U6']}
+
+station Haar has following lanes
+{'Gronsdorf': ['S4', 'S6'], 'Vaterstetten': ['S4', 'S6']}
+
+station Planegg has following lanes
+{'Stockdorf': ['S6'], 'Gräfelfing': ['S6']}
+
+station Buchenhain has following lanes
+{'Baierbrunn': ['S7'], 'Höllriegelskreuth': ['S7']}
+
+station Pullach has following lanes
+{'Höllriegelskreuth': ['S7', 'S20'], 'GroßhesseloheIsartalbahnhof': ['S7', 'S20']}
+
+station Ottobrunn has following lanes
+{'Neubiberg': ['S7'], 'Hohenbrunn': ['S7']}
+
+station Sauerlach has following lanes
+{'Deisenhofen': ['S3'], 'Otterfing': ['S3']}
+
+station Hauptbahnhof has following lanes
+{'Stiglmaierplatz': ['U1', 'U7'], 'SendlingerTor': ['U1', 'U2', 'U7', 'U8'], 'Königsplatz': ['U2', 'U8'], 'Theresienwiese': ['U4', 'U5'], 'Karlsplatz(Stachus)': ['U4', 'U5', 'S1', 'S1.2', 'S2', 'S2.2', 'S3', 'S4', 'S6', 'S7', 'S8'], 'Hackerbrücke': ['S1', 'S1.2', 'S2', 'S2.2', 'S3', 'S4', 'S6', 'S7', 'S8']}
+
+station FrankfurterRing has following lanes
+{'AmHart': ['U2'], 'Milbertshofen': ['U2']}
+
+station Untersbergstraße has following lanes
+{'Silberhornstraße': ['U2', 'U7', 'U8'], 'Giesing': ['U2', 'U7', 'U8']}
+
+station Mangfallplatz has following lanes
+{'St.-Quirin-Platz': ['U1']}
+
+station Westkreuz has following lanes
+{'Lochham': ['S6'], 'Pasing': ['S6', 'S8'], 'Neuaubing': ['S8']}
+
+station Freiham has following lanes
+{'Harthaus': ['S8'], 'Neuaubing': ['S8']}
+
+station Kreillerstraße has following lanes
+{'Josephsburg': ['U2'], 'Trudering': ['U2']}
+
+station Harthof has following lanes
+{'Dülferstraße': ['U2'], 'AmHart': ['U2']}
+
+station Silberhornstraße has following lanes
+{'Kolumbusplatz': ['U2', 'U7', 'U8'], 'Untersbergstraße': ['U2', 'U7', 'U8']}
+
+station Leienfelsstraße has following lanes
+{'Aubing': ['S4', 'S20'], 'Pasing': ['S4', 'S20']}
+
+station Laim has following lanes
+{'Moosach': ['S1', 'S1.2'], 'Hirschgarten': ['S1', 'S1.2', 'S2', 'S2.2', 'S3', 'S4', 'S6', 'S8'], 'Obermenzing': ['S2', 'S2.2'], 'Pasing': ['S3', 'S4', 'S6', 'S8']}
+
+station Implerstraße has following lanes
+{'Poccistraße': ['U3', 'U6'], 'Brudermühlstraße': ['U3'], 'Harras': ['U6']}
+
+station Hebertshausen has following lanes
+{'Röhrmoos': ['S2'], 'DachauBahnhof': ['S2']}
+
+station GeretsriedSüd has following lanes
+{'GeretsriedMitte': ['S7']}
+
+station Siemenswerke has following lanes
+{'Solln': ['S7', 'S20'], 'Mittersendling': ['S7', 'S20']}
+
+station Peiß has following lanes
+{'Aying': ['S7'], 'Großhelfendorf': ['S7']}
+
+station Poccistraße has following lanes
+{'Goetheplatz': ['U3', 'U6'], 'Implerstraße': ['U3', 'U6']}
+
+station BonnerPlatz has following lanes
+{'Scheidplatz': ['U3'], 'MünchnerFreiheit': ['U3']}
+
+station BaslerStraße has following lanes
+{'ForstenriederAllee': ['U3'], 'FürstenriedWest': ['U3']}
+
+station Gröbenzell has following lanes
+{'Olching': ['S3'], 'Lochhausen': ['S3']}
+
+station Marienplatz has following lanes
+{'Odeonsplatz': ['U3', 'U6'], 'SendlingerTor': ['U3', 'U6'], 'Karlsplatz(Stachus)': ['S1', 'S1.2', 'S2', 'S2.2', 'S3', 'S4', 'S6', 'S7', 'S8'], 'Isartor': ['S1', 'S1.2', 'S2', 'S2.2', 'S3', 'S4', 'S6', 'S7', 'S8']}
+
+station Hohenbrunn has following lanes
+{'Ottobrunn': ['S7'], 'Wächterhof': ['S7']}
+
+station Starnberg has following lanes
+{'Possenhofen': ['S6'], 'StarnbergNord': ['S6']}
+
+station Gilching-Argelsried has following lanes
+{'Neugilching': ['S8'], 'Geisenbrunn': ['S8']}
+
+station Dietlindenstraße has following lanes
+{'Nordfriedhof': ['U6'], 'MünchnerFreiheit': ['U6']}
+
+station Altomünster has following lanes
+{'Kleinberghofen': ['S2.2']}
+
+station Theresienstraße has following lanes
+{'Josephsplatz': ['U2', 'U8'], 'Königsplatz': ['U2', 'U8']}
+
+station Grub has following lanes
+{'Heimstetten': ['S2', 'S2.2'], 'Poing': ['S2', 'S2.2']}
+
+station SendlingerTor has following lanes
+{'Hauptbahnhof': ['U1', 'U2', 'U7', 'U8'], 'Fraunhoferstraße': ['U1', 'U2', 'U7', 'U8'], 'Marienplatz': ['U3', 'U6'], 'Goetheplatz': ['U3', 'U6']}
+
+station Wächterhof has following lanes
+{'Hohenbrunn': ['S7'], 'Höhenkirchen-Siegertsbrunn': ['S7']}
+
+station NeuperlachSüd has following lanes
+{'Therese-Giehse-Allee': ['U5'], 'Perlach': ['S7'], 'Neubiberg': ['S7']}
+
+station DachauBahnhof has following lanes
+{'Hebertshausen': ['S2'], 'Karlsfeld': ['S2', 'S2.2'], 'DachauStadt': ['S2.2']}
+
+station Mühltal(stillgelegt) has following lanes
+{'StarnbergNord': ['S6'], 'Gauting': ['S6']}
+
+station Gern has following lanes
+{'Westfriedhof': ['U1', 'U7'], 'Rotkreuzplatz': ['U1', 'U7']}
+
+station Garching has following lanes
+{'Garching-Forschungszentrum': ['U6'], 'Garching-Hochbrück': ['U6']}
+
+station FlughafenBesucherpark has following lanes
+{'FlughafenMünchen': ['S1.2', 'S8'], 'Neufahrn': ['S1.2'], 'Hallbergmoos': ['S8']}
+
+station Vierkirchen-Esterhofen has following lanes
+{'Petershausen': ['S2'], 'Röhrmoos': ['S2']}
+
+station Hirschgarten has following lanes
+{'Laim': ['S1', 'S1.2', 'S2', 'S2.2', 'S3', 'S4', 'S6', 'S8'], 'Donnersbergerbrücke': ['S1', 'S1.2', 'S2', 'S2.2', 'S3', 'S4', 'S6', 'S8']}
+
+station Königsplatz has following lanes
+{'Theresienstraße': ['U2', 'U8'], 'Hauptbahnhof': ['U2', 'U8']}
+
+station Altenerding has following lanes
+{'Aufhausen': ['S2', 'S2.2'], 'Erding': ['S2', 'S2.2']}
+
+station Unterföhring has following lanes
+{'Johanneskirchen': ['S8'], 'Ismaning': ['S8']}
+
+station Brudermühlstraße has following lanes
+{'Implerstraße': ['U3'], 'Thalkirchen': ['U3']}
+
+station Feldafing has following lanes
+{'Tutzing': ['S6'], 'Possenhofen': ['S6']}
+
+station Fröttmaning has following lanes
+{'Garching-Hochbrück': ['U6'], 'Kieferngarten': ['U6']}
+
+station Karl-Preis-Platz has following lanes
+{'Giesing': ['U2', 'U7', 'U8'], 'InnsbruckerRing': ['U2', 'U7', 'U8']}
+
+station Leuchtenbergring has following lanes
+{'Ostbahnhof': ['S1', 'S1.2', 'S2', 'S2.2', 'S4', 'S6', 'S8'], 'BergamLaim': ['S2', 'S2.2', 'S4', 'S6'], 'Daglfing': ['S8']}
+
+station Wettersteinplatz has following lanes
+{'Candidplatz': ['U1'], 'St.-Quirin-Platz': ['U1']}
+
+station Fasanerie has following lanes
+{'Feldmoching': ['S1', 'S1.2'], 'Moosach': ['S1', 'S1.2']}
+
+station Kleinberghofen has following lanes
+{'Altomünster': ['S2.2'], 'Erdweg': ['S2.2']}
+
+station Neuaubing has following lanes
+{'Freiham': ['S8'], 'Westkreuz': ['S8']}
+
+station Schwanthalerhöhe has following lanes
+{'Heimeranplatz': ['U4', 'U5'], 'Theresienwiese': ['U4', 'U5']}
+
+station Riem has following lanes
+{'BergamLaim': ['S2', 'S2.2'], 'Feldkirchen': ['S2', 'S2.2']}
+
+station Zorneding has following lanes
+{'Baldham': ['S4', 'S6'], 'Eglharting': ['S4', 'S6']}
+
+station Aying has following lanes
+{'Dürrnhaar': ['S7'], 'Peiß': ['S7']}
+
+station Harthaus has following lanes
+{'Germering-Unterpfaffenhofen': ['S8'], 'Freiham': ['S8']}
+
+station Hallbergmoos has following lanes
+{'Ismaning': ['S8'], 'FlughafenBesucherpark': ['S8']}
+
+station St.Koloman has following lanes
+{'Ottenhofen': ['S2', 'S2.2'], 'Aufhausen': ['S2', 'S2.2']}
+
+station Unterhaching has following lanes
+{'Fasanenpark': ['S3'], 'Taufkirchen': ['S3']}
+
+station Feldkirchen has following lanes
+{'Riem': ['S2', 'S2.2'], 'Heimstetten': ['S2', 'S2.2']}
+
+station FürstenriedWest has following lanes
+{'BaslerStraße': ['U3']}
+
+station Erdweg has following lanes
+{'Kleinberghofen': ['S2.2'], 'Arnbach': ['S2.2']}
+
+station Baierbrunn has following lanes
+{'Hohenschäftlarn': ['S7'], 'Buchenhain': ['S7']}
+
+station Puchheim has following lanes
+{'Eichenau': ['S4', 'S20'], 'Aubing': ['S4', 'S20']}
+
+station Lehel has following lanes
+{'Odeonsplatz': ['U4', 'U5'], 'Max-Weber-Platz': ['U4', 'U5']}
+
+station Germering-Unterpfaffenhofen has following lanes
+{'Geisenbrunn': ['S8'], 'Harthaus': ['S8']}
+
+station Josephsplatz has following lanes
+{'Hohenzollernplatz': ['U2', 'U8'], 'Theresienstraße': ['U2', 'U8']}
+
+station LaimerPlatz has following lanes
+{'FriedenheimerStraße': ['U5']}
+
+station Fürstenfeldbruck has following lanes
+{'Buchenau': ['S4', 'S20'], 'Eichenau': ['S4', 'S20']}
+
+station Tutzing has following lanes
+{'Feldafing': ['S6']}
+
+station Heimstetten has following lanes
+{'Feldkirchen': ['S2', 'S2.2'], 'Grub': ['S2', 'S2.2']}
+
+station Petuelring has following lanes
+{'Olympiazentrum': ['U3', 'U8'], 'Scheidplatz': ['U3', 'U8']}
+
+station Freising has following lanes
+{'Pulling': ['S1']}
+
+station Geisenbrunn has following lanes
+{'Gilching-Argelsried': ['S8'], 'Germering-Unterpfaffenhofen': ['S8']}
+
+station Moosach has following lanes
+{'MoosacherSt.-Martins-Platz': ['U3'], 'Fasanerie': ['S1', 'S1.2'], 'Laim': ['S1', 'S1.2']}
+
+station NeuperlachZentrum has following lanes
+{'Quiddestraße': ['U5', 'U7', 'U8'], 'Therese-Giehse-Allee': ['U5']}
+
+station Großhadern has following lanes
+{'HadernerStern': ['U6'], 'KlinikumGroßhadern': ['U6']}
+
+station Türkenfeld has following lanes
+{'Geltendorf': ['S4', 'S20'], 'Grafrath': ['S4', 'S20']}
+
+station Böhmerwaldplatz has following lanes
+{'Prinzregentenplatz': ['U4'], 'Richard-Strauss-Straße': ['U4']}
+
+station Arnbach has following lanes
+{'Erdweg': ['S2.2'], 'MarktIndersdorf': ['S2.2']}
+
+station Milbertshofen has following lanes
+{'FrankfurterRing': ['U2'], 'Scheidplatz': ['U2']}
+
+station RosenheimerPlatz has following lanes
+{'Isartor': ['S1', 'S1.2', 'S2', 'S2.2', 'S3', 'S4', 'S6', 'S7', 'S8'], 'Ostbahnhof': ['S1', 'S1.2', 'S2', 'S2.2', 'S3', 'S4', 'S6', 'S7', 'S8']}
+
+station Gräfelfing has following lanes
+{'Planegg': ['S6'], 'Lochham': ['S6']}
+
+station Richard-Strauss-Straße has following lanes
+{'Böhmerwaldplatz': ['U4'], 'Arabellapark': ['U4']}
+
+station Poing has following lanes
+{'Grub': ['S2', 'S2.2'], 'MarktSchwaben': ['S2', 'S2.2']}
+
+station Neubiberg has following lanes
+{'NeuperlachSüd': ['S7'], 'Ottobrunn': ['S7']}
+
+station Otterfing has following lanes
+{'Sauerlach': ['S3'], 'Holzkirchen': ['S3']}
+
+station Kieferngarten has following lanes
+{'Fröttmaning': ['U6'], 'Freimann': ['U6']}
+
+station Pasing has following lanes
+{'Langwied': ['S3'], 'Laim': ['S3', 'S4', 'S6', 'S8'], 'Leienfelsstraße': ['S4', 'S20'], 'Westkreuz': ['S6', 'S8'], 'Heimeranplatz': ['S20']}
+
+station Grafrath has following lanes
+{'Türkenfeld': ['S4', 'S20'], 'Schöngeising': ['S4', 'S20']}
+
+station Olympiazentrum has following lanes
+{'Oberwiesenfeld': ['U3'], 'Petuelring': ['U3', 'U8']}
+
+station Eching has following lanes
+{'Neufahrn': ['S1', 'S1.2'], 'Lohhof': ['S1', 'S1.2']}
+
+station MessestadtOst has following lanes
+{'MessestadtWest': ['U2']}
+
+station Giesing has following lanes
+{'Untersbergstraße': ['U2', 'U7', 'U8'], 'Karl-Preis-Platz': ['U2', 'U7', 'U8'], 'St.-Martin-Straße': ['S7'], 'Perlach': ['S7']}
+
+station Wolfratshausen has following lanes
+{'Gelting': ['S7'], 'Icking': ['S7']}
+
+station Weßling has following lanes
+{'Steinebach': ['S8'], 'Neugilching': ['S8']}
+
+station Trudering has following lanes
+{'Kreillerstraße': ['U2'], 'Moosfeld': ['U2'], 'BergamLaim': ['S4', 'S6'], 'Gronsdorf': ['S4', 'S6']}
+
+station Herrsching has following lanes
+{'Seefeld-Hechendorf': ['S8']}
+
+station Theresienwiese has following lanes
+{'Schwanthalerhöhe': ['U4', 'U5'], 'Hauptbahnhof': ['U4', 'U5']}
+
+station Englschalking has following lanes
+{'Daglfing': ['S8'], 'Johanneskirchen': ['S8']}
+
+station Aidenbachstraße has following lanes
+{'Obersendling': ['U3'], 'MachtlfingerStraße': ['U3']}
+
+station DachauStadt has following lanes
+{'Bachern': ['S2.2'], 'DachauBahnhof': ['S2.2']}
+
+station Langwied has following lanes
+{'Lochhausen': ['S3'], 'Pasing': ['S3']}
+
+station ForstenriederAllee has following lanes
+{'MachtlfingerStraße': ['U3'], 'BaslerStraße': ['U3']}
+
+station Icking has following lanes
+{'Wolfratshausen': ['S7'], 'Ebenhausen-Schäftlarn': ['S7']}
+
+station MessestadtWest has following lanes
+{'Moosfeld': ['U2'], 'MessestadtOst': ['U2']}
+
+station GiesingBhf. has following lanes
+{'St.-Martin-Straße': ['S3'], 'Fasangarten': ['S3']}
+
+station Höhenkirchen-Siegertsbrunn has following lanes
+{'Wächterhof': ['S7'], 'Dürrnhaar': ['S7']}
+
+station Solln has following lanes
+{'GroßhesseloheIsartalbahnhof': ['S7', 'S20'], 'Siemenswerke': ['S7', 'S20']}
+
+station Petershausen has following lanes
+{'Vierkirchen-Esterhofen': ['S2']}
+
+station Hackerbrücke has following lanes
+{'Donnersbergerbrücke': ['S1', 'S1.2', 'S2', 'S2.2', 'S3', 'S4', 'S6', 'S7', 'S8'], 'Hauptbahnhof': ['S1', 'S1.2', 'S2', 'S2.2', 'S3', 'S4', 'S6', 'S7', 'S8']}
+
+station Ismaning has following lanes
+{'Unterföhring': ['S8'], 'Hallbergmoos': ['S8']}
+
+station Kreuzstraße has following lanes
+{'Großhelfendorf': ['S7']}
+
+station Thalkirchen has following lanes
+{'Brudermühlstraße': ['U3'], 'Obersendling': ['U3']}
+
+station Furth has following lanes
+{'Taufkirchen': ['S3'], 'Deisenhofen': ['S3']}
+
+station Niederroth has following lanes
+{'MarktIndersdorf': ['S2.2'], 'Schwabhausen': ['S2.2']}
+
+station Rotkreuzplatz has following lanes
+{'Gern': ['U1', 'U7'], 'Maillingerstraße': ['U1', 'U7']}
+
+station Obersendling has following lanes
+{'Thalkirchen': ['U3'], 'Aidenbachstraße': ['U3']}
+
+station FlughafenMünchen has following lanes
+{'Schwaigerloh(Wendeanlage)': ['S1.2', 'S8'], 'FlughafenBesucherpark': ['S1.2', 'S8']}
+
+station Kirchseeon has following lanes
+{'Eglharting': ['S4', 'S6'], 'GrafingBahnhof': ['S4', 'S6']}
+
+station Johanneskirchen has following lanes
+{'Englschalking': ['S8'], 'Unterföhring': ['S8']}
+
+station GrafingStadt has following lanes
+{'GrafingBahnhof': ['S4', 'S6'], 'Ebersberg': ['S4', 'S6']}
+
+station Heimeranplatz has following lanes
+{'Westendstraße': ['U4', 'U5'], 'Schwanthalerhöhe': ['U4', 'U5'], 'Harras': ['S7'], 'Donnersbergerbrücke': ['S7'], 'Pasing': ['S20'], 'Mittersendling': ['S20']}
+
+station HadernerStern has following lanes
+{'Holzapfelkreuth': ['U6'], 'Großhadern': ['U6']}
+
+station Steinebach has following lanes
+{'Seefeld-Hechendorf': ['S8'], 'Weßling': ['S8']}
+
+station Schwaigerloh(Wendeanlage) has following lanes
+{'FlughafenMünchen': ['S1.2', 'S8']}
+
+station Schöngeising has following lanes
+{'Grafrath': ['S4', 'S20'], 'Buchenau': ['S4', 'S20']}
+
+station Hasenbergl has following lanes
+{'Feldmoching': ['U2'], 'Dülferstraße': ['U2']}
+
+station StarnbergNord has following lanes
+{'Starnberg': ['S6'], 'Mühltal(stillgelegt)': ['S6']}
+
+station Seefeld-Hechendorf has following lanes
+{'Herrsching': ['S8'], 'Steinebach': ['S8']}
+
+station MünchnerFreiheit has following lanes
+{'BonnerPlatz': ['U3'], 'Giselastraße': ['U3', 'U6'], 'Dietlindenstraße': ['U6']}
+
+station KlinikumGroßhadern has following lanes
+{'Großhadern': ['U6']}
+
+station Erding has following lanes
+{'Altenerding': ['S2', 'S2.2']}
+
+station St.-Martin-Straße has following lanes
+{'Ostbahnhof': ['S3', 'S7'], 'GiesingBhf.': ['S3'], 'Giesing': ['S7']}
+
+station Garching-Hochbrück has following lanes
+{'Garching': ['U6'], 'Fröttmaning': ['U6']}
+
+station Gauting has following lanes
+{'Mühltal(stillgelegt)': ['S6'], 'Stockdorf': ['S6']}
+
+station Prinzregentenplatz has following lanes
+{'Max-Weber-Platz': ['U4'], 'Böhmerwaldplatz': ['U4']}
+
+station GrafingBahnhof has following lanes
+{'Kirchseeon': ['S4', 'S6'], 'GrafingStadt': ['S4', 'S6']}
+
+station Fasanenpark has following lanes
+{'Fasangarten': ['S3'], 'Unterhaching': ['S3']}
+
+station Ebenhausen-Schäftlarn has following lanes
+{'Icking': ['S7'], 'Hohenschäftlarn': ['S7']}
+
+station St.-Quirin-Platz has following lanes
+{'Wettersteinplatz': ['U1'], 'Mangfallplatz': ['U1']}
+
+station GeretsriedMitte has following lanes
+{'GeretsriedSüd': ['S7'], 'Gelting': ['S7']}
+
+station Hohenzollernplatz has following lanes
+{'Scheidplatz': ['U2', 'U8'], 'Josephsplatz': ['U2', 'U8']}
+
+station Esting has following lanes
+{'Gernlinden': ['S3'], 'Olching': ['S3']}
+
+station Giselastraße has following lanes
+{'MünchnerFreiheit': ['U3', 'U6'], 'Universität': ['U3', 'U6']}
+
+station Odeonsplatz has following lanes
+{'Universität': ['U3', 'U6'], 'Marienplatz': ['U3', 'U6'], 'Karlsplatz(Stachus)': ['U4', 'U5'], 'Lehel': ['U4', 'U5']}
+
+station Lochhausen has following lanes
+{'Gröbenzell': ['S3'], 'Langwied': ['S3']}
+
+station Westfriedhof has following lanes
+{'Georg-Brauchle-Ring': ['U1', 'U7'], 'Gern': ['U1', 'U7']}
+
+station Feldmoching has following lanes
+{'Hasenbergl': ['U2'], 'Oberschleißheim': ['S1', 'S1.2'], 'Fasanerie': ['S1', 'S1.2']}
+
+station Moosfeld has following lanes
+{'Trudering': ['U2'], 'MessestadtWest': ['U2']}
+
+station Holzapfelkreuth has following lanes
+{'Westpark': ['U6'], 'HadernerStern': ['U6']}
+
+station Stockdorf has following lanes
+{'Gauting': ['S6'], 'Planegg': ['S6']}
+
+station Aubing has following lanes
+{'Puchheim': ['S4', 'S20'], 'Leienfelsstraße': ['S4', 'S20']}
+
+station Vaterstetten has following lanes
+{'Haar': ['S4', 'S6'], 'Baldham': ['S4', 'S6']}
+
+station Schwabhausen has following lanes
+{'Niederroth': ['S2.2'], 'Bachern': ['S2.2']}
+
+station Baldham has following lanes
+{'Vaterstetten': ['S4', 'S6'], 'Zorneding': ['S4', 'S6']}
+
+station Goetheplatz has following lanes
+{'SendlingerTor': ['U3', 'U6'], 'Poccistraße': ['U3', 'U6']}
+
+station Stiglmaierplatz has following lanes
+{'Maillingerstraße': ['U1', 'U7'], 'Hauptbahnhof': ['U1', 'U7']}
+
+station Untermenzing has following lanes
+{'Allach': ['S2', 'S2.2'], 'Obermenzing': ['S2', 'S2.2']}
+
+station Gronsdorf has following lanes
+{'Trudering': ['S4', 'S6'], 'Haar': ['S4', 'S6']}
+
+station MarktSchwaben has following lanes
+{'Poing': ['S2', 'S2.2'], 'Ottenhofen': ['S2', 'S2.2']}
+
+station Freimann has following lanes
+{'Kieferngarten': ['U6'], 'Studentenstadt': ['U6']}
+
