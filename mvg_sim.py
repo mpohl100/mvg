@@ -114,12 +114,12 @@ class Network:
         #        dest_switches = self.switches_per_line[dest_line]
 
 class Simulation:
-    def __init__(self, network: Network):
+    def __init__(self, network: Network, nb_subway = 4, nb_sbahn = 8):
         self.network = network
         self.time = 0
         self.read_all_stations()
         self.read_all_lines()
-        self.read_trains()
+        self.read_trains(nb_subway, nb_sbahn)
 
     def read_all_stations(self):
         self.all_stations = {}
@@ -137,13 +137,16 @@ class Simulation:
             switches = [self.all_stations[station] for station in switch_names] 
             self.all_lines.append(Line(line, all_stations, switches))
 
-    def read_trains(self):
+    def read_trains(self, nb_subway, nb_sbahn):
         self.trains = []
         nb_trains = 0
         for line in self.all_lines:
             stations = line.all_stations
             direction = 1
-            nb_skip = 10
+            if line.is_subway:
+                nb_skip = nb_subway
+            else:
+                nb_skip = nb_sbahn
             for i in range(0,len(stations), nb_skip):
                 train = Train( line, stations[i], direction, nb_trains)
                 train.update()
@@ -170,7 +173,7 @@ class Simulation:
         self.delay_per_train()
         self.delay_per_station()
         #self.print_lanes()
-        self.print_sublines()
+        #self.print_sublines()
 
     def delay_per_train(self):
         for t in sorted(self.trains, key=lambda x : sum(x.delay.values())):
