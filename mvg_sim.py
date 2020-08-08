@@ -218,7 +218,7 @@ class Station:
         for t in self.trains:
             # Die Zielstation der Blockierenden darf nicht meine aktuelle Station sein.
             #TODO auf Line Objekte umstellen
-            if t.line.name in relevant_lines and t.target_station != train.current_station:
+            if t.line.name in relevant_lines and t.target_station != train.current_station and t.line.is_subway == train.line.is_subway:
                 #reason = str(t)
                 can_arrive = False
         #if train.line:
