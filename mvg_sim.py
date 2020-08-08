@@ -169,7 +169,7 @@ class Simulation:
     def print_stats(self):
         self.delay_per_train()
         self.delay_per_station()
-        self.print_lanes()
+        #self.print_lanes()
 
     def print_lanes(self):
         for name, station in self.all_stations.items():
@@ -181,7 +181,7 @@ class Simulation:
         stations = defaultdict(int)
         for t in self.trains:
             for station, delay in t.delay.items():
-                stations[station] += delay
+                stations[station.name] += delay
         print({k:v for k,v in sorted(stations.items(), key=lambda item : item[1], reverse=True)})
 
     def delay_per_train(self):
@@ -205,15 +205,16 @@ class Station:
         self.trains.remove(train)
 
     def can_arrive(self, train):
-        relevant_lines = self.lanes[train.current_station]
+        relevant_lines = self.lanes[train.current_station.name]
         can_arrive = True
         #reason = ""
         for t in self.trains:
             # Die Zielstation der Blockierenden darf nicht meine aktuelle Station sein.
-            if t.line in relevant_lines and t.target_station != train.current_station:
+            #TODO auf Line Objekte umstellen
+            if t.line.name in relevant_lines and t.target_station != train.current_station:
                 #reason = str(t)
                 can_arrive = False
-        # if train.line:
+        #if train.line:
         #     print("Can train " + str(train) + " arrive at " + str(self) + "?")
         #     if can_arrive:
         #         print("    Yes.")
@@ -274,6 +275,9 @@ class Line:
         #self.routes = find_routes(self.switches, self.all_stations, self.name)
         #self.sublines = find_sublines(self.all_stations, self.routes, self.name)
 
+    def __str__(self):
+        return self.name
+
 
 def find_next_station(current_station, stations, direction):
     current_index = find_index_in_list(stations, current_station)
@@ -298,18 +302,18 @@ class Train:
         self.delay = defaultdict(int)
 
     def __str__(self):
-        return str(self.number) + ": " + self.line.name + " " + self.current_station + " -> " + self.target_station
+        return str(self.number) + ": " + str(self.line) + " " + str(self.current_station) + " -> " + str(self.target_station)
 
     def arrive(self):
         self.waiting = True
         self.current_station = self.target_station
         self.target_station, self.direction = find_next_station(self.current_station, self.stations, self.direction)
-        self.line.all_stations[self.current_station].register_arrival(self)
+        self.current_station.register_arrival(self)
 
     def depart(self):
-        next_station_free = self.line.all_stations[self.target_station].can_arrive(self)
+        next_station_free = self.target_station.can_arrive(self)
         if next_station_free:
-            self.line.all_stations[self.current_station].register_departure(self)
+            self.current_station.register_departure(self)
             self.waiting = False
         else:
             self.delay[self.target_station] += 1
