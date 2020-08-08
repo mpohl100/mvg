@@ -170,12 +170,11 @@ class Simulation:
         self.delay_per_train()
         self.delay_per_station()
         #self.print_lanes()
+        self.print_sublines()
 
-    def print_lanes(self):
-        for name, station in self.all_stations.items():
-            print('station ' + station.name + ' has following lanes')
-            print(station.lanes)
-            print()
+    def delay_per_train(self):
+        for t in sorted(self.trains, key=lambda x : sum(x.delay.values())):
+            print(str(t) + " has " + str(sum(t.delay.values())) + " minutes delay.")
 
     def delay_per_station(self):
         stations = defaultdict(int)
@@ -184,9 +183,17 @@ class Simulation:
                 stations[station.name] += delay
         print({k:v for k,v in sorted(stations.items(), key=lambda item : item[1], reverse=True)})
 
-    def delay_per_train(self):
-        for t in sorted(self.trains, key=lambda x : sum(x.delay.values())):
-            print(str(t) + " has " + str(sum(t.delay.values())) + " minutes delay.")
+    def print_lanes(self):
+        for name, station in self.all_stations.items():
+            print('station ' + station.name + ' has following lanes')
+            print(station.lanes)
+            print()
+
+    def print_sublines(self):
+        for line in self.all_lines:
+            print(line)
+            for subroute in line.sublines.keys():
+                print('    ' + str(subroute))
 
 class Station:
     def __init__(self, name, sim: Simulation):
@@ -223,14 +230,17 @@ class Station:
         return can_arrive
 
 class Route:
-    def __init__(self, from_station, to_station):
+    def __init__(self, from_station, to_station, linename):
+        self.linenname = linename
         self.from_station = from_station
         self.to_station = to_station
 
     def __eq__(self, other):
         return self.from_station == other.from_station and self.to_station == other.to_station
     def __hash__(self):
-        return hash(self.from_station + self.to_station)
+        return hash(str(self.from_station) + str(self.to_station))
+    def __str__(self):
+        return str(self.from_station) + ' -> ' + str(self.to_station)
 
 def find_subline(stations, route: Route, linename):
     ret = []
@@ -249,19 +259,21 @@ def find_subline(stations, route: Route, linename):
 def find_sublines(all_stations, routes, linename):
     sublines = {}
     for route in routes:
-        sublines[linename + " " + route.to_station] = find_subline(all_stations, route, linename)
+        sublines[route] = find_subline(all_stations, route, linename)
     return sublines
 
 def find_routes(switches, stations, linename):
     routes = []
-    if len(switches) == 1:
-        return [Route(stations[0], stations[-1])]
+    if len(switches) == 0:
+        return [Route(stations[0], stations[-1], linename)]
     for begin in switches:
         for end in switches:
             if begin != end:
-                route = Route(begin, end)
+                route = Route(begin, end, linename)
                 # nur wenn eine Route durch den Tunnel geht wollen wir von dort nach dort S Bahnen fahren lassen
-                if "Hauptbahnhof" in find_subline(stations, route, linename):
+                subline = find_subline(stations, route, linename)
+                subline_names = [station.name for station in subline]
+                if "Hauptbahnhof" in subline_names:
                     routes.append(route)
     return routes
 
@@ -272,8 +284,8 @@ class Line:
         self.all_stations = all_stations
         self.switches = switches
         #TODO
-        #self.routes = find_routes(self.switches, self.all_stations, self.name)
-        #self.sublines = find_sublines(self.all_stations, self.routes, self.name)
+        self.routes = find_routes(self.switches, self.all_stations, self.name)
+        self.sublines = find_sublines(self.all_stations, self.routes, self.name)
 
     def __str__(self):
         return self.name
