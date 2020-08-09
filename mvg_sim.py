@@ -115,9 +115,14 @@ class Network:
         #        start_switches = self.switches_per_line[start_line]
         #        dest_switches = self.switches_per_line[dest_line]
 
+class Config:
+    def __init__(self, tie_line: bool):
+        self.tie_line: bool = tie_line
+
 class Simulation:
-    def __init__(self, network: Network, nb_subway: int = 4, nb_sbahn: int = 8):
+    def __init__(self, network: Network, config: Config, nb_subway: int = 4, nb_sbahn: int = 8):
         self.network: Network = network
+        self.config: Config = config
         self.time: int = 0
         self.read_all_stations()
         self.read_all_lines()
@@ -139,7 +144,7 @@ class Simulation:
             switches: List[Station] = [self.all_stations[station] for station in switch_names] 
             self.all_lines.append(Line(line, all_stations, switches))
 
-    def read_trains(self, nb_subway, nb_sbahn):
+    def read_trains(self, nb_subway: int, nb_sbahn: int):
         self.trains: List[Train] = []
         nb_trains: int = 0
         for line in self.all_lines:
@@ -149,13 +154,15 @@ class Simulation:
             if line.is_subway:
                 nb_skip = nb_subway
             for i in range(0,len(stations), nb_skip):
-                train = Train( line, stations[i], direction, nb_trains)
+                train = Train(self.config, line, stations[i], direction, nb_trains)
+                line.add_train(train)
                 train.update()
                 nb_trains += 1
                 self.trains.append(train)
             direction = -1
             for i in range(len(stations) -1, 0, -nb_skip):
-                train = Train(line, stations[i], direction, nb_trains)
+                train = Train(self.config, line, stations[i], direction, nb_trains)
+                line.add_train(train)
                 train.update()
                 nb_trains += 1
                 self.trains.append(train)
@@ -290,12 +297,17 @@ class Line:
         self.is_subway: bool = self.name.startswith('U')
         self.all_stations: List[Station] = all_stations
         self.switches: List[Station] = switches
-        #TODO
+        # TODO Management von Sublinien einbauen, niedrige Prio
         self.routes: List[Route] = find_routes(self.switches, self.all_stations, self.name)
         self.sublines: Dict[Route, List[Station]] = find_sublines(self.all_stations, self.routes, self.name)
+        self.trains: List[Train] = []
 
     def __str__(self):
         return self.name
+
+    def add_train(self, train):
+        t: Train = train
+        self.trains.append(t)
 
 
 def find_next_station(current_station: Station, stations: List[Station], direction: int):
@@ -310,8 +322,9 @@ def find_next_station(current_station: Station, stations: List[Station], directi
     return stations[current_index], direction
 
 class Train:
-    def __init__(self, line:Line, starting_station: Station, direction: int, number: int):
+    def __init__(self, config: Config, line:Line, starting_station: Station, direction: int, number: int):
         self.number: int = number
+        self.config = config
         self.line: Line = line
         self.stations: List[Station] = line.all_stations #todo make subline available here
         self.current_station: Station = starting_station
@@ -330,12 +343,21 @@ class Train:
         self.current_station.register_arrival(self)
 
     def depart(self):
-        next_station_free = self.target_station.can_arrive(self)
+        next_station_free = self.can_depart()
         if next_station_free:
             self.current_station.register_departure(self)
             self.waiting = False
         else:
             self.delay[self.target_station] += 1
+
+    def can_depart(self):
+        if not self.config.tie_line:
+            return self.target_station.can_arrive(self)
+        else:
+            can_depart: bool = True
+            for train in self.line.trains:
+                can_depart = can_depart and train.can_depart
+            return can_depart
 
     def update(self):
         if self.waiting:
@@ -363,7 +385,8 @@ def find_neighbours(network: Network, station: str):
 
 def main():
     mvg = Network("MUC")
-    simulation = Simulation(mvg)
+    config = Config(tie_line=False)
+    simulation = Simulation(mvg, config)
     simulation.run()
 
 if __name__=="__main__":
