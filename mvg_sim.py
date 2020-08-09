@@ -186,13 +186,13 @@ class Simulation:
         #self.print_sublines()
 
     def delay_per_train(self):
-        for t in sorted(self.trains, key=lambda x : sum(x.delay.values())):
-            print(str(t) + " has " + str(sum(t.delay.values())) + " minutes delay.")
+        for t in sorted(self.trains, key=lambda x : x.delay):
+            print(str(t) + " has " + str(t.delay) + " minutes delay.")
 
     def delay_per_station(self):
         stations = defaultdict(int)
         for t in self.trains:
-            for station, delay in t.delay.items():
+            for station, delay in t.delay_per_station.items():
                 stations[station.name] += delay
         print({k:v for k,v in sorted(stations.items(), key=lambda item : item[1], reverse=True)})
 
@@ -333,7 +333,9 @@ class Train:
         self.target_station: Station = starting_station
         self.direction: int = direction
         self.waiting: bool = False # a train will always wait for one update call before leaving the station
-        self.delay = defaultdict(int)
+        self.delay_per_station = defaultdict(int)
+        self.delay_per_minute: List[int] = []
+        self.delay = 0
         self.updated = False
 
     def __str__(self):
@@ -351,7 +353,8 @@ class Train:
             self.current_station.register_departure(self)
             self.waiting = False
         else:
-            self.delay[self.target_station] += 1
+            self.delay_per_station[self.target_station] += 1
+            self.delay += 1
 
     def can_depart(self):
             return self.target_station.can_arrive(self)
@@ -359,11 +362,12 @@ class Train:
     def update(self):
         if self.updated: # nur einmal pro Minute der Simulation updaten.
             return
-        self.updated = True
         if self.waiting:
             self.depart()
         else:
             self.arrive()
+        self.delay_per_minute.append(self.delay)
+        self.updated = True
 
     def reset(self):
         self.updated = False
