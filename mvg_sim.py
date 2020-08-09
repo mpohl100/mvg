@@ -144,28 +144,25 @@ class Simulation:
             switches: List[Station] = [self.all_stations[station] for station in switch_names] 
             self.all_lines.append(Line(line, all_stations, switches))
 
+    def add_train(self, index: int, line, direction: int, nb_trains: int, start_minute: int):
+        l: Line = line
+        train = Train(self.config, l, l.all_stations[index], direction, nb_trains, start_minute)
+        l.add_train(train)
+        nb_trains += 1
+        self.trains.append(train)
+        return nb_trains
+
     def read_trains(self, nb_subway: int, nb_sbahn: int):
         self.trains: List[Train] = []
         nb_trains: int = 0
         for line in self.all_lines:
-            stations: List[Station] = line.all_stations
-            direction: int = 1
             nb_skip: int = nb_sbahn
             if line.is_subway:
                 nb_skip = nb_subway
-            for i in range(0,len(stations), nb_skip):
-                train = Train(self.config, line, stations[i], direction, nb_trains)
-                line.add_train(train)
-                train.update()
-                nb_trains += 1
-                self.trains.append(train)
-            direction = -1
-            for i in range(len(stations) -1, 0, -nb_skip):
-                train = Train(self.config, line, stations[i], direction, nb_trains)
-                line.add_train(train)
-                train.update()
-                nb_trains += 1
-                self.trains.append(train)
+            for i in range(0,len(line.all_stations), nb_skip):
+                start_minute = i*2 # TODO die richtigen Distanzen der Bahnhöfe einbauen
+                nb_trains = self.add_train(0, line, +1, nb_trains, start_minute)
+                nb_trains = self.add_train(-1, line, -1, nb_trains, start_minute)
 
     def update(self):
         self.time += 1
@@ -228,7 +225,7 @@ class Station:
 
     def can_arrive(self, train):
         tr: Train = train
-        relevant_lines: List[str] = self.lanes[train.current_station.name]
+        relevant_lines: List[str] = self.lanes[tr.current_station.name]
         can_arrive = True
         #reason = ""
         for t in self.trains:
@@ -324,7 +321,7 @@ def find_next_station(current_station: Station, stations: List[Station], directi
     return stations[current_index], direction
 
 class Train:
-    def __init__(self, config: Config, line:Line, starting_station: Station, direction: int, number: int):
+    def __init__(self, config: Config, line:Line, starting_station: Station, direction: int, number: int, start_minute:int):
         self.number: int = number
         self.config = config
         self.line: Line = line
@@ -337,6 +334,8 @@ class Train:
         self.delay_per_minute: List[int] = []
         self.delay = 0
         self.updated = False
+        self.start_minute = start_minute
+        self.minutes = 0
 
     def __str__(self):
         return str(self.number) + ": " + str(self.line) + " " + str(self.current_station) + " -> " + str(self.target_station)
@@ -362,12 +361,14 @@ class Train:
     def update(self):
         if self.updated: # nur einmal pro Minute der Simulation updaten.
             return
-        if self.waiting:
-            self.depart()
-        else:
-            self.arrive()
+        if self.minutes >= self.start_minute: 
+            if self.waiting:
+                self.depart()
+            else:
+                self.arrive()
         self.delay_per_minute.append(self.delay)
         self.updated = True
+        self.minutes += 1
 
     def reset(self):
         self.updated = False
@@ -393,7 +394,7 @@ def find_neighbours(network: Network, station: str):
 def main():
     mvg = Network("MUC")
     config = Config(tie_line=True)
-    simulation = Simulation(mvg, config, 4, 8)
+    simulation = Simulation(mvg, config, 5, 10)
     simulation.run()
 
 if __name__=="__main__":
