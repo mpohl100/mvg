@@ -170,6 +170,8 @@ class Simulation:
     def update(self):
         self.time += 1
         for t in self.trains:
+            t.reset()
+        for t in self.trains:
             t.update()
 
     def run(self):
@@ -332,6 +334,7 @@ class Train:
         self.direction: int = direction
         self.waiting: bool = False # a train will always wait for one update call before leaving the station
         self.delay = defaultdict(int)
+        self.updated = False
 
     def __str__(self):
         return str(self.number) + ": " + str(self.line) + " " + str(self.current_station) + " -> " + str(self.target_station)
@@ -351,19 +354,19 @@ class Train:
             self.delay[self.target_station] += 1
 
     def can_depart(self):
-        if not self.config.tie_line:
             return self.target_station.can_arrive(self)
-        else:
-            can_depart: bool = True
-            for train in self.line.trains:
-                can_depart = can_depart and train.can_depart
-            return can_depart
 
     def update(self):
+        if self.updated: # nur einmal pro Minute der Simulation updaten.
+            return
+        self.updated = True
         if self.waiting:
             self.depart()
         else:
             self.arrive()
+
+    def reset(self):
+        self.updated = False
 
 def find_neighbour(lanes: Dict[str, List[str]], stations: List[str], index, line):
     if index >= 0 and index < len(stations):
@@ -385,8 +388,8 @@ def find_neighbours(network: Network, station: str):
 
 def main():
     mvg = Network("MUC")
-    config = Config(tie_line=False)
-    simulation = Simulation(mvg, config)
+    config = Config(tie_line=True)
+    simulation = Simulation(mvg, config, 4, 8)
     simulation.run()
 
 if __name__=="__main__":
