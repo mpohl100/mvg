@@ -1,4 +1,4 @@
-from network import find_index_in_list
+from network.network import find_index_in_list
 
 from collections import defaultdict
 from typing import Dict, List

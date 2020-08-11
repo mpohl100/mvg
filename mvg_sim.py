@@ -1,5 +1,5 @@
-from network import Network
-from simulation import Simulation, Config
+from network.network import Network
+from lib.simulation import Simulation, Config
 
 def main():
     mvg = Network("MUC")

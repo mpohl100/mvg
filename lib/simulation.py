@@ -1,6 +1,6 @@
-from line import Line
-from station import Station
-from train import Train
+from lib.line import Line
+from lib.station import Station
+from lib.train import Train
 
 from typing import Dict, List
 from collections import defaultdict
