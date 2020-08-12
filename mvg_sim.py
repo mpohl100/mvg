@@ -3,8 +3,8 @@ from lib.simulation import Simulation, Config
 
 def main():
     mvg = Network("MUC")
-    config = Config(tie_line=True)
-    simulation = Simulation(mvg, config, 5, 10)
+    config = Config(10,20)
+    simulation = Simulation(mvg, config)
     simulation.run()
 
 if __name__=="__main__":

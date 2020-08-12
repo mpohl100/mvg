@@ -7,17 +7,18 @@ from typing import Dict, List
 from collections import defaultdict
 
 class Config:
-    def __init__(self, tie_line: bool):
-        self.tie_line: bool = tie_line
+    def __init__(self, nb_subway: int = 4, nb_sbahn: int = 8):
+        self.nb_subway = nb_subway
+        self.nb_sbahn = nb_sbahn
 
 class Simulation:
-    def __init__(self, network: 'Network', config: Config, nb_subway: int = 4, nb_sbahn: int = 8):
+    def __init__(self, network: 'Network', config: Config):
         self.network: 'Network' = network
         self.config: Config = config
         self.time: int = 0
         self.read_all_stations()
         self.read_all_lines()
-        self.read_trains(nb_subway, nb_sbahn)
+        self.read_trains()
 
     def read_all_stations(self):
         self.all_stations: Dict[str, Station] = {}
@@ -52,13 +53,13 @@ class Simulation:
         self.trains.append(train)
         return nb_trains
 
-    def read_trains(self, nb_subway: int, nb_sbahn: int):
+    def read_trains(self):
         self.trains: List[Train] = []
         nb_trains: int = 0
         for line in self.all_lines:
-            nb_skip: int = nb_sbahn
+            nb_skip: int = self.config.nb_sbahn
             if line.is_subway:
-                nb_skip = nb_subway
+                nb_skip = self.config.nb_subway
             for i in range(0,len(line.all_stations), nb_skip):
                 start_minute = i*2 # TODO die richtigen Distanzen der Bahnhöfe einbauen
                 nb_trains = self.add_train(0, line, +1, nb_trains, start_minute)

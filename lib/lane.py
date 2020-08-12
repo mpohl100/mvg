@@ -30,3 +30,12 @@ class Lane:
     
     def register_departure(self, train: 'Train'):
         self.trains.remove(train)
+
+    def is_free_for(self, train: 'Train'):
+        if len(self.trains) == 0:
+            return True
+        # ab jetzt sollte maximal ein Zug enthalten sein.
+        sum_direction = self.trains[0].direction + train.direction
+        if sum_direction == 0: # entgegengesetzte Richtungen
+            return True
+        return False
