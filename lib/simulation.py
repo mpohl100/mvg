@@ -1,3 +1,4 @@
+from lib.lane import Lane
 from lib.line import Line
 from lib.station import Station
 from lib.train import Train
@@ -24,6 +25,13 @@ class Simulation:
             self.all_stations[station] = Station(station, self)
         for _, station in self.all_stations.items():
             station.deduce_lanes()
+        self.all_lanes: List[Lane] = []
+        for _, station in self.all_stations.items():
+            self.all_lanes.extend([lane for _, lane in station.lanes.items()])
+        # Test der Integrität des Netzwerks:
+        set_lanes = set(self.all_lanes)
+        if len(set_lanes) != len(self.all_lanes):
+            raise Exception("Nicht einzigartige Lanes im Netzwerk vorhanden.")
 
     def read_all_lines(self):
         self.all_lines: List[Line] = []
