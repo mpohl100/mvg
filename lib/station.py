@@ -1,5 +1,5 @@
 from network.network import find_index_in_list
-
+from lib.lane import Lane
 from typing import Dict, List   
 
 
@@ -12,46 +12,53 @@ def find_neighbour(lanes: Dict[str, List[str]], stations: List[str], index, line
             lanes[neighbour_station] = [line]
     
 def find_neighbours(network: 'Network', station: str):
-    lanes: Dict[str, List[str]] = {}
+    neighbours: Dict[str, List[str]] = {}
     for line, stations in network.all_lines.items():
         index: int = find_index_in_list(stations, station)
         if index == -1:
             continue
-        find_neighbour(lanes, stations, index - 1, line)
-        find_neighbour(lanes, stations, index + 1, line)
+        find_neighbour(neighbours, stations, index - 1, line)
+        find_neighbour(neighbours, stations, index + 1, line)
+    return neighbours
+
+def find_lanes(simulation: 'Simulation', station: str):
+    neighbours = find_neighbours(simulation.network, station)
+    lanes: Dict[str, 'Lane'] = {}
+    for neighbour_station, lines in neighbours.items():
+        lanes[neighbour_station] = Lane(simulation.all_stations[station], simulation.all_stations[neighbour_station], lines)
     return lanes
 
 class Station:
     def __init__(self, name: str, sim: 'Simulation'):
         self.name: str = name
         self.sim: 'Simulation' = sim
-        self.lanes: Dict[str, List[str]] = find_neighbours(self.sim.network, name)
-        self.trains: List[Train] = []
+        self.lanes: Dict[str, List[str]] = {}
+        self.trains: List['Train'] = []
+
+    def deduce_lanes(self):
+        self.lanes = find_lanes(self.sim, self.name)
 
     def __str__(self):
         return self.name
 
-    def register_arrival(self, train):
-        t: Train = train
-        self.trains.append(t)
+    def register_arrival(self, train: 'Train'):
+        self.trains.append(train)
 
-    def register_departure(self, train):
-        t: Train = train
-        self.trains.remove(t)
+    def register_departure(self, train: 'Train'):
+        self.trains.remove(train)
 
-    def can_arrive(self, train):
-        tr: Train = train
-        relevant_lines: List[str] = self.lanes[tr.current_station.name]
+    def can_arrive(self, train: 'Train'):
+        relevant_lines: List[str] = self.lanes[train.current_station.name].lines
         can_arrive = True
         #reason = ""
         for t in self.trains:
             # Die Zielstation der Blockierenden darf nicht meine aktuelle Station sein.
             #TODO auf Line Objekte umstellen
-            if t.line.name in relevant_lines and t.target_station != tr.current_station and t.line.is_subway == tr.line.is_subway:
+            if t.line.name in relevant_lines and t.target_station != train.current_station and t.line.is_subway == train.line.is_subway:
                 #reason = str(t)
                 can_arrive = False
         #if tr.line:
-        #     print("Can train " + str(tr) + " arrive at " + str(self) + "?")
+        #     print("Can train " + str(train) + " arrive at " + str(self) + "?")
         #     if can_arrive:
         #         print("    Yes.")
         #     else: 

@@ -22,6 +22,8 @@ class Simulation:
         self.all_stations: Dict[str, Station] = {}
         for station in self.network.all_stations:
             self.all_stations[station] = Station(station, self)
+        for _, station in self.all_stations.items():
+            station.deduce_lanes()
 
     def read_all_lines(self):
         self.all_lines: List[Line] = []
