@@ -7,9 +7,11 @@ from typing import Dict, List
 from collections import defaultdict
 
 class Config:
-    def __init__(self, nb_subway: int = 4, nb_sbahn: int = 8):
-        self.nb_subway = nb_subway
-        self.nb_sbahn = nb_sbahn
+    def __init__(self, subway_stride: int = 4, sbahn_stride: int = 8, minutes: int = 1440, verbosity: int = 0):
+        self.nb_subway = subway_stride
+        self.nb_sbahn = sbahn_stride
+        self.minutes = minutes
+        self.verbosity = verbosity
 
 class Simulation:
     def __init__(self, network: 'Network', config: Config):
@@ -73,9 +75,10 @@ class Simulation:
             t.update()
 
     def run(self):
-        for _ in range(0,24*60):
+        for _ in range(0, self.config.minutes):
             self.update()
-        self.print_stats()
+        if self.config.verbosity >= 1:
+            self.print_stats()
 
     def print_stats(self):
         self.delay_per_train()
@@ -93,6 +96,13 @@ class Simulation:
             for station, delay in t.delay_per_station.items():
                 stations[station.name] += delay
         print({k:v for k,v in sorted(stations.items(), key=lambda item : item[1], reverse=True)})
+
+    def sum_delay(self):
+        sum_delay = 0
+        for t in self.trains:
+            for _, delay in t.delay_per_station.items():
+                sum_delay += delay
+        return sum_delay       
 
     def print_lanes(self):
         for _, station in self.all_stations.items():
