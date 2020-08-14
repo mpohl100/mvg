@@ -34,17 +34,33 @@ class Schedule:
             print(offset)
             positive_range = list(range(main_index + offset, len(line), +takt))
             negative_range = list(range(main_index + offset, -len(line), -takt))
-            print(positive_range)
-            print(negative_range)
+            #print(positive_range)
+            #print(negative_range)
+            indeces = set(positive_range + negative_range)
+            indeces = sorted(indeces, key=lambda x: abs(x))
+            indeces = list(indeces)
+            print(indeces)
+            #print([line[i] + ' ' + str(int(i / abs(i)) if i != 0 else str(0))  for i in indeces])
+            index_plus_one = -100000
+            for i in indeces:
+                if i >= 0:
+                    index_plus_one = i
+                    break
+            index_minues_one = -1000000
+            for i in indeces:
+                if i < 0:
+                    index_minues_one = i
+                    break
+            # zum Zeitpunkt null wollen wir, dass unsere Bahnen an den indizierten Bahnhöfen sind 
 
 
 
 if __name__=="__main__":
     from network import Network
     network = [
-        ["Ostbahnhof","Leuchtenbergring", "BergamLaim", "Riem", "Feldkirchen"],
-        ["Leuchtenbergring", "BergamLaim", "Gronsdorf", "Haar"],
-        ["Ostabhnhof","Leuchtenbergring", "BergamLaim", "Fantasie", "Land", "Trudering"]
+        ["Leuchtenbergring", "BergamLaim", "Riem", "Feldkirchen", "Heimstetten", "Grub", "Poing"],
+        ["Leuchtenbergring", "BergamLaim", "Gronsdorf", "Haar", "Zorneding"],
+        [ "Fantasie", "Land", "Trudering", "Ostbahnhof","Leuchtenbergring", "BergamLaim"]
     ]
     schedule = Schedule(network)
     schedule.calc()
