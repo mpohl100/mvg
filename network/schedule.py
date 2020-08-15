@@ -15,19 +15,36 @@ def get_offsets(nb: int):
     return offsets
 
 class StartMinute:
-    def __init__(self, linename, start_minute_p1, nb_p1, start_minute_m1, nb_m1):
+    def __init__(self, linename, start_minute_p1, nb_p1, start_minute_m1, nb_m1, takt):
         self.linename:str = linename
         self.start_minute_p1 = start_minute_p1
         self.nb_p1 = nb_p1
         self.start_minute_m1 = start_minute_m1
         self.nb_m1 = nb_m1
+        self.takt = takt
 
     def __str__(self):
-        return self.linename + ": p1 " + str(self.start_minute_p1) + " " + str(self.nb_p1) + "; m1 " + str(self.start_minute_m1) + " " + str(self.nb_m1) 
+        return self.linename + ": p1 " + str(self.start_minute_p1) + " " + str(self.nb_p1) + "; m1 " + str(self.start_minute_m1) + " " + str(self.nb_m1) + "; takt: " + str(self.takt)
  
 
+def find_subnetworks(lines: Dict[str, List[str]]):
+    return [lines]
+
+
 class Schedule:
-    def __init__(self, lines: List[List[str]]):
+    def __init__(self, lines: Dict[str, List[str]]):
+        self.subnetworks = find_subnetworks(lines)
+        self.subschedules = [SubSchedule(subnet) for subnet in self.subnetworks]
+
+    def calc(self):
+        ret: Dict[str, StartMinute] = {}
+        for subschedule in self.subschedules:
+            subminutes = subschedule.calc()
+            ret = {**ret, **subminutes}
+        return ret
+
+class SubSchedule:
+    def __init__(self, lines: Dict[str, List[str]]):
         self.lines = lines
         self.occurences = defaultdict(int)
         for _, line in self.lines.items():
@@ -36,8 +53,7 @@ class Schedule:
         self.main_station_occurence = max(self.occurences.items(), key=itemgetter(1))
 
     def calc(self):
-        start_minutes: Dict[int, Tuple(int, int, int, int)] = {}
-
+        start_minutes: Dict[str, StartMinute] = {}
         main_station = self.main_station_occurence[0]
         takt = self.main_station_occurence[1]
         offsets = get_offsets(len(self.lines))
@@ -82,7 +98,7 @@ class Schedule:
             #print(nb_minus_one)
             #print(index_plus_one)
             #print(nb_plus_one) 
-            start_minutes[linename] = StartMinute(linename, start_minute_plus_one, nb_plus_one, start_minute_minus_one, nb_minus_one)
+            start_minutes[linename] = StartMinute(linename, start_minute_plus_one, nb_plus_one, start_minute_minus_one, nb_minus_one, takt*2)
         return start_minutes
 
 if __name__=="__main__":
@@ -90,7 +106,8 @@ if __name__=="__main__":
     network = {
         'S1':["Leuchtenbergring", "BergamLaim", "Riem", "Feldkirchen"],
         'S2': ["Leuchtenbergring", "BergamLaim", "Gronsdorf", "Haar", "Zorneding"],
-        'S3': ["Fantasie", "Land", "Trudering", "Ostbahnhof","Leuchtenbergring", "BergamLaim"]
+        'S3': ["Fantasie", "Land", "Trudering", "Ostbahnhof","Leuchtenbergring", "BergamLaim"],
+        'S4': ["a", "b", "c", "d"],
     }
     schedule = Schedule(network)
     start_minutes = schedule.calc()
