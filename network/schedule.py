@@ -27,13 +27,33 @@ class StartMinute:
         return self.linename + ": p1 " + str(self.start_minute_p1) + " " + str(self.nb_p1) + "; m1 " + str(self.start_minute_m1) + " " + str(self.nb_m1) + "; takt: " + str(self.takt)
  
 
-def find_subnetworks(lines: Dict[str, List[str]]):
-    return [lines]
+def is_connected(line1: Tuple[str, List[str]], line2: Tuple[str, List[str]]):
+    stations1 = set(line1[1])
+    stations2 = set(line2[1])
+    return len(stations1.intersection(stations2)) >= 2
+
+def find_subnetworks(lines: List[Tuple[str, List[str]]]):
+    if len(lines) == 0:
+        return [] # base case of recursion
+    belongs_to_graph = [lines[0]]
+    to_be_examined = []
+    for line in lines[1:]:
+        if is_connected(belongs_to_graph[0], line):
+            belongs_to_graph.append(line)
+        else:
+            to_be_examined.append(line)
+    ret = [belongs_to_graph]
+    other_graphs = find_subnetworks(to_be_examined)
+    if len(other_graphs) > 0:
+        ret = ret + other_graphs
+    return ret
 
 
 class Schedule:
     def __init__(self, lines: Dict[str, List[str]]):
-        self.subnetworks = find_subnetworks(lines)
+        list_of_lines = [(line,stations) for line, stations in lines.items()]
+        self.subnetworks = find_subnetworks(list_of_lines)
+        self.subnetworks = [{line:stations for line, stations in subnet} for subnet in self.subnetworks]
         self.subschedules = [SubSchedule(subnet) for subnet in self.subnetworks]
 
     def calc(self):
@@ -107,7 +127,7 @@ if __name__=="__main__":
         'S1':["Leuchtenbergring", "BergamLaim", "Riem", "Feldkirchen"],
         'S2': ["Leuchtenbergring", "BergamLaim", "Gronsdorf", "Haar", "Zorneding"],
         'S3': ["Fantasie", "Land", "Trudering", "Ostbahnhof","Leuchtenbergring", "BergamLaim"],
-        'S4': ["a", "b", "c", "d"],
+        'S4': ["a", "b", "c", "d", "Fantasie", "Land"],
     }
     schedule = Schedule(network)
     start_minutes = schedule.calc()
