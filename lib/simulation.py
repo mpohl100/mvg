@@ -2,12 +2,14 @@ from lib.lane import Lane
 from lib.line import Line
 from lib.station import Station
 from lib.train import Train
+from network.schedule import Schedule, StartMinute
 
 from typing import Dict, List
 from collections import defaultdict
 
 class Config:
-    def __init__(self, subway_stride: int = 4, sbahn_stride: int = 8, minutes: int = 1440, verbosity: int = 0):
+    def __init__(self, subway_stride: int = 4, sbahn_stride: int = 8, minutes: int = 1440, verbosity: int = 0, deduce_schedule: bool = False):
+        self.deduce_schedule = deduce_schedule
         self.nb_subway = subway_stride
         self.nb_sbahn = sbahn_stride
         self.minutes = minutes
@@ -20,7 +22,10 @@ class Simulation:
         self.time: int = 0
         self.read_all_stations()
         self.read_all_lines()
-        self.read_trains()
+        if not self.config.deduce_schedule:
+            self.read_trains()
+        else:
+            self.deduce_trains()
 
     def read_all_stations(self):
         self.all_stations: Dict[str, Station] = {}
@@ -66,6 +71,23 @@ class Simulation:
                 start_minute = i*2 # TODO die richtigen Distanzen der Bahnhöfe einbauen
                 nb_trains = self.add_train(0, line, +1, nb_trains, start_minute)
                 nb_trains = self.add_train(-1, line, -1, nb_trains, start_minute)
+
+    def deduce_trains(self):
+        self.trains: List[Train] = []
+        dict_of_lines = {line.name: line.all_stations for line in self.all_lines}
+        schedule = Schedule(dict_of_lines)
+        start_minutes = schedule.calc()
+        nb_trains = 0
+        for line in self.all_lines:
+            start_minute = start_minutes[line.name]
+            for i in range(0, start_minute.nb_p1):
+                self.add_train(0, line, 1, nb_trains, start_minute.start_minute_p1 + i*start_minute.takt)
+                nb_trains += 1
+            for i in range(0, start_minute.nb_m1):
+                self.add_train(-1, line, -1, nb_trains, start_minute.start_minute_m1 + i*start_minute.takt)
+                nb_trains += 1           
+
+
 
     def update(self):
         self.time += 1

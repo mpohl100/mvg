@@ -8,7 +8,7 @@ def main():
     minutes = list(range(60, 1440, 60))
     delays = []
     for minute in minutes:
-        config = Config(5,10, minute)
+        config = Config(5,10, minute, 0, True)
         simulation = Simulation(mvg, config)
         simulation.run()
         delays.append(simulation.sum_delay())
