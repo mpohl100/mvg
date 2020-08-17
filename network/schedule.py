@@ -120,17 +120,5 @@ class SubSchedule:
             #print(nb_plus_one) 
             start_minutes[linename] = StartMinute(linename, start_minute_plus_one, nb_plus_one, start_minute_minus_one, nb_minus_one, takt*2)
         return start_minutes
-
-if __name__=="__main__":
-    from network import Network
-    network = {
-        'S1':["Leuchtenbergring", "BergamLaim", "Riem", "Feldkirchen"],
-        'S2': ["Leuchtenbergring", "BergamLaim", "Gronsdorf", "Haar", "Zorneding"],
-        'S3': ["Fantasie", "Land", "Trudering", "Ostbahnhof","Leuchtenbergring", "BergamLaim"],
-        'S4': ["a", "b", "c", "d", "Fantasie", "Land"],
-    }
-    schedule = Schedule(network)
-    start_minutes = schedule.calc()
-    print([str(s) for _, s in start_minutes.items()])
         
         

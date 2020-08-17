@@ -75,11 +75,11 @@ class Simulation:
     def deduce_trains(self):
         self.trains: List[Train] = []
         dict_of_lines = {line.name: line.all_stations for line in self.all_lines}
-        schedule = Schedule(dict_of_lines)
-        start_minutes = schedule.calc()
+        self.schedule = Schedule(dict_of_lines)
+        self.start_minutes = self.schedule.calc()
         nb_trains = 0
         for line in self.all_lines:
-            start_minute = start_minutes[line.name]
+            start_minute = self.start_minutes[line.name]
             for i in range(0, start_minute.nb_p1):
                 self.add_train(0, line, 1, nb_trains, start_minute.start_minute_p1 + i*start_minute.takt)
                 nb_trains += 1
@@ -105,6 +105,8 @@ class Simulation:
     def print_stats(self):
         self.delay_per_train()
         self.delay_per_station()
+        import json
+        print([str(s) for _, s in self.start_minutes.items()])
         #self.print_lanes()
         #self.print_sublines()
 

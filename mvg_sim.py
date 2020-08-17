@@ -5,10 +5,10 @@ import matplotlib.pyplot as plt
 
 def main():
     mvg = Network("MUC")
-    minutes = list(range(60, 1440, 60))
+    minutes = list(range(60, 120, 60))
     delays = []
     for minute in minutes:
-        config = Config(5,10, minute, 0, True)
+        config = Config(5,10, minute, 1, True)
         simulation = Simulation(mvg, config)
         simulation.run()
         delays.append(simulation.sum_delay())

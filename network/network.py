@@ -66,10 +66,21 @@ def accumulate_stations(stations: List[str], start: str, dest: str):
     return ret
 
 class Network:
-    def __init__(self, city):
-        self.all_info: Dict[str, Dict[str, List[str]]] = read_network(city)
+    def __init__(self, city, testnetwork=None):
+        self.all_info = self.get_all_info(city, testnetwork)
         self.all_lines: Dict[str, List[str]] = {k:v['all_stations'] for k,v in self.all_info.items()}
         self.all_switches: Dict[str, List[str]] = {k:v['switches'] for k,v in self.all_info.items()}
+        self.deduce_line_data()
+
+    def get_all_info(self,city, testnetwork):
+        all_info: Dict[str, Dict[str, List[str]]] = {} 
+        if not testnetwork:
+            all_info = read_network(city)
+        else:
+            all_info = {k: {'all_stations': v, 'switches': []} for k,v in testnetwork.items()}
+        return all_info
+
+    def deduce_line_data(self):
         self.all_stations: List[str] = find_all_stations(self.all_lines)
         self.lines_per_station: Dict[str, List[str]] = index_network_by_line(self.all_lines)
         self.switches_per_line: Dict[str, List[str]] = find_all_switches(self.all_lines, self.lines_per_station)
