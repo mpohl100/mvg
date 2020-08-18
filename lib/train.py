@@ -35,7 +35,11 @@ class Train:
         return str(self.number) + ": " + str(self.line) + " " + str(self.current_station) + " -> " + str(self.target_station)
 
     def arrive(self):
-        # Am Anfang der Simulation sind die current und die target station die Selben, deswegen gibt es in diesem Fall noch keine Lane
+        if not self.target_station.can_arrive(self):
+            self.delay_per_station[self.target_station] += 1
+            self.delay += 1
+            return         
+        # Am Anfang der Simulation sind die current und die target station die Selben, deswegen gibt es in diesem Fall noch keine Lane   
         if self.current_station.name in self.target_station.lanes:
             lane = self.target_station.lanes[self.current_station.name]
             lane.register_departure(self)
@@ -57,7 +61,7 @@ class Train:
 
     def can_depart(self):
             lane = self.target_station.lanes[self.current_station.name]
-            return lane.is_free_for(self) and self.target_station.can_arrive(self)
+            return lane.is_free_for(self)
 
     def update(self):
         if self.updated: # nur einmal pro Minute der Simulation updaten.

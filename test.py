@@ -15,7 +15,7 @@ if __name__=="__main__":
         'S1':["Leuchtenbergring", "BergamLaim", "Riem", "Feldkirchen"],
         'S2': ["Leuchtenbergring", "BergamLaim", "Gronsdorf", "Haar", "Zorneding"],
         'S3': ["Fantasie", "Land", "Trudering", "Ostbahnhof","Leuchtenbergring", "BergamLaim"],
-        #'S4': ["a", "b", "c", "d", "Fantasie", "Land"],
+        'S4': ["a", "b", "c", "d", "Fantasie", "Land"],
     }
     test_schedule(net)
     network = Network("TEST", net)

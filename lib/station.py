@@ -48,6 +48,8 @@ class Station:
         self.trains.remove(train)
 
     def can_arrive(self, train: 'Train'):
+        if not train.current_station.name in self.lanes:
+            return len(self.trains) == 0
         relevant_lines: List[str] = self.lanes[train.current_station.name].lines
         can_arrive = True
         #reason = ""
