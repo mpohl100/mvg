@@ -5,7 +5,7 @@ import matplotlib.pyplot as plt
 
 def main():
     mvg = Network("MUC")
-    minutes = list(range(60, 120, 60))
+    minutes = list(range(60, 1440, 60))
     delays = []
     for minute in minutes:
         config = Config(5,10, minute, 1, True)

@@ -22,10 +22,13 @@ class Simulation:
         self.time: int = 0
         self.read_all_stations()
         self.read_all_lines()
+        self.trains: List[Train] = []
+        self.start_minutes = {}
         if not self.config.deduce_schedule:
             self.read_trains()
         else:
-            self.deduce_trains()
+            self.deduce_trains(True)
+            self.deduce_trains(False)
 
     def read_all_stations(self):
         self.all_stations: Dict[str, Station] = {}
@@ -72,13 +75,14 @@ class Simulation:
                 nb_trains = self.add_train(0, line, +1, nb_trains, start_minute)
                 nb_trains = self.add_train(-1, line, -1, nb_trains, start_minute)
 
-    def deduce_trains(self):
-        self.trains: List[Train] = []
-        dict_of_lines = {line.name: line.all_stations for line in self.all_lines}
+    def deduce_trains(self, is_subway):
+        dict_of_lines = {}
+        start_letter = 'U' if is_subway else 'S'
+        dict_of_lines = {line.name: line.all_stations for line in self.all_lines if line.name.startswith(start_letter)} 
         self.schedule = Schedule(dict_of_lines)
-        self.start_minutes = self.schedule.calc()
+        self.start_minutes.update(self.schedule.calc())
         nb_trains = 0
-        for line in self.all_lines:
+        for line in [ line for line in self.all_lines if line.name.startswith(start_letter)]:
             start_minute = self.start_minutes[line.name]
             for i in range(0, start_minute.nb_p1):
                 self.add_train(0, line, 1, nb_trains, start_minute.start_minute_p1 + i*start_minute.takt)
