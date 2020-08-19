@@ -12,7 +12,7 @@ def find_next_station(current_station: 'Station', stations: List['Station'], dir
     if current_index >= len(stations):
         direction *= -1
         current_index -= 2
-    return stations[current_index], direction
+    return stations[current_index], direction, stations[-1 if direction == 1 else 0]
 
 class Train:
     def __init__(self, config: 'Config', line:'Line', starting_station: 'Station', direction: int, number: int, start_minute:int):
@@ -23,6 +23,7 @@ class Train:
         self.current_station: 'Station' = starting_station
         self.target_station: 'Station' = starting_station
         self.direction: int = direction
+        self.end_station = self.stations[-1 if self.direction == 1 else 0]
         self.waiting: bool = False # a train will always wait for one update call before leaving the station
         self.delay_per_station = defaultdict(int)
         self.delay_per_minute: List[int] = []
@@ -32,7 +33,7 @@ class Train:
         self.minutes = 0
 
     def __str__(self):
-        return str(self.number) + ": " + str(self.line) + " " + str(self.current_station) + " -> " + str(self.target_station)
+        return str(self.number) + ": " + str(self.line) + " " + str(self.end_station) + " (" + str(self.current_station) + ")"
 
     def arrive(self):
         if not self.target_station.can_arrive(self):
@@ -45,7 +46,7 @@ class Train:
             lane.register_departure(self)
         self.waiting = True
         self.current_station = self.target_station
-        self.target_station, self.direction = find_next_station(self.current_station, self.stations, self.direction)
+        self.target_station, self.direction, self.end_station = find_next_station(self.current_station, self.stations, self.direction)
         self.current_station.register_arrival(self)
 
     def depart(self):
