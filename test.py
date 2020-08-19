@@ -12,10 +12,10 @@ def test_schedule(network):
 
 if __name__=="__main__":
     net = {
-        'S1':["Leuchtenbergring", "BergamLaim", "Riem", "Feldkirchen"],
-        'S2': ["Leuchtenbergring", "BergamLaim", "Gronsdorf", "Haar", "Zorneding"],
-        'S3': ["Fantasie", "Land", "Trudering", "Ostbahnhof","Leuchtenbergring", "BergamLaim"],
-        'S4': ["a", "b", "c", "d", "Fantasie", "Land"],
+        'S1':["e", "Leuchtenbergring", "BergamLaim", "Riem", "Feldkirchen"],
+        'S2': ["f", "Leuchtenbergring", "BergamLaim", "Gronsdorf", "Haar", "Zorneding"],
+        'S3': ["Fantasie", "Land", "Trudering", "Ostbahnhof","Leuchtenbergring", "BergamLaim", "g"],
+        'S4': ["a", "b", "c", "d", "Fantasie", "Land", "h"],
     }
     test_schedule(net)
     network = Network("TEST", net)

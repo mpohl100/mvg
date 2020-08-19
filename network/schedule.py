@@ -15,16 +15,16 @@ def get_offsets(nb: int):
     return offsets
 
 class StartMinute:
-    def __init__(self, linename, start_minute_p1, nb_p1, start_minute_m1, nb_m1, takt):
+    def __init__(self, linename: str, start_minute_p1: int, nb_p1: int, start_minute_m1: int, nb_m1: int, takt: int):
         self.linename:str = linename
-        self.start_minute_p1 = start_minute_p1
-        self.nb_p1 = nb_p1
-        self.start_minute_m1 = start_minute_m1
-        self.nb_m1 = nb_m1
-        self.takt = takt
+        self.start_minute_p1: int = start_minute_p1 # start at minute of the simulation
+        self.nb_p1: int = nb_p1                     # number of trains to start at start_minute_p1 + i * takt
+        self.start_minute_m1: int = start_minute_m1 # start at minute of the simulation
+        self.nb_m1: int = nb_m1                     # number of trains to start at start_minute_m1 + i * takt
+        self.takt: int = takt                       # Takt
 
     def __str__(self):
-        return self.linename + ": p1 " + str(self.start_minute_p1) + " " + str(self.nb_p1) + "; m1 " + str(self.start_minute_m1) + " " + str(self.nb_m1) + "; takt: " + str(self.takt)
+        return self.linename + ": +1 (start " + str(self.start_minute_p1) + " nb " + str(self.nb_p1) + "); -1 (start " + str(self.start_minute_m1) + " nb " + str(self.nb_m1) + "); takt: " + str(self.takt)
  
 
 def is_connected(line1: Tuple[str, List[str]], line2: Tuple[str, List[str]]):
