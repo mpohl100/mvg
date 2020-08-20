@@ -4,7 +4,7 @@ from network.network import Network
 
 def main():
     network = Network("MUC")
-    graph = network.generate_graphviz()
+    graph = network.generate_graphviz(line="S2")
     graph.render()
     master = Tk()
     w = Canvas(master, width=700, height=600)

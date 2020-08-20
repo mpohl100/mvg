@@ -124,19 +124,24 @@ class Network:
         #        start_switches = self.switches_per_line[start_line]
         #        dest_switches = self.switches_per_line[dest_line]
 
-    def generate_graphviz(self):
+    def generate_graphviz(self, line=None):
         import graphviz as gv
+        #TODO auf networkx umstellen, wegen Farbupdatefähigkeit
+        #import networkx as nx
         graph = gv.Graph(format="png", filename=self.city)
-        for station in self.all_stations:
+        stations = self.all_stations if line is None else self.all_lines[line]
+        for station in stations:
             graph.node(station, label=station)
         inserted_edges = set()
-        for _, line in self.all_lines.items():
-            for i, station in enumerate(line[0:-1]):
-                if (station, line[i+1]) in inserted_edges:
+        for name, line_stations in self.all_lines.items():
+            if line and line != name:
+                continue
+            for i, station in enumerate(line_stations[0:-1]):
+                if (station, line_stations[i+1]) in inserted_edges:
                     continue
-                inserted_edges.add((station, line[i+1]))
-                inserted_edges.add((line[i+1], station))
-                graph.edge(station, line[i+1])
-                graph.edge(line[i+1], station)
+                inserted_edges.add((station, line_stations[i+1]))
+                inserted_edges.add((line_stations[i+1], station))
+                graph.edge(station, line_stations[i+1])
+                graph.edge(line_stations[i+1], station)
         return graph
 
