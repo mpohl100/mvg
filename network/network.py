@@ -67,6 +67,7 @@ def accumulate_stations(stations: List[str], start: str, dest: str):
 
 class Network:
     def __init__(self, city, testnetwork=None):
+        self.city = city
         self.all_info = self.get_all_info(city, testnetwork)
         self.all_lines: Dict[str, List[str]] = {k:v['all_stations'] for k,v in self.all_info.items()}
         self.all_switches: Dict[str, List[str]] = {k:v['switches'] for k,v in self.all_info.items()}
@@ -122,3 +123,20 @@ class Network:
         #    for dest_line in dest_lines:
         #        start_switches = self.switches_per_line[start_line]
         #        dest_switches = self.switches_per_line[dest_line]
+
+    def generate_graphviz(self):
+        import graphviz as gv
+        graph = gv.Graph(format="png", filename=self.city)
+        for station in self.all_stations:
+            graph.node(station, label=station)
+        inserted_edges = set()
+        for _, line in self.all_lines.items():
+            for i, station in enumerate(line[0:-1]):
+                if (station, line[i+1]) in inserted_edges:
+                    continue
+                inserted_edges.add((station, line[i+1]))
+                inserted_edges.add((line[i+1], station))
+                graph.edge(station, line[i+1])
+                graph.edge(line[i+1], station)
+        return graph
+
