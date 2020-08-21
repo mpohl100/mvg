@@ -159,8 +159,17 @@ class Simulation:
         if self.graph is None:
             self.graph = self.network.generate_networkx()
             self.positions = nx.spring_layout(self.graph)
+        plt.cla()
         nx.draw_networkx(self.graph, self.positions, with_labels=False)
+        full_stations = []
+        for name, station in self.all_stations.items():
+            if len(station.trains) > 0:
+                full_stations.append(name)
+        for lane in self.all_lanes:
+            if len(lane.trains) > 0:
+                full_stations.append(lane.from_station.name)
+        nx.draw_networkx_nodes(self.graph, self.positions, nodelist=full_stations, node_color='red')
+
         plt.title('Graph Representation of Rail Map', size=15)
-        #plt.cla()
         plt.draw()
         plt.pause(0.001)
