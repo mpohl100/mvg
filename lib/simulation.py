@@ -8,12 +8,13 @@ from typing import Dict, List
 from collections import defaultdict
 
 class Config:
-    def __init__(self, subway_stride: int = 4, sbahn_stride: int = 8, minutes: int = 1440, verbosity: int = 0, deduce_schedule: bool = False):
+    def __init__(self, subway_stride: int = 4, sbahn_stride: int = 8, minutes: int = 1440, verbosity: int = 0, deduce_schedule: bool = False, show_net: bool = False):
         self.deduce_schedule = deduce_schedule
         self.nb_subway = subway_stride
         self.nb_sbahn = sbahn_stride
         self.minutes = minutes
         self.verbosity = verbosity
+        self.show_net = show_net
 
 class Simulation:
     def __init__(self, network: 'Network', config: Config):
@@ -29,6 +30,7 @@ class Simulation:
         else:
             self.deduce_trains(True)
             self.deduce_trains(False)
+        self.graph = None
 
     def read_all_stations(self):
         self.all_stations: Dict[str, Station] = {}
@@ -99,8 +101,15 @@ class Simulation:
             t.reset()
         for t in self.trains:
             t.update()
+        if self.config.show_net:
+            self.print_net()
 
     def run(self):
+        if self.config.show_net:
+            import matplotlib.pyplot as plt
+            plt.ion()
+            plt.show()
+            print("show plot")
         for _ in range(0, self.config.minutes):
             self.update()
         if self.config.verbosity >= 1:
@@ -143,3 +152,15 @@ class Simulation:
             print(line)
             for subroute in line.sublines.keys():
                 print('    ' + str(subroute))
+
+    def print_net(self):
+        import matplotlib.pyplot as plt
+        import networkx as nx
+        if self.graph is None:
+            self.graph = self.network.generate_networkx()
+            self.positions = nx.spring_layout(self.graph)
+        nx.draw_networkx(self.graph, self.positions, with_labels=False)
+        plt.title('Graph Representation of Rail Map', size=15)
+        #plt.cla()
+        plt.draw()
+        plt.pause(0.001)
