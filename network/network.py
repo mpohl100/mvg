@@ -146,7 +146,6 @@ class Network:
         return graph
 
     def generate_networkx(self, line=None):
-        #TODO auf networkx umstellen, wegen Farbupdatefähigkeit
         import networkx as nx
         graph = nx.Graph()
         stations = self.all_stations if line is None else self.all_lines[line]

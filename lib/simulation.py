@@ -16,6 +16,9 @@ class Config:
         self.verbosity = verbosity
         self.show_net = show_net
 
+def interpolate(from_pos, to_pos, t):
+    return from_pos + t * (to_pos-from_pos)
+
 class Simulation:
     def __init__(self, network: 'Network', config: Config):
         self.network: 'Network' = network
@@ -31,6 +34,8 @@ class Simulation:
             self.deduce_trains(True)
             self.deduce_trains(False)
         self.graph = None
+        self.positions = None
+        self.minute = -1
 
     def read_all_stations(self):
         self.all_stations: Dict[str, Station] = {}
@@ -110,7 +115,7 @@ class Simulation:
             plt.ion()
             plt.show()
             print("show plot")
-        for _ in range(0, self.config.minutes):
+        for self.minute in range(0, self.config.minutes):
             self.update()
         if self.config.verbosity >= 1:
             self.print_stats()
@@ -185,11 +190,22 @@ class Simulation:
         if self.graph is None:
             self.graph = self.network.generate_networkx()
             self.positions = nx.spring_layout(self.graph)
+            for train in self.trains:
+                self.graph.add_node("trainnr" + str(train.number), label=train.line.name)
+                self.positions["trainnr" + str(train.number)] = (0,0)
         colors_of_stations = self.get_colors_of_stations()
-        plt.cla()
-        nx.draw_networkx(self.graph, self.positions, with_labels=False)
-        for color, stations in colors_of_stations.items():
-            nx.draw_networkx_nodes(self.graph, self.positions, nodelist=stations, node_color=color)
-        plt.title('Graph Representation of Rail Map', size=15)
-        plt.draw()
-        plt.pause(0.001)
+        for i in range(60):
+            plt.cla()
+            # draw the trains linearly interpolated with respect to their from and to stations
+            for train in self.trains:
+                if train.minutes >= train.start_minute:
+                    from_pos = self.positions[train.current_station.name]
+                    to_pos = self.positions[train.target_station.name]
+                    interpolated_pos = interpolate(from_pos, to_pos, i*1.0 / 60.0)
+                    self.positions["trainnr"+str(train.number)] = interpolated_pos
+            nx.draw_networkx(self.graph, self.positions, with_labels=False)
+            for color, stations in colors_of_stations.items():
+                nx.draw_networkx_nodes(self.graph, self.positions, nodelist=stations, node_color=color)
+            plt.title('Graph Representation of Rail Map', size=15)
+            plt.draw()
+            plt.pause(0.001)
