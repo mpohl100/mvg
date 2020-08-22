@@ -158,7 +158,7 @@ class Simulation:
             for subroute in line.sublines.keys():
                 print('    ' + str(subroute))
 
-    def get_colors_of_stations(self): 
+    def get_colors_of_lines(self):
         import matplotlib
         cmap = matplotlib.cm.get_cmap('Spectral')
         colors = {}
@@ -166,24 +166,19 @@ class Simulation:
         for line in self.all_lines:
             colors[line.name] = cmap(i*1.0/len(self.all_lines))
             i += 1
-        full_stations = []
-        for _, station in self.all_stations.items():
-            if len(station.trains) > 0:
-                line = station.trains[0].line.name
-                full_stations.append((station, colors[line]))
-        for lane in self.all_lanes:
-            if len(lane.trains) > 0:
-                line = lane.trains[0].line.name
-                full_stations.append((lane.from_station, colors[line]))
-        colors_of_stations = {}
-        for station, color in full_stations:
-            if color in colors_of_stations:
-                colors_of_stations[color].append(station.name)
+        return colors
+
+    def get_colors_of_trains(self):
+        colors = self.get_colors_of_lines()
+        colors_of_trains = {}
+        for train in self.trains:
+            color = colors[train.line.name]
+            if color in colors_of_trains:
+                colors_of_trains[color].append("trainnr" + str(train.number))
             else:
-                colors_of_stations[color] = [station.name]
-        return colors_of_stations     
-
-
+                colors_of_trains[color] = ["trainnr" + str(train.number)]
+        return colors_of_trains
+        
     def print_net(self):
         import matplotlib.pyplot as plt
         import networkx as nx
@@ -193,19 +188,20 @@ class Simulation:
             for train in self.trains:
                 self.graph.add_node("trainnr" + str(train.number), label=train.line.name)
                 self.positions["trainnr" + str(train.number)] = (0,0)
-        colors_of_stations = self.get_colors_of_stations()
+        colors_of_trains = self.get_colors_of_trains()
         for i in range(60):
             plt.cla()
             # draw the trains linearly interpolated with respect to their from and to stations
             for train in self.trains:
-                if train.minutes >= train.start_minute:
+                if train.minutes >= train.start_minute and not train.waiting:
                     from_pos = self.positions[train.current_station.name]
                     to_pos = self.positions[train.target_station.name]
                     interpolated_pos = interpolate(from_pos, to_pos, i*1.0 / 60.0)
                     self.positions["trainnr"+str(train.number)] = interpolated_pos
             nx.draw_networkx(self.graph, self.positions, with_labels=False)
-            for color, stations in colors_of_stations.items():
+            for color, stations in colors_of_trains.items():
                 nx.draw_networkx_nodes(self.graph, self.positions, nodelist=stations, node_color=color)
+           
             plt.title('Graph Representation of Rail Map', size=15)
             plt.draw()
             plt.pause(0.001)
