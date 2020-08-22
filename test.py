@@ -15,11 +15,12 @@ if __name__=="__main__":
         'S1':["e", "Leuchtenbergring", "BergamLaim", "Riem", "Feldkirchen"],
         'S2': ["f", "Leuchtenbergring", "BergamLaim", "Gronsdorf", "Haar", "Zorneding"],
         'S3': ["Fantasie", "Land", "Trudering", "Ostbahnhof","Leuchtenbergring", "BergamLaim", "g"],
-        'S4': ["a", "b", "c", "d", "Fantasie", "Land", "h"],
+        #'S4': ["a", "b", "c", "d", "Fantasie", "Land", "h"],
     }
     test_schedule(net)
     network = Network("TEST", net)
     config = Config(4,8,500,1,True)
+    config.show_net = True
     simulation = Simulation(network, config)
     simulation.run()
 

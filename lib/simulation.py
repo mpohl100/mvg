@@ -153,23 +153,43 @@ class Simulation:
             for subroute in line.sublines.keys():
                 print('    ' + str(subroute))
 
+    def get_colors_of_stations(self): 
+        import matplotlib
+        cmap = matplotlib.cm.get_cmap('Spectral')
+        colors = {}
+        i = 0
+        for line in self.all_lines:
+            colors[line.name] = cmap(i*1.0/len(self.all_lines))
+            i += 1
+        full_stations = []
+        for _, station in self.all_stations.items():
+            if len(station.trains) > 0:
+                line = station.trains[0].line.name
+                full_stations.append((station, colors[line]))
+        for lane in self.all_lanes:
+            if len(lane.trains) > 0:
+                line = lane.trains[0].line.name
+                full_stations.append((lane.from_station, colors[line]))
+        colors_of_stations = {}
+        for station, color in full_stations:
+            if color in colors_of_stations:
+                colors_of_stations[color].append(station.name)
+            else:
+                colors_of_stations[color] = [station.name]
+        return colors_of_stations     
+
+
     def print_net(self):
         import matplotlib.pyplot as plt
         import networkx as nx
         if self.graph is None:
             self.graph = self.network.generate_networkx()
             self.positions = nx.spring_layout(self.graph)
+        colors_of_stations = self.get_colors_of_stations()
         plt.cla()
         nx.draw_networkx(self.graph, self.positions, with_labels=False)
-        full_stations = []
-        for name, station in self.all_stations.items():
-            if len(station.trains) > 0:
-                full_stations.append(name)
-        for lane in self.all_lanes:
-            if len(lane.trains) > 0:
-                full_stations.append(lane.from_station.name)
-        nx.draw_networkx_nodes(self.graph, self.positions, nodelist=full_stations, node_color='red')
-
+        for color, stations in colors_of_stations.items():
+            nx.draw_networkx_nodes(self.graph, self.positions, nodelist=stations, node_color=color)
         plt.title('Graph Representation of Rail Map', size=15)
         plt.draw()
         plt.pause(0.001)
