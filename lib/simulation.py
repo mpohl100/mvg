@@ -35,6 +35,8 @@ class Simulation:
             self.deduce_trains(False)
         self.graph = None
         self.positions = None
+        self.xlim = None
+        self.ylim = None
         self.minute = -1
 
     def read_all_stations(self):
@@ -181,6 +183,8 @@ class Simulation:
         
     def print_net(self):
         import matplotlib.pyplot as plt
+        from matplotlib.axes._axes import _log as matplotlib_axes_logger
+        matplotlib_axes_logger.setLevel('ERROR')
         import networkx as nx
         if self.graph is None:
             self.graph = self.network.generate_networkx()
@@ -190,7 +194,7 @@ class Simulation:
                 self.positions["trainnr" + str(train.number)] = (0,0)
         colors_of_trains = self.get_colors_of_trains()
         for i in range(60):
-            plt.cla()
+
             # draw the trains linearly interpolated with respect to their from and to stations
             for train in self.trains:
                 if train.minutes >= train.start_minute and not train.waiting:
@@ -198,6 +202,11 @@ class Simulation:
                     to_pos = self.positions[train.target_station.name]
                     interpolated_pos = interpolate(from_pos, to_pos, i*1.0 / 60.0)
                     self.positions["trainnr"+str(train.number)] = interpolated_pos
+            axes = plt.gca()
+            plt.cla()
+            if self.xlim and self.ylim:
+                axes.set_xlim(self.xlim)
+                axes.set_ylim(self.ylim)
             nx.draw_networkx(self.graph, self.positions, with_labels=False)
             for color, stations in colors_of_trains.items():
                 nx.draw_networkx_nodes(self.graph, self.positions, nodelist=stations, node_color=color)
@@ -205,3 +214,5 @@ class Simulation:
             plt.title('Graph Representation of Rail Map', size=15)
             plt.draw()
             plt.pause(0.001)
+            self.ylim = axes.get_ylim()
+            self.xlim = axes.get_xlim()
