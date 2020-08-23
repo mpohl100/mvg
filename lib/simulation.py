@@ -176,9 +176,9 @@ class Simulation:
         for train in self.trains:
             color = colors[train.line.name]
             if color in colors_of_trains:
-                colors_of_trains[color].append("trainnr" + str(train.number))
+                colors_of_trains[color].append(train.line.name + "(" + str(train.number) + ")")
             else:
-                colors_of_trains[color] = ["trainnr" + str(train.number)]
+                colors_of_trains[color] = [train.line.name + "(" + str(train.number) + ")"]
         return colors_of_trains
         
     def print_net(self):
@@ -190,8 +190,8 @@ class Simulation:
             self.graph = self.network.generate_networkx()
             self.positions = nx.spring_layout(self.graph)
             for train in self.trains:
-                self.graph.add_node("trainnr" + str(train.number), label=train.line.name)
-                self.positions["trainnr" + str(train.number)] = (0,0)
+                self.graph.add_node(train.line.name + "(" + str(train.number) + ")", label=train.line.name)
+                self.positions[train.line.name + "(" + str(train.number) + ")"] = (0,0)
         colors_of_trains = self.get_colors_of_trains()
         for i in range(60):
 
@@ -201,13 +201,19 @@ class Simulation:
                     from_pos = self.positions[train.current_station.name]
                     to_pos = self.positions[train.target_station.name]
                     interpolated_pos = interpolate(from_pos, to_pos, i*1.0 / 60.0)
-                    self.positions["trainnr"+str(train.number)] = interpolated_pos
+                    self.positions[train.line.name + "(" + str(train.number) + ")"] = interpolated_pos
             axes = plt.gca()
             plt.cla()
-            if self.xlim and self.ylim:
+            with_labels=False
+            if self.xlim and self.ylim: # to preserve the zoom and translations of the user
                 axes.set_xlim(self.xlim)
                 axes.set_ylim(self.ylim)
-            nx.draw_networkx(self.graph, self.positions, with_labels=False)
+                # draw labels if it is zoomed in a lot
+                delta_x = self.xlim[1] - self.xlim[0]
+                delta_y = self.ylim[1] - self.ylim[0]
+                if delta_x*delta_y < 0.25:
+                    with_labels = True
+            nx.draw_networkx(self.graph, self.positions, with_labels=with_labels)
             for color, stations in colors_of_trains.items():
                 nx.draw_networkx_nodes(self.graph, self.positions, nodelist=stations, node_color=color)
            
