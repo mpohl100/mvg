@@ -1,0 +1,364 @@
+RE 	60 	Mitteldeutsche Regiobahn 	Dresden – Freiberg – Chemnitz – Glauchau – Zwickau – Reichenbach – Plauen – Hof 	Leipzig–Hof 	510 	Bayerische Oberlandbahn 	BR 1440
+RB 	einzelne Züge 	Vogtlandbahn 	Zwickau – Werdau – Plauen (– Hof) 	Leipzig–Hof 		Die Länderbahn 	BR 650
+EB 	120 		Gera – Weida – Zeulenroda – Hof 	Leipzig–Hof 		Erfurter Bahn 	BR 650
+EB 	120 (Mo–Fr) 		Gutenfürst – Hof
+	Leipzig–Hof 		Erfurter Bahn 	BR 650
+RE 	120 	Franken-Thüringen-Express 	Leipzig – Jena –/ Sonneberg – Lichtenfels – Bamberg – Fürth – Nürnberg 	Nürnberg–Bamberg
+Bamberg–Hof
+Eisenach–Lichtenfels
+Hochstadt-Marktzeuln–Probstzella 	560, 810, 820, 840 	DB Regio Franken 	BR 442
+RE 	120 	Mainfranken-Thüringen-Express 	Würzburg – Schweinfurt – Ebenhausen – Bad Kissingen / – Grimmenthal – Suhl – Arnstadt – Erfurt 	Nürnberg–Würzburg
+Bamberg–Rottendorf
+Schweinfurt–Meiningen 	570 	DB Regio Südost 	BR 612
+EB 	120 	Unterfranken-Shuttle 	Schweinfurt – Ebenhausen – Mellrichstadt – Meiningen 	Schweinfurt–Meiningen 	570, 815 	Erfurter Bahn 	BR 650
+RE 	60 	Main-Spessart-Express 	Frankfurt – Hanau – Aschaffenburg – Würzburg 	Hanau–Würzburg 	640, 800 	DB Regio Franken 	Twindexx Vario
+RB 	60 	Mainfrankenbahn 	Frankfurt – Hanau – Aschaffenburg 	Hanau–Würzburg 	640 	Hessische Landesbahn 	BR 1440
+RB 	60 (Mo–Fr)
+120 (Sa, So) 	Kahlgrundbahn 	Hanau – Kahl (Main) – Alzenau – Michelbach – Schöllkrippen 	Kahl–Schöllkrippen 	642 	DB RegioNetz Verkehrs GmbH 	BR 642
+RB 	60 	Rhein-Main-Bahn 	Aschaffenburg – Babenhausen – Darmstadt – Mainz – Wiesbaden 	Mainz–Aschaffenburg 	651 	Hessische Landesbahn 	BR 1440
+RE 	60 		Lindau – Wasserburg – Friedrichshafen Stadt – Ravensburg – Aulendorf – Ulm (– Göppingen – Plochingen – Stuttgart) 	Lindau–Friedrichshafen 	731, 750, 751 	DB ZugBus Regionalverkehr Alb-Bodensee 	BR 245 + 4 Doppelstockwagen
+RB 	120 		(Aulendorf –) Kißlegg – Hergatz – Lindau – Wasserburg – Friedrichshafen Stadt – Friedrichshafen Hafen 	Lindau–Friedrichshafen
+München–Lindau
+Kißlegg–Hergatz 	731, 971 	DB ZugBus Regionalverkehr Alb-Bodensee 	BR 650
+RB 	120 		Lindau – Wasserburg – Friedrichshafen Stadt 	Lindau–Friedrichshafen 	731 	DB ZugBus Regionalverkehr Alb-Bodensee 	BR 650
+RB 	120 		Ulm – Neu-Ulm – Senden – Memmingen – Leutkirch – Kißlegg – Aulendorf – Bad Saulgau – Herbertingen – Sigmaringen 	Augsburg–Ulm
+Neu-Ulm–Kempten
+Leutkirch–Memmingen 	971, 975 	DB ZugBus Regionalverkehr Alb-Bodensee 	BR 650
+RE 	60 		Aalen – Heidenheim – Langenau – Thalfingen – Ulm 	Ulm–Aalen 	757, 786 	Hohenzollerische Landesbahn 	BR 622
+RB 	60 		Langenau – Thalfingen – Ulm 	Ulm–Aalen 	757 	Hohenzollerische Landesbahn 	BR 622
+RE 	120 		Würzburg – Lauda – Osterburken – Bad Friedrichshall – Heilbronn – Bietigheim-Bissingen – Stuttgart 	Würzburg–Stuttgart 	780 	Go-Ahead Verkehrsgesellschaft Deutschland 	Stadler Flirt 3
+RB 	60 (Mo–Fr)
+120 (Sa, So) 		Würzburg – Lauda 	Würzburg–Stuttgart 	780 	DB Regio Franken 	BR 425
+RE 	120 	Main-Tauber-Express 	Aschaffenburg – Miltenberg – Wertheim – Lauda – Crailsheim 	Aschaffenburg–Wertheim 	781, 782 	DB RegioNetz Verkehrs GmbH 	BR 642
+RB 	60 (Mo–Fr)
+120 (Sa, So) 	Maintalbahn 	Aschaffenburg – Miltenberg 	Aschaffenburg–Wertheim 	781 	DB RegioNetz Verkehrs GmbH 	BR 642
+RB 	120 (Mo–Fr) 	Westfrankenbahn 	Miltenberg – Wertheim (– Lauda – Bad Mergentheim) 	Aschaffenburg–Wertheim 	781 	DB RegioNetz Verkehrs GmbH 	BR 642
+RB 	60 (Mo–Fr)
+120 (Sa, So) 	Westfrankenbahn 	(Aschaffenburg –) Miltenberg – Amorbach – Walldürn – Seckach 	Aschaffenburg–Wertheim
+Seckach–Miltenberg 	781, 784 	DB RegioNetz Verkehrs GmbH 	BR 642
+RE 	120 		Nürnberg – Ansbach – Crailsheim – Schwäbisch Hall-Hessental – Waiblingen – Stuttgart 	Nürnberg–Crailsheim 	785, 786 	Go-Ahead Verkehrsgesellschaft Deutschland 	Stadler Flirt 3
+RB 	mind. 120 	Mainfrankenbahn 	(Gemünden (Main) –) Heigenbrücken – Aschaffenburg 	Bamberg–Würzburg
+Würzburg–Hanau 	800 	DB Regio Mitte 	BR 425
+RB 	120 	Mainfrankenbahn 	Bamberg – Schweinfurt – Würzburg – Gemünden (Main) – Jossa 	Bamberg–Würzburg
+Würzburg–Hanau
+Flieden–Gemünden 	800, 801, 810 	DB Regio Franken 	BR 440
+RB 	120 	Mainfrankenbahn 	Bamberg – Schweinfurt – Würzburg – Gemünden (Main) – Jossa – Schlüchtern 	Bamberg–Würzburg
+Würzburg–Hanau
+Flieden–Gemünden 	800, 801, 810 	DB Regio Franken 	BR 440
+EB 	120 	Unterfranken-Shuttle 	Gemünden (Main) – Gräfendorf – Hammelburg – Bad Kissingen – Ebenhausen – Schweinfurt 	Gemünden–Ebenhausen
+Schweinfurt–Meiningen 	803, 815 	Erfurter Bahn 	BR 650
+RE 	60 	Mainfrankenbahn 	Würzburg – Kitzingen – Neustadt (Aisch) – Fürth – Nürnberg 	Würzburg–Nürnberg 	805 	DB Regio Franken 	BR 440
+RB 	60 	Mainfrankenbahn 	Neustadt (Aisch) – Siegelsdorf – Fürth – Nürnberg 	Würzburg–Nürnberg 	805 	DB Regio Franken 	BR 440
+RB 	60 		Neustadt (Aisch) – Bad Windsheim – Steinach 	Steinach bei Rothenburg–Dombühl 	806 	DB Regio Franken 	BR 648
+RB 	60 		Fürth – Siegelsdorf – Wilhermsdorf – Markt Erlbach 	Siegelsdorf–Markt Erlbach
+Nürnberg–Würzburg 	807 	DB Regio Franken 	BR 648
+RB 	60 		Fürth – Zirndorf – Cadolzburg 	Fürth–Cadolzburg 	808 	DB Regio Franken 	BR 648
+RE 	120 		Würzburg – Schweinfurt – Haßfurt – Bamberg 	Würzburg–Bamberg 	810 	DB Regio Franken 	Twindexx Vario
+RE 	120 	Franken-Thüringen-Express 	Würzburg – Schweinfurt –/ Sonneberg – Lichtenfels – Bamberg – Fürth – Nürnberg 	Würzburg–Bamberg
+Nürnberg–Bamberg
+Bamberg–Hof
+Eisenach–Lichtenfels 	810, 820 	DB Regio Franken 	BR 442
+EB 	120 		Bad Kissingen – Ebenhausen – Schweinfurt 	Gemünden–Ebenhausen
+Schweinfurt–Meiningen 	815 	Erfurter Bahn 	BR 650
+ag 	60 		Bad Rodach – Coburg – Ebersdorf – Lichtenfels – Hochstadt-Marktzeuln – Kulmbach – Neuenmarkt-Wirsberg – Bayreuth – Kirchlaibach – Weiden 	Coburg–Bad Rodach
+Bamberg–Hof
+Eisenach–Lichtenfels
+Bayreuth–Neuenmarkt-Wirsberg
+Weiden–Bayreuth 	820, 831, 850, 860, 867 	agilis Verkehrsgesellschaft 	BR 650
+RB 	60 		Bamberg – Lichtenfels – Kronach – Ludwigsstadt – Saalfeld 	Bamberg–Hof
+Hochstadt-Marktzeuln–Probstzella 	820, 840 	DB Regio Franken 	BR 442
+ag 	60 		Ebermannstadt – Forchheim 	Forchheim–Beringersmühle 	821 	agilis Verkehrsgesellschaft 	BR 650
+ag 	60 		Bamberg – Breitengüßbach – Ebern 	Bamberg–Hof
+Breitengüßbach–Maroldsweisach 	826 	agilis Verkehrsgesellschaft 	BR 650
+RE 	120 	Main-Saale-Express 	Lichtenfels – Kulmbach – Neuenmarkt-Wirsberg – Hof / Bayreuth 	Bamberg–Hof
+Bayreuth–Neuenmarkt-Wirsberg 	820, 850 	DB Regio Franken 	BR 641
+RE 	120 	Main-Saale-Express 	Bamberg – Lichtenfels – Kulmbach – Neuenmarkt-Wirsberg – Hof / – Bayreuth – Nürnberg 	Bamberg–Hof
+Bayreuth–Neuenmarkt-Wirsberg
+Schnabelwaid–Bayreuth
+Nürnberg–Cheb 	850, 860 	DB Regio Franken 	BR 612
+ag 	120 		Bad Steben – Marxgrün – Naila – Hof – Münchberg 	Hof–Bad Steben
+Bamberg–Hof 	850, 857 	agilis Verkehrsgesellschaft 	BR 650
+ag 	60 		Münchberg – Helmbrechts 	Münchberg–Selbitz 	853 	agilis Verkehrsgesellschaft 	BR 650
+ALX 	120 	alex 	Hof – Marktredwitz – Weiden – Schwandorf – Regensburg – Landshut – München 	Hof–Regensburg
+München–Regensburg 	855, 930 	Die Länderbahn 	BR 223 / BR 183 + Wagen verschiedener Bauarten
+ALX 	120 	alex 	Prag – Pilsen – Furth im Wald – Cham – Schwandorf – Regensburg – Landshut – München 	Schwandorf–Furth im Wald
+Hof–Regensburg
+München–Regensburg 	855, 875, 930 	Die Länderbahn 	BR 223 / BR 183 + Wagen verschiedener Bauarten
+RE 	einzelne Züge 		Hof – Marktredwitz – Weiden – Schwandorf – Regensburg 	Hof–Regensburg 	855 	DB Regio Nordostbayern 	BR 612
+RE 	120 		Hof – Marktredwitz – Kirchenlaibach – Hersbruck – Nürnberg 	Hof–Regensburg
+Nürnberg–Cheb 	855, 860 	DB Regio Nordostbayern 	BR 612
+OPB 	60 	Oberpfalzbahn 	Marktredwitz – Weiden – Schwandorf – Regensburg 	Hof–Regensburg 	855 	Die Länderbahn 	BR 1648
+ag 	120 		Hof – Marktredwitz – Kirchenlaibach – Bayreuth 	Hof–Regensburg
+Nürnberg–Cheb
+Bayreuth–Weiden 	855, 860, 867 	agilis Verkehrsgesellschaft 	BR 650
+ag 	120 		Hof – Marktredwitz – Kirchenlaibach (– Bayreuth) 	Hof–Regensburg
+Nürnberg–Cheb 	855, 860 	agilis Verkehrsgesellschaft 	BR 650
+ag 	120 		Bad Steben – Marxgrün – Naila – Hof 	Hof–Bad Steben 	857 	agilis Verkehrsgesellschaft 	BR 650
+ag 	60 		Hof – Rehau – Selb-Plößberg – Selb Stadt 	Cheb–Oberkotzau
+Holenbrunn–Selb 	858 	agilis Verkehrsgesellschaft 	BR 650
+RE 	120 		Nürnberg – Hersbruck (r Pegnitz) – Pegnitz – Bayreuth 	Nürnberg–Cheb
+Schnabelwaid–Bayreuth 	860, 891 	DB Regio Nordostbayern 	BR 612
+OPB 	120 	Oberpfalzbahn 	Marktredwitz – Schirnding – Cheb – Hof Hauptbahnhof 	Nürnberg–Cheb 	860 	Die Länderbahn 	BR 1648
+RE 	120 		Nürnberg – Hersbruck (r Pegnitz) – Pegnitz – Marktredwitz – Schirnding – Cheb 	Nürnberg–Cheb 	860, 891 	DB Regio Nordostbayern 	BR 612
+RB 	60 		Nürnberg Nordost – Eschenau – Gräfenberg 	Nürnberg–Gräfenberg 	861 	DB Regio Franken 	BR 642
+ag 	60 		Bayreuth – Weidenberg 	Bayreuth–Weidenberg 	862 	agilis Verkehrsgesellschaft 	BR 650
+RE 	60 		Nürnberg – Hersbruck (r Pegnitz) – Neukirchen (b Sulzb) – Amberg – Schwandorf 	Nürnberg–Cheb
+Hersbruck–Pommelsbrunn
+Nürnberg–Schwandorf 	870 	DB Regio Nordostbayern 	BR 612
+RE 	60 		Nürnberg – Hersbruck (r Pegnitz) – Neukirchen (b Sulzb) – Weiden (Oberpf) – Neustadt (Waldnaab) 	Nürnberg–Cheb
+Hersbruck–Pommelsbrunn
+Nürnberg–Schwandorf
+Neukirchen–Weiden 	870 	DB Regio Nordostbayern 	BR 612
+OPB 	60 	Oberpfalzbahn 	Schwandorf – Cham (Oberpf) – Furth i Wald 	Schwandorf–Furth im Wald 	875 	Die Länderbahn 	BR 650
+OPB 	120 	Oberpfalzbahn 	Cham (Oberpf) – Waldmünchen 	Cham–Waldmünchen 	876 	Die Länderbahn 	BR 650
+OPB 	120 	Oberpfalzbahn 	Cham (Oberpf) – Bad Kötzting – Lam 	Cham–Lam 	877 	Die Länderbahn 	BR 650
+RE 	120 		Nürnberg – Neumarkt (Oberpf) – Regensburg – Landshut (Bay) – Freising – München 	Nürnberg–Regensburg
+Regensburg–München 	880 	DB Regio Oberbayern 	BR 146.2 + Doppelstockwagen
+ag 	60 		Neumarkt (Oberpf) – Regensburg – Straubing – Plattling 	Nürnberg–Regensburg
+Regensburg–Passau 	880 	agilis Verkehrsgesellschaft 	BR 440
+RE 	60 	Donau-Isar-Express 	Passau – Plattling – Landau (Isar) – Landshut (Bay) – Freising – München 	Nürnberg–Regensburg
+Landshut–Plattling
+Regensburg–Passau 	880, 930, 931 	DB Regio Oberbayern 	BR 440, BR 146.2 + Doppelstockwagen
+S1 	20 	S-Bahn Nürnberg 	(Bamberg – Forchheim (Oberfr) – Erlangen –) Nürnberg – Röthenbach (Pegnitz) – Lauf (l Pegnitz) (– Hersbruck (l Pegnitz) – Hartmannshof) 	Nürnberg–Bamberg
+Nürnberg–Schwandorf 	890.1 	DB Regio Franken 	BR 442
+S2 	20 	S-Bahn Nürnberg 	(Roth –) Schwabach – Nürnberg – Feucht (– Altdorf (b Nürnberg)) 	Treuchtlingen–Nürnberg
+Nürnberg–Feucht
+Feucht–Altdorf 	890.2 	DB Regio Franken 	BR 143 + x-Wagen
+S3 	20 	S-Bahn Nürnberg 	Nürnberg – Feucht – Burgthann – Neumarkt (Oberpf) 	Nürnberg–Feucht
+Nürnberg–Regensburg 	890.3 	DB Regio Franken 	BR 442
+S4 	20/40 	S-Bahn Nürnberg 	Nürnberg – Roßtal – Wicklesgreuth – Ansbach 	Nürnberg–Crailsheim 	890.4 	DB Regio Franken 	BR 442
+RB 	60 		Nürnberg – Lauf (r Pegnitz) – Neunkirchen a Sand – Hersbruck (r Pegnitz) – Neuhaus (Pegnitz) 	Nürnberg–Cheb 	891 	DB Regio Franken 	BR 648
+RB 	60 		Nürnberg – Lauf (r Pegnitz) – Neunkirchen a Sand – Simmelsdorf-Hüttenbach 	Nürnberg–Cheb
+Neunkirchen–Simmelsdorf-Hüttenbach 	891 	DB Regio Franken 	BR 648
+RE 	120 	München-Nürnberg-Express 	München (– Petershausen) – Pfaffenhofen (Ilm) – Ingolstadt (– Kinding (Altmühltal) – Allersberg (Rothsee) – Nürnberg) 	München–Nürnberg 	900 	DB Regio Oberbayern 	BR 101 + ehemalige IC-Wagen
+RB 	60 		München – Dachau – Pfaffenhofen (Ilm) – Ingolstadt – Eichstätt – Treuchtlingen (– Roth – Nürnberg) 	München–Nürnberg
+Ingolstadt–Treuchtlingen
+Treuchtlingen–Nürnberg 	900, 990, 920 	DB Regio Oberbayern 	BR 445
+RE 	einzelne Züge 		München (– Petershausen) – Pfaffenhofen (Ilm) – Ingolstadt (– Kinding (Altmühltal) – Allersberg (Rothsee) – Nürnberg) 	München–Nürnberg 	900 	DB Regio Oberbayern 	BR 101 + ehemalige IC-Wagen
+RB 	120 	Allersberg-Express 	Allersberg (Rothsee) – Nürnberg 	München–Nürnberg 	900 	DB Regio Oberbayern 	BR 101 + ehemalige IC-Wagen
+WBA 	60 	Waldbahn 	Plattling – Deggendorf – Zwiesel – Bayerisch Eisenstein 	Plattling–Bayerisch Eisenstein 	905 	Die Länderbahn 	BR 650
+WBA 	120 	Waldbahn 	Zwiesel – Grafenau 	Zwiesel–Grafenau 	906 	Die Länderbahn 	BR 650
+WBA 	60 	Waldbahn 	Zwiesel – Bodenmais 	Zwiesel–Bodenmais 	907 	Die Länderbahn 	BR 650
+WBA 	60 	Waldbahn 	Gotteszell – Teisnach – Viechtach 	Gotteszell–Viechtach 	908 	Die Länderbahn 	BR 650
+RE 	einzelne Züge 	Allgäu-Franken-Express 	Nürnberg – Treuchtlingen – Donauwörth – Augsburg – Buchloe – Kaufbeuren – Kempten – Immenstadt – Oberstdorf / Lindau 	Treuchtlingen–Nürnberg
+Augsburg–Buchloe
+München–Lindau
+Immenstadt–Oberstdorf 	910, 970 	DB Regio Allgäu-Schwaben 	BR 612
+RE 	120 		Nürnberg – Treuchtlingen – Donauwörth – Augsburg 	Treuchtlingen–Nürnberg
+Donauwörth–Treuchtlingen
+Augsburg–Nördlingen 	910 	DB Regio Oberbayern 	BR 445
+RE 	einzelne Züge 		Nürnberg – Roth – Treuchtlingen 	Treuchtlingen–Nürnberg 	910 	DB Regio Oberbayern 	BR 445
+RE 	120 	Fugger-Express 	Treuchtlingen – Donauwörth – Augsburg – Mering – München
+(zwischen Augsburg und München mit Zugteil nach Ulm) 	Treuchtlingen–Nürnberg
+München–Augsburg 	910, 980 	DB Regio Allgäu-Schwaben 	BR 440
+RE/RB 	60 	Fugger-Express 	Donauwörth – Meitingen – Augsburg – Mering – München
+(Mo–Fr: zwischen Augsburg und München mit Zugteil nach Dinkelscherben) 	Augsburg–Nördlingen
+München–Augsburg 	910, 980 	DB Regio Allgäu-Schwaben 	BR 440
+RB 	einzelne Züge 	Fugger-Express 	Donauwörth – Meitingen – Augsburg 	Augsburg–Nördlingen 	910 	DB Regio Allgäu-Schwaben 	BR 440
+RB 	60 (Mo–Fr)
+120 (Sa, So) 		Roth – Hilpoltstein 	Roth–Hilpoltstein 	911 	DB Regio Franken 	BR 648
+RB 	60 (Mo–Fr)
+120 (Sa, So) 	Seenland-Bahn 	Pleinfeld – Gunzenhausen 	Gunzenhausen–Pleinfeld 	912 	DB Regio Franken 	BR 642
+RB 	60 	Mainfrankenbahn 	(Gemünden (Main) – Karlstadt –) Würzburg – Marktbreit – Steinach (b Rothenburg o.d. Tauber) – Ansbach – Gunzenhausen – Treuchtlingen 	Würzburg–Treuchtlingen 	920 	DB Regio Franken 	BR 440
+RB 	einzelne Züge 	Mainfrankenbahn 	Würzburg – Ochsenfurt – Marktbreit 	Würzburg–Treuchtlingen 	920 	DB Regio Franken 	BR 440
+RB 	60 		Steinach (b Rothenburg o.d. Tauber) – Rothenburg ob der Tauber 	Steinach–Rothenburg 	921 	DB Regio Franken 	BR 648
+RB 	60 (Mo–Fr)
+120 (Sa, So) 		Wicklesgreuth – Windsbach 	Wicklesgreuth–Windsbach 	922 	DB Regio Franken 	BR 648
+RB 	60 (Mo–Fr)
+120 (Sa, So) 		(München –) Freising – Moosburg – Landshut 	München–Regensburg 	930 	DB Regio Oberbayern 	BR 425 / BR 440
+ag 	60 (Mo–Fr) 		Ingolstadt – Regensburg 	Regensburg–Ingolstadt 	930, 993 	agilis Verkehrsgesellschaft 	BR 440
+RE 	60 		Regensburg – Flughafen München 	München–Regensburg 	930, 5559 	DB Regio Bayern 	BR 442
+ag 	120 (Sa, So) 		Ulm – Günzburg – Donauwörth – Ingolstadt – Regensburg (– Eggmühl – Neufahrn (Niederbay) – Landshut (Bay)) 	München–Regensburg
+Regensburg–Ingolstadt
+Ingolstadt–Neuoffingen
+Augsburg–Ulm 	930, 993 	agilis Verkehrsgesellschaft 	BR 440
+as 	120 (Sa, So) 		Ulm – Günzburg – Donauwörth – Ingolstadt – Regensburg (– Eggmühl / Passau) 	München–Regensburg
+Regensburg–Ingolstadt
+Ingolstadt–Neuoffingen
+Augsburg–Ulm
+Regensburg–Passau 	930, 993 	agilis Verkehrsgesellschaft 	BR 440
+RB 	60 	Gäubodenbahn 	Bogen – Straubing – Radldorf (Niederbay) – Neufahrn (Niederbay) 	Neufahrn–Radldorf
+Regensburg–Passau
+Straubing–Bogen 	932 	DB RegioNetz Verkehrs GmbH 	BR 628
+RB 	60 	Südostbayernbahn 	München – Markt Schwaben – Dorfen – Mühldorf (– Simbach (Inn)) 	München–Simbach 	940 	DB Regio Netz Verkehrs GmbH 	BR 218 / BR 245 + Doppelstockwagen /
+BR 628
+RB 	60 	Südostbayernbahn 	Mühldorf – Marktl – Simbach (Inn) 	München–Simbach 	941 	DB Regio Netz Verkehrs GmbH 	BR 218 / BR 245 + Doppelstockwagen /
+BR 628
+RB 	60 	Südostbayernbahn 	Mühldorf – Tüßling – Altötting – Burghausen 	Mühldorf–Freilassing
+Tüßling–Burghausen 	942 	DB Regio Netz Verkehrs GmbH 	BR 628
+RB 	120 	Südostbayernbahn 	Landshut (Bay) – Vilsbiburg – Neumarkt-St Veit – Mühldorf – Waldkraiburg – Wasserburg (Inn) – Rott (Inn) – Rosenheim 	Neumarkt-St Veit–Landshut
+Mühldorf–Frontenhausen-Marklkofen
+Mühldorf–Rosenheim 	944 	DB Regio Netz Verkehrs GmbH 	BR 628
+RB 	einzelne Züge 	Südostbayernbahn 	(Passau / Burghausen – Mühldorf – Waldkraiburg –) Wasserburg (Inn) – Rott (Inn) – Rosenheim 	Neumarkt-St Veit–Passau
+Mühldorf–Frontenhausen-Marklkofen
+Mühldorf–Freilassing
+Tüßling–Burghausen
+Mühldorf–Rosenheim 	944 	DB Regio Netz Verkehrs GmbH 	BR 628
+RB 	120 (Landshut–Mühldorf) / 60 (Mühldorf–Salzburg) 	Südostbayernbahn 	Landshut (Bay) – Vilsbiburg – Neumarkt-St Veit – Mühldorf – Garching (Alz) – Laufen (Oberbay) – Freilassing – Salzburg 	Neumarkt-St Veit–Landshut
+Mühldorf–Frontenhausen-Marklkofen
+Mühldorf–Freilassing 	945 	DB Regio Netz Verkehrs GmbH 	BR 628
+RB 	60 	Südostbayernbahn 	Passau – Fürstenzell – Pocking – Pfarrkirchen – Neumarkt-St Veit – Mühldorf 	Passau–Neumarkt-St Veit
+Mühldorf–Frontenhausen-Marklkofen 	946 	DB Regio Netz Verkehrs GmbH 	BR 628
+RB 	120 (Mo–Fr) 	Südostbayernbahn 	Mühldorf – Garching (Alz) – Trostberg – Hörpolding (– Traunreut – Traunstein) 	Mühldorf–Freilassing
+Traunstein–Garching 	947 	DB Regio Netz Verkehrs GmbH 	BR 628
+RB 	60 	Südostbayernbahn 	Traunreut – Hörpolding – Traunstein 	Traunstein–Garching 	947 	DB Regio Netz Verkehrs GmbH 	BR 628
+RB 	60 	Südostbayernbahn 	Wasserburg (Inn) – Ebersberg (Oberbay) (– Grafing – München) 	Grafing–Wasserburg
+München–Rosenheim 	948 	DB Regio Netz Verkehrs GmbH 	BR 628
+M 	60 	Meridian 	München – Rosenheim – Bad Endorf – Prien a Chiemsee – Traunstein – Freilassing – Salzburg 	München–Rosenheim
+Rosenheim–Salzburg 	950, 951 	Bayerische Oberlandbahn 	BR 1430
+M 	einzelne Züge 	Meridian 	München – Grafing – Rosenheim (– Bad Endorf – Prien a Chiemsee – Traunstein) 	München–Rosenheim
+Rosenheim–Salzburg 	950, 951 	Bayerische Oberlandbahn 	BR 1430
+M 	60 	Meridian 	München – Grafing – Rosenheim – Kufstein 	München–Rosenheim
+Rosenheim–Kufstein 	950, 951 	Bayerische Oberlandbahn 	BR 1430
+RB 	60 	Chiemgau-Bahn
+Südostbayernbahn 	Prien a Chiemsee – Aschau (Chiemgau) 	Prien a Chiemsee–Aschau 	952 	DB RegioNetz Verkehrs GmbH 	BR 640
+RB 	60 	Südostbayernbahn 	Traunstein – Ruhpolding 	Traunstein–Ruhpolding 	953 	DB RegioNetz Verkehrs GmbH 	BR 426
+BLB / S4 	60 	S-Bahn Salzburg 	Freilassing – Berchtesgaden 	Freilassing–Berchtesgaden 	954 	Berchtesgadener LandBahn 	BR 429
+BLB / S3 	60 	S-Bahn Salzburg 	Schwarzach-St. Veit – Salzburg – Freilassing – Bad Reichenhall 	Freilassing–Berchtesgaden
+Rosenheim–Salzburg 	954 	Österreichische Bundesbahnen 	Rh 4023/4024
+S3 	60 	S-Bahn Salzburg 	Golling-Abtenau – Salzburg – Freilassing 	Rosenheim–Salzburg 	954 	Österreichische Bundesbahnen 	Rh 4023/4024
+BOB 	60 		München – Holzkirchen – Schliersee – Bayrischzell 	München–Holzkirchen
+Holzkirchen–Schliersee
+Schliersee–Bayrischzell 	955 	Bayerische Oberlandbahn 	BR 609 / BR 643
+BOB 	einzelne Züge 		München – Holzkirchen – Schliersee 	München–Holzkirchen
+Holzkirchen–Schliersee 	955 	Bayerische Oberlandbahn 	BR 609 / BR 643
+BOB 	60
+30 (zeitw.) 		München – Holzkirchen – Schaftlach – Bad Tölz – Lenggries 	München–Holzkirchen
+Holzkirchen–Lenggries 	956 	Bayerische Oberlandbahn 	BR 609 / BR 643
+BOB 	60
+30 (zeitw.) 		München – Holzkirchen – Schaftlach – Tegernsee 	München–Holzkirchen
+Holzkirchen–Lenggries
+Schaftlach–Tegernsee 	957 	Bayerische Oberlandbahn 	BR 609 / BR 643
+M 	60 	Meridian 	Holzkirchen – Bad Aibling – Rosenheim 	Holzkirchen–Rosenheim 	958 	Bayerische Oberlandbahn 	BR 1427 / BR 1430
+M 	einzelne Züge 	Meridian 	München – Deisenhofen – Holzkirchen – Bad Aibling – Rosenheim 	München–Holzkirchen
+Holzkirchen–Rosenheim 	958, 999.27 	Bayerische Oberlandbahn 	BR 1427 / BR 1430
+RE 	einzelne Züge 	Werdenfelsbahn 	München – Weilheim – Murnau – Garmisch-Partenkirchen – Mittenwald / Lermoos 	München–Garmisch-Partenkirchen
+Garmisch-Partenkirchen–Innsbruck
+Garmisch-Partenkirchen–Kempten 	960, 965 	DB Regio Oberbayern 	BR 442
+RB 	120 	Werdenfelsbahn 	München – Tutzing – Weilheim – Murnau – Garmisch-Partenkirchen – Reutte / – Mittenwald – Seefeld 	München–Garmisch-Partenkirchen
+Garmisch-Partenkirchen–Innsbruck
+Garmisch-Partenkirchen–Kempten 	960, 965 	DB Regio Oberbayern 	BR 442
+RB 	240 	Werdenfelsbahn 	München – Tutzing – Weilheim – Murnau – Garmisch-Partenkirchen – Reutte 	München–Garmisch-Partenkirchen
+Garmisch-Partenkirchen–Kempten 	960, 965 	DB Regio Oberbayern 	BR 442
+RB 	240 	Werdenfelsbahn 	München – Tutzing – Weilheim – Murnau – Garmisch-Partenkirchen – Reutte / – Mittenwald – Seefeld – Innsbruck 	München–Garmisch-Partenkirchen
+Garmisch-Partenkirchen–Innsbruck
+Garmisch-Partenkirchen–Kempten 	960, 965 	DB Regio Oberbayern 	BR 442
+RB 	240 	Werdenfelsbahn 	Garmisch-Partenkirchen – Mittenwald – Seefeld – Innsbruck 	Garmisch-Partenkirchen–Innsbruck 	960 	Österreichische Bundesbahnen 	Rh 4024
+RB 	60 	Werdenfelsbahn
+Kochelsee-Bahn 	München – Tutzing – Weilheim / Kochel 	München–Garmisch-Partenkirchen
+Tutzing–Kochel 	960, 961 	DB Regio Oberbayern 	BR 442
+RB 	einzelne Züge 	Werdenfelsbahn
+Kochelsee-Bahn 	(München –) Tutzing – Kochel 	München–Garmisch-Partenkirchen
+Tutzing–Kochel 	961 	DB Regio Oberbayern 	BR 442
+BRB 	60 	Pfaffenwinkel-Bahn
+Ammersee-Bahn 	Augsburg – Mering – Geltendorf – Dießen – Weilheim – Peißenberg – Schongau 	München–Augsburg
+Mering–Weilheim
+Weilheim–Peißenberg
+Schongau–Peißenberg 	962, 985 	Bayerische Regiobahn 	BR 648
+BRB 	einzelne Züge 	Pfaffenwinkel-Bahn
+Ammersee-Bahn 	Geltendorf – Dießen – Weilheim – Peißenberg 	Mering–Weilheim
+Weilheim–Peißenberg 	962, 985 	Bayerische Regiobahn 	BR 648
+RB 	60 	Ammergau-Bahn
+Werdenfelsbahn 	Murnau – Bad Kohlgrub – Oberammergau 	Murnau–Oberammergau 	963 	DB Regio Oberbayern 	BR 442
+ALX 	120 	alex 	München – Kaufering – Buchloe – Kaufbeuren – Kempten – Immenstadt – Oberstdorf / – Hergatz – Lindau 	München–Lindau
+Immenstadt–Oberstdorf 	970 	Die Länderbahn 	BR 223 + Wagen verschiedener Bauarten
+RE 	120 		München – Geltendorf – Kaufering – Buchloe – Kaufbeuren – Biessenhofen – Kempten 	München–Lindau 	970 	DB Regio Allgäu-Schwaben 	BR 612
+RE 	120 		München – Geltendorf – Kaufering – Buchloe – Türkheim – Mindelheim – Memmingen 	München–Lindau
+Buchloe–Memmingen 	970, 971 	DB Regio Allgäu-Schwaben 	BR 245 + Dosto / BR 612
+RE 	120 		München – Geltendorf – Kaufering – Buchloe – Kaufbeuren – Biessenhofen – Marktoberdorf – Füssen 	München–Lindau
+Biessenhofen–Füssen 	970, 974 	Bayerische Regiobahn 	LINT
+RE 	120 		Augsburg – Buchloe – Kaufbeuren – Kempten – Immenstadt – Oberstdorf / – Hergatz – Lindau 	Augsburg–Buchloe
+München–Lindau
+Immenstadt–Oberstdorf 	970 	DB Regio Allgäu-Schwaben 	BR 612
+RE 	120 		Ulm – Memmingen – Kempten – Immenstadt – Oberstdorf (/ – Hergatz – Lindau / – Wangen) 	Augsburg–Ulm
+Neu-Ulm–Kempten
+München–Lindau
+Immenstadt–Oberstdorf
+Kißlegg–Hergatz 	970, 971, 975 	DB Regio Allgäu-Schwaben 	BR 612
+RB 	120 		Augsburg – Bobingen – Buchloe – Kaufbeuren – Biessenhofen – Marktoberdorf – Füssen 	Augsburg–Buchloe
+München–Lindau
+Biessenhofen–Füssen 	970, 974, 987 	Bayerische Regiobahn 	LINT
+RB 	120 		Augsburg – Bobingen – Buchloe (– Kaufbeuren – Biessenhofen – Marktoberdorf) 	Augsburg–Buchloe
+München–Lindau
+Biessenhofen–Füssen 	970, 974, 987 	Bayerische Regiobahn 	LINT
+RE/RB 	120 	Kneipp-Lechfeld-Bahn 	Augsburg – Bobingen – Buchloe – Türkheim – Bad Wörishofen / – Mindelheim – Memmingen 	Augsburg–Buchloe
+Buchloe–Memmingen
+Türkheim–Bad Wörishofen 	971, 987 	DB Regio Allgäu-Schwaben 	BR 642 / BR 612
+RB 	120 	Außerfern-Bahn 	Kempten – Pfronten-Steinach – Vils in Tirol – Reutte 	Garmisch-Partenkirchen–Kempten 	973 	DB Regio Allgäu-Schwaben 	BR 642
+RB 	120 	Außerfern-Bahn 	Kempten – Pfronten-Steinach (– Vils in Tirol – Reutte) 	Garmisch-Partenkirchen–Kempten 	973 	DB Regio Allgäu-Schwaben 	BR 642
+RE 	120 		Ulm – Memmingen – Kempten 	Augsburg–Ulm
+Neu-Ulm–Kempten 	975 	DB Regio Allgäu-Schwaben 	BR 612
+RB 	60 	Der Weißenhorner 	Ulm – Neu-Ulm – Senden – Weißenhorn 	Augsburg–Ulm
+Neu-Ulm–Kempten
+Senden–Weißenhorn 	976 	DB ZugBus Regionalverkehr Alb-Bodensee 	BR 642
+RB 	120 	Mittelschwabenbahn 	Günzburg – Krumbach (Schwab) – Mindelheim 	Günzburg–Mindelheim 	978 	DB Regio Allgäu-Schwaben 	BR 650
+RB 	120 (Mo–Fr) 	Mittelschwabenbahn 	Günzburg – Krumbach (Schwab) 	Günzburg–Mindelheim 	978 	DB Regio Allgäu-Schwaben 	BR 642
+RE 	120 	Fugger-Express 	München – Mering – Augsburg – Dinkelscherben – Günzburg – Neu-Ulm – Ulm 	München–Augsburg
+Augsburg–Ulm 	980 	DB Regio Allgäu-Schwaben 	BR 440
+RE 	120 	Fugger-Express 	München – Mering – Augsburg – Dinkelscherben – Günzburg – Neu-Ulm – Ulm
+(zwischen München und Augsburg mit Zugteil nach Treuchtlingen) 	München–Augsburg
+Augsburg–Ulm 	980 	DB Regio Allgäu-Schwaben 	BR 440
+RB 	60 (Mo–Fr) 	Fugger-Express 	München – Mering – Augsburg – Dinkelscherben
+(zwischen München und Augsburg mit Zugteil nach Donauwörth) 	München–Augsburg
+Augsburg–Ulm 	980 	DB Regio Allgäu-Schwaben 	BR 440
+RB 	einzelne Züge 	Fugger-Express 	(München – Mering –) Augsburg – Gessertshausen (– Dinkelscherben – Günzburg – Neu-Ulm – Ulm) 	München–Augsburg
+Augsburg–Ulm 	980 	DB Regio Allgäu-Schwaben 	BR 440
+BRB 	60 	Paartal-Bahn 	Augsburg – Friedberg (Augsburg) – Aichach – Ingolstadt 	Ingolstadt–Augsburg 	983 	Bayerische Regiobahn 	BR 648
+BRB 	60 (Mo–Fr) 	Paartal-Bahn 	Augsburg – Friedberg (Augsburg) – Aichach 	Ingolstadt–Augsburg 	983 	Bayerische Regiobahn 	BR 648
+BRB 	30 (Mo–Fr) 	Paartal-Bahn 	Augsburg – Friedberg (Augsburg) 	Ingolstadt–Augsburg 	983 	Bayerische Regiobahn 	BR 648
+BRB 	einzelne Züge 	Ammersee-Bahn 	Augsburg – Mering (– Geltendorf) 	Weilheim–Mering
+München–Augsburg 	985 	Bayerische Regiobahn 	BR 648
+RB 	60 	Lechfeld-Bahn 	Augsburg – Bobingen – Kaufering – Landsberg (Lech) 	Augsburg–Buchloe
+Bobingen–Landsberg (Lech) 	986 	Bayerische Regiobahn 	LINT
+RB 	60 	Lechfeld-Bahn 	Kaufering – Landsberg (Lech) 	Bobingen–Landsberg (Lech) 	986 	Bayerische Regiobahn 	LINT
+RB 	60 		Augsburg – Bobingen 	Augsburg–Buchloe 	987 	Bayerische Regiobahn 	LINT
+RB 	60 		Türkheim (Bay) – Bad Wörishofen 	Türkheim–Bad Wörishofen 	987 	DB Regio Allgäu-Schwaben 	BR 642
+BRB 	einzelne Züge 		Eichstätt Stadt – Eichstätt Bahnhof – Ingolstadt
+(einzelne Züge weiter nach Augsburg) 	Eichstätt Bahnhof–Eichstätt Stadt
+Ingolstadt–Treuchtlingen 	990, 991 	Bayerische Regiobahn 	BR 648
+BRB 	60 		Eichstätt Stadt – Eichstätt Bahnhof 	Eichstätt Bahnhof–Eichstätt Stadt 	991 	Bayerische Regiobahn 	BR 648
+ag 	60 (Mo–Fr) 		Ulm – Günzburg – Donauwörth – Ingolstadt 	Ulm–Augsburg
+Ingolstadt–Neuoffingen 	993 	agilis Verkehrsgesellschaft 	BR 440
+RB 	60 (Mo–Fr),
+120 (Sa, So) 		Aalen – Nördlingen – Donauwörth 	Aalen–Donauwörth 	995 	DB Regio Allgäu-Schwaben 	BR 440
+S1 	20 	S-Bahn München 	München – Neufahrn (b Freising) – Freising / Flughafen München 	München Ost–München-Pasing
+München–Regensburg
+Neufahrn (b Freising)–Flughafen München 	999.1 	DB Regio Bayern 	BR 423
+S2 	20,
+10 (HVZ) 	S-Bahn München 	(Erding – Markt Schwaben –) München – Dachau Bahnhof (– Altomünster / Petershausen (Oberbay)) 	Markt Schwaben–Erding
+München–Mühldorf
+München Ost–München-Pasing
+Ingolstadt–München
+Dachau–Altomünster 	999.2 	DB Regio Bayern 	BR 423
+S3 	20,
+10 (HVZ) 	S-Bahn München 	(Holzkirchen –) Deisenhofen – München – Maisach (– Mammendorf) 	München–Holzkirchen
+München Ost–Deisenhofen
+München Ost–München-Pasing
+München–Augsburg 	999.3 	DB Regio Bayern 	BR 423
+S4 	20 	S-Bahn München 	Geltendorf – Grafrath – Buchenau – München – Grafing – Ebersberg (Oberbay) 	München–Lindau
+München Ost–München-Pasing
+München–Rosenheim
+Grafing–Wasserburg 	999.4 	DB Regio Bayern 	BR 423
+S4 	einzelne Züge
+(HVZ) 	S-Bahn München 	Geltendorf – Grafrath – Buchenau – München 	München–Lindau
+München Ost–München-Pasing 	999.4 	DB Regio Bayern 	BR 420
+BR 423
+S6 	20 	S-Bahn München 	Tutzing – Starnberg – München (– Zorneding – Grafing – Ebersberg (Oberbay)) 	München–Garmisch-Partenkirchen
+München Ost–München-Pasing
+München–Rosenheim
+Grafing–Wasserburg 	999.4
+999.6 	DB Regio Bayern 	BR 423
+S7 	20 	S-Bahn München 	Wolfratshausen – Höllriegelskreuth – München – Höhenkirchen-Siegertsbrunn – Aying – Kreuzstraße 	München–Wolfratshausen
+München–Holzkirchen
+München Ost–München-Pasing
+München Ost–Deisenhofen
+München–Kreuzstraße 	999.7 	DB Regio Bayern 	BR 423
+S20 	einzelne Züge (HVZ) 	S-Bahn München 	Höllriegelskreuth – München-Pasing 	München–Wolfratshausen
+München–Holzkirchen
+München-Mittersendling–München-Pasing 	999.7 	DB Regio Bayern 	BR 420
+BR 423
+S8 	20,
+10 (HVZ) 	S-Bahn München 	(Herrsching –) Weßling – Germering-Unterpfaffenhofen – München (– München Flughafen) 	München–Herrsching
+München Ost–München-Pasing
+München–München Flughafen 	999.8 	DB Regio Bayern 	BR 423
+M 	60 (Mo–Fr) 	Meridian 	Deisenhofen – München 	München–Holzkirchen 	999.27 	Bayerische Oberlandbahn 	BR 1427
