@@ -193,14 +193,13 @@ class Simulation:
                 self.graph.add_node(train.line.name + "(" + str(train.number) + ")", label=train.line.name)
                 self.positions[train.line.name + "(" + str(train.number) + ")"] = (0,0)
         colors_of_trains = self.get_colors_of_trains()
-        for i in range(60):
-
+        for i in range(20):
             # draw the trains linearly interpolated with respect to their from and to stations
             for train in self.trains:
                 if train.minutes >= train.start_minute and not train.waiting:
                     from_pos = self.positions[train.current_station.name]
                     to_pos = self.positions[train.target_station.name]
-                    interpolated_pos = interpolate(from_pos, to_pos, i*1.0 / 60.0)
+                    interpolated_pos = interpolate(from_pos, to_pos, i*1.0 / 20.0)
                     self.positions[train.line.name + "(" + str(train.number) + ")"] = interpolated_pos
             axes = plt.gca()
             plt.cla()
