@@ -50,6 +50,12 @@ def find_index_in_list(lst, el):
             return i
     return -1
 
+def find_index_in_list_pred(lst, pred):
+    for i, e in enumerate(lst):
+        if pred(e):
+            return i
+    return -1
+
 def accumulate_stations(stations: List[str], start: str, dest: str):
     start_index: int = find_index_in_list(stations, start)
     dest_index: int = find_index_in_list(stations, dest)

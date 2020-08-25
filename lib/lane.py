@@ -1,11 +1,17 @@
 from typing import List
 
 class Lane:
-    def __init__(self, from_station: 'Station', to_station: 'Station', lines: List[str]):
+    def __init__(self, from_station: 'Station', to_station: 'Station', lines: List['Line']):
         self.from_station: 'Station' = from_station
         self.to_station: 'Station' = to_station
-        self.lines: List[str] = lines
-        self.is_subway: bool = self.lines[0].startswith('U')
+        self.lines: List['Line'] = lines
+        self.lines_by_type: Dict[bool, List['Line']] = {}
+        for line in self.lines:
+            if line.is_subway in self.lines_by_type:
+                self.lines_by_type[line.is_subway].append(line)
+            else:
+                self.lines_by_type[line.is_subway] = [line]
+        self.is_subway: bool = self.lines[0].name.startswith('U')
         self.is_double: bool = True # Doppelgleis
         self.trains: List['Train'] = []
 
