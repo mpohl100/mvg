@@ -15,6 +15,22 @@ class Config:
         self.minutes = minutes
         self.verbosity = verbosity
         self.show_net = show_net
+        self.files = None
+
+def parse_config():
+    import argparse
+    parser = argparse.ArgumentParser(description='MVG Simulation configuration.')
+    parser.add_argument('-f','--files', nargs='+',
+                        help='list of json files containing the network info.', required=True)
+    parser.add_argument('-v', '--verbosity', type=int, help='verbosity of the output.')
+    parser.add_argument('-d', '--deduce-schedule', type=bool, help='deduce a schedule for the network.')
+    args = vars(parser.parse_args())
+    config = Config()
+    config.files = args['files']
+    config.verbosity = args['verbosity']
+    config.deduce_schedule = args['deduce-schedule']
+    return config
+    
 
 def interpolate(from_pos, to_pos, t):
     return from_pos + t * (to_pos-from_pos)

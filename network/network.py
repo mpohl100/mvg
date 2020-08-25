@@ -65,10 +65,24 @@ def accumulate_stations(stations: List[str], start: str, dest: str):
         ret.append(stations[i])
     return ret
 
+def read_from_files(files):
+    all_info = {}
+    for i, file in enumerate(files):
+        with open(file, 'r') as infile:
+            data = json.load(infile)
+            if i == 0:
+                all_info = data
+            else:
+                all_info.update(data)
+    return all_info
+
 class Network:
-    def __init__(self, city, testnetwork=None):
-        self.city = city
-        self.all_info = self.get_all_info(city, testnetwork)
+    def __init__(self, city=None, testnetwork=None, files=None):
+        if not files:
+            self.city = city
+            self.all_info = self.get_all_info(city, testnetwork)
+        else:
+            self.all_info = read_from_files(files)
         self.all_lines: Dict[str, List[str]] = {k:v['all_stations'] for k,v in self.all_info.items()}
         self.all_switches: Dict[str, List[str]] = {k:v['switches'] for k,v in self.all_info.items()}
         self.deduce_line_data()

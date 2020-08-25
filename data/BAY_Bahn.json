@@ -1,0 +1,2000 @@
+{
+    "RE(0)": {
+        "all_stations": [
+            "Dresden",
+            "Freiberg",
+            "Chemnitz",
+            "Glauchau",
+            "Zwickau",
+            "Reichenbach",
+            "Plauen",
+            "Hof"
+        ],
+        "switches": [
+            ""
+        ]
+    },
+    "RB(1)": {
+        "all_stations": [
+            "Zwickau",
+            "Werdau",
+            "Plauen",
+            "Hof"
+        ],
+        "switches": [
+            ""
+        ]
+    },
+    "EB(2)": {
+        "all_stations": [
+            "Gera",
+            "Weida",
+            "Zeulenroda",
+            "Hof"
+        ],
+        "switches": [
+            ""
+        ]
+    },
+    "EB(3)": {
+        "all_stations": [
+            "Gutenf\u00fcrst",
+            "Hof"
+        ],
+        "switches": [
+            ""
+        ]
+    },
+    "RE(4)": {
+        "all_stations": [
+            "Leipzig",
+            "Jena",
+            "Sonneberg",
+            "Lichtenfels",
+            "Bamberg",
+            "F\u00fcrth",
+            "N\u00fcrnberg"
+        ],
+        "switches": [
+            ""
+        ]
+    },
+    "RE(5)": {
+        "all_stations": [
+            "W\u00fcrzburg",
+            "Schweinfurt",
+            "Ebenhausen",
+            "BadKissingen",
+            "Grimmenthal",
+            "Suhl",
+            "Arnstadt",
+            "Erfurt"
+        ],
+        "switches": [
+            ""
+        ]
+    },
+    "EB(6)": {
+        "all_stations": [
+            "Schweinfurt",
+            "Ebenhausen",
+            "Mellrichstadt",
+            "Meiningen"
+        ],
+        "switches": [
+            ""
+        ]
+    },
+    "RE(7)": {
+        "all_stations": [
+            "Frankfurt",
+            "Hanau",
+            "Aschaffenburg",
+            "W\u00fcrzburg"
+        ],
+        "switches": [
+            ""
+        ]
+    },
+    "RB(8)": {
+        "all_stations": [
+            "Frankfurt",
+            "Hanau",
+            "Aschaffenburg"
+        ],
+        "switches": [
+            ""
+        ]
+    },
+    "RB(9)": {
+        "all_stations": [
+            "Hanau",
+            "Kahl(Main)",
+            "Alzenau",
+            "Michelbach",
+            "Sch\u00f6llkrippen"
+        ],
+        "switches": [
+            ""
+        ]
+    },
+    "RB(10)": {
+        "all_stations": [
+            "Aschaffenburg",
+            "Babenhausen",
+            "Darmstadt",
+            "Mainz",
+            "Wiesbaden"
+        ],
+        "switches": [
+            ""
+        ]
+    },
+    "RE(11)": {
+        "all_stations": [
+            "Lindau",
+            "Wasserburg",
+            "FriedrichshafenStadt",
+            "Ravensburg",
+            "Aulendorf",
+            "Ulm",
+            "G\u00f6ppingen",
+            "Plochingen",
+            "Stuttgart"
+        ],
+        "switches": [
+            ""
+        ]
+    },
+    "RB(12)": {
+        "all_stations": [
+            "Aulendorf",
+            "Ki\u00dflegg",
+            "Hergatz",
+            "Lindau",
+            "Wasserburg",
+            "FriedrichshafenStadt",
+            "FriedrichshafenHafen"
+        ],
+        "switches": [
+            ""
+        ]
+    },
+    "RB(13)": {
+        "all_stations": [
+            "Lindau",
+            "Wasserburg",
+            "FriedrichshafenStadt"
+        ],
+        "switches": [
+            ""
+        ]
+    },
+    "RB(14)": {
+        "all_stations": [
+            "Ulm",
+            "Neu-Ulm",
+            "Senden",
+            "Memmingen",
+            "Leutkirch",
+            "Ki\u00dflegg",
+            "Aulendorf",
+            "BadSaulgau",
+            "Herbertingen",
+            "Sigmaringen"
+        ],
+        "switches": [
+            ""
+        ]
+    },
+    "RE(15)": {
+        "all_stations": [
+            "Aalen",
+            "Heidenheim",
+            "Langenau",
+            "Thalfingen",
+            "Ulm"
+        ],
+        "switches": [
+            ""
+        ]
+    },
+    "RB(16)": {
+        "all_stations": [
+            "Langenau",
+            "Thalfingen",
+            "Ulm"
+        ],
+        "switches": [
+            ""
+        ]
+    },
+    "RE(17)": {
+        "all_stations": [
+            "W\u00fcrzburg",
+            "Lauda",
+            "Osterburken",
+            "BadFriedrichshall",
+            "Heilbronn",
+            "Bietigheim-Bissingen",
+            "Stuttgart"
+        ],
+        "switches": [
+            ""
+        ]
+    },
+    "120(18)": {
+        "all_stations": [
+            "W\u00fcrzburg",
+            "Lauda"
+        ],
+        "switches": [
+            ""
+        ]
+    },
+    "RE(19)": {
+        "all_stations": [
+            "Aschaffenburg",
+            "Miltenberg",
+            "Wertheim",
+            "Lauda",
+            "Crailsheim"
+        ],
+        "switches": [
+            ""
+        ]
+    },
+    "120(20)": {
+        "all_stations": [
+            "Aschaffenburg",
+            "Miltenberg"
+        ],
+        "switches": [
+            ""
+        ]
+    },
+    "RB(21)": {
+        "all_stations": [
+            "Miltenberg",
+            "Wertheim",
+            "Lauda",
+            "BadMergentheim"
+        ],
+        "switches": [
+            ""
+        ]
+    },
+    "RB(22)": {
+        "all_stations": [
+            "Aschaffenburg",
+            "Miltenberg",
+            "Amorbach",
+            "Walld\u00fcrn",
+            "Seckach"
+        ],
+        "switches": [
+            ""
+        ]
+    },
+    "RE(23)": {
+        "all_stations": [
+            "N\u00fcrnberg",
+            "Ansbach",
+            "Crailsheim",
+            "Schw\u00e4bischHall-Hessental",
+            "Waiblingen",
+            "Stuttgart"
+        ],
+        "switches": [
+            ""
+        ]
+    },
+    "RB(24)": {
+        "all_stations": [
+            "Gem\u00fcnden(Main)",
+            "Heigenbr\u00fccken",
+            "Aschaffenburg"
+        ],
+        "switches": [
+            ""
+        ]
+    },
+    "RB(25)": {
+        "all_stations": [
+            "Bamberg",
+            "Schweinfurt",
+            "W\u00fcrzburg",
+            "Gem\u00fcnden(Main)",
+            "Jossa"
+        ],
+        "switches": [
+            ""
+        ]
+    },
+    "RB(26)": {
+        "all_stations": [
+            "Bamberg",
+            "Schweinfurt",
+            "W\u00fcrzburg",
+            "Gem\u00fcnden(Main)",
+            "Jossa",
+            "Schl\u00fcchtern"
+        ],
+        "switches": [
+            ""
+        ]
+    },
+    "EB(27)": {
+        "all_stations": [
+            "Gem\u00fcnden(Main)",
+            "Gr\u00e4fendorf",
+            "Hammelburg",
+            "BadKissingen",
+            "Ebenhausen",
+            "Schweinfurt"
+        ],
+        "switches": [
+            ""
+        ]
+    },
+    "RE(28)": {
+        "all_stations": [
+            "W\u00fcrzburg",
+            "Kitzingen",
+            "Neustadt(Aisch)",
+            "F\u00fcrth",
+            "N\u00fcrnberg"
+        ],
+        "switches": [
+            ""
+        ]
+    },
+    "RB(29)": {
+        "all_stations": [
+            "Neustadt(Aisch)",
+            "Siegelsdorf",
+            "F\u00fcrth",
+            "N\u00fcrnberg"
+        ],
+        "switches": [
+            ""
+        ]
+    },
+    "RB(30)": {
+        "all_stations": [
+            "Neustadt(Aisch)",
+            "BadWindsheim",
+            "Steinach"
+        ],
+        "switches": [
+            ""
+        ]
+    },
+    "RB(31)": {
+        "all_stations": [
+            "F\u00fcrth",
+            "Siegelsdorf",
+            "Wilhermsdorf",
+            "MarktErlbach"
+        ],
+        "switches": [
+            ""
+        ]
+    },
+    "RB(32)": {
+        "all_stations": [
+            "F\u00fcrth",
+            "Zirndorf",
+            "Cadolzburg"
+        ],
+        "switches": [
+            ""
+        ]
+    },
+    "RE(33)": {
+        "all_stations": [
+            "W\u00fcrzburg",
+            "Schweinfurt",
+            "Ha\u00dffurt",
+            "Bamberg"
+        ],
+        "switches": [
+            ""
+        ]
+    },
+    "RE(34)": {
+        "all_stations": [
+            "W\u00fcrzburg",
+            "Schweinfurt",
+            "Sonneberg",
+            "Lichtenfels",
+            "Bamberg",
+            "F\u00fcrth",
+            "N\u00fcrnberg"
+        ],
+        "switches": [
+            ""
+        ]
+    },
+    "EB(35)": {
+        "all_stations": [
+            "BadKissingen",
+            "Ebenhausen",
+            "Schweinfurt"
+        ],
+        "switches": [
+            ""
+        ]
+    },
+    "ag(36)": {
+        "all_stations": [
+            "BadRodach",
+            "Coburg",
+            "Ebersdorf",
+            "Lichtenfels",
+            "Hochstadt-Marktzeuln",
+            "Kulmbach",
+            "Neuenmarkt-Wirsberg",
+            "Bayreuth",
+            "Kirchlaibach",
+            "Weiden"
+        ],
+        "switches": [
+            ""
+        ]
+    },
+    "RB(37)": {
+        "all_stations": [
+            "Bamberg",
+            "Lichtenfels",
+            "Kronach",
+            "Ludwigsstadt",
+            "Saalfeld"
+        ],
+        "switches": [
+            ""
+        ]
+    },
+    "ag(38)": {
+        "all_stations": [
+            "Ebermannstadt",
+            "Forchheim"
+        ],
+        "switches": [
+            ""
+        ]
+    },
+    "ag(39)": {
+        "all_stations": [
+            "Bamberg",
+            "Breiteng\u00fc\u00dfbach",
+            "Ebern"
+        ],
+        "switches": [
+            ""
+        ]
+    },
+    "RE(40)": {
+        "all_stations": [
+            "Lichtenfels",
+            "Kulmbach",
+            "Neuenmarkt-Wirsberg",
+            "Hof",
+            "Bayreuth"
+        ],
+        "switches": [
+            ""
+        ]
+    },
+    "RE(41)": {
+        "all_stations": [
+            "Bamberg",
+            "Lichtenfels",
+            "Kulmbach",
+            "Neuenmarkt-Wirsberg",
+            "Hof",
+            "Bayreuth",
+            "N\u00fcrnberg"
+        ],
+        "switches": [
+            ""
+        ]
+    },
+    "ag(42)": {
+        "all_stations": [
+            "BadSteben",
+            "Marxgr\u00fcn",
+            "Naila",
+            "Hof",
+            "M\u00fcnchberg"
+        ],
+        "switches": [
+            ""
+        ]
+    },
+    "ag(43)": {
+        "all_stations": [
+            "M\u00fcnchberg",
+            "Helmbrechts"
+        ],
+        "switches": [
+            ""
+        ]
+    },
+    "ALX(44)": {
+        "all_stations": [
+            "Hof",
+            "Marktredwitz",
+            "Weiden",
+            "Schwandorf",
+            "Regensburg",
+            "Landshut",
+            "M\u00fcnchen"
+        ],
+        "switches": [
+            ""
+        ]
+    },
+    "ALX(45)": {
+        "all_stations": [
+            "Prag",
+            "Pilsen",
+            "FurthimWald",
+            "Cham",
+            "Schwandorf",
+            "Regensburg",
+            "Landshut",
+            "M\u00fcnchen"
+        ],
+        "switches": [
+            ""
+        ]
+    },
+    "RE(46)": {
+        "all_stations": [
+            "Hof",
+            "Marktredwitz",
+            "Weiden",
+            "Schwandorf",
+            "Regensburg"
+        ],
+        "switches": [
+            ""
+        ]
+    },
+    "RE(47)": {
+        "all_stations": [
+            "Hof",
+            "Marktredwitz",
+            "Kirchenlaibach",
+            "Hersbruck",
+            "N\u00fcrnberg"
+        ],
+        "switches": [
+            ""
+        ]
+    },
+    "OPB(48)": {
+        "all_stations": [
+            "Marktredwitz",
+            "Weiden",
+            "Schwandorf",
+            "Regensburg"
+        ],
+        "switches": [
+            ""
+        ]
+    },
+    "ag(49)": {
+        "all_stations": [
+            "Hof",
+            "Marktredwitz",
+            "Kirchenlaibach",
+            "Bayreuth"
+        ],
+        "switches": [
+            ""
+        ]
+    },
+    "ag(50)": {
+        "all_stations": [
+            "Hof",
+            "Marktredwitz",
+            "Kirchenlaibach",
+            "Bayreuth"
+        ],
+        "switches": [
+            ""
+        ]
+    },
+    "ag(51)": {
+        "all_stations": [
+            "BadSteben",
+            "Marxgr\u00fcn",
+            "Naila",
+            "Hof"
+        ],
+        "switches": [
+            ""
+        ]
+    },
+    "ag(52)": {
+        "all_stations": [
+            "Hof",
+            "Rehau",
+            "Selb-Pl\u00f6\u00dfberg",
+            "SelbStadt"
+        ],
+        "switches": [
+            ""
+        ]
+    },
+    "RE(53)": {
+        "all_stations": [
+            "N\u00fcrnberg",
+            "Hersbruck(rPegnitz)",
+            "Pegnitz",
+            "Bayreuth"
+        ],
+        "switches": [
+            ""
+        ]
+    },
+    "OPB(54)": {
+        "all_stations": [
+            "Marktredwitz",
+            "Schirnding",
+            "Cheb",
+            "HofHauptbahnhof"
+        ],
+        "switches": [
+            ""
+        ]
+    },
+    "RE(55)": {
+        "all_stations": [
+            "N\u00fcrnberg",
+            "Hersbruck(rPegnitz)",
+            "Pegnitz",
+            "Marktredwitz",
+            "Schirnding",
+            "Cheb"
+        ],
+        "switches": [
+            ""
+        ]
+    },
+    "RB(56)": {
+        "all_stations": [
+            "N\u00fcrnbergNordost",
+            "Eschenau",
+            "Gr\u00e4fenberg"
+        ],
+        "switches": [
+            ""
+        ]
+    },
+    "ag(57)": {
+        "all_stations": [
+            "Bayreuth",
+            "Weidenberg"
+        ],
+        "switches": [
+            ""
+        ]
+    },
+    "RE(58)": {
+        "all_stations": [
+            "N\u00fcrnberg",
+            "Hersbruck(rPegnitz)",
+            "Neukirchen(bSulzb)",
+            "Amberg",
+            "Schwandorf"
+        ],
+        "switches": [
+            ""
+        ]
+    },
+    "RE(59)": {
+        "all_stations": [
+            "N\u00fcrnberg",
+            "Hersbruck(rPegnitz)",
+            "Neukirchen(bSulzb)",
+            "Weiden(Oberpf)",
+            "Neustadt(Waldnaab)"
+        ],
+        "switches": [
+            ""
+        ]
+    },
+    "OPB(60)": {
+        "all_stations": [
+            "Schwandorf",
+            "Cham(Oberpf)",
+            "FurthiWald"
+        ],
+        "switches": [
+            ""
+        ]
+    },
+    "OPB(61)": {
+        "all_stations": [
+            "Cham(Oberpf)",
+            "Waldm\u00fcnchen"
+        ],
+        "switches": [
+            ""
+        ]
+    },
+    "OPB(62)": {
+        "all_stations": [
+            "Cham(Oberpf)",
+            "BadK\u00f6tzting",
+            "Lam"
+        ],
+        "switches": [
+            ""
+        ]
+    },
+    "RE(63)": {
+        "all_stations": [
+            "N\u00fcrnberg",
+            "Neumarkt(Oberpf)",
+            "Regensburg",
+            "Landshut(Bay)",
+            "Freising",
+            "M\u00fcnchen"
+        ],
+        "switches": [
+            ""
+        ]
+    },
+    "ag(64)": {
+        "all_stations": [
+            "Neumarkt(Oberpf)",
+            "Regensburg",
+            "Straubing",
+            "Plattling"
+        ],
+        "switches": [
+            ""
+        ]
+    },
+    "RE(65)": {
+        "all_stations": [
+            "Passau",
+            "Plattling",
+            "Landau(Isar)",
+            "Landshut(Bay)",
+            "Freising",
+            "M\u00fcnchen"
+        ],
+        "switches": [
+            ""
+        ]
+    },
+    "S1(66)": {
+        "all_stations": [
+            "Bamberg",
+            "Forchheim(Oberfr)",
+            "Erlangen",
+            "N\u00fcrnberg",
+            "R\u00f6thenbach(Pegnitz)",
+            "Lauf(lPegnitz)",
+            "Hersbruck(lPegnitz)",
+            "Hartmannshof"
+        ],
+        "switches": [
+            ""
+        ]
+    },
+    "S2(67)": {
+        "all_stations": [
+            "Roth",
+            "Schwabach",
+            "N\u00fcrnberg",
+            "Feucht",
+            "Altdorf(bN\u00fcrnberg)"
+        ],
+        "switches": [
+            ""
+        ]
+    },
+    "S3(68)": {
+        "all_stations": [
+            "N\u00fcrnberg",
+            "Feucht",
+            "Burgthann",
+            "Neumarkt(Oberpf)"
+        ],
+        "switches": [
+            ""
+        ]
+    },
+    "S4(69)": {
+        "all_stations": [
+            "N\u00fcrnberg",
+            "Ro\u00dftal",
+            "Wicklesgreuth",
+            "Ansbach"
+        ],
+        "switches": [
+            ""
+        ]
+    },
+    "RB(70)": {
+        "all_stations": [
+            "N\u00fcrnberg",
+            "Lauf(rPegnitz)",
+            "NeunkirchenaSand",
+            "Hersbruck(rPegnitz)",
+            "Neuhaus(Pegnitz)"
+        ],
+        "switches": [
+            ""
+        ]
+    },
+    "RB(71)": {
+        "all_stations": [
+            "N\u00fcrnberg",
+            "Lauf(rPegnitz)",
+            "NeunkirchenaSand",
+            "Simmelsdorf-H\u00fcttenbach"
+        ],
+        "switches": [
+            ""
+        ]
+    },
+    "RE(72)": {
+        "all_stations": [
+            "M\u00fcnchen(\u2013Petershausen)",
+            "Pfaffenhofen(Ilm)",
+            "Ingolstadt",
+            "Kinding(Altm\u00fchltal)",
+            "Allersberg(Rothsee)",
+            "N\u00fcrnberg"
+        ],
+        "switches": [
+            ""
+        ]
+    },
+    "RB(73)": {
+        "all_stations": [
+            "M\u00fcnchen",
+            "Dachau",
+            "Pfaffenhofen(Ilm)",
+            "Ingolstadt",
+            "Eichst\u00e4tt",
+            "Treuchtlingen",
+            "Roth",
+            "N\u00fcrnberg"
+        ],
+        "switches": [
+            ""
+        ]
+    },
+    "RE(74)": {
+        "all_stations": [
+            "M\u00fcnchen",
+            "Petershausen",
+            "Pfaffenhofen(Ilm)",
+            "Ingolstadt",
+            "Kinding(Altm\u00fchltal)",
+            "Allersberg(Rothsee)",
+            "N\u00fcrnberg"
+        ],
+        "switches": [
+            ""
+        ]
+    },
+    "RB(75)": {
+        "all_stations": [
+            "Allersberg(Rothsee)",
+            "N\u00fcrnberg"
+        ],
+        "switches": [
+            ""
+        ]
+    },
+    "WBA(76)": {
+        "all_stations": [
+            "Plattling",
+            "Deggendorf",
+            "Zwiesel",
+            "BayerischEisenstein"
+        ],
+        "switches": [
+            ""
+        ]
+    },
+    "WBA(77)": {
+        "all_stations": [
+            "Zwiesel",
+            "Grafenau"
+        ],
+        "switches": [
+            ""
+        ]
+    },
+    "WBA(78)": {
+        "all_stations": [
+            "Zwiesel",
+            "Bodenmais"
+        ],
+        "switches": [
+            ""
+        ]
+    },
+    "WBA(79)": {
+        "all_stations": [
+            "Gotteszell",
+            "Teisnach",
+            "Viechtach"
+        ],
+        "switches": [
+            ""
+        ]
+    },
+    "RE(80)": {
+        "all_stations": [
+            "N\u00fcrnberg",
+            "Treuchtlingen",
+            "Donauw\u00f6rth",
+            "Augsburg",
+            "Buchloe",
+            "Kaufbeuren",
+            "Kempten",
+            "Immenstadt",
+            "Oberstdorf/Lindau"
+        ],
+        "switches": [
+            ""
+        ]
+    },
+    "RE(81)": {
+        "all_stations": [
+            "N\u00fcrnberg",
+            "Treuchtlingen",
+            "Donauw\u00f6rth",
+            "Augsburg"
+        ],
+        "switches": [
+            ""
+        ]
+    },
+    "RE(82)": {
+        "all_stations": [
+            "N\u00fcrnberg",
+            "Roth",
+            "Treuchtlingen"
+        ],
+        "switches": [
+            ""
+        ]
+    },
+    "RE(83)": {
+        "all_stations": [
+            "Treuchtlingen",
+            "Donauw\u00f6rth",
+            "Augsburg",
+            "Mering",
+            "M\u00fcnchen"
+        ],
+        "switches": [
+            ""
+        ]
+    },
+    "RE/RB(84)": {
+        "all_stations": [
+            "Donauw\u00f6rth",
+            "Meitingen",
+            "Augsburg",
+            "Mering",
+            "M\u00fcnchen"
+        ],
+        "switches": [
+            ""
+        ]
+    },
+    "RB(85)": {
+        "all_stations": [
+            "Donauw\u00f6rth",
+            "Meitingen",
+            "Augsburg"
+        ],
+        "switches": [
+            ""
+        ]
+    },
+    "RB(86)": {
+        "all_stations": [
+            "Roth",
+            "Hilpoltstein"
+        ],
+        "switches": [
+            ""
+        ]
+    },
+    "RB(87)": {
+        "all_stations": [
+            "Pleinfeld",
+            "Gunzenhausen"
+        ],
+        "switches": [
+            ""
+        ]
+    },
+    "RB(88)": {
+        "all_stations": [
+            "Gem\u00fcnden(Main)",
+            "Karlstadt",
+            "W\u00fcrzburg",
+            "Marktbreit",
+            "Steinach(bRothenburgo.d.Tauber)",
+            "Ansbach",
+            "Gunzenhausen",
+            "Treuchtlingen"
+        ],
+        "switches": [
+            ""
+        ]
+    },
+    "RB(89)": {
+        "all_stations": [
+            "W\u00fcrzburg",
+            "Ochsenfurt",
+            "Marktbreit"
+        ],
+        "switches": [
+            ""
+        ]
+    },
+    "RB(90)": {
+        "all_stations": [
+            "Steinach(bRothenburgo.d.Tauber)",
+            "RothenburgobderTauber"
+        ],
+        "switches": [
+            ""
+        ]
+    },
+    "RB(91)": {
+        "all_stations": [
+            "Wicklesgreuth",
+            "Windsbach"
+        ],
+        "switches": [
+            ""
+        ]
+    },
+    "RB(92)": {
+        "all_stations": [
+            "M\u00fcnchen",
+            "Freising",
+            "Moosburg",
+            "Landshut"
+        ],
+        "switches": [
+            ""
+        ]
+    },
+    "ag(93)": {
+        "all_stations": [
+            "Ingolstadt",
+            "Regensburg"
+        ],
+        "switches": [
+            ""
+        ]
+    },
+    "RE(94)": {
+        "all_stations": [
+            "Regensburg",
+            "FlughafenM\u00fcnchen"
+        ],
+        "switches": [
+            ""
+        ]
+    },
+    "ag(95)": {
+        "all_stations": [
+            "Ulm",
+            "G\u00fcnzburg",
+            "Donauw\u00f6rth",
+            "Ingolstadt",
+            "Regensburg",
+            "Eggm\u00fchl",
+            "Neufahrn(Niederbay)",
+            "Landshut(Bay)"
+        ],
+        "switches": [
+            ""
+        ]
+    },
+    "as(96)": {
+        "all_stations": [
+            "Ulm",
+            "G\u00fcnzburg",
+            "Donauw\u00f6rth",
+            "Ingolstadt",
+            "Regensburg",
+            "Eggm\u00fchl/Passau"
+        ],
+        "switches": [
+            ""
+        ]
+    },
+    "RB(97)": {
+        "all_stations": [
+            "Bogen",
+            "Straubing",
+            "Radldorf(Niederbay)",
+            "Neufahrn(Niederbay)"
+        ],
+        "switches": [
+            ""
+        ]
+    },
+    "RB(98)": {
+        "all_stations": [
+            "M\u00fcnchen",
+            "MarktSchwaben",
+            "Dorfen",
+            "M\u00fchldorf",
+            "Simbach(Inn)"
+        ],
+        "switches": [
+            ""
+        ]
+    },
+    "RB(99)": {
+        "all_stations": [
+            "M\u00fchldorf",
+            "Marktl",
+            "Simbach(Inn)"
+        ],
+        "switches": [
+            ""
+        ]
+    },
+    "RB(100)": {
+        "all_stations": [
+            "M\u00fchldorf",
+            "T\u00fc\u00dfling",
+            "Alt\u00f6tting",
+            "Burghausen"
+        ],
+        "switches": [
+            ""
+        ]
+    },
+    "RB(101)": {
+        "all_stations": [
+            "Landshut(Bay)",
+            "Vilsbiburg",
+            "Neumarkt-StVeit",
+            "M\u00fchldorf",
+            "Waldkraiburg",
+            "Wasserburg(Inn)",
+            "Rott(Inn)",
+            "Rosenheim"
+        ],
+        "switches": [
+            ""
+        ]
+    },
+    "RB(102)": {
+        "all_stations": [
+            "Passau/Burghausen",
+            "M\u00fchldorf",
+            "Waldkraiburg",
+            "Wasserburg(Inn)",
+            "Rott(Inn)",
+            "Rosenheim"
+        ],
+        "switches": [
+            ""
+        ]
+    },
+    "RB(103)": {
+        "all_stations": [
+            "Landshut(Bay)",
+            "Vilsbiburg",
+            "Neumarkt-StVeit",
+            "M\u00fchldorf",
+            "Garching(Alz)",
+            "Laufen(Oberbay)",
+            "Freilassing",
+            "Salzburg"
+        ],
+        "switches": [
+            ""
+        ]
+    },
+    "RB(104)": {
+        "all_stations": [
+            "Passau",
+            "F\u00fcrstenzell",
+            "Pocking",
+            "Pfarrkirchen",
+            "Neumarkt-StVeit",
+            "M\u00fchldorf"
+        ],
+        "switches": [
+            ""
+        ]
+    },
+    "RB(105)": {
+        "all_stations": [
+            "M\u00fchldorf",
+            "Garching(Alz)",
+            "Trostberg",
+            "H\u00f6rpolding",
+            "Traunreut",
+            "Traunstein"
+        ],
+        "switches": [
+            ""
+        ]
+    },
+    "RB(106)": {
+        "all_stations": [
+            "Traunreut",
+            "H\u00f6rpolding",
+            "Traunstein"
+        ],
+        "switches": [
+            ""
+        ]
+    },
+    "RB(107)": {
+        "all_stations": [
+            "Wasserburg(Inn)",
+            "Ebersberg(Oberbay)(\u2013Grafing",
+            "M\u00fcnchen)"
+        ],
+        "switches": [
+            ""
+        ]
+    },
+    "M(108)": {
+        "all_stations": [
+            "M\u00fcnchen",
+            "Rosenheim",
+            "BadEndorf",
+            "PrienaChiemsee",
+            "Traunstein",
+            "Freilassing",
+            "Salzburg"
+        ],
+        "switches": [
+            ""
+        ]
+    },
+    "M(109)": {
+        "all_stations": [
+            "M\u00fcnchen",
+            "Grafing",
+            "Rosenheim",
+            "BadEndorf",
+            "PrienaChiemsee",
+            "Traunstein"
+        ],
+        "switches": [
+            ""
+        ]
+    },
+    "M(110)": {
+        "all_stations": [
+            "M\u00fcnchen",
+            "Grafing",
+            "Rosenheim",
+            "Kufstein"
+        ],
+        "switches": [
+            ""
+        ]
+    },
+    "RB(111)": {
+        "all_stations": [
+            "PrienaChiemsee",
+            "Aschau(Chiemgau)"
+        ],
+        "switches": [
+            ""
+        ]
+    },
+    "RB(112)": {
+        "all_stations": [
+            "Traunstein",
+            "Ruhpolding"
+        ],
+        "switches": [
+            ""
+        ]
+    },
+    "BLB/S4(113)": {
+        "all_stations": [
+            "Freilassing",
+            "Berchtesgaden"
+        ],
+        "switches": [
+            ""
+        ]
+    },
+    "BLB/S3(114)": {
+        "all_stations": [
+            "Schwarzach-St.Veit",
+            "Salzburg",
+            "Freilassing",
+            "BadReichenhall"
+        ],
+        "switches": [
+            ""
+        ]
+    },
+    "S3(115)": {
+        "all_stations": [
+            "Golling-Abtenau",
+            "Salzburg",
+            "Freilassing"
+        ],
+        "switches": [
+            ""
+        ]
+    },
+    "BOB(116)": {
+        "all_stations": [
+            "M\u00fcnchen",
+            "Holzkirchen",
+            "Schliersee",
+            "Bayrischzell"
+        ],
+        "switches": [
+            ""
+        ]
+    },
+    "BOB(117)": {
+        "all_stations": [
+            "M\u00fcnchen",
+            "Holzkirchen",
+            "Schliersee"
+        ],
+        "switches": [
+            ""
+        ]
+    },
+    "BOB(118)": {
+        "all_stations": [
+            "M\u00fcnchen",
+            "Holzkirchen",
+            "Schaftlach",
+            "BadT\u00f6lz",
+            "Lenggries"
+        ],
+        "switches": [
+            ""
+        ]
+    },
+    "BOB(119)": {
+        "all_stations": [
+            "M\u00fcnchen",
+            "Holzkirchen",
+            "Schaftlach",
+            "Tegernsee"
+        ],
+        "switches": [
+            ""
+        ]
+    },
+    "M(120)": {
+        "all_stations": [
+            "Holzkirchen",
+            "BadAibling",
+            "Rosenheim"
+        ],
+        "switches": [
+            ""
+        ]
+    },
+    "M(121)": {
+        "all_stations": [
+            "M\u00fcnchen",
+            "Deisenhofen",
+            "Holzkirchen",
+            "BadAibling",
+            "Rosenheim"
+        ],
+        "switches": [
+            ""
+        ]
+    },
+    "RE(122)": {
+        "all_stations": [
+            "M\u00fcnchen",
+            "Weilheim",
+            "Murnau",
+            "Garmisch-Partenkirchen",
+            "Mittenwald/Lermoos"
+        ],
+        "switches": [
+            ""
+        ]
+    },
+    "RB(123)": {
+        "all_stations": [
+            "M\u00fcnchen",
+            "Tutzing",
+            "Weilheim",
+            "Murnau",
+            "Garmisch-Partenkirchen",
+            "Reutte",
+            "Mittenwald",
+            "Seefeld"
+        ],
+        "switches": [
+            ""
+        ]
+    },
+    "RB(124)": {
+        "all_stations": [
+            "M\u00fcnchen",
+            "Tutzing",
+            "Weilheim",
+            "Murnau",
+            "Garmisch-Partenkirchen",
+            "Reutte"
+        ],
+        "switches": [
+            ""
+        ]
+    },
+    "RB(125)": {
+        "all_stations": [
+            "M\u00fcnchen",
+            "Tutzing",
+            "Weilheim",
+            "Murnau",
+            "Garmisch-Partenkirchen",
+            "Reutte",
+            "Mittenwald",
+            "Seefeld",
+            "Innsbruck"
+        ],
+        "switches": [
+            ""
+        ]
+    },
+    "RB(126)": {
+        "all_stations": [
+            "Garmisch-Partenkirchen",
+            "Mittenwald",
+            "Seefeld",
+            "Innsbruck"
+        ],
+        "switches": [
+            ""
+        ]
+    },
+    "RB(127)": {
+        "all_stations": [
+            "Kochelsee-BahnM\u00fcnchen",
+            "Tutzing",
+            "Weilheim/Kochel"
+        ],
+        "switches": [
+            ""
+        ]
+    },
+    "RB(128)": {
+        "all_stations": [
+            "M\u00fcnchen",
+            "Tutzing",
+            "Kochel"
+        ],
+        "switches": [
+            ""
+        ]
+    },
+    "BRB(129)": {
+        "all_stations": [
+            "Augsburg",
+            "Mering",
+            "Geltendorf",
+            "Die\u00dfen",
+            "Weilheim",
+            "Pei\u00dfenberg",
+            "Schongau"
+        ],
+        "switches": [
+            ""
+        ]
+    },
+    "BRB(130)": {
+        "all_stations": [
+            "Ammersee-BahnGeltendorf",
+            "Die\u00dfen",
+            "Weilheim",
+            "Pei\u00dfenberg"
+        ],
+        "switches": [
+            ""
+        ]
+    },
+    "RB(131)": {
+        "all_stations": [
+            "WerdenfelsbahnMurnau",
+            "BadKohlgrub",
+            "Oberammergau"
+        ],
+        "switches": [
+            ""
+        ]
+    },
+    "ALX(132)": {
+        "all_stations": [
+            "M\u00fcnchen",
+            "Kaufering",
+            "Buchloe",
+            "Kaufbeuren",
+            "Kempten",
+            "Immenstadt",
+            "Oberstdorf",
+            "Hergatz",
+            "Lindau"
+        ],
+        "switches": [
+            ""
+        ]
+    },
+    "RE(133)": {
+        "all_stations": [
+            "M\u00fcnchen",
+            "Geltendorf",
+            "Kaufering",
+            "Buchloe",
+            "Kaufbeuren",
+            "Biessenhofen",
+            "Kempten"
+        ],
+        "switches": [
+            ""
+        ]
+    },
+    "RE(134)": {
+        "all_stations": [
+            "M\u00fcnchen",
+            "Geltendorf",
+            "Kaufering",
+            "Buchloe",
+            "T\u00fcrkheim",
+            "Mindelheim",
+            "Memmingen"
+        ],
+        "switches": [
+            ""
+        ]
+    },
+    "RE(135)": {
+        "all_stations": [
+            "M\u00fcnchen",
+            "Geltendorf",
+            "Kaufering",
+            "Buchloe",
+            "Kaufbeuren",
+            "Biessenhofen",
+            "Marktoberdorf",
+            "F\u00fcssen"
+        ],
+        "switches": [
+            ""
+        ]
+    },
+    "RE(136)": {
+        "all_stations": [
+            "Augsburg",
+            "Buchloe",
+            "Kaufbeuren",
+            "Kempten",
+            "Immenstadt",
+            "Oberstdorf",
+            "Hergatz",
+            "Lindau"
+        ],
+        "switches": [
+            ""
+        ]
+    },
+    "RE(137)": {
+        "all_stations": [
+            "Ulm",
+            "Memmingen",
+            "Kempten",
+            "Immenstadt",
+            "Oberstdorf",
+            "Hergatz",
+            "Lindau",
+            "Wangen"
+        ],
+        "switches": [
+            ""
+        ]
+    },
+    "RB(138)": {
+        "all_stations": [
+            "Augsburg",
+            "Bobingen",
+            "Buchloe",
+            "Kaufbeuren",
+            "Biessenhofen",
+            "Marktoberdorf",
+            "F\u00fcssen"
+        ],
+        "switches": [
+            ""
+        ]
+    },
+    "RB(139)": {
+        "all_stations": [
+            "Augsburg",
+            "Bobingen",
+            "Buchloe",
+            "Kaufbeuren",
+            "Biessenhofen",
+            "Marktoberdorf"
+        ],
+        "switches": [
+            ""
+        ]
+    },
+    "RE/RB(140)": {
+        "all_stations": [
+            "Augsburg",
+            "Bobingen",
+            "Buchloe",
+            "T\u00fcrkheim",
+            "BadW\u00f6rishofen",
+            "Mindelheim",
+            "Memmingen"
+        ],
+        "switches": [
+            ""
+        ]
+    },
+    "RB(141)": {
+        "all_stations": [
+            "Kempten",
+            "Pfronten-Steinach",
+            "VilsinTirol",
+            "Reutte"
+        ],
+        "switches": [
+            ""
+        ]
+    },
+    "RB(142)": {
+        "all_stations": [
+            "Kempten",
+            "Pfronten-Steinach",
+            "VilsinTirol",
+            "Reutte"
+        ],
+        "switches": [
+            ""
+        ]
+    },
+    "RE(143)": {
+        "all_stations": [
+            "Ulm",
+            "Memmingen",
+            "Kempten"
+        ],
+        "switches": [
+            ""
+        ]
+    },
+    "RB(144)": {
+        "all_stations": [
+            "Ulm",
+            "Neu-Ulm",
+            "Senden",
+            "Wei\u00dfenhorn"
+        ],
+        "switches": [
+            ""
+        ]
+    },
+    "RB(145)": {
+        "all_stations": [
+            "G\u00fcnzburg",
+            "Krumbach(Schwab)",
+            "Mindelheim"
+        ],
+        "switches": [
+            ""
+        ]
+    },
+    "RB(146)": {
+        "all_stations": [
+            "G\u00fcnzburg",
+            "Krumbach(Schwab)"
+        ],
+        "switches": [
+            ""
+        ]
+    },
+    "RE(147)": {
+        "all_stations": [
+            "M\u00fcnchen",
+            "Mering",
+            "Augsburg",
+            "Dinkelscherben",
+            "G\u00fcnzburg",
+            "Neu-Ulm",
+            "Ulm"
+        ],
+        "switches": [
+            ""
+        ]
+    },
+    "RE(148)": {
+        "all_stations": [
+            "M\u00fcnchen",
+            "Mering",
+            "Augsburg",
+            "Dinkelscherben",
+            "G\u00fcnzburg",
+            "Neu-Ulm",
+            "Ulm"
+        ],
+        "switches": [
+            ""
+        ]
+    },
+    "RB(149)": {
+        "all_stations": [
+            "M\u00fcnchen",
+            "Mering",
+            "Augsburg",
+            "Dinkelscherben"
+        ],
+        "switches": [
+            ""
+        ]
+    },
+    "RB(150)": {
+        "all_stations": [
+            "M\u00fcnchen",
+            "Mering",
+            "Augsburg",
+            "Gessertshausen",
+            "Dinkelscherben",
+            "G\u00fcnzburg",
+            "Neu-Ulm",
+            "Ulm"
+        ],
+        "switches": [
+            ""
+        ]
+    },
+    "BRB(151)": {
+        "all_stations": [
+            "Augsburg",
+            "Friedberg(Augsburg)",
+            "Aichach",
+            "Ingolstadt"
+        ],
+        "switches": [
+            ""
+        ]
+    },
+    "BRB(152)": {
+        "all_stations": [
+            "Augsburg",
+            "Friedberg(Augsburg)",
+            "Aichach"
+        ],
+        "switches": [
+            ""
+        ]
+    },
+    "BRB(153)": {
+        "all_stations": [
+            "Augsburg",
+            "Friedberg(Augsburg)"
+        ],
+        "switches": [
+            ""
+        ]
+    },
+    "BRB(154)": {
+        "all_stations": [
+            "Augsburg",
+            "Mering(\u2013Geltendorf)"
+        ],
+        "switches": [
+            ""
+        ]
+    },
+    "RB(155)": {
+        "all_stations": [
+            "Augsburg",
+            "Bobingen",
+            "Kaufering",
+            "Landsberg(Lech)"
+        ],
+        "switches": [
+            ""
+        ]
+    },
+    "RB(156)": {
+        "all_stations": [
+            "Kaufering",
+            "Landsberg(Lech)"
+        ],
+        "switches": [
+            ""
+        ]
+    },
+    "RB(157)": {
+        "all_stations": [
+            "Augsburg",
+            "Bobingen"
+        ],
+        "switches": [
+            ""
+        ]
+    },
+    "RB(158)": {
+        "all_stations": [
+            "T\u00fcrkheim(Bay)",
+            "BadW\u00f6rishofen"
+        ],
+        "switches": [
+            ""
+        ]
+    },
+    "BRB(159)": {
+        "all_stations": [
+            "Eichst\u00e4ttStadt",
+            "Eichst\u00e4ttBahnhof",
+            "Ingolstadt"
+        ],
+        "switches": [
+            ""
+        ]
+    },
+    "BRB(160)": {
+        "all_stations": [
+            "Eichst\u00e4ttStadt",
+            "Eichst\u00e4ttBahnhof"
+        ],
+        "switches": [
+            ""
+        ]
+    },
+    "ag(161)": {
+        "all_stations": [
+            "Ulm",
+            "G\u00fcnzburg",
+            "Donauw\u00f6rth",
+            "Ingolstadt"
+        ],
+        "switches": [
+            ""
+        ]
+    },
+    "RB(162)": {
+        "all_stations": [
+            "Aalen",
+            "N\u00f6rdlingen",
+            "Donauw\u00f6rth"
+        ],
+        "switches": [
+            ""
+        ]
+    },
+    "S1(163)": {
+        "all_stations": [
+            "M\u00fcnchen",
+            "Neufahrn(bFreising)",
+            "Freising/FlughafenM\u00fcnchen"
+        ],
+        "switches": [
+            ""
+        ]
+    },
+    "S2(164)": {
+        "all_stations": [
+            "Erding",
+            "MarktSchwaben",
+            "M\u00fcnchen",
+            "DachauBahnhof",
+            "Altom\u00fcnster/Petershausen(Oberbay)"
+        ],
+        "switches": [
+            ""
+        ]
+    },
+    "S3(165)": {
+        "all_stations": [
+            "Holzkirchen",
+            "Deisenhofen",
+            "M\u00fcnchen",
+            "Maisach",
+            "Mammendorf"
+        ],
+        "switches": [
+            ""
+        ]
+    },
+    "S4(166)": {
+        "all_stations": [
+            "Geltendorf",
+            "Grafrath",
+            "Buchenau",
+            "M\u00fcnchen",
+            "Grafing",
+            "Ebersberg(Oberbay)"
+        ],
+        "switches": [
+            ""
+        ]
+    },
+    "S4(167)": {
+        "all_stations": [
+            "Geltendorf",
+            "Grafrath",
+            "Buchenau",
+            "M\u00fcnchen"
+        ],
+        "switches": [
+            ""
+        ]
+    },
+    "S6(168)": {
+        "all_stations": [
+            "Tutzing",
+            "Starnberg",
+            "M\u00fcnchen",
+            "Zorneding",
+            "Grafing",
+            "Ebersberg(Oberbay)"
+        ],
+        "switches": [
+            ""
+        ]
+    },
+    "S7(169)": {
+        "all_stations": [
+            "Wolfratshausen",
+            "H\u00f6llriegelskreuth",
+            "M\u00fcnchen",
+            "H\u00f6henkirchen-Siegertsbrunn",
+            "Aying",
+            "Kreuzstra\u00dfe"
+        ],
+        "switches": [
+            ""
+        ]
+    },
+    "S20(170)": {
+        "all_stations": [
+            "H\u00f6llriegelskreuth",
+            "M\u00fcnchen-PasingM\u00fcnchen\u2013Wolfratshausen"
+        ],
+        "switches": [
+            ""
+        ]
+    },
+    "S8(171)": {
+        "all_stations": [
+            "Herrsching",
+            "We\u00dfling",
+            "Germering-Unterpfaffenhofen",
+            "M\u00fcnchen",
+            "M\u00fcnchenFlughafen"
+        ],
+        "switches": []
+    }
+}
