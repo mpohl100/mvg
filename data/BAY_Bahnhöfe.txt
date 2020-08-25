@@ -2,7 +2,7 @@ RE
 Dresden – Freiberg – Chemnitz – Glauchau – Zwickau – Reichenbach – Plauen – Hof 	
 
 RB 	
-Zwickau – Werdau – Plauen (– Hof) 	
+Zwickau – Werdau – Plauen – Hof	
 
 EB
 Gera – Weida – Zeulenroda – Hof
@@ -11,10 +11,10 @@ EB
 Gutenfürst – Hof
 
 RE 	
-Leipzig – Jena –/ Sonneberg – Lichtenfels – Bamberg – Fürth – Nürnberg 	Nürnberg–Bamberg
+Leipzig – Jena – Sonneberg – Lichtenfels – Bamberg – Fürth – Nürnberg
 
 RE 
-Würzburg – Schweinfurt – Ebenhausen – Bad Kissingen / – Grimmenthal – Suhl – Arnstadt – Erfurt 	
+Würzburg – Schweinfurt – Ebenhausen – Bad Kissingen – Grimmenthal – Suhl – Arnstadt – Erfurt 	
 
 EB 	
 Schweinfurt – Ebenhausen – Mellrichstadt – Meiningen
@@ -32,10 +32,10 @@ RB
 Aschaffenburg – Babenhausen – Darmstadt – Mainz – Wiesbaden
 
 RE 	
-Lindau – Wasserburg – Friedrichshafen Stadt – Ravensburg – Aulendorf – Ulm (– Göppingen – Plochingen – Stuttgart) 	
+Lindau – Wasserburg – Friedrichshafen Stadt – Ravensburg – Aulendorf – Ulm – Göppingen – Plochingen – Stuttgart	
 
 RB
-(Aulendorf –) Kißlegg – Hergatz – Lindau – Wasserburg – Friedrichshafen Stadt – Friedrichshafen Hafen 	
+Aulendorf – Kißlegg – Hergatz – Lindau – Wasserburg – Friedrichshafen Stadt – Friedrichshafen Hafen 	
 
 RB 	
 Lindau – Wasserburg – Friedrichshafen Stadt
@@ -62,16 +62,16 @@ Aschaffenburg – Miltenberg – Wertheim – Lauda – Crailsheim
 Aschaffenburg – Miltenberg
 
 RB
-Miltenberg – Wertheim (– Lauda – Bad Mergentheim)
+Miltenberg – Wertheim – Lauda – Bad Mergentheim
 
 RB 	
-(Aschaffenburg –) Miltenberg – Amorbach – Walldürn – Seckach
+Aschaffenburg – Miltenberg – Amorbach – Walldürn – Seckach
 
 RE 
 Nürnberg – Ansbach – Crailsheim – Schwäbisch Hall-Hessental – Waiblingen – Stuttgart
 
 RB 	
-(Gemünden (Main) –) Heigenbrücken – Aschaffenburg
+Gemünden (Main) – Heigenbrücken – Aschaffenburg
 
 RB
 Bamberg – Schweinfurt – Würzburg – Gemünden (Main) – Jossa 	
@@ -101,10 +101,10 @@ RE
 Würzburg – Schweinfurt – Haßfurt – Bamberg
 
 RE
-Würzburg – Schweinfurt –/ Sonneberg – Lichtenfels – Bamberg – Fürth – Nürnberg 	
+Würzburg – Schweinfurt – Sonneberg – Lichtenfels – Bamberg – Fürth – Nürnberg 	
 
 EB 
-Bad Kissingen – Ebenhausen – Schweinfurt 	Gemünden–Ebenhausen
+Bad Kissingen – Ebenhausen – Schweinfurt
 
 ag
 Bad Rodach – Coburg – Ebersdorf – Lichtenfels – Hochstadt-Marktzeuln – Kulmbach – Neuenmarkt-Wirsberg – Bayreuth – Kirchlaibach – Weiden
@@ -119,10 +119,10 @@ ag
 Bamberg – Breitengüßbach – Ebern
 
 RE 
-Lichtenfels – Kulmbach – Neuenmarkt-Wirsberg – Hof / Bayreuth
+Lichtenfels – Kulmbach – Neuenmarkt-Wirsberg – Hof - Bayreuth
 
 RE 
-Bamberg – Lichtenfels – Kulmbach – Neuenmarkt-Wirsberg – Hof / – Bayreuth – Nürnberg 	
+Bamberg – Lichtenfels – Kulmbach – Neuenmarkt-Wirsberg – Hof – Bayreuth – Nürnberg 	
 
 ag
 Bad Steben – Marxgrün – Naila – Hof – Münchberg
@@ -149,7 +149,7 @@ ag
 Hof – Marktredwitz – Kirchenlaibach – Bayreuth 	
 
 ag 
-Hof – Marktredwitz – Kirchenlaibach (– Bayreuth)
+Hof – Marktredwitz – Kirchenlaibach – Bayreuth
 
 ag 
 Bad Steben – Marxgrün – Naila – Hof
@@ -197,9 +197,10 @@ RE
 Passau – Plattling – Landau (Isar) – Landshut (Bay) – Freising – München
 
 S1
-(Bamberg – Forchheim (Oberfr) – Erlangen –) Nürnberg – Röthenbach (Pegnitz) – Lauf (l Pegnitz) (– Hersbruck (l Pegnitz) – Hartmannshof)
+Bamberg – Forchheim (Oberfr) – Erlangen – Nürnberg – Röthenbach (Pegnitz) – Lauf (l Pegnitz) – Hersbruck (l Pegnitz) – Hartmannshof
 
-S2(Roth –) Schwabach – Nürnberg – Feucht (– Altdorf (b Nürnberg))
+S2
+Roth – Schwabach – Nürnberg – Feucht – Altdorf (b Nürnberg)
 
 S3
 Nürnberg – Feucht – Burgthann – Neumarkt (Oberpf)
@@ -214,13 +215,13 @@ RB
 Nürnberg – Lauf (r Pegnitz) – Neunkirchen a Sand – Simmelsdorf-Hüttenbach
 
 RE 
-München (– Petershausen) – Pfaffenhofen (Ilm) – Ingolstadt (– Kinding (Altmühltal) – Allersberg (Rothsee) – Nürnberg)
+München (– Petershausen) – Pfaffenhofen (Ilm) – Ingolstadt – Kinding (Altmühltal) – Allersberg (Rothsee) – Nürnberg
 
 RB 
-München – Dachau – Pfaffenhofen (Ilm) – Ingolstadt – Eichstätt – Treuchtlingen (– Roth – Nürnberg)
+München – Dachau – Pfaffenhofen (Ilm) – Ingolstadt – Eichstätt – Treuchtlingen – Roth – Nürnberg
 
 RE
-München (– Petershausen) – Pfaffenhofen (Ilm) – Ingolstadt (– Kinding (Altmühltal) – Allersberg (Rothsee) – Nürnberg) 
+München – Petershausen – Pfaffenhofen (Ilm) – Ingolstadt – Kinding (Altmühltal) – Allersberg (Rothsee) – Nürnberg
 
 RB
 Allersberg (Rothsee) – Nürnberg
@@ -254,6 +255,7 @@ Donauwörth – Meitingen – Augsburg – Mering – München
 
 RB
 Donauwörth – Meitingen – Augsburg
+
 RB
 Roth – Hilpoltstein
 
@@ -261,7 +263,7 @@ RB
 Pleinfeld – Gunzenhausen
 
 RB 
-(Gemünden (Main) – Karlstadt –) Würzburg – Marktbreit – Steinach (b Rothenburg o.d. Tauber) – Ansbach – Gunzenhausen – Treuchtlingen
+Gemünden (Main) – Karlstadt – Würzburg – Marktbreit – Steinach (b Rothenburg o.d. Tauber) – Ansbach – Gunzenhausen – Treuchtlingen
 
 RB 
 Würzburg – Ochsenfurt – Marktbreit
@@ -273,7 +275,7 @@ RB
 Wicklesgreuth – Windsbach
 
 RB 
-(München –) Freising – Moosburg – Landshut
+München – Freising – Moosburg – Landshut
 
 ag 
 Ingolstadt – Regensburg
@@ -282,16 +284,16 @@ RE
 Regensburg – Flughafen München
 
 ag
-Ulm – Günzburg – Donauwörth – Ingolstadt – Regensburg (– Eggmühl – Neufahrn (Niederbay) – Landshut (Bay)) 	
+Ulm – Günzburg – Donauwörth – Ingolstadt – Regensburg – Eggmühl – Neufahrn (Niederbay) – Landshut (Bay) 	
 
 as
-Ulm – Günzburg – Donauwörth – Ingolstadt – Regensburg (– Eggmühl / Passau)
+Ulm – Günzburg – Donauwörth – Ingolstadt – Regensburg – Eggmühl / Passau
 
 RB 
 Bogen – Straubing – Radldorf (Niederbay) – Neufahrn (Niederbay)
 
 RB
-München – Markt Schwaben – Dorfen – Mühldorf (– Simbach (Inn))
+München – Markt Schwaben – Dorfen – Mühldorf – Simbach (Inn)
 
 RB 
 Mühldorf – Marktl – Simbach (Inn)
@@ -303,7 +305,7 @@ RB
 Landshut (Bay) – Vilsbiburg – Neumarkt-St Veit – Mühldorf – Waldkraiburg – Wasserburg (Inn) – Rott (Inn) – Rosenheim
 
 RB 
-(Passau / Burghausen – Mühldorf – Waldkraiburg –) Wasserburg (Inn) – Rott (Inn) – Rosenheim
+Passau / Burghausen – Mühldorf – Waldkraiburg – Wasserburg (Inn) – Rott (Inn) – Rosenheim
 
 RB
 Landshut (Bay) – Vilsbiburg – Neumarkt-St Veit – Mühldorf – Garching (Alz) – Laufen (Oberbay) – Freilassing – Salzburg 	
@@ -312,7 +314,7 @@ RB
 Passau – Fürstenzell – Pocking – Pfarrkirchen – Neumarkt-St Veit – Mühldorf
 
 RB 
-Mühldorf – Garching (Alz) – Trostberg – Hörpolding (– Traunreut – Traunstein)
+Mühldorf – Garching (Alz) – Trostberg – Hörpolding – Traunreut – Traunstein
 
 RB
 Traunreut – Hörpolding – Traunstein
@@ -324,7 +326,7 @@ M
 München – Rosenheim – Bad Endorf – Prien a Chiemsee – Traunstein – Freilassing – Salzburg
 
 M
-München – Grafing – Rosenheim (– Bad Endorf – Prien a Chiemsee – Traunstein)
+München – Grafing – Rosenheim – Bad Endorf – Prien a Chiemsee – Traunstein
 
 M
 München – Grafing – Rosenheim – Kufstein
@@ -366,13 +368,13 @@ RE
 München – Weilheim – Murnau – Garmisch-Partenkirchen – Mittenwald / Lermoos
 
 RB
-München – Tutzing – Weilheim – Murnau – Garmisch-Partenkirchen – Reutte / – Mittenwald – Seefeld
+München – Tutzing – Weilheim – Murnau – Garmisch-Partenkirchen – Reutte – Mittenwald – Seefeld
 
 RB
 München – Tutzing – Weilheim – Murnau – Garmisch-Partenkirchen – Reutte
 
 RB
-München – Tutzing – Weilheim – Murnau – Garmisch-Partenkirchen – Reutte / – Mittenwald – Seefeld – Innsbruck
+München – Tutzing – Weilheim – Murnau – Garmisch-Partenkirchen – Reutte – Mittenwald – Seefeld – Innsbruck
 
 RB	
 Garmisch-Partenkirchen – Mittenwald – Seefeld – Innsbruck
@@ -381,7 +383,7 @@ RB
 Kochelsee-Bahn 	München – Tutzing – Weilheim / Kochel
 
 RB
-(München –) Tutzing – Kochel
+München – Tutzing – Kochel
 
 BRB
 Augsburg – Mering – Geltendorf – Dießen – Weilheim – Peißenberg – Schongau
@@ -393,7 +395,7 @@ RB
 Werdenfelsbahn 	Murnau – Bad Kohlgrub – Oberammergau
 
 ALX
-München – Kaufering – Buchloe – Kaufbeuren – Kempten – Immenstadt – Oberstdorf / – Hergatz – Lindau
+München – Kaufering – Buchloe – Kaufbeuren – Kempten – Immenstadt – Oberstdorf – Hergatz – Lindau
 
 RE
 München – Geltendorf – Kaufering – Buchloe – Kaufbeuren – Biessenhofen – Kempten
@@ -405,25 +407,25 @@ RE
 München – Geltendorf – Kaufering – Buchloe – Kaufbeuren – Biessenhofen – Marktoberdorf – Füssen
 
 RE 
-Augsburg – Buchloe – Kaufbeuren – Kempten – Immenstadt – Oberstdorf / – Hergatz – Lindau
+Augsburg – Buchloe – Kaufbeuren – Kempten – Immenstadt – Oberstdorf – Hergatz – Lindau
 
 RE
-Ulm – Memmingen – Kempten – Immenstadt – Oberstdorf (/ – Hergatz – Lindau / – Wangen)
+Ulm – Memmingen – Kempten – Immenstadt – Oberstdorf – Hergatz – Lindau – Wangen
 
 RB
 Augsburg – Bobingen – Buchloe – Kaufbeuren – Biessenhofen – Marktoberdorf – Füssen
 
 RB
-Augsburg – Bobingen – Buchloe (– Kaufbeuren – Biessenhofen – Marktoberdorf)
+Augsburg – Bobingen – Buchloe – Kaufbeuren – Biessenhofen – Marktoberdorf
 
 RE/RB
-Augsburg – Bobingen – Buchloe – Türkheim – Bad Wörishofen / – Mindelheim – Memmingen
+Augsburg – Bobingen – Buchloe – Türkheim – Bad Wörishofen – Mindelheim – Memmingen
 
 RB
 Kempten – Pfronten-Steinach – Vils in Tirol – Reutte
 
 RB
-Kempten – Pfronten-Steinach (– Vils in Tirol – Reutte)
+Kempten – Pfronten-Steinach – Vils in Tirol – Reutte
 
 RE
 Ulm – Memmingen – Kempten
@@ -447,7 +449,7 @@ RB
 München – Mering – Augsburg – Dinkelscherben
 
 RB
-(München – Mering –) Augsburg – Gessertshausen (– Dinkelscherben – Günzburg – Neu-Ulm – Ulm)
+München – Mering – Augsburg – Gessertshausen – Dinkelscherben – Günzburg – Neu-Ulm – Ulm
 
 BRB
 Augsburg – Friedberg (Augsburg) – Aichach – Ingolstadt
@@ -489,10 +491,10 @@ S1
 München – Neufahrn (b Freising) – Freising / Flughafen München
 
 S2
-(Erding – Markt Schwaben –) München – Dachau Bahnhof (– Altomünster / Petershausen (Oberbay)) 	
+Erding – Markt Schwaben – München – Dachau Bahnhof – Altomünster / Petershausen (Oberbay) 	
 
 S3 
-(Holzkirchen –) Deisenhofen – München – Maisach (– Mammendorf) 	
+Holzkirchen – Deisenhofen – München – Maisach – Mammendorf 	
 
 S4
 Geltendorf – Grafrath – Buchenau – München – Grafing – Ebersberg (Oberbay)
@@ -501,7 +503,7 @@ S4
 Geltendorf – Grafrath – Buchenau – München 
 
 S6
-Tutzing – Starnberg – München (– Zorneding – Grafing – Ebersberg (Oberbay))
+Tutzing – Starnberg – München – Zorneding – Grafing – Ebersberg (Oberbay)
 
 S7
 Wolfratshausen – Höllriegelskreuth – München – Höhenkirchen-Siegertsbrunn – Aying – Kreuzstraße
@@ -510,4 +512,4 @@ S20
 Höllriegelskreuth – München-Pasing 	München–Wolfratshausen
 
 S8	
-(Herrsching –) Weßling – Germering-Unterpfaffenhofen – München (– München Flughafen)
+Herrsching – Weßling – Germering-Unterpfaffenhofen – München – München Flughafen
