@@ -60,7 +60,6 @@ class Station:
         #reason = ""
         for t in self.trains:
             # Die Zielstation der Blockierenden darf nicht meine aktuelle Station sein.
-            #TODO auf Line Objekte umstellen
             if t.line in relevant_lines and t.target_station != train.current_station:
                 #reason = str(t)
                 can_arrive = False

@@ -146,8 +146,6 @@ class Network:
 
     def generate_graphviz(self, line=None, filename=None):
         import graphviz as gv
-        #TODO auf networkx umstellen, wegen Farbupdatefähigkeit
-        #import networkx as nx
         graph = gv.Graph(format="png", filename=filename if filename else self.city)
         stations = self.all_stations if line is None else self.all_lines[line]
         for station in stations:
