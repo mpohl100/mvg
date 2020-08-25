@@ -1,5 +1,3 @@
-from tkinter import Tk, Canvas, mainloop, Image
-
 from lib.simulation import Simulation, Config, parse_config
 from network.network import Network
 

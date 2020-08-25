@@ -55,6 +55,7 @@ class Simulation:
         self.time: int = 0
         self.read_all_stations()
         self.read_all_lines()
+        self.deduce_lanes()
         self.trains: List[Train] = []
         self.start_minutes = {}
         if not self.config.deduce_schedule:
@@ -71,16 +72,7 @@ class Simulation:
     def read_all_stations(self):
         self.all_stations: Dict[str, Station] = {}
         for station in self.network.all_stations:
-            self.all_stations[station] = Station(station, self)
-        for _, station in self.all_stations.items():
-            station.deduce_lanes()
-        self.all_lanes: List[Lane] = []
-        for _, station in self.all_stations.items():
-            self.all_lanes.extend([lane for _, lane in station.lanes.items()])
-        # Test der Integrität des Netzwerks:
-        set_lanes = set(self.all_lanes)
-        if len(set_lanes) != len(self.all_lanes):
-            raise Exception("Nicht einzigartige Lanes im Netzwerk vorhanden.")
+            self.all_stations[station] = Station(station)
 
     def read_all_lines(self):
         self.all_lines: List[Line] = []
@@ -92,6 +84,18 @@ class Simulation:
             all_stations: List[Station] = [self.all_stations[station] for station in all_station_names] 
             switches: List[Station] = [self.all_stations[station] for station in switch_names] 
             self.all_lines.append(Line(line, all_stations, switches))
+    
+    def deduce_lanes(self):
+        for _, station in self.all_stations.items():
+            station.deduce_lanes(self.network, self.all_stations, self.all_lines)
+        self.all_lanes: List[Lane] = []
+        for _, station in self.all_stations.items():
+            self.all_lanes.extend([lane for _, lane in station.lanes.items()])
+        # Test der Integrität des Netzwerks:
+        set_lanes = set(self.all_lanes)
+        if len(set_lanes) != len(self.all_lanes):
+            raise Exception("Nicht einzigartige Lanes im Netzwerk vorhanden.")
+
 
     def add_train(self, index: int, line, direction: int, nb_trains: int, start_minute: int):
         l: Line = line

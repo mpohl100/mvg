@@ -21,22 +21,21 @@ def find_neighbours(network: 'Network', station: str):
         find_neighbour(neighbours, stations, index + 1, line)
     return neighbours
 
-def find_lanes(simulation: 'Simulation', station: str):
-    neighbours = find_neighbours(simulation.network, station)
+def find_lanes(station: str, network: 'Network', all_stations: List['Station'], all_lines: List['Line']):
+    neighbours = find_neighbours(network, station)
     lanes: Dict[str, 'Lane'] = {}
     for neighbour_station, lines in neighbours.items():
-        lanes[neighbour_station] = Lane(simulation.all_stations[station], simulation.all_stations[neighbour_station], lines)
+        lanes[neighbour_station] = Lane(all_stations[station], all_stations[neighbour_station], lines)
     return lanes
 
 class Station:
-    def __init__(self, name: str, sim: 'Simulation'):
+    def __init__(self, name: str):
         self.name: str = name
-        self.sim: 'Simulation' = sim
-        self.lanes: Dict[str, List[str]] = {}
+        self.lanes: Dict[str, List['Line']] = {}
         self.trains: List['Train'] = []
 
-    def deduce_lanes(self):
-        self.lanes = find_lanes(self.sim, self.name)
+    def deduce_lanes(self, network: 'Network', all_stations: List['Station'], all_lines: List['Line']):
+        self.lanes = find_lanes(self.name, network, all_stations, all_lines)
 
     def __str__(self):
         return self.name
