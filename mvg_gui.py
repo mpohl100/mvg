@@ -5,7 +5,6 @@ from network.network import Network
 
 def main():
     config=parse_config()
-    config.show_net = True
     network = Network(files=config.files)
     simulation = Simulation(network, config)
     simulation.run()
