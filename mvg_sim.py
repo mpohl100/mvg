@@ -1,6 +1,7 @@
+from lib.config import Config
+from lib.simulation import Simulation
 from network.network import Network
 from network.schedule import StartMinute
-from lib.simulation import Simulation, Config
 
 import copy
 import matplotlib.pyplot as plt

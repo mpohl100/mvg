@@ -1,6 +1,7 @@
+from lib.config import Config, parse_config
+from lib.simulation import Simulation
 from network.network import Network
 from network.schedule import Schedule
-from lib.simulation import Simulation, Config
 
 
 def test_schedule(network):
@@ -19,8 +20,7 @@ if __name__=="__main__":
     }
     test_schedule(net)
     network = Network("TEST", net)
-    config = Config(4,8,500,1,True)
-    config.show_net = True
+    config = parse_config()
     simulation = Simulation(network, config)
     simulation.run()
 
