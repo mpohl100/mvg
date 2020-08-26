@@ -11,6 +11,11 @@ from collections import defaultdict
 def interpolate(from_pos, to_pos, t):
     return from_pos + t * (to_pos-from_pos)
 
+def is_visible(position, xlim, ylim):
+    visible_x = xlim[0] <= position[0] and position[0] <= xlim[1]
+    visible_y = ylim[0] <= position[1] and position[1] <= ylim[1]
+    return visible_x and visible_y
+
 class Simulation:
     def __init__(self, network: 'Network', config: Config):
         self.network: 'Network' = network
@@ -200,6 +205,7 @@ class Simulation:
             axes = plt.gca()
             plt.cla()
             with_labels=False
+            visible_nodes = None
             if self.xlim and self.ylim: # to preserve the zoom and translations of the user
                 axes.set_xlim(self.xlim)
                 axes.set_ylim(self.ylim)
@@ -208,7 +214,14 @@ class Simulation:
                 delta_y = self.ylim[1] - self.ylim[0]
                 if delta_x*delta_y < 0.25:
                     with_labels = True
-            nx.draw_networkx(self.graph, self.positions, with_labels=with_labels)
+                visible_nodes = []
+                for nodename, position in self.positions.items():
+                    if is_visible(position, self.xlim, self.ylim):
+                        visible_nodes.append(nodename)
+            if visible_nodes:
+                nx.draw_networkx(self.graph, self.positions, nodelist=visible_nodes, with_labels=with_labels)
+            else:
+                nx.draw_networkx(self.graph, self.positions, with_labels=with_labels)
             for color, stations in colors_of_trains.items():
                 nx.draw_networkx_nodes(self.graph, self.positions, nodelist=stations, node_color=color)
            
