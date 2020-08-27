@@ -1,7 +1,7 @@
 from lib.config import Config, parse_config
 from lib.simulation import Simulation
 from network.network import Network
-from network.schedule import Schedule
+from network.schedule import Schedule, deduce_schedule
 
 
 def test_schedule(network):
@@ -18,9 +18,11 @@ if __name__=="__main__":
         'S3': ["Fantasie", "Land", "Trudering", "Ostbahnhof","Leuchtenbergring", "BergamLaim", "g"],
         #'S4': ["a", "b", "c", "d", "Fantasie", "Land", "h"],
     }
-    test_schedule(net)
+    #test_schedule(net)
     network = Network("TEST", net)
     config = parse_config()
     simulation = Simulation(network, config)
-    simulation.run()
+    #simulation.run()
+    all_lines = simulation.all_lines
+    start_minutes = deduce_schedule(all_lines)
 
