@@ -46,7 +46,12 @@ class Train:
             lane.register_departure(self)
         self.waiting = True
         self.current_station = self.target_station
+        prev_direction = self.direction
         self.target_station, self.direction, self.end_station = find_next_station(self.current_station, self.stations, self.direction)
+        if self.line.start_minute and prev_direction != self.direction:
+            self.start_minute = self.line.start_minute.deduce_start(self.direction, self.minutes)
+            #print(self.line.name + " " + str(self.number) + " minute " + str(self.minutes))
+            #print("new start at " + str(self.start_minute))
         self.current_station.register_arrival(self)
 
     def depart(self):

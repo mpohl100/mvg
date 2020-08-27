@@ -94,6 +94,7 @@ class Simulation:
         nb_trains = 0
         for line in [ line for line in self.all_lines if line.name.startswith(start_letter)]:
             start_minute = self.start_minutes[line.name]
+            line.set_start_minute(start_minute)
             for i in range(0, start_minute.nb_p1):
                 self.add_train(0, line, 1, nb_trains, start_minute.start_minute_p1 + i*start_minute.takt)
                 nb_trains += 1
