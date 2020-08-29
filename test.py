@@ -19,10 +19,10 @@ if __name__=="__main__":
         #'S4': ["a", "b", "c", "d", "Fantasie", "Land", "h"],
     }
     #test_schedule(net)
-    network = Network("TEST", net)
     config = parse_config()
+    network = Network(files=config.files)
     simulation = Simulation(network, config)
     #simulation.run()
-    all_lines = simulation.all_lines
-    start_minutes = deduce_schedule(all_lines)
+    all_lines_dict = {line.name: line.all_stations for line in simulation.all_lines}
+    start_minutes = deduce_schedule(all_lines_dict)
 

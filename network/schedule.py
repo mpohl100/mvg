@@ -1,4 +1,4 @@
-from network.network import find_index_in_list
+from network.network import find_index_in_list, find_index_in_list_pred
 
 from collections import defaultdict
 from operator import itemgetter
@@ -133,30 +133,50 @@ class SubSchedule:
         return start_minutes
         
         
-def longest_common(line1: 'Line', line2: 'Line'):
-    stations1 = set(line1.all_stations)
-    stations2 = set(line2.all_stations)
+def longest_common(all_stations1: List[str], all_stations2: List[str]):
+    stations1 = set(all_stations1)
+    stations2 = set(all_stations2)
     #TODO hier muss man auf Routen aufpassen, die sich zweimal überschneiden
     common_route = list(stations1.intersection(stations2))
     return common_route
 
-def deduce_longest_common_lines(list_of_lines):
+def deduce_longest_common_lines(lines):
     from collections import namedtuple
     Key = namedtuple("Key", ["line1", "line2"])
     ret = {}
-    for i, line1 in enumerate(list_of_lines):
-        for line2 in list_of_lines[i+1:]:
-            if line1.name != line2.name:
-                longest_common_route = longest_common(line1, line2)
+    for line1, all_stations1 in lines.items():
+        for line2, all_stations2 in lines.items():
+            if line1 != line2:
+                longest_common_route = longest_common(all_stations1, all_stations2)
                 if len(longest_common_route) >= 2:
-                    key = Key(line1=line1.name, line2=line2.name)
+                    key = Key(line1=line1, line2=line2)
                     ret[key] = longest_common_route
     return {k: v for k,v in sorted(ret.items(), key=lambda x: len(x[1]), reverse=True)}
 
 
-def deduce_schedule(list_of_lines: List['Line']):
-    ret = {line: StartMinute(line.name,0,1,0,1,2) for line in list_of_lines}
-    longest_common_lines = deduce_longest_common_lines(list_of_lines)
-    print(longest_common_lines)
-    return ret
+def deduce_schedule(lines: Dict[str, List[str]]):
+    #ret = {line: StartMinute(line.name,0,1,0,1,2) for line in lines.keys()}
+    print('deduce_schedule')
+    if len(lines) == 1:
+        return
+    longest_common_lines = deduce_longest_common_lines(lines)
+    already_merged_lines = set()
+    new_lines = {}
+    for key, stations in longest_common_lines.items():
+        #print(str(key) + ' ' + str(len(stations)) )
+        if key.line1 in already_merged_lines or key.line2 in already_merged_lines:
+            continue
+        already_merged_lines.add(key.line1)
+        already_merged_lines.add(key.line2)
+        line1 = lines[key.line1]
+        line2 = lines[key.line2]
+        scheduler = SubSchedule({key.line1: line1, key.line2: line2})
+        start_minutes = scheduler.calc()
+        print()
+        for line, start_minute in start_minutes.items():
+            #print(line)
+            print(str(start_minute))
+        new_lines[key.line1+';'+key.line2] = stations
+    print()
+    deduce_schedule(new_lines)
     
