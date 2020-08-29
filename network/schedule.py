@@ -151,13 +151,14 @@ def deduce_longest_common_lines(lines):
                 if len(longest_common_route) >= 2:
                     key = Key(line1=line1, line2=line2)
                     ret[key] = longest_common_route
+    #print(ret)
     return {k: v for k,v in sorted(ret.items(), key=lambda x: len(x[1]), reverse=True)}
 
 
 def deduce_schedule(lines: Dict[str, List[str]]):
     #ret = {line: StartMinute(line.name,0,1,0,1,2) for line in lines.keys()}
     print('deduce_schedule')
-    if len(lines) == 1:
+    if len(lines) <= 1:
         return
     longest_common_lines = deduce_longest_common_lines(lines)
     already_merged_lines = set()

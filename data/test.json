@@ -1,0 +1,15 @@
+{
+    "S1":{
+        "all_stations" : ["e", "Leuchtenbergring", "BergamLaim", "Riem", "Feldkirchen"],
+        "switches": []
+    },
+    "S2": {
+        "all_stations" : ["f", "Leuchtenbergring", "BergamLaim", "Gronsdorf", "Haar", "Zorneding"],
+        "switches": []
+    },
+    "S3": {
+        "all_stations" : ["Fantasie", "Land", "Trudering", "Ostbahnhof","Leuchtenbergring", "BergamLaim", "g"],
+        "switches": []
+    },
+    "S4": { "all_stations": ["a", "b", "c", "d", "Fantasie", "Land", "h"], "switches": [] }
+}
