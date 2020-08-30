@@ -27,6 +27,9 @@ class TaktOffset:
     def nb_trains(self):
         return len(self.all_stations) // (self.takt // 2)
 
+    def __str__(self):
+        return self.linename + ' ' + self.ref_station.name + ': ' + str(self.direction) + ' ' + str(self.offset) + ' (' + str(self.takt) + ')' 
+
 def deduce_startminute(minute, start_minute, takt):
     nb_takt = (minute - start_minute) // takt # die Anzahl an bisher vergangenen Takten 
     return start_minute + takt * (nb_takt + 1)

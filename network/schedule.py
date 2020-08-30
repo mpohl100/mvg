@@ -64,7 +64,7 @@ class SubSchedule:
     def calc(self):
         start_minutes: Dict[str, StartMinute] = {}
         main_station = self.main_station_occurence[0]
-        takt = self.main_station_occurence[1]
+        takt = self.main_station_occurence[1] * 2
         #offsets = get_offsets(len(self.lines))
         i = 0
         p1_offsets: List[TaktOffset] = []
@@ -86,50 +86,8 @@ class SubSchedule:
         start_minutes: Dict[str, StartMinute] = {}
         for p1,m1 in zip(p1_offsets, m1_offsets):
             start_minutes[p1.linename] = StartMinute(p1,m1)
-        print(start_minutes)
+        #print(start_minutes)
         return start_minutes
-            # main_index = find_index_in_list(line, main_station)
-            # offset = offsets[i]
-            # i += 1
-            # #print(line[main_index])
-            # #print(offset)
-            # positive_range = list(range(main_index + offset, len(line), +takt))
-            # negative_range = list(range(main_index + offset, -len(line), -takt))
-            # #print(positive_range)
-            # #print(negative_range)
-            # indeces = set(positive_range + negative_range)
-            # indeces = sorted(indeces, key=lambda x: abs(x))
-            # indeces = list(indeces)
-            # #print(indeces)
-            # #print([line[i] + ' ' + str(int(i / abs(i)) if i != 0 else str(0))  for i in indeces])
-            # index_plus_one = -100000
-            # for j in indeces:
-            #     if j >= 0:
-            #         index_plus_one = j
-            #         break
-            # index_minus_one = -1000000
-            # for j in indeces:
-            #     if j < 0:
-            #         index_minus_one = j
-            #         break
-            # # zum Zeitpunkt null wollen wir, dass unsere Bahnen an den indizierten Bahnhöfen sind 
-            # start_minute_plus_one = -index_plus_one*2
-            # if start_minute_plus_one < 0:
-            #     start_minute_plus_one += takt*2 
-            # start_minute_minus_one = (index_minus_one+1)*2
-            # if start_minute_minus_one < 0:
-            #     start_minute_minus_one += takt*2
-
-            # nb_plus_one = sum(map(lambda x: x >= 0, indeces))
-            # nb_minus_one = sum(map(lambda x: x < 0, indeces))
-            # #print(indeces)
-            # #print(index_minus_one)
-            # #print(nb_minus_one)
-            # #print(index_plus_one)
-            # #print(nb_plus_one) 
-            # start_minutes[linename] = StartMinute(linename, start_minute_plus_one, nb_plus_one, start_minute_minus_one, nb_minus_one, takt*2)
-        return start_minutes
-        
         
 def longest_common(all_stations1: List[str], all_stations2: List[str]):
     stations1 = set(all_stations1)
