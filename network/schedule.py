@@ -1,4 +1,5 @@
 from network.network import find_index_in_list, find_index_in_list_pred
+from network.startminute import StartMinute
 
 from collections import defaultdict
 from operator import itemgetter
@@ -14,29 +15,6 @@ def get_offsets(nb: int):
             offsets.append(-i)
     return offsets
 
-def deduce_startminute(minute, start_minute, takt):
-    nb_takt = (minute - start_minute) // takt # die Anzahl an bisher vergangenen Takten 
-    return start_minute + takt * (nb_takt + 1)
-
-class StartMinute:
-    def __init__(self, linename: str, start_minute_p1: int, nb_p1: int, start_minute_m1: int, nb_m1: int, takt: int):
-        self.linename:str = linename
-        self.start_minute_p1: int = start_minute_p1 # start at minute of the simulation
-        self.nb_p1: int = nb_p1                     # number of trains to start at start_minute_p1 + i * takt
-        self.start_minute_m1: int = start_minute_m1 # start at minute of the simulation
-        self.nb_m1: int = nb_m1                     # number of trains to start at start_minute_m1 + i * takt
-        self.takt: int = takt                       # Takt
-
-    def __str__(self):
-        return self.linename + ": +1 (start " + str(self.start_minute_p1) + " nb " + str(self.nb_p1) + "); -1 (start " + str(self.start_minute_m1) + " nb " + str(self.nb_m1) + "); takt: " + str(self.takt)
- 
-    def deduce_start(self, direction: int, minute: int):
-        if direction == 1:
-            return deduce_startminute(minute, self.start_minute_p1, self.takt)
-        elif direction == -1:
-            return deduce_startminute(minute, self.start_minute_m1, self.takt)
-        else: 
-            raise ValueError("direction != {-1,1}")
 
 def is_connected(line1: Tuple[str, List[str]], line2: Tuple[str, List[str]]):
     stations1 = set(line1[1])
@@ -179,5 +157,8 @@ def deduce_schedule(lines: Dict[str, List[str]]):
             print(str(start_minute))
         new_lines[key.line1+';'+key.line2] = stations
     print()
+    for line, stations in lines.items():
+        if not line in already_merged_lines:
+            new_lines[line] = stations
     deduce_schedule(new_lines)
     

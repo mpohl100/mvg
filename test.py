@@ -18,5 +18,6 @@ if __name__=="__main__":
     simulation = Simulation(network, config)
     #simulation.run()
     all_lines_dict = {line.name: [station.name for station in line.all_stations] for line in simulation.all_lines}
+    del all_lines_dict['S20']
     start_minutes = deduce_schedule(all_lines_dict)
 
