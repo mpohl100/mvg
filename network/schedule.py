@@ -5,17 +5,6 @@ from collections import defaultdict
 from operator import itemgetter
 from typing import Dict, List, Tuple
 
-def get_offsets(nb: int):
-    offsets = []
-    for i in range(0, int(nb / 2 ) + 1):
-        if i == 0:
-            offsets.append(i)
-        else:
-            offsets.append(i)
-            offsets.append(-i)
-    return offsets
-
-
 def is_connected(line1: Tuple[str, List[str]], line2: Tuple[str, List[str]]):
     stations1 = set(line1[1])
     stations2 = set(line2[1])
@@ -64,8 +53,7 @@ class SubSchedule:
     def calc(self):
         start_minutes: Dict[str, StartMinute] = {}
         main_station = self.main_station_occurence[0]
-        takt = self.main_station_occurence[1] * 2
-        #offsets = get_offsets(len(self.lines))
+        takt = 2 * self.main_station_occurence[1]
         i = 0
         p1_offsets: List[TaktOffset] = []
         for linename, line in self.lines.items():

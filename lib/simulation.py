@@ -87,13 +87,11 @@ class Simulation:
 
     def deduce_trains(self, is_subway):
         dict_of_lines = {}
-        #TODO wenn man BAY einlesen will klappt das so nicht.
-        start_letter = 'U' if is_subway else 'S'
-        dict_of_lines = {line.name: line.all_stations for line in self.all_lines if line.name.startswith(start_letter)} 
+        dict_of_lines = {line.name: line.all_stations for line in self.all_lines if line.is_subway == is_subway} 
         self.schedule = Schedule(dict_of_lines)
         self.start_minutes.update(self.schedule.calc())
         nb_trains = 0
-        for line in [ line for line in self.all_lines if line.name.startswith(start_letter)]:
+        for line in [ line for line in self.all_lines if line.is_subway == is_subway]:
             start_minute = self.start_minutes[line.name]
             line.set_start_minute(start_minute)
             for i in range(0, start_minute.taktoffset_p1.nb_trains()):
