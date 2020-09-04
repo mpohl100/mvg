@@ -14,6 +14,10 @@ class TaktOffset:
     def shift_ref_station(self, new_ref_station):
         current_ref_index = find_index_in_list(self.all_stations, self.ref_station)
         new_ref_index = find_index_in_list(self.all_stations, new_ref_station)
+        if current_ref_index == -1:
+            raise ValueError("current index not found in shift_ref_station")
+        if new_ref_index == -1:
+            raise ValueError("new ref index not found in shift_ref_station")
         #TODO use real distances between stations
         self.offset += (new_ref_index - current_ref_index) * 2
         self.ref_station = new_ref_station

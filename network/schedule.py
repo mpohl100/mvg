@@ -67,7 +67,7 @@ class SubSchedule:
         for linename, line in self.lines.items():
             takt_offset_m1 = TaktOffset(linename, main_station, line, i*2, takt, -1) 
             i += 1
-            takt_offset_m1.shift_ref_station(takt_offset_p1.all_stations[-1])
+            takt_offset_m1.shift_ref_station(takt_offset_m1.all_stations[-1])
             takt_offset_m1.shift_to_zero()
             m1_offsets.append(takt_offset_m1)
 
