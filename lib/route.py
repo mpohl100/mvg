@@ -49,3 +49,33 @@ def find_routes(switches: List['Station'], stations: List['Station'], linename: 
                 if "Hauptbahnhof" in subline_names:
                     routes.append(route)
     return routes
+
+def find_lines(all_lines: List['Line'], station: 'Station'):
+    return [line for line in all_lines if station in line.all_stations]
+
+class RouteFinder: 
+    def __init__(self, all_lines: List['Line'], from_station: 'Station', to_station: 'Station', route: List[Route] = [], already_visited: List['Line'] = []):
+        self.all_lines = all_lines
+        self.from_station = from_station
+        self.to_station = to_station
+        self.route: List[Route] = route
+        self.already_visited = already_visited
+        self.find_route()
+
+    def find_route(self):
+        from_lines = find_lines(self.all_lines, self.from_station)
+        to_lines = find_lines(self.all_lines, self.to_station)
+        common_lines = set(from_lines).intersection(set(to_lines))
+        if len(common_lines) > 0:
+            self.route.append(Route(self.from_station, self.to_station, list(common_lines)[0].name))
+            return # wenn wir hier ankommen sind wir fertig 
+        #TODO implement find_all_possible_switches
+        possible_switches = List[Tuple['Line', 'Station']] = find_all_possible_switches(from_lines, self.already_visited)
+        for line, station in possible_switches:
+            self.route.pop() # remove the last element as it was no success
+            self.already_visited.append(line)
+            self.route.append(Route(self.from_station, station, line.name))
+            new_route_finder = RouteFinder(self.all_lines, station, self.to_station, self.route, self.already_visited)
+            self.route.extend(new_route_finder.route)
+        
+        
