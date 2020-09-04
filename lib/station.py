@@ -40,6 +40,12 @@ class Station:
         self.lanes: Dict[str, List['Line']] = {}
         self.trains: List['Train'] = []
 
+    def __eq__(self, other: 'Station'):
+        return self.name == other.name
+
+    def __hash__(self):
+        return hash(self.name)
+
     def deduce_lanes(self, network: 'Network', all_stations: List['Station'], all_lines: List['Line']):
         self.lanes = find_lanes(self.name, network, all_stations, all_lines)
 

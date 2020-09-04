@@ -17,7 +17,13 @@ if __name__=="__main__":
     network = Network(files=config.files)
     simulation = Simulation(network, config)
     #simulation.run()
-    all_lines_dict = {line.name: [station.name for station in line.all_stations] for line in simulation.all_lines}
-    del all_lines_dict['S20']
-    start_minutes = deduce_schedule(all_lines_dict)
+    #all_lines_dict = {line.name: [station.name for station in line.all_stations] for line in simulation.all_lines}
+    #del all_lines_dict['S20']
+    #start_minutes = deduce_schedule(all_lines_dict)
+    from lib.route import RouteFinder
+    from lib.station import Station
+    from_station = Station("NeuperlachZentrum")
+    to_station = Station("Mangfallplatz")
+    route_finder = RouteFinder(simulation.all_lines, from_station, to_station)
+    print(route_finder)
 
