@@ -37,7 +37,7 @@ def find_lanes(station: str, network: 'Network', all_stations: List['Station'], 
 class Station:
     def __init__(self, name: str):
         self.name: str = name
-        self.lanes: Dict[str, List['Line']] = {}
+        self.lanes: Dict[str, 'Lane'] = {}
         self.trains: List['Train'] = []
 
     def __eq__(self, other: 'Station'):
@@ -76,3 +76,9 @@ class Station:
         #     else: 
         #         print("    No, because of " + reason)
         return can_arrive
+
+    def get_switch_lines(self):
+        switch_lines = []
+        for _, lane in self.lanes.items():
+            switch_lines.extend(lane.lines)
+        return list(set(switch_lines))
