@@ -20,10 +20,18 @@ if __name__=="__main__":
     #all_lines_dict = {line.name: [station.name for station in line.all_stations] for line in simulation.all_lines}
     #del all_lines_dict['S20']
     #start_minutes = deduce_schedule(all_lines_dict)
-    from lib.route import RouteFinder
+    from lib.route import find_route
     from lib.station import Station
-    from_station = Station("NeuperlachZentrum")
-    to_station = Station("Mangfallplatz")
-    route_finder = RouteFinder(simulation.all_lines, from_station, to_station)
-    print(route_finder)
+    from_station = Station("Quiddestraße")
+    to_station = Station("Universität")
+    route = find_route(from_station, to_station, simulation.all_lines)
+    print([str(r) for r in route])
+    route = find_route(to_station, from_station, simulation.all_lines)
+    print([str(r) for r in route])
+    for _, from_station in simulation.all_stations.items():
+        for _, to_station in simulation.all_stations.items():
+            route = find_route(from_station, to_station, simulation.all_lines)
+            print('from ' + from_station.name + ' to ' + to_station.name + ':')
+            for r in route:
+                print('    ' + str(r))
 
