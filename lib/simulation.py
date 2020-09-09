@@ -1,6 +1,8 @@
 from lib.config import Config
 from lib.lane import Lane
 from lib.line import Line
+from lib.passenger import Passenger
+from lib.route import find_route
 from lib.station import Station
 from lib.train import Train
 from network.schedule import Schedule, StartMinute
@@ -31,6 +33,10 @@ class Simulation:
         else:
             self.deduce_trains(True)
             self.deduce_trains(False)
+        self.all_routes = []
+        self.passengers = []
+        if config.num_passengers_per_route > 0:
+            self.create_passengers()
         self.graph = None
         self.positions = None
         self.xlim = None
@@ -101,7 +107,22 @@ class Simulation:
                 self.add_train(-1, line, -1, nb_trains, start_minute.taktoffset_m1.offset + i*start_minute.taktoffset_m1.takt)
                 nb_trains += 1           
 
+    def find_all_routes(self):
+        all_routes: List[List['Route']]
+        for _, from_station in self.all_stations.items():
+            for _, to_station in self.all_stations.items():
+                route = find_route(from_station, to_station, self.all_lines)
+                all_routes.append(route)
+        return all_routes
 
+    def create_passengers(self):
+        self.all_routes = self.find_all_routes()
+        self.passengers: List[Passenger] = []
+        passenger_number = 0
+        for route in self.all_routes:
+            for i in range(self.config.num_passengers_per_route):
+                self.passengers.append(Passenger(route, passenger_number))
+                passenger_number += 1
 
     def update(self):
         self.time += 1
@@ -109,6 +130,8 @@ class Simulation:
             t.reset()
         for t in self.trains:
             t.update()
+        for p in self.passengers:
+            p.update()
         if self.config.show_net:
             self.print_net()
 

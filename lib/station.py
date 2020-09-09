@@ -39,6 +39,7 @@ class Station:
         self.name: str = name
         self.lanes: Dict[str, 'Lane'] = {}
         self.trains: List['Train'] = []
+        self.passengers: List['Passenger'] = []
 
     def __eq__(self, other: 'Station'):
         return self.name == other.name
@@ -82,3 +83,12 @@ class Station:
         for _, lane in self.lanes.items():
             switch_lines.extend(lane.lines)
         return list(set(switch_lines))
+
+    def enter_passenger(self, passenger: 'Passenger'):
+        self.passengers.append(passenger)
+
+    def depart_passenger(self, passenger: 'Passenger'):
+        passenger_index = find_index_in_list(self.passengers, passenger)
+        if passenger_index == -1:
+            raise ValueError("Passenger not found in station.")
+        del self.passengers[passenger_index]

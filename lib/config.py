@@ -8,6 +8,7 @@ class Config:
         self.minutes = minutes
         self.verbosity = verbosity
         self.show_net = show_net
+        self.num_passengers_per_route = 0
         self.files = None
 
 def str2bool(v):
@@ -28,6 +29,7 @@ def parse_config():
     parser.add_argument('-v', '--verbosity', type=int, help='verbosity of the output.', default=0)
     parser.add_argument('-d', '--deduce-schedule', type=str2bool, nargs='?', help='deduce a schedule for the network.', default=False)
     parser.add_argument('-s', '--show-network', type=str2bool, nargs='?', help='show an animation of the network.', default=False)
+    parser.add_argument('-p', '--num-passengers-per-route', type=int, help='number of passengers per route', default=0)
     args = vars(parser.parse_args())
     print(args)
     config = Config()
@@ -35,4 +37,5 @@ def parse_config():
     config.verbosity = args['verbosity']
     config.deduce_schedule = args['deduce_schedule']
     config.show_net = args['show_network']
+    config.num_passengers_per_route = args['num_passengers_per_route']
     return config

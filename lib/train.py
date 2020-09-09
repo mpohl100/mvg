@@ -31,6 +31,7 @@ class Train:
         self.updated = False
         self.start_minute = start_minute
         self.minutes = 0
+        self.passengers: List['Passenger'] = []
 
     def __str__(self):
         return str(self.number) + ": " + str(self.line) + " " + str(self.end_station) + " (" + str(self.current_station) + ")"
@@ -83,3 +84,12 @@ class Train:
 
     def reset(self):
         self.updated = False
+
+    def enter_passenger(self, passenger: 'Passenger'):
+        self.passengers.append(passenger)
+
+    def depart_passenger(self, passenger: 'Passenger'):
+        passenger_index = find_index_in_list(self.passengers, passenger)
+        if passenger_index == -1:
+            raise ValueError("Passenger not found in train.")
+        del self.passengers[passenger_index]
