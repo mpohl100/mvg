@@ -9,6 +9,7 @@ from network.schedule import Schedule, StartMinute
 
 from typing import Dict, List
 from collections import defaultdict    
+import random
 
 def interpolate(from_pos, to_pos, t):
     return from_pos + t * (to_pos-from_pos)
@@ -108,7 +109,7 @@ class Simulation:
                 nb_trains += 1           
 
     def find_all_routes(self):
-        all_routes: List[List['Route']]
+        all_routes: List[List['Route']] = []
         for _, from_station in self.all_stations.items():
             for _, to_station in self.all_stations.items():
                 route = find_route(from_station, to_station, self.all_lines)
@@ -121,7 +122,8 @@ class Simulation:
         passenger_number = 0
         for route in self.all_routes:
             for i in range(self.config.num_passengers_per_route):
-                self.passengers.append(Passenger(route, passenger_number))
+                start_minute = random.randint(0, self.config.minutes)
+                self.passengers.append(Passenger(route, start_minute, passenger_number))
                 passenger_number += 1
 
     def update(self):
