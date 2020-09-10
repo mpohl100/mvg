@@ -24,10 +24,16 @@ class Passenger:
             # nachschauen ob ein Zug mit dem Liniennamen im Bahnhof ist
             linename = self.route[self.current_leg].linename
             train_index = find_index_in_list_pred(self.current_station.trains, lambda x: x.line.name == linename)
-            if train_index != -1: #TODO noch überprüfen, dass es die richtige Richtung ist
-                self.current_train = self.current_station.trains[train_index]
-                self.current_station.depart_passenger(self)
-                self.current_train.enter_passenger(self)
+            if train_index != -1: 
+                #noch überprüfen, dass es die richtige Richtung ist
+                end_station_index = self.current_station.trains[train_index].get_end_station_index()
+                target_station_index = self.current_station.trains[train_index].get_station_index(self.route[self.current_leg].to_station)
+                current_station_index = self.current_station.trains[train_index].get_station_index(self.route[self.current_leg].from_station)
+                if float(target_station_index - current_station_index) / float(end_station_index - current_station_index) > 0:
+                    self.current_train = self.current_station.trains[train_index]
+                    self.current_station.depart_passenger(self)
+                    self.current_train.enter_passenger(self)
+                    self.in_train = True
         else:
             target_station = self.route[self.current_leg].to_station
             if self.current_train.current_station == target_station:

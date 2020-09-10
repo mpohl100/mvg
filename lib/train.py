@@ -93,3 +93,12 @@ class Train:
         if passenger_index == -1:
             raise ValueError("Passenger not found in train.")
         del self.passengers[passenger_index]
+
+    def get_end_station_index(self):
+        return len(self.stations)-1 if self.direction == 1 else 0
+
+    def get_station_index(self, station: 'Station'):
+        station_index = find_index_in_list(self.stations, station)
+        if station_index == -1:
+            raise ValueError("Station not found in stations of train")
+        return station_index
