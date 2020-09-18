@@ -1,7 +1,7 @@
-from network.network import find_index_in_list
+from network.network import find_index_in_list, find_index_in_list_pred
 
 import copy
-from typing import List, Dict, Tuple
+from typing import List, Dict, Tuple, Set
 
 class Route:
     def __init__(self, from_station: 'Station', to_station: 'Station', linename: str):
@@ -83,3 +83,21 @@ def find_route(from_station: 'Station', to_station: 'Station', all_lines: List['
     if len(routes) > 0:
         return routes[0]
     return [Route(from_station, to_station, 'no line')]     
+
+class AdjacencyList:
+    def __init__(self, all_lines: List['Line']):
+        self.all_stations: Set['Station'] = set()
+        for line in all_lines:
+            for station in line.all_stations:
+                self.all_stations.add(station)
+        self.all_stations: List['Station'] = list(self.all_stations)
+        self.graph = []
+        for station in self.all_stations:
+            neighbours = []
+            for neighbour_station, _ in station.lanes.items():
+                index = find_index_in_list_pred(self.all_stations, lambda x: x.name == neighbour_station)
+                neighbours.append(index)
+            self.graph.append(neighbours)
+            
+def find_route_bfs(from_station: 'Station', to_station: 'Station', all_lines: List['Line']):
+    adjacency_list = AdjacencyList(all_lines)
