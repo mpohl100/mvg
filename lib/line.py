@@ -1,6 +1,4 @@
 
-from lib.route import Route, find_routes, find_sublines
-
 from typing import Dict, List
 
 class Line:
@@ -9,9 +7,6 @@ class Line:
         self.is_subway: bool = self.name.startswith('U')
         self.all_stations: List['Station'] = all_stations
         self.switches: List['Station'] = switches
-        # TODO Management von Sublinien einbauen, niedrige Prio
-        self.routes: List[Route] = find_routes(self.switches, self.all_stations, self.name)
-        self.sublines: Dict[Route, List['Station']] = find_sublines(self.all_stations, self.routes, self.name)
         self.trains: List['Train'] = []
         self.start_minute = None
 
