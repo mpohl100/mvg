@@ -1,6 +1,7 @@
 from network.network import find_index_in_list, find_index_in_list_pred
 
 import copy
+from queue import Queue
 from typing import List, Dict, Tuple, Set
 
 class Route:
@@ -98,6 +99,45 @@ class AdjacencyList:
                 index = find_index_in_list_pred(self.all_stations, lambda x: x.name == neighbour_station)
                 neighbours.append(index)
             self.graph.append(neighbours)
-            
+
+    def get_index(self, station: 'Station'):
+        return find_index_in_list(self.all_stations, station)
+
+    def N(self):
+        return len(self.all_stations)
+
+def solve_bfs(from_station: 'Station', adjacency_list: AdjacencyList):
+    first_station_index = adjacency_list.get_index(from_station)
+    queue = Queue()
+    queue.put(first_station_index)
+    visited = [False] * adjacency_list.N()
+    visited[first_station_index] = True
+    prev = [None] * adjacency_list.N()
+    while not queue.empty():
+        node = queue.get()
+        neighbours = adjacency_list.graph[node]
+        for neighbour in neighbours:
+            if not visited[neighbour]:
+                queue.put(neighbour)
+                visited[neighbour] = True
+                prev[neighbour] = node
+    return prev
+        
+def reconstruct_path(prev, from_station: 'Station', to_station: 'Station', adjacency_list: AdjacencyList):
+    to_index = adjacency_list.get_index(to_station)
+    path_index = [to_index]
+    at = prev[to_index]
+    while at != None:
+        path_index.append(at)
+        at = prev[at]
+    path = []
+    for path_i in reversed(path_index):
+        path.append(adjacency_list.all_stations[path_i])
+    if path[0] == from_station:
+        return path
+    return []
+
 def find_route_bfs(from_station: 'Station', to_station: 'Station', all_lines: List['Line']):
     adjacency_list = AdjacencyList(all_lines)
+    prev = solve_bfs(from_station, adjacency_list)
+    return reconstruct_path(prev, from_station, to_station, adjacency_list)
