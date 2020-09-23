@@ -130,14 +130,42 @@ def reconstruct_path(prev, from_station: 'Station', to_station: 'Station', adjac
     while at != None:
         path_index.append(at)
         at = prev[at]
-    path = []
+    path: List['Station'] = []
     for path_i in reversed(path_index):
         path.append(adjacency_list.all_stations[path_i])
     if path[0] == from_station:
         return path
     return []
 
+def deduce_longest_route(path: List['Station']):
+    if len(path) == 1:
+        raise ValueError("path must have at least two members")
+    potential_lines: Set[str] = set(['dummy'])
+    index = 0
+    route = Route(path[index], path[index], '')
+    while(len(potential_lines) > 0 and index < len(path) - 1):
+        if index == 0:
+            potential_lines = set(path[index].lanes[path[index+1].name].lines)
+        else:
+            potential_lines = potential_lines.intersection(set(path[index].lanes[path[index+1].name].lines))
+        if len(potential_lines) > 0:
+            route.to_station = path[index+1]
+            route.linename = list(potential_lines)[0].name
+            index += 1
+    return route, index
+    
+
+def deduce_shortest_lines(path: List['Station']):
+    ret: List['Route'] = []
+    next_index = 0
+    while(next_index < len(path) - 1):
+        route, offset = deduce_longest_route(path[next_index:])
+        next_index += offset
+        ret.append(route)
+    return ret
+
 def find_route_bfs(from_station: 'Station', to_station: 'Station', all_lines: List['Line']):
     adjacency_list = AdjacencyList(all_lines)
     prev = solve_bfs(from_station, adjacency_list)
-    return reconstruct_path(prev, from_station, to_station, adjacency_list)
+    path = reconstruct_path(prev, from_station, to_station, adjacency_list)
+    return deduce_shortest_lines(path)

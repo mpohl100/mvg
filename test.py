@@ -25,13 +25,13 @@ if __name__=="__main__":
     from_station = Station("Quiddestraße")
     to_station = Station("Universität")
     route = find_route_bfs(from_station, to_station, simulation.all_lines)
-    print([str(r) for r in route])
+    #print([str(r) for r in route])
     route = find_route_bfs(to_station, from_station, simulation.all_lines)
-    print([str(r) for r in route])
-    #for _, from_station in simulation.all_stations.items():
-    #    for _, to_station in simulation.all_stations.items():
-    #        route = find_route(from_station, to_station, simulation.all_lines)
-    #        print('from ' + from_station.name + ' to ' + to_station.name + ':')
-    #        for r in route:
-    #            print('    ' + str(r))
+    #print([str(r) for r in route])
+    for _, from_station in simulation.all_stations.items():
+        for _, to_station in simulation.all_stations.items():
+            route = find_route_bfs(from_station, to_station, simulation.all_lines)
+            print('from ' + from_station.name + ' to ' + to_station.name + ':')
+            for r in route:
+                print('    ' + str(r))
 
