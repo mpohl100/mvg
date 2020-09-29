@@ -164,8 +164,15 @@ def deduce_shortest_lines(path: List['Station']):
         ret.append(route)
     return ret
 
+prev_cache: Dict['Station', List[int]] = {}
+
+def find_route_adj(from_station: 'Station', to_station: 'Station', adj: 'AdjacencyList'):
+    if not from_station in prev_cache:
+        prev = solve_bfs(from_station, adj)
+        prev_cache[from_station] = prev
+    path = reconstruct_path(prev_cache[from_station], from_station, to_station, adj)
+    return deduce_shortest_lines(path)
+
 def find_route_bfs(from_station: 'Station', to_station: 'Station', all_lines: List['Line']):
     adjacency_list = AdjacencyList(all_lines)
-    prev = solve_bfs(from_station, adjacency_list)
-    path = reconstruct_path(prev, from_station, to_station, adjacency_list)
-    return deduce_shortest_lines(path)
+    return find_route_adj(from_station, to_station, adjacency_list)

@@ -2,7 +2,7 @@ from lib.config import Config
 from lib.lane import Lane
 from lib.line import Line
 from lib.passenger import Passenger
-from lib.route import find_route
+from lib.route import find_route_adj, AdjacencyList
 from lib.station import Station
 from lib.train import Train
 from network.schedule import Schedule, StartMinute
@@ -110,9 +110,10 @@ class Simulation:
 
     def find_all_routes(self):
         all_routes: List[List['Route']] = []
+        adj = AdjacencyList(self.all_lines)
         for _, from_station in self.all_stations.items():
             for _, to_station in self.all_stations.items():
-                route = find_route(from_station, to_station, self.all_lines)
+                route = find_route_adj(from_station, to_station, adj)
                 all_routes.append(route)
         return all_routes
 
