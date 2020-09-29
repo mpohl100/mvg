@@ -13,10 +13,10 @@ class Passenger:
         self.current_train = None
         self.in_train = False
 
-    def update(self):
-        self.minute += 1
-        if self.minute < self.start_minute or self.current_leg == len(self.route):
-            return
+    def update(self, minute):
+        self.minute = minute
+        if self.minute < self.start_minute or self.finished():
+            raise ValueError("unnecessary passenger update call.")
         if not self.current_station:
             self.current_station = self.route[self.current_leg].from_station
             self.current_station.enter_passenger(self)
@@ -43,7 +43,30 @@ class Passenger:
                 self.in_train = False
                 self.current_station = target_station
 
+    def finished(self):
+        return self.current_leg == len(self.route)
+
+class Passengers:
+    def __init__(self, passengers: List[Passenger]):
+        self.passengers = passengers
+        self.minute = 0
+        self.active_passengers: List[Passenger] = []
+        self.indexed_passengers = {}
+        for passenger in self.passengers:
+            if passenger.start_minute in self.indexed_passengers:
+                self.indexed_passengers[passenger.start_minute].append(passenger)
+            else:
+                self.indexed_passengers[passenger.start_minute] = [passenger]
 
 
+    def update(self):
+        if self.minute in self.indexed_passengers:
+            self.active_passengers.extend(self.indexed_passengers[self.minute])
+        self.active_passengers = [passenger for passenger in self.active_passengers if not passenger.finished()]
+        print(str(len(self.active_passengers)) + " / " + str(len(self.passengers)))
+        for passenger in self.active_passengers:
+            passenger.update(self.minute)
+
+        self.minute += 1
 
 

@@ -1,7 +1,7 @@
 from lib.config import Config
 from lib.lane import Lane
 from lib.line import Line
-from lib.passenger import Passenger
+from lib.passenger import Passenger, Passengers
 from lib.route import find_route_adj, AdjacencyList
 from lib.station import Station
 from lib.train import Train
@@ -35,7 +35,7 @@ class Simulation:
             self.deduce_trains(True)
             self.deduce_trains(False)
         self.all_routes = []
-        self.passengers = []
+        self.passengers = None
         if config.num_passengers_per_route > 0:
             self.create_passengers()
         self.graph = None
@@ -119,13 +119,14 @@ class Simulation:
 
     def create_passengers(self):
         self.all_routes = self.find_all_routes()
-        self.passengers: List[Passenger] = []
+        passengers: List[Passenger] = []
         passenger_number = 0
         for route in self.all_routes:
             for i in range(self.config.num_passengers_per_route):
                 start_minute = random.randint(0, self.config.minutes)
-                self.passengers.append(Passenger(route, start_minute, passenger_number))
+                passengers.append(Passenger(route, start_minute, passenger_number))
                 passenger_number += 1
+        self.passengers = Passengers(passengers)
 
     def update(self):
         self.time += 1
@@ -133,8 +134,8 @@ class Simulation:
             t.reset()
         for t in self.trains:
             t.update()
-        for p in self.passengers:
-            p.update()
+        if self.passengers:
+            self.passengers.update()
         if self.config.show_net:
             self.print_net()
 
