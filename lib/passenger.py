@@ -1,5 +1,6 @@
 from network.network import find_index_in_list_pred
 
+from collections import defaultdict
 from typing import List
 
 class Passenger:
@@ -12,6 +13,8 @@ class Passenger:
         self.current_station = None
         self.current_train = None
         self.in_train = False
+        self.travel_time: Dict[int, int] = defaultdict(int)
+        self.wait_time: Dict[int, int] = defaultdict(int)
 
     def update(self, minute):
         self.minute = minute
@@ -22,6 +25,9 @@ class Passenger:
             self.current_station.enter_passenger(self)
         if not self.in_train:
             # nachschauen ob ein Zug mit dem Liniennamen im Bahnhof ist
+            # wir wollen nur die Wartezeiten beim Umsteigen zählen
+            #if self.current_leg > 0:
+            self.wait_time[self.current_leg] += 1
             linename = self.route[self.current_leg].linename
             train_index = find_index_in_list_pred(self.current_station.trains, lambda x: x.line.name == linename)
             if train_index != -1: 
@@ -35,6 +41,7 @@ class Passenger:
                     self.current_train.enter_passenger(self)
                     self.in_train = True
         else:
+            self.travel_time[self.current_leg] += 1
             target_station = self.route[self.current_leg].to_station
             if self.current_train.current_station == target_station:
                 self.current_train.depart_passenger(self)
@@ -58,7 +65,6 @@ class Passengers:
             else:
                 self.indexed_passengers[passenger.start_minute] = [passenger]
 
-
     def update(self):
         if self.minute in self.indexed_passengers:
             self.active_passengers.extend(self.indexed_passengers[self.minute])
@@ -66,7 +72,25 @@ class Passengers:
         print(str(len(self.active_passengers)) + " / " + str(len(self.passengers)))
         for passenger in self.active_passengers:
             passenger.update(self.minute)
-
         self.minute += 1
+
+    def print_stats(self):
+        if (len(self.passengers) == 0):
+            return
+        ges_travel_time = defaultdict(int)
+        ges_wait_time = defaultdict(int)
+        for p in self.passengers:
+            for k, t in p.travel_time.items():
+                ges_travel_time[k] += t
+            for k, t in p.wait_time.items():
+                ges_wait_time[k] += t
+        avg_travel_time = defaultdict(int)
+        avg_wait_time = defaultdict(int)
+        for k, t in ges_travel_time.items():
+            avg_travel_time[k] = t / len(self.passengers)
+        for k, t in ges_wait_time.items():
+            avg_wait_time[k] = t / len(self.passengers)
+        print()
+        print("avg. travel time: " + str(avg_travel_time) + " min., avg. wait time: " + str(avg_wait_time) + " min.")
 
 

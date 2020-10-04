@@ -157,6 +157,7 @@ class Simulation:
         print([str(s) for _, s in self.start_minutes.items()])
         #self.print_lanes()
         #self.print_sublines()
+        self.passengers.print_stats()
 
     def delay_per_train(self):
         for t in sorted(self.trains, key=lambda x : x.delay):
