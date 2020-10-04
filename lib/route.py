@@ -5,8 +5,8 @@ from queue import Queue
 from typing import List, Dict, Tuple, Set
 
 class Route:
-    def __init__(self, from_station: 'Station', to_station: 'Station', linename: str):
-        self.linename: str = linename
+    def __init__(self, from_station: 'Station', to_station: 'Station', linenames: List[str]):
+        self.linenames: List[str] = linenames
         self.from_station: 'Station' = from_station
         self.to_station: 'Station' = to_station
 
@@ -15,7 +15,7 @@ class Route:
     def __hash__(self):
         return hash(str(self.from_station) + str(self.to_station))
     def __str__(self):
-        return str(self.from_station) + ' -> ' + str(self.to_station) + ' via line ' + str(self.linename)
+        return str(self.from_station) + ' -> ' + str(self.to_station) + ' via lines ' + str(self.linenames)
 
 def find_lines(all_lines: List['Line'], station: 'Station'):
     return [line for line in all_lines if station in line.all_stations]
@@ -64,13 +64,13 @@ class RouteFinder:
         to_lines = find_lines(self.all_lines, self.to_station)
         common_lines = set(from_lines).intersection(set(to_lines))
         if len(common_lines) > 0:
-            self.current_route.append(Route(self.from_station, self.to_station, list(common_lines)[0].name))
+            self.current_route.append(Route(self.from_station, self.to_station, [l.name for l in common_lines]))
             self.routes.append(copy.copy(self.current_route))
             return # wenn wir hier ankommen sind wir fertig mit der Route
         possible_switches: List[StationSwitch] = find_all_possible_switches(from_lines, copy.copy(self.already_visited), self.from_station)
         for station_switch in possible_switches:
             self.already_visited.append(station_switch.into_line)
-            self.current_route.append(Route(self.from_station, station_switch.station, station_switch.from_line.name))
+            self.current_route.append(Route(self.from_station, station_switch.station, [station_switch.from_line.name]))
             new_route_finder = RouteFinder(self.all_lines, station_switch.station, self.to_station, self.already_visited)
             if len(new_route_finder.routes) > 0: # es wurde eine Route gefunden
                 for route in new_route_finder.routes:
@@ -83,7 +83,7 @@ def find_route(from_station: 'Station', to_station: 'Station', all_lines: List['
     routes = list(sorted(route_finder.routes, key=lambda x: len(x)))
     if len(routes) > 0:
         return routes[0]
-    return [Route(from_station, to_station, 'no line')]     
+    return [Route(from_station, to_station, ['no line'])]     
 
 class AdjacencyList:
     def __init__(self, all_lines: List['Line']):
@@ -142,7 +142,7 @@ def deduce_longest_route(path: List['Station']):
         raise ValueError("path must have at least two members")
     potential_lines: Set[str] = set(['dummy'])
     index = 0
-    route = Route(path[index], path[index], '')
+    route = Route(path[index], path[index], [''])
     while(len(potential_lines) > 0 and index < len(path) - 1):
         if index == 0:
             potential_lines = set(path[index].lanes[path[index+1].name].lines)
@@ -150,7 +150,7 @@ def deduce_longest_route(path: List['Station']):
             potential_lines = potential_lines.intersection(set(path[index].lanes[path[index+1].name].lines))
         if len(potential_lines) > 0:
             route.to_station = path[index+1]
-            route.linename = list(potential_lines)[0].name
+            route.linenames = [l.name for l in potential_lines]
             index += 1
     return route, index
     
