@@ -83,17 +83,21 @@ class Passengers:
             return
         ges_travel_time = defaultdict(int)
         ges_wait_time = defaultdict(int)
+        ges_travel_time_n = defaultdict(int)
+        ges_wait_time_n = defaultdict(int)
         for p in self.passengers:
             for k, t in p.travel_time.items():
                 ges_travel_time[k] += t
+                ges_travel_time_n[k] += 1
             for k, t in p.wait_time.items():
                 ges_wait_time[k] += t
+                ges_wait_time_n[k] += 1
         avg_travel_time = defaultdict(int)
         avg_wait_time = defaultdict(int)
         for k, t in ges_travel_time.items():
-            avg_travel_time[k] = t / len(self.passengers)
+            avg_travel_time[k] = t / ges_travel_time_n[k]
         for k, t in ges_wait_time.items():
-            avg_wait_time[k] = t / len(self.passengers)
+            avg_wait_time[k] = t / ges_wait_time_n[k]
         print()
         print("avg. travel time: " + str(avg_travel_time) + " min., avg. wait time: " + str(avg_wait_time) + " min.")
 
