@@ -1,8 +1,8 @@
 # Goal
 The goal of this project is to create an algorithm which can automatically deduce a driving schedule for public transportation networks by examining the topology of the network.
-This algorithm is meant to be used by railway networks for transporting humans or economic goods. Furthermore the algorithm can be used by self driving car networks in bin cities to plan how many cars shall be used to transport a certain number of people.
+This algorithm is meant to be used by railway networks for transporting humans or economic goods. Furthermore the algorithm can be used by self driving car networks in big cities to plan how many cars shall be used to transport a certain number of people.
 The algorithm is still under construction but it already works well for the local Munich subway network. 
-Further ideas are needed and and help is appreciated.
+Further ideas are needed and any help is appreciated.
 
 # Usage
 The prototype is written in python3 and requires the libraries networkx and tkinter to work properly.
