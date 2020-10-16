@@ -82,7 +82,7 @@ def read_from_files(files):
                 all_info.update(data)
     return all_info
 
-class Network:
+class NetworkDb:
     def __init__(self, city=None, testnetwork=None, files=None):
         if not files:
             self.city = city
@@ -104,64 +104,7 @@ class Network:
     def deduce_line_data(self):
         self.all_stations: List[str] = find_all_stations(self.all_lines)
         self.lines_per_station: Dict[str, List[str]] = index_network_by_line(self.all_lines)
-        self.switches_per_line: Dict[str, List[str]] = find_all_switches(self.all_lines, self.lines_per_station)
-        #self.all_routes = {}
-        #for start in self.all_stations:
-        #    for dest in self.all_stations:
-        #        route = self.find_route(start,dest)
-        #        self.all_routes[start + " | " + dest] = route
-    
-
-
-    def find_route(self, start: str, dest: str):
-        route: List[str] = []
-        start_lines: List[str] = self.lines_per_station[start]
-        dest_lines: List[str] = self.lines_per_station[dest]
-        common_lines: Set[str] = set(start_lines).intersection(set(dest_lines))
-        if len(common_lines) > 0:
-            routes: List[str] = []
-            for common_line in common_lines:
-                routes.append( accumulate_stations(self.all_lines[common_line], start, dest) )
-            routes.sort(key=lambda x : len(x))
-            return routes[0]
-        
-        for start_line in start_lines:
-            for dest_line in dest_lines:
-                start_switches: List[str] = self.switches_per_line[start_line]
-                dest_switches: List[str] = self.switches_per_line[dest_line]
-                common_switches: Set[str] = set(start_switches).intersection(set(dest_switches))
-                if len(common_switches) > 0:
-                    routes: List[str] = []
-                    for common_switch in common_switches:
-                        routes.append( [self.find_route(start, common_switch), self.find_route(common_switch, dest)] )
-                    # erst sortieren wir nach der Länge der  Gesamtstrecke und dann nach der Länge des ersten Abschnitts
-                    routes.sort(key=lambda x : (len(x[0]) + len(x[1]), len(x[0])) )
-                    return routes[0][0] + routes[0][1]
-        return route        
-        # Falls zwei Stationen nicht mit einmal Umsteigen erreicht werden können, muss noch was gemacht werden
-        #for start_line in start_lines:
-        #    for dest_line in dest_lines:
-        #        start_switches = self.switches_per_line[start_line]
-        #        dest_switches = self.switches_per_line[dest_line]
-
-    def generate_graphviz(self, line=None, filename=None):
-        import graphviz as gv
-        graph = gv.Graph(format="png", filename=filename if filename else self.city)
-        stations = self.all_stations if line is None else self.all_lines[line]
-        for station in stations:
-            graph.node(station, label=station)
-        inserted_edges = set()
-        for name, line_stations in self.all_lines.items():
-            if line and line != name:
-                continue
-            for i, station in enumerate(line_stations[0:-1]):
-                if (station, line_stations[i+1]) in inserted_edges:
-                    continue
-                inserted_edges.add((station, line_stations[i+1]))
-                inserted_edges.add((line_stations[i+1], station))
-                graph.edge(station, line_stations[i+1])
-                graph.edge(line_stations[i+1], station)
-        return graph
+        self.switches_per_line: Dict[str, List[str]] = find_all_switches(self.all_lines, self.lines_per_station)    
 
     def generate_networkx(self, line=None):
         import networkx as nx

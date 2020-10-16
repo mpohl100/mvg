@@ -20,8 +20,8 @@ def is_visible(position, xlim, ylim):
     return visible_x and visible_y
 
 class Simulation:
-    def __init__(self, network: 'Network', config: Config):
-        self.network: 'Network' = network
+    def __init__(self, networkdb: 'NetworkDb', config: Config):
+        self.networkdb: 'NetworkDb' = networkdb
         self.config: Config = config
         self.time: int = 0
         self.read_all_stations()
@@ -46,12 +46,12 @@ class Simulation:
 
     def read_all_stations(self):
         self.all_stations: Dict[str, Station] = {}
-        for station in self.network.all_stations:
+        for station in self.networkdb.all_stations:
             self.all_stations[station] = Station(station)
 
     def read_all_lines(self):
         self.all_lines: List[Line] = []
-        for line, info in self.network.all_info.items():
+        for line, info in self.networkdb.all_info.items():
             all_station_names: List[str] = info['all_stations']
             switch_names: List[str] = info['switches']
             if '' in switch_names:
@@ -62,7 +62,7 @@ class Simulation:
     
     def deduce_lanes(self):
         for _, station in self.all_stations.items():
-            station.deduce_lanes(self.network, self.all_stations, self.all_lines)
+            station.deduce_lanes(self.networkdb, self.all_stations, self.all_lines)
         self.all_lanes: List[Lane] = []
         for _, station in self.all_stations.items():
             self.all_lanes.extend([lane for _, lane in station.lanes.items()])
@@ -157,7 +157,8 @@ class Simulation:
         print([str(s) for _, s in self.start_minutes.items()])
         #self.print_lanes()
         #self.print_sublines()
-        self.passengers.print_stats()
+        if self.passengers:
+            self.passengers.print_stats()
 
     def delay_per_train(self):
         for t in sorted(self.trains, key=lambda x : x.delay):
@@ -216,7 +217,7 @@ class Simulation:
         matplotlib_axes_logger.setLevel('ERROR')
         import networkx as nx
         if self.graph is None:
-            self.graph = self.network.generate_networkx()
+            self.graph = self.networkdb.generate_networkx()
             self.positions = nx.spring_layout(self.graph)
             for train in self.trains:
                 self.graph.add_node(train.line.name + "(" + str(train.number) + ")", label=train.line.name)

@@ -1,6 +1,6 @@
 from lib.config import Config
 from lib.simulation import Simulation
-from network.network import Network
+from network.networkdb import NetworkDb
 from network.schedule import StartMinute
 
 import copy
@@ -8,7 +8,7 @@ import matplotlib.pyplot as plt
 
 
 def brute_force_schedule():
-    mvg = Network("MUC")
+    mvg = NetworkDb("MUC")
     config = Config(5,10,500,0,True)
     simulation = Simulation(mvg, config)
     # Die automatisch erzeugten Startminuten merken
@@ -25,7 +25,7 @@ def brute_force_schedule():
 
 
 def main():
-    mvg = Network("MUC")
+    mvg = NetworkDb("MUC")
     minutes = list(range(60, 1440, 60))
     delays = []
     for minute in minutes:
@@ -35,7 +35,6 @@ def main():
         delays.append(simulation.sum_delay())
     plt.plot(minutes, delays, color='blue')
     plt.show()
-
 
 
 if __name__=="__main__":

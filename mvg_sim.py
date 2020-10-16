@@ -1,11 +1,11 @@
 from lib.config import Config, parse_config
 from lib.simulation import Simulation
-from network.network import Network
+from network.networkdb import NetworkDb
 
 def main():
     config = parse_config()
-    network = Network(files=config.files)
-    simulation = Simulation(network, config)
+    networkdb = NetworkDb(files=config.files)
+    simulation = Simulation(networkdb, config)
     simulation.run()
 
 if __name__=="__main__":

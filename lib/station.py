@@ -1,4 +1,4 @@
-from network.network import find_index_in_list, find_index_in_list_pred
+from network.networkdb import find_index_in_list, find_index_in_list_pred
 from lib.lane import Lane
 from typing import Dict, List   
 
@@ -11,9 +11,9 @@ def find_neighbour(lanes: Dict[str, List[str]], stations: List[str], index, line
         else:
             lanes[neighbour_station] = [line]
     
-def find_neighbours(network: 'Network', station: str):
+def find_neighbours(networkdb: 'NetworkDb', station: str):
     neighbours: Dict[str, List[str]] = {}
-    for line, stations in network.all_lines.items():
+    for line, stations in networkdb.all_lines.items():
         index: int = find_index_in_list(stations, station)
         if index == -1:
             continue
@@ -21,8 +21,8 @@ def find_neighbours(network: 'Network', station: str):
         find_neighbour(neighbours, stations, index + 1, line)
     return neighbours
 
-def find_lanes(station: str, network: 'Network', all_stations: List['Station'], all_lines: List['Line']):
-    neighbours = find_neighbours(network, station)
+def find_lanes(station: str, networkdb: 'NetworkDb', all_stations: List['Station'], all_lines: List['Line']):
+    neighbours = find_neighbours(networkdb, station)
     lanes: Dict[str, 'Lane'] = {}
     for neighbour_station, linenames in neighbours.items():
         lines = [] 

@@ -1,4 +1,4 @@
-from network.network import find_index_in_list, find_index_in_list_pred
+from network.networkdb import find_index_in_list, find_index_in_list_pred
 
 import copy
 from queue import Queue

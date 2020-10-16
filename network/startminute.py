@@ -1,4 +1,4 @@
-from network.network import find_index_in_list
+from network.networkdb import find_index_in_list
 
 from typing import List
 
