@@ -1,6 +1,7 @@
 from lib.config import Config
 from lib.lane import Lane
 from lib.line import Line
+from lib.network import Network
 from lib.passenger import Passenger, Passengers
 from lib.route import find_route_adj, AdjacencyList
 from lib.station import Station
@@ -24,9 +25,7 @@ class Simulation:
         self.networkdb: 'NetworkDb' = networkdb
         self.config: Config = config
         self.time: int = 0
-        self.read_all_stations()
-        self.read_all_lines()
-        self.deduce_lanes()
+        self.network: Network = Network(networkdb)
         self.trains: List[Train] = []
         self.start_minutes = {}
         if not self.config.deduce_schedule:
@@ -44,34 +43,6 @@ class Simulation:
         self.ylim = None
         self.minute = -1
 
-    def read_all_stations(self):
-        self.all_stations: Dict[str, Station] = {}
-        for station in self.networkdb.all_stations:
-            self.all_stations[station] = Station(station)
-
-    def read_all_lines(self):
-        self.all_lines: List[Line] = []
-        for line, info in self.networkdb.all_info.items():
-            all_station_names: List[str] = info['all_stations']
-            switch_names: List[str] = info['switches']
-            if '' in switch_names:
-                switch_names.remove('')
-            all_stations: List[Station] = [self.all_stations[station] for station in all_station_names] 
-            switches: List[Station] = [self.all_stations[station] for station in switch_names] 
-            self.all_lines.append(Line(line, all_stations, switches))
-    
-    def deduce_lanes(self):
-        for _, station in self.all_stations.items():
-            station.deduce_lanes(self.networkdb, self.all_stations, self.all_lines)
-        self.all_lanes: List[Lane] = []
-        for _, station in self.all_stations.items():
-            self.all_lanes.extend([lane for _, lane in station.lanes.items()])
-        # Test der Integrität des Netzwerks:
-        set_lanes = set(self.all_lanes)
-        if len(set_lanes) != len(self.all_lanes):
-            raise Exception("Nicht einzigartige Lanes im Netzwerk vorhanden.")
-
-
     def add_train(self, index: int, line, direction: int, nb_trains: int, start_minute: int):
         l: Line = line
         train = Train(self.config, l, l.all_stations[index], direction, nb_trains, start_minute)
@@ -83,7 +54,7 @@ class Simulation:
     def read_trains(self):
         self.trains: List[Train] = []
         nb_trains: int = 0
-        for line in self.all_lines:
+        for line in self.network.all_lines:
             nb_skip: int = self.config.nb_sbahn
             if line.is_subway:
                 nb_skip = self.config.nb_subway
@@ -94,11 +65,11 @@ class Simulation:
 
     def deduce_trains(self, is_subway):
         dict_of_lines = {}
-        dict_of_lines = {line.name: line.all_stations for line in self.all_lines if line.is_subway == is_subway} 
+        dict_of_lines = {line.name: line.all_stations for line in self.network.all_lines if line.is_subway == is_subway} 
         self.schedule = Schedule(dict_of_lines)
         self.start_minutes.update(self.schedule.calc())
         nb_trains = 0
-        for line in [ line for line in self.all_lines if line.is_subway == is_subway]:
+        for line in [ line for line in self.network.all_lines if line.is_subway == is_subway]:
             start_minute = self.start_minutes[line.name]
             line.set_start_minute(start_minute)
             for i in range(0, start_minute.taktoffset_p1.nb_trains()):
@@ -110,9 +81,9 @@ class Simulation:
 
     def find_all_routes(self):
         all_routes: List[List['Route']] = []
-        adj = AdjacencyList(self.all_lines)
-        for _, from_station in self.all_stations.items():
-            for _, to_station in self.all_stations.items():
+        adj = AdjacencyList(self.network.all_lines)
+        for _, from_station in self.network.all_stations.items():
+            for _, to_station in self.network.all_stations.items():
                 route = find_route_adj(from_station, to_station, adj)
                 all_routes.append(route)
         return all_routes
@@ -122,7 +93,7 @@ class Simulation:
         passengers: List[Passenger] = []
         passenger_number = 0
         for route in self.all_routes:
-            for i in range(self.config.num_passengers_per_route):
+            for _ in range(self.config.num_passengers_per_route):
                 start_minute = random.randint(0, self.config.minutes)
                 passengers.append(Passenger(route, start_minute, passenger_number))
                 passenger_number += 1
@@ -179,13 +150,13 @@ class Simulation:
         return sum_delay       
 
     def print_lanes(self):
-        for _, station in self.all_stations.items():
+        for _, station in self.network.all_stations.items():
             print('station ' + station.name + ' has following lanes')
             print(station.lanes)
             print()
 
     def print_sublines(self):
-        for line in self.all_lines:
+        for line in self.network.all_lines:
             print(line)
             for subroute in line.sublines.keys():
                 print('    ' + str(subroute))
@@ -195,8 +166,8 @@ class Simulation:
         cmap = matplotlib.cm.get_cmap('Spectral')
         colors = {}
         i = 0
-        for line in self.all_lines:
-            colors[line.name] = cmap(i*1.0/len(self.all_lines))
+        for line in self.network.all_lines:
+            colors[line.name] = cmap(i*1.0/len(self.network.all_lines))
             i += 1
         return colors
 

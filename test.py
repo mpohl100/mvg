@@ -24,13 +24,13 @@ if __name__=="__main__":
     from lib.station import Station
     from_station = Station("Quiddestraße")
     to_station = Station("Universität")
-    route = find_route_bfs(from_station, to_station, simulation.all_lines)
+    route = find_route_bfs(from_station, to_station, simulation.network.all_lines)
     #print([str(r) for r in route])
-    route = find_route_bfs(to_station, from_station, simulation.all_lines)
+    route = find_route_bfs(to_station, from_station, simulation.network.all_lines)
     #print([str(r) for r in route])
-    adj = AdjacencyList(simulation.all_lines)
-    for _, from_station in simulation.all_stations.items():
-        for _, to_station in simulation.all_stations.items():
+    adj = AdjacencyList(simulation.network.all_lines)
+    for _, from_station in simulation.network.all_stations.items():
+        for _, to_station in simulation.network.all_stations.items():
             route = find_route_adj(from_station, to_station, adj)
             print('from ' + from_station.name + ' to ' + to_station.name + ':')
             for r in route:
