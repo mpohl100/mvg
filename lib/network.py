@@ -40,3 +40,23 @@ class Network:
         set_lanes = set(self.all_lanes)
         if len(set_lanes) != len(self.all_lanes):
             raise Exception("Nicht einzigartige Lanes im Netzwerk vorhanden.")
+
+    def generate_networkx(self, line=None):
+        import networkx as nx
+        graph = nx.Graph()
+        stations = self.all_stations.values() if line is None else self.all_lines[line]
+        for station in stations:
+            graph.add_node(station.name, label=station.name)
+        inserted_edges = set()
+        for l in self.all_lines:
+            if line and line != l.name:
+                continue
+            for i, station in enumerate(l.all_stations[0:-1]):
+                if (station, l.all_stations[i+1]) in inserted_edges:
+                    continue
+                inserted_edges.add((station, l.all_stations[i+1]))
+                inserted_edges.add((l.all_stations[i+1], station))
+                graph.add_edge(station.name, l.all_stations[i+1].name)
+                graph.add_edge(l.all_stations[i+1].name, station.name)
+        return graph
+

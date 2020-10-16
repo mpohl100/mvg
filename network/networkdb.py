@@ -105,23 +105,3 @@ class NetworkDb:
         self.all_stations: List[str] = find_all_stations(self.all_lines)
         self.lines_per_station: Dict[str, List[str]] = index_network_by_line(self.all_lines)
         self.switches_per_line: Dict[str, List[str]] = find_all_switches(self.all_lines, self.lines_per_station)    
-
-    def generate_networkx(self, line=None):
-        import networkx as nx
-        graph = nx.Graph()
-        stations = self.all_stations if line is None else self.all_lines[line]
-        for station in stations:
-            graph.add_node(station, label=station)
-        inserted_edges = set()
-        for name, line_stations in self.all_lines.items():
-            if line and line != name:
-                continue
-            for i, station in enumerate(line_stations[0:-1]):
-                if (station, line_stations[i+1]) in inserted_edges:
-                    continue
-                inserted_edges.add((station, line_stations[i+1]))
-                inserted_edges.add((line_stations[i+1], station))
-                graph.add_edge(station, line_stations[i+1])
-                graph.add_edge(line_stations[i+1], station)
-        return graph
-

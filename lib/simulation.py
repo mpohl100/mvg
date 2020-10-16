@@ -188,7 +188,7 @@ class Simulation:
         matplotlib_axes_logger.setLevel('ERROR')
         import networkx as nx
         if self.graph is None:
-            self.graph = self.networkdb.generate_networkx()
+            self.graph = self.network.generate_networkx()
             self.positions = nx.spring_layout(self.graph)
             for train in self.trains:
                 self.graph.add_node(train.line.name + "(" + str(train.number) + ")", label=train.line.name)
