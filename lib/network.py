@@ -23,12 +23,8 @@ class Network:
         self.all_lines: List[Line] = []
         for line, info in self.networkdb.all_info.items():
             all_station_names: List[str] = info['all_stations']
-            switch_names: List[str] = info['switches']
-            if '' in switch_names:
-                switch_names.remove('')
-            all_stations: List[Station] = [self.all_stations[station] for station in all_station_names] 
-            switches: List[Station] = [self.all_stations[station] for station in switch_names] 
-            self.all_lines.append(Line(line, all_stations, switches))
+            all_stations: List[Station] = [self.all_stations[station] for station in all_station_names]
+            self.all_lines.append(Line(line, all_stations))
     
     def deduce_lanes(self):
         for _, station in self.all_stations.items():

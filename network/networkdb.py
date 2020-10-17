@@ -31,19 +31,6 @@ def index_network_by_line(network: Dict[str, List[str]]):
                 lines_per_station[s] = [line]
     return lines_per_station
 
-def find_possible_switch_stations(lines_per_station: Dict[str, List[str]], line: str):
-    ret: List[str] = []
-    for station, lines in lines_per_station.items():
-        if line in lines and len(lines) >= 2:
-            ret.append(station)
-    return ret
-
-def find_all_switches(network: Dict[str, List[str]], lines_per_station: Dict[str, List[str]]):
-    ret: Dict[str, List[str]] = {}
-    for line, _ in network.items():
-        ret[line] = find_possible_switch_stations(lines_per_station, line)
-    return ret
-
 def find_index_in_list(lst, el):
     for i, e in enumerate(lst):
         if e == el:
@@ -90,7 +77,6 @@ class NetworkDb:
         else:
             self.all_info = read_from_files(files)
         self.all_lines: Dict[str, List[str]] = {k:v['all_stations'] for k,v in self.all_info.items()}
-        self.all_switches: Dict[str, List[str]] = {k:v['switches'] for k,v in self.all_info.items()}
         self.deduce_line_data()
 
     def get_all_info(self,city, testnetwork):
@@ -98,10 +84,9 @@ class NetworkDb:
         if not testnetwork:
             all_info = read_network(city)
         else:
-            all_info = {k: {'all_stations': v, 'switches': []} for k,v in testnetwork.items()}
+            all_info = {k: {'all_stations': v} for k,v in testnetwork.items()}
         return all_info
 
     def deduce_line_data(self):
         self.all_stations: List[str] = find_all_stations(self.all_lines)
-        self.lines_per_station: Dict[str, List[str]] = index_network_by_line(self.all_lines)
-        self.switches_per_line: Dict[str, List[str]] = find_all_switches(self.all_lines, self.lines_per_station)    
+        self.lines_per_station: Dict[str, List[str]] = index_network_by_line(self.all_lines)    

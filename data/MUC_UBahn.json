@@ -1,5 +1,5 @@
 {
-    "U1": {
+    "U1(0)": {
         "all_stations": [
             "Olympia-Einkaufszentrum",
             "Georg-Brauchle-Ring",
@@ -16,12 +16,9 @@
             "Wettersteinplatz",
             "St.-Quirin-Platz",
             "Mangfallplatz"
-        ],
-        "switches": [
-            ""
         ]
     },
-    "U2": {
+    "U2(1)": {
         "all_stations": [
             "Feldmoching",
             "Hasenbergl",
@@ -50,12 +47,9 @@
             "Moosfeld",
             "MessestadtWest",
             "MessestadtOst"
-        ],
-        "switches": [
-            ""
         ]
     },
-    "U3": {
+    "U3(2)": {
         "all_stations": [
             "Moosach",
             "MoosacherSt.-Martins-Platz",
@@ -82,12 +76,9 @@
             "ForstenriederAllee",
             "BaslerStra\u00dfe",
             "F\u00fcrstenriedWest"
-        ],
-        "switches": [
-            ""
         ]
     },
-    "U4": {
+    "U4(3)": {
         "all_stations": [
             "Westendstra\u00dfe",
             "Heimeranplatz",
@@ -102,12 +93,9 @@
             "B\u00f6hmerwaldplatz",
             "Richard-Strauss-Stra\u00dfe",
             "Arabellapark"
-        ],
-        "switches": [
-            ""
         ]
     },
-    "U5": {
+    "U5(4)": {
         "all_stations": [
             "LaimerPlatz",
             "FriedenheimerStra\u00dfe",
@@ -127,12 +115,9 @@
             "NeuperlachZentrum",
             "Therese-Giehse-Allee",
             "NeuperlachS\u00fcd"
-        ],
-        "switches": [
-            ""
         ]
     },
-    "U6": {
+    "U6(5)": {
         "all_stations": [
             "Garching-Forschungszentrum",
             "Garching",
@@ -160,12 +145,9 @@
             "HadernerStern",
             "Gro\u00dfhadern",
             "KlinikumGro\u00dfhadern"
-        ],
-        "switches": [
-            ""
         ]
     },
-    "U7": {
+    "U7(6)": {
         "all_stations": [
             "Olympia-Einkaufszentrum",
             "Georg-Brauchle-Ring",
@@ -186,12 +168,9 @@
             "Michaelibad",
             "Quiddestra\u00dfe",
             "NeuperlachZentrum"
-        ],
-        "switches": [
-            ""
         ]
     },
-    "U8": {
+    "U8(7)": {
         "all_stations": [
             "Olympiazentrum",
             "Petuelring",
@@ -212,9 +191,6 @@
             "Michaelibad",
             "Quiddestra\u00dfe",
             "NeuperlachZentrum"
-        ],
-        "switches": [
-            ""
         ]
     }
 }

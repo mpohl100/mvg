@@ -2,11 +2,10 @@
 from typing import Dict, List
 
 class Line:
-    def __init__(self, name: str, all_stations: List['Station'], switches: List['Station']):
+    def __init__(self, name: str, all_stations: List['Station']):
         self.name: str = name
         self.is_subway: bool = self.name.startswith('U')
         self.all_stations: List['Station'] = all_stations
-        self.switches: List['Station'] = switches
         self.trains: List['Train'] = []
         self.start_minute = None
 

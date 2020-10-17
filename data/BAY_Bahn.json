@@ -9,9 +9,6 @@
             "Reichenbach",
             "Plauen",
             "Hof"
-        ],
-        "switches": [
-            ""
         ]
     },
     "RB(1)": {
@@ -20,9 +17,6 @@
             "Werdau",
             "Plauen",
             "Hof"
-        ],
-        "switches": [
-            ""
         ]
     },
     "EB(2)": {
@@ -31,18 +25,12 @@
             "Weida",
             "Zeulenroda",
             "Hof"
-        ],
-        "switches": [
-            ""
         ]
     },
     "EB(3)": {
         "all_stations": [
             "Gutenf\u00fcrst",
             "Hof"
-        ],
-        "switches": [
-            ""
         ]
     },
     "RE(4)": {
@@ -54,9 +42,6 @@
             "Bamberg",
             "F\u00fcrth",
             "N\u00fcrnberg"
-        ],
-        "switches": [
-            ""
         ]
     },
     "RE(5)": {
@@ -69,9 +54,6 @@
             "Suhl",
             "Arnstadt",
             "Erfurt"
-        ],
-        "switches": [
-            ""
         ]
     },
     "EB(6)": {
@@ -80,9 +62,6 @@
             "Ebenhausen",
             "Mellrichstadt",
             "Meiningen"
-        ],
-        "switches": [
-            ""
         ]
     },
     "RE(7)": {
@@ -91,9 +70,6 @@
             "Hanau",
             "Aschaffenburg",
             "W\u00fcrzburg"
-        ],
-        "switches": [
-            ""
         ]
     },
     "RB(8)": {
@@ -101,9 +77,6 @@
             "Frankfurt",
             "Hanau",
             "Aschaffenburg"
-        ],
-        "switches": [
-            ""
         ]
     },
     "RB(9)": {
@@ -113,9 +86,6 @@
             "Alzenau",
             "Michelbach",
             "Sch\u00f6llkrippen"
-        ],
-        "switches": [
-            ""
         ]
     },
     "RB(10)": {
@@ -125,9 +95,6 @@
             "Darmstadt",
             "Mainz",
             "Wiesbaden"
-        ],
-        "switches": [
-            ""
         ]
     },
     "RE(11)": {
@@ -141,9 +108,6 @@
             "G\u00f6ppingen",
             "Plochingen",
             "Stuttgart"
-        ],
-        "switches": [
-            ""
         ]
     },
     "RB(12)": {
@@ -155,9 +119,6 @@
             "Wasserburg",
             "FriedrichshafenStadt",
             "FriedrichshafenHafen"
-        ],
-        "switches": [
-            ""
         ]
     },
     "RB(13)": {
@@ -165,9 +126,6 @@
             "Lindau",
             "Wasserburg",
             "FriedrichshafenStadt"
-        ],
-        "switches": [
-            ""
         ]
     },
     "RB(14)": {
@@ -182,9 +140,6 @@
             "BadSaulgau",
             "Herbertingen",
             "Sigmaringen"
-        ],
-        "switches": [
-            ""
         ]
     },
     "RE(15)": {
@@ -194,9 +149,6 @@
             "Langenau",
             "Thalfingen",
             "Ulm"
-        ],
-        "switches": [
-            ""
         ]
     },
     "RB(16)": {
@@ -204,9 +156,6 @@
             "Langenau",
             "Thalfingen",
             "Ulm"
-        ],
-        "switches": [
-            ""
         ]
     },
     "RE(17)": {
@@ -218,18 +167,12 @@
             "Heilbronn",
             "Bietigheim-Bissingen",
             "Stuttgart"
-        ],
-        "switches": [
-            ""
         ]
     },
     "120(18)": {
         "all_stations": [
             "W\u00fcrzburg",
             "Lauda"
-        ],
-        "switches": [
-            ""
         ]
     },
     "RE(19)": {
@@ -239,18 +182,12 @@
             "Wertheim",
             "Lauda",
             "Crailsheim"
-        ],
-        "switches": [
-            ""
         ]
     },
     "120(20)": {
         "all_stations": [
             "Aschaffenburg",
             "Miltenberg"
-        ],
-        "switches": [
-            ""
         ]
     },
     "RB(21)": {
@@ -259,9 +196,6 @@
             "Wertheim",
             "Lauda",
             "BadMergentheim"
-        ],
-        "switches": [
-            ""
         ]
     },
     "RB(22)": {
@@ -271,9 +205,6 @@
             "Amorbach",
             "Walld\u00fcrn",
             "Seckach"
-        ],
-        "switches": [
-            ""
         ]
     },
     "RE(23)": {
@@ -284,9 +215,6 @@
             "Schw\u00e4bischHall-Hessental",
             "Waiblingen",
             "Stuttgart"
-        ],
-        "switches": [
-            ""
         ]
     },
     "RB(24)": {
@@ -294,9 +222,6 @@
             "Gem\u00fcnden(Main)",
             "Heigenbr\u00fccken",
             "Aschaffenburg"
-        ],
-        "switches": [
-            ""
         ]
     },
     "RB(25)": {
@@ -306,9 +231,6 @@
             "W\u00fcrzburg",
             "Gem\u00fcnden(Main)",
             "Jossa"
-        ],
-        "switches": [
-            ""
         ]
     },
     "RB(26)": {
@@ -319,9 +241,6 @@
             "Gem\u00fcnden(Main)",
             "Jossa",
             "Schl\u00fcchtern"
-        ],
-        "switches": [
-            ""
         ]
     },
     "EB(27)": {
@@ -332,9 +251,6 @@
             "BadKissingen",
             "Ebenhausen",
             "Schweinfurt"
-        ],
-        "switches": [
-            ""
         ]
     },
     "RE(28)": {
@@ -344,9 +260,6 @@
             "Neustadt(Aisch)",
             "F\u00fcrth",
             "N\u00fcrnberg"
-        ],
-        "switches": [
-            ""
         ]
     },
     "RB(29)": {
@@ -355,9 +268,6 @@
             "Siegelsdorf",
             "F\u00fcrth",
             "N\u00fcrnberg"
-        ],
-        "switches": [
-            ""
         ]
     },
     "RB(30)": {
@@ -365,9 +275,6 @@
             "Neustadt(Aisch)",
             "BadWindsheim",
             "Steinach"
-        ],
-        "switches": [
-            ""
         ]
     },
     "RB(31)": {
@@ -376,9 +283,6 @@
             "Siegelsdorf",
             "Wilhermsdorf",
             "MarktErlbach"
-        ],
-        "switches": [
-            ""
         ]
     },
     "RB(32)": {
@@ -386,9 +290,6 @@
             "F\u00fcrth",
             "Zirndorf",
             "Cadolzburg"
-        ],
-        "switches": [
-            ""
         ]
     },
     "RE(33)": {
@@ -397,9 +298,6 @@
             "Schweinfurt",
             "Ha\u00dffurt",
             "Bamberg"
-        ],
-        "switches": [
-            ""
         ]
     },
     "RE(34)": {
@@ -411,9 +309,6 @@
             "Bamberg",
             "F\u00fcrth",
             "N\u00fcrnberg"
-        ],
-        "switches": [
-            ""
         ]
     },
     "EB(35)": {
@@ -421,9 +316,6 @@
             "BadKissingen",
             "Ebenhausen",
             "Schweinfurt"
-        ],
-        "switches": [
-            ""
         ]
     },
     "ag(36)": {
@@ -438,9 +330,6 @@
             "Bayreuth",
             "Kirchlaibach",
             "Weiden"
-        ],
-        "switches": [
-            ""
         ]
     },
     "RB(37)": {
@@ -450,18 +339,12 @@
             "Kronach",
             "Ludwigsstadt",
             "Saalfeld"
-        ],
-        "switches": [
-            ""
         ]
     },
     "ag(38)": {
         "all_stations": [
             "Ebermannstadt",
             "Forchheim"
-        ],
-        "switches": [
-            ""
         ]
     },
     "ag(39)": {
@@ -469,9 +352,6 @@
             "Bamberg",
             "Breiteng\u00fc\u00dfbach",
             "Ebern"
-        ],
-        "switches": [
-            ""
         ]
     },
     "RE(40)": {
@@ -481,9 +361,6 @@
             "Neuenmarkt-Wirsberg",
             "Hof",
             "Bayreuth"
-        ],
-        "switches": [
-            ""
         ]
     },
     "RE(41)": {
@@ -495,9 +372,6 @@
             "Hof",
             "Bayreuth",
             "N\u00fcrnberg"
-        ],
-        "switches": [
-            ""
         ]
     },
     "ag(42)": {
@@ -507,18 +381,12 @@
             "Naila",
             "Hof",
             "M\u00fcnchberg"
-        ],
-        "switches": [
-            ""
         ]
     },
     "ag(43)": {
         "all_stations": [
             "M\u00fcnchberg",
             "Helmbrechts"
-        ],
-        "switches": [
-            ""
         ]
     },
     "ALX(44)": {
@@ -530,9 +398,6 @@
             "Regensburg",
             "Landshut",
             "M\u00fcnchen"
-        ],
-        "switches": [
-            ""
         ]
     },
     "ALX(45)": {
@@ -545,9 +410,6 @@
             "Regensburg",
             "Landshut",
             "M\u00fcnchen"
-        ],
-        "switches": [
-            ""
         ]
     },
     "RE(46)": {
@@ -557,9 +419,6 @@
             "Weiden",
             "Schwandorf",
             "Regensburg"
-        ],
-        "switches": [
-            ""
         ]
     },
     "RE(47)": {
@@ -569,9 +428,6 @@
             "Kirchenlaibach",
             "Hersbruck",
             "N\u00fcrnberg"
-        ],
-        "switches": [
-            ""
         ]
     },
     "OPB(48)": {
@@ -580,9 +436,6 @@
             "Weiden",
             "Schwandorf",
             "Regensburg"
-        ],
-        "switches": [
-            ""
         ]
     },
     "ag(49)": {
@@ -591,9 +444,6 @@
             "Marktredwitz",
             "Kirchenlaibach",
             "Bayreuth"
-        ],
-        "switches": [
-            ""
         ]
     },
     "ag(50)": {
@@ -602,9 +452,6 @@
             "Marktredwitz",
             "Kirchenlaibach",
             "Bayreuth"
-        ],
-        "switches": [
-            ""
         ]
     },
     "ag(51)": {
@@ -613,9 +460,6 @@
             "Marxgr\u00fcn",
             "Naila",
             "Hof"
-        ],
-        "switches": [
-            ""
         ]
     },
     "ag(52)": {
@@ -624,9 +468,6 @@
             "Rehau",
             "Selb-Pl\u00f6\u00dfberg",
             "SelbStadt"
-        ],
-        "switches": [
-            ""
         ]
     },
     "RE(53)": {
@@ -635,9 +476,6 @@
             "Hersbruck(rPegnitz)",
             "Pegnitz",
             "Bayreuth"
-        ],
-        "switches": [
-            ""
         ]
     },
     "OPB(54)": {
@@ -646,9 +484,6 @@
             "Schirnding",
             "Cheb",
             "HofHauptbahnhof"
-        ],
-        "switches": [
-            ""
         ]
     },
     "RE(55)": {
@@ -659,9 +494,6 @@
             "Marktredwitz",
             "Schirnding",
             "Cheb"
-        ],
-        "switches": [
-            ""
         ]
     },
     "RB(56)": {
@@ -669,18 +501,12 @@
             "N\u00fcrnbergNordost",
             "Eschenau",
             "Gr\u00e4fenberg"
-        ],
-        "switches": [
-            ""
         ]
     },
     "ag(57)": {
         "all_stations": [
             "Bayreuth",
             "Weidenberg"
-        ],
-        "switches": [
-            ""
         ]
     },
     "RE(58)": {
@@ -690,9 +516,6 @@
             "Neukirchen(bSulzb)",
             "Amberg",
             "Schwandorf"
-        ],
-        "switches": [
-            ""
         ]
     },
     "RE(59)": {
@@ -702,9 +525,6 @@
             "Neukirchen(bSulzb)",
             "Weiden(Oberpf)",
             "Neustadt(Waldnaab)"
-        ],
-        "switches": [
-            ""
         ]
     },
     "OPB(60)": {
@@ -712,18 +532,12 @@
             "Schwandorf",
             "Cham(Oberpf)",
             "FurthiWald"
-        ],
-        "switches": [
-            ""
         ]
     },
     "OPB(61)": {
         "all_stations": [
             "Cham(Oberpf)",
             "Waldm\u00fcnchen"
-        ],
-        "switches": [
-            ""
         ]
     },
     "OPB(62)": {
@@ -731,9 +545,6 @@
             "Cham(Oberpf)",
             "BadK\u00f6tzting",
             "Lam"
-        ],
-        "switches": [
-            ""
         ]
     },
     "RE(63)": {
@@ -744,9 +555,6 @@
             "Landshut(Bay)",
             "Freising",
             "M\u00fcnchen"
-        ],
-        "switches": [
-            ""
         ]
     },
     "ag(64)": {
@@ -755,9 +563,6 @@
             "Regensburg",
             "Straubing",
             "Plattling"
-        ],
-        "switches": [
-            ""
         ]
     },
     "RE(65)": {
@@ -768,9 +573,6 @@
             "Landshut(Bay)",
             "Freising",
             "M\u00fcnchen"
-        ],
-        "switches": [
-            ""
         ]
     },
     "S1(66)": {
@@ -783,9 +585,6 @@
             "Lauf(lPegnitz)",
             "Hersbruck(lPegnitz)",
             "Hartmannshof"
-        ],
-        "switches": [
-            ""
         ]
     },
     "S2(67)": {
@@ -795,9 +594,6 @@
             "N\u00fcrnberg",
             "Feucht",
             "Altdorf(bN\u00fcrnberg)"
-        ],
-        "switches": [
-            ""
         ]
     },
     "S3(68)": {
@@ -806,9 +602,6 @@
             "Feucht",
             "Burgthann",
             "Neumarkt(Oberpf)"
-        ],
-        "switches": [
-            ""
         ]
     },
     "S4(69)": {
@@ -817,9 +610,6 @@
             "Ro\u00dftal",
             "Wicklesgreuth",
             "Ansbach"
-        ],
-        "switches": [
-            ""
         ]
     },
     "RB(70)": {
@@ -829,9 +619,6 @@
             "NeunkirchenaSand",
             "Hersbruck(rPegnitz)",
             "Neuhaus(Pegnitz)"
-        ],
-        "switches": [
-            ""
         ]
     },
     "RB(71)": {
@@ -840,9 +627,6 @@
             "Lauf(rPegnitz)",
             "NeunkirchenaSand",
             "Simmelsdorf-H\u00fcttenbach"
-        ],
-        "switches": [
-            ""
         ]
     },
     "RE(72)": {
@@ -853,9 +637,6 @@
             "Kinding(Altm\u00fchltal)",
             "Allersberg(Rothsee)",
             "N\u00fcrnberg"
-        ],
-        "switches": [
-            ""
         ]
     },
     "RB(73)": {
@@ -868,9 +649,6 @@
             "Treuchtlingen",
             "Roth",
             "N\u00fcrnberg"
-        ],
-        "switches": [
-            ""
         ]
     },
     "RE(74)": {
@@ -882,18 +660,12 @@
             "Kinding(Altm\u00fchltal)",
             "Allersberg(Rothsee)",
             "N\u00fcrnberg"
-        ],
-        "switches": [
-            ""
         ]
     },
     "RB(75)": {
         "all_stations": [
             "Allersberg(Rothsee)",
             "N\u00fcrnberg"
-        ],
-        "switches": [
-            ""
         ]
     },
     "WBA(76)": {
@@ -902,27 +674,18 @@
             "Deggendorf",
             "Zwiesel",
             "BayerischEisenstein"
-        ],
-        "switches": [
-            ""
         ]
     },
     "WBA(77)": {
         "all_stations": [
             "Zwiesel",
             "Grafenau"
-        ],
-        "switches": [
-            ""
         ]
     },
     "WBA(78)": {
         "all_stations": [
             "Zwiesel",
             "Bodenmais"
-        ],
-        "switches": [
-            ""
         ]
     },
     "WBA(79)": {
@@ -930,9 +693,6 @@
             "Gotteszell",
             "Teisnach",
             "Viechtach"
-        ],
-        "switches": [
-            ""
         ]
     },
     "RE(80)": {
@@ -946,9 +706,6 @@
             "Kempten",
             "Immenstadt",
             "Oberstdorf/Lindau"
-        ],
-        "switches": [
-            ""
         ]
     },
     "RE(81)": {
@@ -957,9 +714,6 @@
             "Treuchtlingen",
             "Donauw\u00f6rth",
             "Augsburg"
-        ],
-        "switches": [
-            ""
         ]
     },
     "RE(82)": {
@@ -967,9 +721,6 @@
             "N\u00fcrnberg",
             "Roth",
             "Treuchtlingen"
-        ],
-        "switches": [
-            ""
         ]
     },
     "RE(83)": {
@@ -979,9 +730,6 @@
             "Augsburg",
             "Mering",
             "M\u00fcnchen"
-        ],
-        "switches": [
-            ""
         ]
     },
     "RE/RB(84)": {
@@ -991,9 +739,6 @@
             "Augsburg",
             "Mering",
             "M\u00fcnchen"
-        ],
-        "switches": [
-            ""
         ]
     },
     "RB(85)": {
@@ -1001,27 +746,18 @@
             "Donauw\u00f6rth",
             "Meitingen",
             "Augsburg"
-        ],
-        "switches": [
-            ""
         ]
     },
     "RB(86)": {
         "all_stations": [
             "Roth",
             "Hilpoltstein"
-        ],
-        "switches": [
-            ""
         ]
     },
     "RB(87)": {
         "all_stations": [
             "Pleinfeld",
             "Gunzenhausen"
-        ],
-        "switches": [
-            ""
         ]
     },
     "RB(88)": {
@@ -1034,9 +770,6 @@
             "Ansbach",
             "Gunzenhausen",
             "Treuchtlingen"
-        ],
-        "switches": [
-            ""
         ]
     },
     "RB(89)": {
@@ -1044,27 +777,18 @@
             "W\u00fcrzburg",
             "Ochsenfurt",
             "Marktbreit"
-        ],
-        "switches": [
-            ""
         ]
     },
     "RB(90)": {
         "all_stations": [
             "Steinach(bRothenburgo.d.Tauber)",
             "RothenburgobderTauber"
-        ],
-        "switches": [
-            ""
         ]
     },
     "RB(91)": {
         "all_stations": [
             "Wicklesgreuth",
             "Windsbach"
-        ],
-        "switches": [
-            ""
         ]
     },
     "RB(92)": {
@@ -1073,27 +797,18 @@
             "Freising",
             "Moosburg",
             "Landshut"
-        ],
-        "switches": [
-            ""
         ]
     },
     "ag(93)": {
         "all_stations": [
             "Ingolstadt",
             "Regensburg"
-        ],
-        "switches": [
-            ""
         ]
     },
     "RE(94)": {
         "all_stations": [
             "Regensburg",
             "FlughafenM\u00fcnchen"
-        ],
-        "switches": [
-            ""
         ]
     },
     "ag(95)": {
@@ -1106,9 +821,6 @@
             "Eggm\u00fchl",
             "Neufahrn(Niederbay)",
             "Landshut(Bay)"
-        ],
-        "switches": [
-            ""
         ]
     },
     "as(96)": {
@@ -1119,9 +831,6 @@
             "Ingolstadt",
             "Regensburg",
             "Eggm\u00fchl/Passau"
-        ],
-        "switches": [
-            ""
         ]
     },
     "RB(97)": {
@@ -1130,9 +839,6 @@
             "Straubing",
             "Radldorf(Niederbay)",
             "Neufahrn(Niederbay)"
-        ],
-        "switches": [
-            ""
         ]
     },
     "RB(98)": {
@@ -1142,9 +848,6 @@
             "Dorfen",
             "M\u00fchldorf",
             "Simbach(Inn)"
-        ],
-        "switches": [
-            ""
         ]
     },
     "RB(99)": {
@@ -1152,9 +855,6 @@
             "M\u00fchldorf",
             "Marktl",
             "Simbach(Inn)"
-        ],
-        "switches": [
-            ""
         ]
     },
     "RB(100)": {
@@ -1163,9 +863,6 @@
             "T\u00fc\u00dfling",
             "Alt\u00f6tting",
             "Burghausen"
-        ],
-        "switches": [
-            ""
         ]
     },
     "RB(101)": {
@@ -1178,9 +875,6 @@
             "Wasserburg(Inn)",
             "Rott(Inn)",
             "Rosenheim"
-        ],
-        "switches": [
-            ""
         ]
     },
     "RB(102)": {
@@ -1191,9 +885,6 @@
             "Wasserburg(Inn)",
             "Rott(Inn)",
             "Rosenheim"
-        ],
-        "switches": [
-            ""
         ]
     },
     "RB(103)": {
@@ -1206,9 +897,6 @@
             "Laufen(Oberbay)",
             "Freilassing",
             "Salzburg"
-        ],
-        "switches": [
-            ""
         ]
     },
     "RB(104)": {
@@ -1219,9 +907,6 @@
             "Pfarrkirchen",
             "Neumarkt-StVeit",
             "M\u00fchldorf"
-        ],
-        "switches": [
-            ""
         ]
     },
     "RB(105)": {
@@ -1232,9 +917,6 @@
             "H\u00f6rpolding",
             "Traunreut",
             "Traunstein"
-        ],
-        "switches": [
-            ""
         ]
     },
     "RB(106)": {
@@ -1242,9 +924,6 @@
             "Traunreut",
             "H\u00f6rpolding",
             "Traunstein"
-        ],
-        "switches": [
-            ""
         ]
     },
     "RB(107)": {
@@ -1252,9 +931,6 @@
             "Wasserburg(Inn)",
             "Ebersberg(Oberbay)(\u2013Grafing",
             "M\u00fcnchen)"
-        ],
-        "switches": [
-            ""
         ]
     },
     "M(108)": {
@@ -1266,9 +942,6 @@
             "Traunstein",
             "Freilassing",
             "Salzburg"
-        ],
-        "switches": [
-            ""
         ]
     },
     "M(109)": {
@@ -1279,9 +952,6 @@
             "BadEndorf",
             "PrienaChiemsee",
             "Traunstein"
-        ],
-        "switches": [
-            ""
         ]
     },
     "M(110)": {
@@ -1290,36 +960,24 @@
             "Grafing",
             "Rosenheim",
             "Kufstein"
-        ],
-        "switches": [
-            ""
         ]
     },
     "RB(111)": {
         "all_stations": [
             "PrienaChiemsee",
             "Aschau(Chiemgau)"
-        ],
-        "switches": [
-            ""
         ]
     },
     "RB(112)": {
         "all_stations": [
             "Traunstein",
             "Ruhpolding"
-        ],
-        "switches": [
-            ""
         ]
     },
     "BLB/S4(113)": {
         "all_stations": [
             "Freilassing",
             "Berchtesgaden"
-        ],
-        "switches": [
-            ""
         ]
     },
     "BLB/S3(114)": {
@@ -1328,9 +986,6 @@
             "Salzburg",
             "Freilassing",
             "BadReichenhall"
-        ],
-        "switches": [
-            ""
         ]
     },
     "S3(115)": {
@@ -1338,9 +993,6 @@
             "Golling-Abtenau",
             "Salzburg",
             "Freilassing"
-        ],
-        "switches": [
-            ""
         ]
     },
     "BOB(116)": {
@@ -1349,9 +1001,6 @@
             "Holzkirchen",
             "Schliersee",
             "Bayrischzell"
-        ],
-        "switches": [
-            ""
         ]
     },
     "BOB(117)": {
@@ -1359,9 +1008,6 @@
             "M\u00fcnchen",
             "Holzkirchen",
             "Schliersee"
-        ],
-        "switches": [
-            ""
         ]
     },
     "BOB(118)": {
@@ -1371,9 +1017,6 @@
             "Schaftlach",
             "BadT\u00f6lz",
             "Lenggries"
-        ],
-        "switches": [
-            ""
         ]
     },
     "BOB(119)": {
@@ -1382,9 +1025,6 @@
             "Holzkirchen",
             "Schaftlach",
             "Tegernsee"
-        ],
-        "switches": [
-            ""
         ]
     },
     "M(120)": {
@@ -1392,9 +1032,6 @@
             "Holzkirchen",
             "BadAibling",
             "Rosenheim"
-        ],
-        "switches": [
-            ""
         ]
     },
     "M(121)": {
@@ -1404,9 +1041,6 @@
             "Holzkirchen",
             "BadAibling",
             "Rosenheim"
-        ],
-        "switches": [
-            ""
         ]
     },
     "RE(122)": {
@@ -1416,9 +1050,6 @@
             "Murnau",
             "Garmisch-Partenkirchen",
             "Mittenwald/Lermoos"
-        ],
-        "switches": [
-            ""
         ]
     },
     "RB(123)": {
@@ -1431,9 +1062,6 @@
             "Reutte",
             "Mittenwald",
             "Seefeld"
-        ],
-        "switches": [
-            ""
         ]
     },
     "RB(124)": {
@@ -1444,9 +1072,6 @@
             "Murnau",
             "Garmisch-Partenkirchen",
             "Reutte"
-        ],
-        "switches": [
-            ""
         ]
     },
     "RB(125)": {
@@ -1460,9 +1085,6 @@
             "Mittenwald",
             "Seefeld",
             "Innsbruck"
-        ],
-        "switches": [
-            ""
         ]
     },
     "RB(126)": {
@@ -1471,9 +1093,6 @@
             "Mittenwald",
             "Seefeld",
             "Innsbruck"
-        ],
-        "switches": [
-            ""
         ]
     },
     "RB(127)": {
@@ -1481,9 +1100,6 @@
             "Kochelsee-BahnM\u00fcnchen",
             "Tutzing",
             "Weilheim/Kochel"
-        ],
-        "switches": [
-            ""
         ]
     },
     "RB(128)": {
@@ -1491,9 +1107,6 @@
             "M\u00fcnchen",
             "Tutzing",
             "Kochel"
-        ],
-        "switches": [
-            ""
         ]
     },
     "BRB(129)": {
@@ -1505,9 +1118,6 @@
             "Weilheim",
             "Pei\u00dfenberg",
             "Schongau"
-        ],
-        "switches": [
-            ""
         ]
     },
     "BRB(130)": {
@@ -1516,9 +1126,6 @@
             "Die\u00dfen",
             "Weilheim",
             "Pei\u00dfenberg"
-        ],
-        "switches": [
-            ""
         ]
     },
     "RB(131)": {
@@ -1526,9 +1133,6 @@
             "WerdenfelsbahnMurnau",
             "BadKohlgrub",
             "Oberammergau"
-        ],
-        "switches": [
-            ""
         ]
     },
     "ALX(132)": {
@@ -1542,9 +1146,6 @@
             "Oberstdorf",
             "Hergatz",
             "Lindau"
-        ],
-        "switches": [
-            ""
         ]
     },
     "RE(133)": {
@@ -1556,9 +1157,6 @@
             "Kaufbeuren",
             "Biessenhofen",
             "Kempten"
-        ],
-        "switches": [
-            ""
         ]
     },
     "RE(134)": {
@@ -1570,9 +1168,6 @@
             "T\u00fcrkheim",
             "Mindelheim",
             "Memmingen"
-        ],
-        "switches": [
-            ""
         ]
     },
     "RE(135)": {
@@ -1585,9 +1180,6 @@
             "Biessenhofen",
             "Marktoberdorf",
             "F\u00fcssen"
-        ],
-        "switches": [
-            ""
         ]
     },
     "RE(136)": {
@@ -1600,9 +1192,6 @@
             "Oberstdorf",
             "Hergatz",
             "Lindau"
-        ],
-        "switches": [
-            ""
         ]
     },
     "RE(137)": {
@@ -1615,9 +1204,6 @@
             "Hergatz",
             "Lindau",
             "Wangen"
-        ],
-        "switches": [
-            ""
         ]
     },
     "RB(138)": {
@@ -1629,9 +1215,6 @@
             "Biessenhofen",
             "Marktoberdorf",
             "F\u00fcssen"
-        ],
-        "switches": [
-            ""
         ]
     },
     "RB(139)": {
@@ -1642,9 +1225,6 @@
             "Kaufbeuren",
             "Biessenhofen",
             "Marktoberdorf"
-        ],
-        "switches": [
-            ""
         ]
     },
     "RE/RB(140)": {
@@ -1656,9 +1236,6 @@
             "BadW\u00f6rishofen",
             "Mindelheim",
             "Memmingen"
-        ],
-        "switches": [
-            ""
         ]
     },
     "RB(141)": {
@@ -1667,9 +1244,6 @@
             "Pfronten-Steinach",
             "VilsinTirol",
             "Reutte"
-        ],
-        "switches": [
-            ""
         ]
     },
     "RB(142)": {
@@ -1678,9 +1252,6 @@
             "Pfronten-Steinach",
             "VilsinTirol",
             "Reutte"
-        ],
-        "switches": [
-            ""
         ]
     },
     "RE(143)": {
@@ -1688,9 +1259,6 @@
             "Ulm",
             "Memmingen",
             "Kempten"
-        ],
-        "switches": [
-            ""
         ]
     },
     "RB(144)": {
@@ -1699,9 +1267,6 @@
             "Neu-Ulm",
             "Senden",
             "Wei\u00dfenhorn"
-        ],
-        "switches": [
-            ""
         ]
     },
     "RB(145)": {
@@ -1709,18 +1274,12 @@
             "G\u00fcnzburg",
             "Krumbach(Schwab)",
             "Mindelheim"
-        ],
-        "switches": [
-            ""
         ]
     },
     "RB(146)": {
         "all_stations": [
             "G\u00fcnzburg",
             "Krumbach(Schwab)"
-        ],
-        "switches": [
-            ""
         ]
     },
     "RE(147)": {
@@ -1732,9 +1291,6 @@
             "G\u00fcnzburg",
             "Neu-Ulm",
             "Ulm"
-        ],
-        "switches": [
-            ""
         ]
     },
     "RE(148)": {
@@ -1746,9 +1302,6 @@
             "G\u00fcnzburg",
             "Neu-Ulm",
             "Ulm"
-        ],
-        "switches": [
-            ""
         ]
     },
     "RB(149)": {
@@ -1757,9 +1310,6 @@
             "Mering",
             "Augsburg",
             "Dinkelscherben"
-        ],
-        "switches": [
-            ""
         ]
     },
     "RB(150)": {
@@ -1772,9 +1322,6 @@
             "G\u00fcnzburg",
             "Neu-Ulm",
             "Ulm"
-        ],
-        "switches": [
-            ""
         ]
     },
     "BRB(151)": {
@@ -1783,9 +1330,6 @@
             "Friedberg(Augsburg)",
             "Aichach",
             "Ingolstadt"
-        ],
-        "switches": [
-            ""
         ]
     },
     "BRB(152)": {
@@ -1793,27 +1337,18 @@
             "Augsburg",
             "Friedberg(Augsburg)",
             "Aichach"
-        ],
-        "switches": [
-            ""
         ]
     },
     "BRB(153)": {
         "all_stations": [
             "Augsburg",
             "Friedberg(Augsburg)"
-        ],
-        "switches": [
-            ""
         ]
     },
     "BRB(154)": {
         "all_stations": [
             "Augsburg",
             "Mering(\u2013Geltendorf)"
-        ],
-        "switches": [
-            ""
         ]
     },
     "RB(155)": {
@@ -1822,36 +1357,24 @@
             "Bobingen",
             "Kaufering",
             "Landsberg(Lech)"
-        ],
-        "switches": [
-            ""
         ]
     },
     "RB(156)": {
         "all_stations": [
             "Kaufering",
             "Landsberg(Lech)"
-        ],
-        "switches": [
-            ""
         ]
     },
     "RB(157)": {
         "all_stations": [
             "Augsburg",
             "Bobingen"
-        ],
-        "switches": [
-            ""
         ]
     },
     "RB(158)": {
         "all_stations": [
             "T\u00fcrkheim(Bay)",
             "BadW\u00f6rishofen"
-        ],
-        "switches": [
-            ""
         ]
     },
     "BRB(159)": {
@@ -1859,18 +1382,12 @@
             "Eichst\u00e4ttStadt",
             "Eichst\u00e4ttBahnhof",
             "Ingolstadt"
-        ],
-        "switches": [
-            ""
         ]
     },
     "BRB(160)": {
         "all_stations": [
             "Eichst\u00e4ttStadt",
             "Eichst\u00e4ttBahnhof"
-        ],
-        "switches": [
-            ""
         ]
     },
     "ag(161)": {
@@ -1879,9 +1396,6 @@
             "G\u00fcnzburg",
             "Donauw\u00f6rth",
             "Ingolstadt"
-        ],
-        "switches": [
-            ""
         ]
     },
     "RB(162)": {
@@ -1889,9 +1403,6 @@
             "Aalen",
             "N\u00f6rdlingen",
             "Donauw\u00f6rth"
-        ],
-        "switches": [
-            ""
         ]
     },
     "S1(163)": {
@@ -1899,9 +1410,6 @@
             "M\u00fcnchen",
             "Neufahrn(bFreising)",
             "Freising/FlughafenM\u00fcnchen"
-        ],
-        "switches": [
-            ""
         ]
     },
     "S2(164)": {
@@ -1911,9 +1419,6 @@
             "M\u00fcnchen",
             "DachauBahnhof",
             "Altom\u00fcnster/Petershausen(Oberbay)"
-        ],
-        "switches": [
-            ""
         ]
     },
     "S3(165)": {
@@ -1923,9 +1428,6 @@
             "M\u00fcnchen",
             "Maisach",
             "Mammendorf"
-        ],
-        "switches": [
-            ""
         ]
     },
     "S4(166)": {
@@ -1936,9 +1438,6 @@
             "M\u00fcnchen",
             "Grafing",
             "Ebersberg(Oberbay)"
-        ],
-        "switches": [
-            ""
         ]
     },
     "S4(167)": {
@@ -1947,9 +1446,6 @@
             "Grafrath",
             "Buchenau",
             "M\u00fcnchen"
-        ],
-        "switches": [
-            ""
         ]
     },
     "S6(168)": {
@@ -1960,9 +1456,6 @@
             "Zorneding",
             "Grafing",
             "Ebersberg(Oberbay)"
-        ],
-        "switches": [
-            ""
         ]
     },
     "S7(169)": {
@@ -1973,18 +1466,12 @@
             "H\u00f6henkirchen-Siegertsbrunn",
             "Aying",
             "Kreuzstra\u00dfe"
-        ],
-        "switches": [
-            ""
         ]
     },
     "S20(170)": {
         "all_stations": [
             "H\u00f6llriegelskreuth",
             "M\u00fcnchen-PasingM\u00fcnchen\u2013Wolfratshausen"
-        ],
-        "switches": [
-            ""
         ]
     },
     "S8(171)": {
@@ -1994,7 +1481,6 @@
             "Germering-Unterpfaffenhofen",
             "M\u00fcnchen",
             "M\u00fcnchenFlughafen"
-        ],
-        "switches": []
+        ]
     }
 }

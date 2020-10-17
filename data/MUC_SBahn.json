@@ -1,5 +1,5 @@
 {
-    "S1": {
+    "S1(0)": {
         "all_stations": [
             "Freising",
             "Pulling",
@@ -22,14 +22,9 @@
             "RosenheimerPlatz",
             "Ostbahnhof",
             "Leuchtenbergring"
-        ],
-        "switches": [
-            "Freising",
-            "Ostbahnhof",
-            "Leuchtenbergring"
         ]
     },
-    "S1.2": {
+    "S1.2(1)": {
         "all_stations": [
             "Schwaigerloh(Wendeanlage)",
             "FlughafenM\u00fcnchen",
@@ -53,14 +48,9 @@
             "RosenheimerPlatz",
             "Ostbahnhof",
             "Leuchtenbergring"
-        ],
-        "switches": [
-            "FlughafenM\u00fcnchen",
-            "Ostbahnhof",
-            "Leuchtenbergring"
         ]
     },
-    "S2": {
+    "S2(2)": {
         "all_stations": [
             "Petershausen",
             "Vierkirchen-Esterhofen",
@@ -94,16 +84,9 @@
             "Aufhausen",
             "Altenerding",
             "Erding"
-        ],
-        "switches": [
-            "Petershausen",
-            "DachauBahnhof",
-            "Ostbahnhof",
-            "MarktSchwaben",
-            "Erding"
         ]
     },
-    "S2.2": {
+    "S2.2(3)": {
         "all_stations": [
             "Altom\u00fcnster",
             "Kleinberghofen",
@@ -142,16 +125,9 @@
             "Aufhausen",
             "Altenerding",
             "Erding"
-        ],
-        "switches": [
-            "Altom\u00fcnster",
-            "DachauBahnhof",
-            "Ostbahnhof",
-            "MarktSchwaben",
-            "Erding"
         ]
     },
-    "S3": {
+    "S3(4)": {
         "all_stations": [
             "Mammendorf",
             "Malching",
@@ -184,16 +160,9 @@
             "Sauerlach",
             "Otterfing",
             "Holzkirchen"
-        ],
-        "switches": [
-            "Mammendorf",
-            "Maisach",
-            "Ostbahnhof",
-            "Deisenhofen",
-            "Holzkirchen"
         ]
     },
-    "S4": {
+    "S4(5)": {
         "all_stations": [
             "Geltendorf",
             "T\u00fcrkenfeld",
@@ -229,20 +198,9 @@
             "GrafingBahnhof",
             "GrafingStadt",
             "Ebersberg"
-        ],
-        "switches": [
-            "Geltendorf",
-            "Grafrath",
-            "Buchenau",
-            "Ostbahnhof",
-            "Leuchtenbergring",
-            "Trudering",
-            "Zorneding",
-            "GrafingBahnhof",
-            "Ebersberg"
         ]
     },
-    "S6": {
+    "S6(6)": {
         "all_stations": [
             "Tutzing",
             "Feldafing",
@@ -280,18 +238,9 @@
             "GrafingBahnhof",
             "GrafingStadt",
             "Ebersberg"
-        ],
-        "switches": [
-            "Tutzing",
-            "Starnberg",
-            "Ostbahnhof",
-            "Leuchtenbergring",
-            "Zorneding",
-            "GrafingBahnhof",
-            "Ebersberg"
         ]
     },
-    "S7": {
+    "S7(7)": {
         "all_stations": [
             "GeretsriedS\u00fcd",
             "GeretsriedMitte",
@@ -332,16 +281,9 @@
             "Pei\u00df",
             "Gro\u00dfhelfendorf",
             "Kreuzstra\u00dfe"
-        ],
-        "switches": [
-            "Wolfratshausen",
-            "H\u00f6llriegelskreuth",
-            "H\u00f6henkirchen-Siegertsbrunn",
-            "Aying",
-            "Kreuzstra\u00dfe"
         ]
     },
-    "S8": {
+    "S8(8)": {
         "all_stations": [
             "Herrsching",
             "Seefeld-Hechendorf",
@@ -376,17 +318,9 @@
             "FlughafenBesucherpark",
             "FlughafenM\u00fcnchen",
             "Schwaigerloh(Wendeanlage)"
-        ],
-        "switches": [
-            "Herrsching",
-            "We\u00dfling",
-            "Gilching-Argelsried",
-            "Germering-Unterpfaffenhofen",
-            "Ostbahnhof",
-            "FlughafenM\u00fcnchen"
         ]
     },
-    "S20": {
+    "S20(9)": {
         "all_stations": [
             "Geltendorf",
             "T\u00fcrkenfeld",
@@ -405,13 +339,6 @@
             "Solln",
             "Gro\u00dfhesseloheIsartalbahnhof",
             "Pullach",
-            "H\u00f6llriegelskreuth"
-        ],
-        "switches": [
-            "Geltendorf",
-            "Grafrath",
-            "Pasing",
-            "Solln",
             "H\u00f6llriegelskreuth"
         ]
     }
