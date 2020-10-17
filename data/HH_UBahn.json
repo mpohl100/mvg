@@ -50,12 +50,66 @@
             "Gro\u00dfhansdorf"
         ]
     },
-    "NiendorfNord>>Schippelsweg>>Joachim-M\u00e4hl-Stra\u00dfe>>NiendorfMarkt>>Hagendeel>>HagenbecksTierpark>>Lutterothstra\u00dfe>>Osterstra\u00dfe>>Emilienstra\u00dfe>>Christuskirche>>Schlump>>Messehallen>>G\u00e4nsemarkt>>Jungfernstieg>>HauptbahnhofNord>>BerlinerTor>>Burgstra\u00dfe>>HammerKirche>>RauhesHaus>>HornerRennbahn>>Legienstra\u00dfe>>Billstedt>>Merkenstra\u00dfe>>SteinfurtherAllee>>M\u00fcmmelmannsberg(1)": {
+    "U2(1)": {
         "all_stations": [
-            "U3"
+            "NiendorfNord",
+            "Schippelsweg",
+            "Joachim-M\u00e4hl-Stra\u00dfe",
+            "NiendorfMarkt",
+            "Hagendeel",
+            "HagenbecksTierpark",
+            "Lutterothstra\u00dfe",
+            "Osterstra\u00dfe",
+            "Emilienstra\u00dfe",
+            "Christuskirche",
+            "Schlump",
+            "Messehallen",
+            "G\u00e4nsemarkt",
+            "Jungfernstieg",
+            "HauptbahnhofNord",
+            "BerlinerTor",
+            "Burgstra\u00dfe",
+            "HammerKirche",
+            "RauhesHaus",
+            "HornerRennbahn",
+            "Legienstra\u00dfe",
+            "Billstedt",
+            "Merkenstra\u00dfe",
+            "SteinfurtherAllee",
+            "M\u00fcmmelmannsberg"
         ]
     },
-    "U4(2)": {
+    "U3(2)": {
+        "all_stations": [
+            "Barmbek",
+            "Saarlandstra\u00dfe",
+            "Borgweg",
+            "Sierichstra\u00dfe",
+            "Kellinghusenstra\u00dfe",
+            "EppendorferBaum",
+            "Hoheluftbr\u00fccke",
+            "Schlump",
+            "Sternschanze",
+            "Feldstra\u00dfe",
+            "St.Pauli",
+            "Landungsbr\u00fccken",
+            "Baumwall",
+            "R\u00f6dingsmarkt",
+            "Rathaus",
+            "M\u00f6nckebergstra\u00dfe",
+            "HauptbahnhofS\u00fcd",
+            "BerlinerTor",
+            "L\u00fcbeckerStra\u00dfe",
+            "Uhlandstra\u00dfe",
+            "Mundsburg",
+            "HamburgerStra\u00dfe",
+            "Dehnhaide",
+            "Barmbek",
+            "Habichtstra\u00dfe",
+            "Wandsbek-Gartenstadt"
+        ]
+    },
+    "U4(3)": {
         "all_stations": [
             "Elbbr\u00fccken",
             "HafenCityUniversit\u00e4t",

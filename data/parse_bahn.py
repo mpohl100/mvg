@@ -1,4 +1,4 @@
-f = open("data/MUC_SBahnhoefe.txt", "r")
+f = open("data/HH_UBahnhoefe.txt", "r")
 data = {}
 current_line = ""
 for i,x in enumerate(f):
@@ -14,6 +14,6 @@ for i,x in enumerate(f):
         pass
     else:
         raise ValueError("Eigentlich ist alles abgedeckt.")
-w = open("data/MUC_SBahn.json", "w")
+w = open("data/HH_UBahn.json", "w")
 import json
 w.write(json.dumps(data, indent=4))
