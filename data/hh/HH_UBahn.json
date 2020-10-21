@@ -48,7 +48,8 @@
             "Schmalenbeck",
             "Kiekut",
             "Gro\u00dfhansdorf"
-        ]
+        ],
+        "network": "U"
     },
     "U2(1)": {
         "all_stations": [
@@ -77,7 +78,8 @@
             "Merkenstra\u00dfe",
             "SteinfurtherAllee",
             "M\u00fcmmelmannsberg"
-        ]
+        ],
+        "network": "U"
     },
     "U3(2)": {
         "all_stations": [
@@ -107,7 +109,8 @@
             "Barmbek",
             "Habichtstra\u00dfe",
             "Wandsbek-Gartenstadt"
-        ]
+        ],
+        "network": "U"
     },
     "U4(3)": {
         "all_stations": [
@@ -125,6 +128,7 @@
             "Billstedt|imBau:",
             "Stoltenstra\u00dfe",
             "HornerGeest"
-        ]
+        ],
+        "network": "U"
     }
 }

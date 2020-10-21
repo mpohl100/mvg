@@ -1,11 +1,13 @@
-f = open("data/HH_UBahnhoefe.txt", "r")
+f = open("data/bay/BAY_Bahnhoefe.txt", "r")
 data = {}
 current_line = ""
 for i,x in enumerate(f):
     linenumber = i // 3
     if i % 3 == 0:
-        current_line = x.replace(" ", "").replace("\n","").replace("\t","")
-        data[current_line + "(" + str(linenumber) + ")"] = { 'all_stations': [] }
+        line_segments = x.split("|")
+        current_line = line_segments[0].replace(" ", "").replace("\n","").replace("\t","")
+        network_name = line_segments[1].replace(" ", "").replace("\n","").replace("\t","")
+        data[current_line + "(" + str(linenumber) + ")"] = { 'all_stations': [], 'network': network_name }
     elif i % 3 == 1:
         all_stations = x.split('>>')
         for bahnhof in all_stations:
@@ -14,6 +16,6 @@ for i,x in enumerate(f):
         pass
     else:
         raise ValueError("Eigentlich ist alles abgedeckt.")
-w = open("data/HH_UBahn.json", "w")
+w = open("data/bay/BAY_Bahn.json", "w")
 import json
 w.write(json.dumps(data, indent=4))

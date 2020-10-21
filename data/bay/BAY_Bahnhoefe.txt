@@ -1,515 +1,521 @@
-RE
+RE  | RE
 Dresden >> Freiberg >> Chemnitz >> Glauchau >> Zwickau >> Reichenbach >> Plauen >> Hof 	
 
-RB 	
+RB 	| RB
 Zwickau >> Werdau >> Plauen >> Hof	
 
-EB
+EB  | EB
 Gera >> Weida >> Zeulenroda >> Hof
 
-EB 		
+EB 	| EB	
 Gutenfürst >> Hof
 
-RE 	
+RE 	| RE
 Leipzig >> Jena >> Sonneberg >> Lichtenfels >> Bamberg >> Fürth >> Nürnberg
 
-RE 
+RE | RE
 Würzburg >> Schweinfurt >> Ebenhausen >> Bad Kissingen >> Grimmenthal >> Suhl >> Arnstadt >> Erfurt 	
 
-EB 	
+EB 	| EB
 Schweinfurt >> Ebenhausen >> Mellrichstadt >> Meiningen
 
-RE 	
+RE 	| RE
 Frankfurt >> Hanau >> Aschaffenburg >> Würzburg
 
-RB 	
+RB 	| RB
 Frankfurt >> Hanau >> Aschaffenburg 
 
-RB 	
+RB 	| RB
 Hanau >> Kahl (Main) >> Alzenau >> Michelbach >> Schöllkrippen
 
-RB 	
+RB 	| RB
 Aschaffenburg >> Babenhausen >> Darmstadt >> Mainz >> Wiesbaden
 
-RE 	
+RE 	| RE
 Lindau >> Wasserburg >> Friedrichshafen Stadt >> Ravensburg >> Aulendorf >> Ulm >> Göppingen >> Plochingen >> Stuttgart	
 
-RB
+RB | RB
 Aulendorf >> Kißlegg >> Hergatz >> Lindau >> Wasserburg >> Friedrichshafen Stadt >> Friedrichshafen Hafen 	
 
-RB 	
+RB 	| RB
 Lindau >> Wasserburg >> Friedrichshafen Stadt
 
-RB 	
+RB 	| RB
 Ulm >> Neu-Ulm >> Senden >> Memmingen >> Leutkirch >> Kißlegg >> Aulendorf >> Bad Saulgau >> Herbertingen >> Sigmaringen
 
-RE 	
+RE 	| RE
 Aalen >> Heidenheim >> Langenau >> Thalfingen >> Ulm 	
 
-RB 	
+RB 	| RB
 Langenau >> Thalfingen >> Ulm 	
 
-RE 	
+RE 	| RE
 Würzburg >> Lauda >> Osterburken >> Bad Friedrichshall >> Heilbronn >> Bietigheim-Bissingen >> Stuttgart
 
-120	
+120	| NR
 Würzburg >> Lauda
 
-RE 	
+RE 	| RE
 Aschaffenburg >> Miltenberg >> Wertheim >> Lauda >> Crailsheim 	
 
-120 
+120 | NR
 Aschaffenburg >> Miltenberg
 
-RB
+RB | RB
 Miltenberg >> Wertheim >> Lauda >> Bad Mergentheim
 
-RB 	
+RB 	| RB
 Aschaffenburg >> Miltenberg >> Amorbach >> Walldürn >> Seckach
 
-RE 
+RE | RE
 Nürnberg >> Ansbach >> Crailsheim >> Schwäbisch Hall-Hessental >> Waiblingen >> Stuttgart
 
-RB 	
+RB 	| RB
 Gemünden (Main) >> Heigenbrücken >> Aschaffenburg
 
-RB
+RB | RB
 Bamberg >> Schweinfurt >> Würzburg >> Gemünden (Main) >> Jossa 	
 
-RB
+RB | RB
 Bamberg >> Schweinfurt >> Würzburg >> Gemünden (Main) >> Jossa >> Schlüchtern 	
 
-EB
+EB | EB
 Gemünden (Main) >> Gräfendorf >> Hammelburg >> Bad Kissingen >> Ebenhausen >> Schweinfurt 	
 
-RE 	
+RE 	| RE
 Würzburg >> Kitzingen >> Neustadt (Aisch) >> Fürth >> Nürnberg
 
-RB 	
+RB 	| RB
 Neustadt (Aisch) >> Siegelsdorf >> Fürth >> Nürnberg
 
-RB 
+RB | RB
 Neustadt (Aisch) >> Bad Windsheim >> Steinach
 
-RB 	
+RB 	| RB
 Fürth >> Siegelsdorf >> Wilhermsdorf >> Markt Erlbach
 
-RB 
+RB | RB
 Fürth >> Zirndorf >> Cadolzburg
 
-RE 
+RE | RE
 Würzburg >> Schweinfurt >> Haßfurt >> Bamberg
 
-RE
+RE | RE
 Würzburg >> Schweinfurt >> Sonneberg >> Lichtenfels >> Bamberg >> Fürth >> Nürnberg 	
 
-EB 
+EB | EB
 Bad Kissingen >> Ebenhausen >> Schweinfurt
 
-ag
+ag | ag
 Bad Rodach >> Coburg >> Ebersdorf >> Lichtenfels >> Hochstadt-Marktzeuln >> Kulmbach >> Neuenmarkt-Wirsberg >> Bayreuth >> Kirchlaibach >> Weiden
 
-RB
+RB | RB
 Bamberg >> Lichtenfels >> Kronach >> Ludwigsstadt >> Saalfeld
 
-ag
+ag | ag
 Ebermannstadt >> Forchheim
 
-ag
+ag | ag
 Bamberg >> Breitengüßbach >> Ebern
 
-RE 
+RE | RE
 Lichtenfels >> Kulmbach >> Neuenmarkt-Wirsberg >> Hof >> Bayreuth
 
-RE 
+RE | RE
 Bamberg >> Lichtenfels >> Kulmbach >> Neuenmarkt-Wirsberg >> Hof >> Bayreuth >> Nürnberg 	
 
-ag
+ag | ag
 Bad Steben >> Marxgrün >> Naila >> Hof >> Münchberg
 
-ag
+ag | ag
 Münchberg >> Helmbrechts
 
-ALX
+ALX | ALX
 Hof >> Marktredwitz >> Weiden >> Schwandorf >> Regensburg >> Landshut >> München
 
-ALX
+ALX | ALX
 Prag >> Pilsen >> Furth im Wald >> Cham >> Schwandorf >> Regensburg >> Landshut >> München
 
-RE
+RE | RE
 Hof >> Marktredwitz >> Weiden >> Schwandorf >> Regensburg
 
-RE 
+RE | RE
 Hof >> Marktredwitz >> Kirchenlaibach >> Hersbruck >> Nürnberg
 
-OPB
+OPB | OPB
 Marktredwitz >> Weiden >> Schwandorf >> Regensburg
 
-ag 	
+ag 	| ag
 Hof >> Marktredwitz >> Kirchenlaibach >> Bayreuth 	
 
-ag 
+ag | ag
 Hof >> Marktredwitz >> Kirchenlaibach >> Bayreuth
 
-ag 
+ag | ag
 Bad Steben >> Marxgrün >> Naila >> Hof
 
-ag
+ag | ag
 Hof >> Rehau >> Selb-Plößberg >> Selb Stadt
 
-RE 
+RE | RE
 Nürnberg >> Hersbruck (r Pegnitz) >> Pegnitz >> Bayreuth
 
-OPB
+OPB | OPB
 Marktredwitz >> Schirnding >> Cheb >> Hof Hauptbahnhof
 
-RE 
+RE | RE
 Nürnberg >> Hersbruck (r Pegnitz) >> Pegnitz >> Marktredwitz >> Schirnding >> Cheb
 
-RB 
+RB | RB
 Nürnberg Nordost >> Eschenau >> Gräfenberg
 
-ag
+ag | ag
 Bayreuth >> Weidenberg
 
-RE
+RE | RE
 Nürnberg >> Hersbruck (r Pegnitz) >> Neukirchen (b Sulzb) >> Amberg >> Schwandorf
 
-RE 	
+RE 	| RE
 Nürnberg >> Hersbruck (r Pegnitz) >> Neukirchen (b Sulzb) >> Weiden (Oberpf) >> Neustadt (Waldnaab)
 
-OPB
+OPB | OPB
 Schwandorf >> Cham (Oberpf) >> Furth i Wald
 
-OPB
+OPB | OPB
 Cham (Oberpf) >> Waldmünchen
 
-OPB
+OPB | OPB
 Cham (Oberpf) >> Bad Kötzting >> Lam
 
-RE
+RE | RE
 Nürnberg >> Neumarkt (Oberpf) >> Regensburg >> Landshut (Bay) >> Freising >> München
 
-ag
+ag | ag
 Neumarkt (Oberpf) >> Regensburg >> Straubing >> Plattling
 
-RE
+RE | RE
 Passau >> Plattling >> Landau (Isar) >> Landshut (Bay) >> Freising >> München
 
-S1
+S1 | SNUR
 Bamberg >> Forchheim (Oberfr) >> Erlangen >> Nürnberg >> Röthenbach (Pegnitz) >> Lauf (l Pegnitz) >> Hersbruck (l Pegnitz) >> Hartmannshof
 
-S2
+S2 | SNUR
 Roth >> Schwabach >> Nürnberg >> Feucht >> Altdorf (b Nürnberg)
 
-S3
+S3 | SNUR
 Nürnberg >> Feucht >> Burgthann >> Neumarkt (Oberpf)
 
-S4
+S4 | SNUR
 Nürnberg >> Roßtal >> Wicklesgreuth >> Ansbach
 
-RB
+RB | RB
 Nürnberg >> Lauf (r Pegnitz) >> Neunkirchen a Sand >> Hersbruck (r Pegnitz) >> Neuhaus (Pegnitz)
 
-RB 
+RB | RB
 Nürnberg >> Lauf (r Pegnitz) >> Neunkirchen a Sand >> Simmelsdorf-Hüttenbach
 
-RE 
+RE | RE
 München (– Petershausen) >> Pfaffenhofen (Ilm) >> Ingolstadt >> Kinding (Altmühltal) >> Allersberg (Rothsee) >> Nürnberg
 
-RB 
+RB | RB
 München >> Dachau >> Pfaffenhofen (Ilm) >> Ingolstadt >> Eichstätt >> Treuchtlingen >> Roth >> Nürnberg
 
-RE
+RE | RE 
 München >> Petershausen >> Pfaffenhofen (Ilm) >> Ingolstadt >> Kinding (Altmühltal) >> Allersberg (Rothsee) >> Nürnberg
 
-RB
+RB | RB
 Allersberg (Rothsee) >> Nürnberg
 
-WBA
+WBA | WBA
 Plattling >> Deggendorf >> Zwiesel >> Bayerisch Eisenstein
 
-WBA 
+WBA | WBA
 Zwiesel >> Grafenau
 
-WBA 
+WBA | WBA
 Zwiesel >> Bodenmais
 
-WBA
+WBA | WBA
 Gotteszell >> Teisnach >> Viechtach
 
-RE
+RE | RE 
 Nürnberg >> Treuchtlingen >> Donauwörth >> Augsburg >> Buchloe >> Kaufbeuren >> Kempten >> Immenstadt >> Oberstdorf / Lindau 	
 
-RE
+RE | RE 
 Nürnberg >> Treuchtlingen >> Donauwörth >> Augsburg
 
-RE
+RE | RE 
 Nürnberg >> Roth >> Treuchtlingen
 
-RE
+RE | RE
 Treuchtlingen >> Donauwörth >> Augsburg >> Mering >> München
 
-RE/RB
+RE | RE
 Donauwörth >> Meitingen >> Augsburg >> Mering >> München
 
-RB
+RB | RB
+Donauwörth >> Meitingen >> Augsburg >> Mering >> München
+
+RB | RB
 Donauwörth >> Meitingen >> Augsburg
 
-RB
+RB | RB
 Roth >> Hilpoltstein
 
-RB 
+RB | RB 
 Pleinfeld >> Gunzenhausen
 
-RB 
+RB | RB
 Gemünden (Main) >> Karlstadt >> Würzburg >> Marktbreit >> Steinach (b Rothenburg o.d. Tauber) >> Ansbach >> Gunzenhausen >> Treuchtlingen
 
-RB 
+RB | RB 
 Würzburg >> Ochsenfurt >> Marktbreit
 
-RB 
+RB | RB
 Steinach (b Rothenburg o.d. Tauber) >> Rothenburg ob der Tauber
 
-RB
+RB | RB
 Wicklesgreuth >> Windsbach
 
-RB 
+RB | RB
 München >> Freising >> Moosburg >> Landshut
 
-ag 
+ag | ag
 Ingolstadt >> Regensburg
 
-RE
+RE | RE
 Regensburg >> Flughafen München
 
-ag
+ag | ag
 Ulm >> Günzburg >> Donauwörth >> Ingolstadt >> Regensburg >> Eggmühl >> Neufahrn (Niederbay) >> Landshut (Bay) 	
 
-as
+as | as
 Ulm >> Günzburg >> Donauwörth >> Ingolstadt >> Regensburg >> Eggmühl / Passau
 
-RB 
+RB | RB
 Bogen >> Straubing >> Radldorf (Niederbay) >> Neufahrn (Niederbay)
 
-RB
+RB | RB
 München >> Markt Schwaben >> Dorfen >> Mühldorf >> Simbach (Inn)
 
-RB 
+RB | RB
 Mühldorf >> Marktl >> Simbach (Inn)
 
-RB
+RB | RB
 Mühldorf >> Tüßling >> Altötting >> Burghausen
 
-RB
+RB | RB
 Landshut (Bay) >> Vilsbiburg >> Neumarkt-St Veit >> Mühldorf >> Waldkraiburg >> Wasserburg (Inn) >> Rott (Inn) >> Rosenheim
 
-RB 
+RB | RB
 Passau / Burghausen >> Mühldorf >> Waldkraiburg >> Wasserburg (Inn) >> Rott (Inn) >> Rosenheim
 
-RB
+RB | RB
 Landshut (Bay) >> Vilsbiburg >> Neumarkt-St Veit >> Mühldorf >> Garching (Alz) >> Laufen (Oberbay) >> Freilassing >> Salzburg 	
 
-RB
+RB | RB
 Passau >> Fürstenzell >> Pocking >> Pfarrkirchen >> Neumarkt-St Veit >> Mühldorf
 
-RB 
+RB | RB
 Mühldorf >> Garching (Alz) >> Trostberg >> Hörpolding >> Traunreut >> Traunstein
 
-RB
+RB | RB
 Traunreut >> Hörpolding >> Traunstein
 
-RB
+RB | RB
 Wasserburg (Inn) >> Ebersberg (Oberbay) (– Grafing >> München)
 
-M
+M | M
 München >> Rosenheim >> Bad Endorf >> Prien a Chiemsee >> Traunstein >> Freilassing >> Salzburg
 
-M
+M | M
 München >> Grafing >> Rosenheim >> Bad Endorf >> Prien a Chiemsee >> Traunstein
 
-M
+M | M
 München >> Grafing >> Rosenheim >> Kufstein
 
-RB 
+RB | RB
 Prien a Chiemsee >> Aschau (Chiemgau)
 
-RB
+RB | RB
 Traunstein >> Ruhpolding
 
-BLB / S4
+BLB / S4 | BLB
 Freilassing >> Berchtesgaden
 
-BLB / S3
+BLB / S3 | BLB
 Schwarzach-St. Veit >> Salzburg >> Freilassing >> Bad Reichenhall
 
-S3
+S3 | BLB
 Golling-Abtenau >> Salzburg >> Freilassing
 
-BOB
+BOB | BOB
 München >> Holzkirchen >> Schliersee >> Bayrischzell
 
-BOB 
+BOB | BOB
 München >> Holzkirchen >> Schliersee
 
-BOB
+BOB | BOB
 München >> Holzkirchen >> Schaftlach >> Bad Tölz >> Lenggries
 
-BOB
+BOB | BOB
 München >> Holzkirchen >> Schaftlach >> Tegernsee
 
-M
+M | M
 Holzkirchen >> Bad Aibling >> Rosenheim
 
-M
+M | M
 München >> Deisenhofen >> Holzkirchen >> Bad Aibling >> Rosenheim
 
-RE
+RE | RE
 München >> Weilheim >> Murnau >> Garmisch-Partenkirchen >> Mittenwald / Lermoos
 
-RB
+RB | RB
 München >> Tutzing >> Weilheim >> Murnau >> Garmisch-Partenkirchen >> Reutte >> Mittenwald >> Seefeld
 
-RB
+RB | RB
 München >> Tutzing >> Weilheim >> Murnau >> Garmisch-Partenkirchen >> Reutte
 
-RB
+RB | RB
 München >> Tutzing >> Weilheim >> Murnau >> Garmisch-Partenkirchen >> Reutte >> Mittenwald >> Seefeld >> Innsbruck
 
-RB	
+RB	| RB
 Garmisch-Partenkirchen >> Mittenwald >> Seefeld >> Innsbruck
 
-RB
+RB | RB
 Kochelsee-Bahn 	München >> Tutzing >> Weilheim / Kochel
 
-RB
+RB | RB
 München >> Tutzing >> Kochel
 
-BRB
+BRB | BRB
 Augsburg >> Mering >> Geltendorf >> Dießen >> Weilheim >> Peißenberg >> Schongau
 
-BRB
+BRB | BRB
 Ammersee-Bahn 	Geltendorf >> Dießen >> Weilheim >> Peißenberg
 
-RB
+RB | RB
 Werdenfelsbahn 	Murnau >> Bad Kohlgrub >> Oberammergau
 
-ALX
+ALX | ALX
 München >> Kaufering >> Buchloe >> Kaufbeuren >> Kempten >> Immenstadt >> Oberstdorf >> Hergatz >> Lindau
 
-RE
+RE | RE
 München >> Geltendorf >> Kaufering >> Buchloe >> Kaufbeuren >> Biessenhofen >> Kempten
 
-RE
+RE | RE
 München >> Geltendorf >> Kaufering >> Buchloe >> Türkheim >> Mindelheim >> Memmingen
 
-RE
+RE | RE
 München >> Geltendorf >> Kaufering >> Buchloe >> Kaufbeuren >> Biessenhofen >> Marktoberdorf >> Füssen
 
-RE 
+RE | RE
 Augsburg >> Buchloe >> Kaufbeuren >> Kempten >> Immenstadt >> Oberstdorf >> Hergatz >> Lindau
 
-RE
+RE | RE
 Ulm >> Memmingen >> Kempten >> Immenstadt >> Oberstdorf >> Hergatz >> Lindau >> Wangen
 
-RB
+RB | RB
 Augsburg >> Bobingen >> Buchloe >> Kaufbeuren >> Biessenhofen >> Marktoberdorf >> Füssen
 
-RB
+RB | RB
 Augsburg >> Bobingen >> Buchloe >> Kaufbeuren >> Biessenhofen >> Marktoberdorf
 
-RE/RB
+RB | RB
 Augsburg >> Bobingen >> Buchloe >> Türkheim >> Bad Wörishofen >> Mindelheim >> Memmingen
 
-RB
+RE | RE
+Augsburg >> Bobingen >> Buchloe >> Türkheim >> Bad Wörishofen >> Mindelheim >> Memmingen
+
+RB | RB
 Kempten >> Pfronten-Steinach >> Vils in Tirol >> Reutte
 
-RB
+RB | RB
 Kempten >> Pfronten-Steinach >> Vils in Tirol >> Reutte
 
-RE
+RE | RE
 Ulm >> Memmingen >> Kempten
 
-RB
+RB | RB
 Ulm >> Neu-Ulm >> Senden >> Weißenhorn
 
-RB
+RB | RB
 Günzburg >> Krumbach (Schwab) >> Mindelheim
 
-RB	
+RB	| RB
 Günzburg >> Krumbach (Schwab)
 
-RE
+RE | RE
 München >> Mering >> Augsburg >> Dinkelscherben >> Günzburg >> Neu-Ulm >> Ulm
 
-RE
+RE | RE
 München >> Mering >> Augsburg >> Dinkelscherben >> Günzburg >> Neu-Ulm >> Ulm
 
-RB
+RB | RB
 München >> Mering >> Augsburg >> Dinkelscherben
 
-RB
+RB | RB
 München >> Mering >> Augsburg >> Gessertshausen >> Dinkelscherben >> Günzburg >> Neu-Ulm >> Ulm
 
-BRB
+BRB | BRB
 Augsburg >> Friedberg (Augsburg) >> Aichach >> Ingolstadt
 
-BRB
+BRB | BRB
 Augsburg >> Friedberg (Augsburg) >> Aichach
 
-BRB
+BRB | BRB
 Augsburg >> Friedberg (Augsburg)
 
-BRB
+BRB | BRB
 Augsburg >> Mering (– Geltendorf)
 
-RB
+RB | RB
 Augsburg >> Bobingen >> Kaufering >> Landsberg (Lech)
 
-RB
+RB | RB
 Kaufering >> Landsberg (Lech)
 
-RB
+RB | RB
 Augsburg >> Bobingen
 
-RB
+RB | RB
 Türkheim (Bay) >> Bad Wörishofen
 
-BRB 
+BRB | BRB
 Eichstätt Stadt >> Eichstätt Bahnhof >> Ingolstadt
 
-BRB 
+BRB | BRB
 Eichstätt Stadt >> Eichstätt Bahnhof
 
-ag
+ag | ag
 Ulm >> Günzburg >> Donauwörth >> Ingolstadt
 
-RB
+RB | RB
 Aalen >> Nördlingen >> Donauwörth
 
-S1
+S1 | SMUC
 München >> Neufahrn (b Freising) >> Freising / Flughafen München
 
-S2
+S2 | SMUC
 Erding >> Markt Schwaben >> München >> Dachau Bahnhof >> Altomünster / Petershausen (Oberbay) 	
 
-S3 
+S3 | SMUC
 Holzkirchen >> Deisenhofen >> München >> Maisach >> Mammendorf 	
 
-S4
+S4 | SMUC
 Geltendorf >> Grafrath >> Buchenau >> München >> Grafing >> Ebersberg (Oberbay)
 
-S4
+S4 | SMUC
 Geltendorf >> Grafrath >> Buchenau >> München 
 
-S6
+S6 | SMUC
 Tutzing >> Starnberg >> München >> Zorneding >> Grafing >> Ebersberg (Oberbay)
 
-S7
+S7 | SMUC
 Wolfratshausen >> Höllriegelskreuth >> München >> Höhenkirchen-Siegertsbrunn >> Aying >> Kreuzstraße
 
-S20
+S20 | SMUC
 Höllriegelskreuth >> München-Pasing 	München–Wolfratshausen
 
-S8	
+S8	| SMUC
 Herrsching >> Weßling >> Germering-Unterpfaffenhofen >> München >> München Flughafen

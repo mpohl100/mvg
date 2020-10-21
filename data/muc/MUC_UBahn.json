@@ -16,7 +16,8 @@
             "Wettersteinplatz",
             "St.-Quirin-Platz",
             "Mangfallplatz"
-        ]
+        ],
+        "network": "U"
     },
     "U2(1)": {
         "all_stations": [
@@ -47,7 +48,8 @@
             "Moosfeld",
             "MessestadtWest",
             "MessestadtOst"
-        ]
+        ],
+        "network": "U"
     },
     "U3(2)": {
         "all_stations": [
@@ -76,7 +78,8 @@
             "ForstenriederAllee",
             "BaslerStra\u00dfe",
             "F\u00fcrstenriedWest"
-        ]
+        ],
+        "network": "U"
     },
     "U4(3)": {
         "all_stations": [
@@ -93,7 +96,8 @@
             "B\u00f6hmerwaldplatz",
             "Richard-Strauss-Stra\u00dfe",
             "Arabellapark"
-        ]
+        ],
+        "network": "U"
     },
     "U5(4)": {
         "all_stations": [
@@ -115,7 +119,8 @@
             "NeuperlachZentrum",
             "Therese-Giehse-Allee",
             "NeuperlachS\u00fcd"
-        ]
+        ],
+        "network": "U"
     },
     "U6(5)": {
         "all_stations": [
@@ -145,7 +150,8 @@
             "HadernerStern",
             "Gro\u00dfhadern",
             "KlinikumGro\u00dfhadern"
-        ]
+        ],
+        "network": "U"
     },
     "U7(6)": {
         "all_stations": [
@@ -168,7 +174,8 @@
             "Michaelibad",
             "Quiddestra\u00dfe",
             "NeuperlachZentrum"
-        ]
+        ],
+        "network": "U"
     },
     "U8(7)": {
         "all_stations": [
@@ -191,6 +198,7 @@
             "Michaelibad",
             "Quiddestra\u00dfe",
             "NeuperlachZentrum"
-        ]
+        ],
+        "network": "U"
     }
 }

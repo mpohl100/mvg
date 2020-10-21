@@ -31,7 +31,8 @@
             "Hoheneichen",
             "Wellingsb\u00fcttel",
             "Poppenb\u00fcttel"
-        ]
+        ],
+        "network": "S"
     },
     "S11(1)": {
         "all_stations": [
@@ -58,7 +59,8 @@
             "Hoheneichen",
             "Wellingsb\u00fcttel",
             "Poppenb\u00fcttel"
-        ]
+        ],
+        "network": "S"
     },
     "S2(2)": {
         "all_stations": [
@@ -77,7 +79,8 @@
             "Allerm\u00f6he",
             "Nettelnburg",
             "Bergedorf"
-        ]
+        ],
+        "network": "S"
     },
     "S21(3)": {
         "all_stations": [
@@ -101,7 +104,8 @@
             "Reinbek",
             "Wohltorf",
             "Aum\u00fchle"
-        ]
+        ],
+        "network": "S"
     },
     "S3(4)": {
         "all_stations": [
@@ -138,7 +142,8 @@
             "Dollern",
             "Agathenburg",
             "Stade"
-        ]
+        ],
+        "network": "S"
     },
     "S31(5)": {
         "all_stations": [
@@ -157,6 +162,7 @@
             "Neuwiedenthal",
             "Neugraben|",
             "BerlinerTor"
-        ]
+        ],
+        "network": "S"
     }
 }
