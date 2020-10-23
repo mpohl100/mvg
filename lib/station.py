@@ -62,7 +62,7 @@ class Station:
     def can_arrive(self, train: 'Train'):
         if not train.current_station.name in self.lanes:
             return len(self.trains) == 0
-        relevant_lines: List['Line'] = self.lanes[train.current_station.name].lines_by_type[train.line.is_subway]
+        relevant_lines: List['Line'] = self.lanes[train.current_station.name].lines_by_network[train.line.networkname]
         can_arrive = True
         #reason = ""
         for t in self.trains:

@@ -1,3 +1,4 @@
+from network.networkdb import NetworkDb
 from lib.station import Station
 from lib.line import Line
 from lib.lane import Lane
@@ -13,6 +14,7 @@ class Network:
         self.read_all_stations()
         self.read_all_lines()
         self.deduce_lanes()
+        self.deduce_subnets()
 
     def read_all_stations(self):
         self.all_stations: Dict[str, Station] = {}
@@ -24,7 +26,8 @@ class Network:
         for line, info in self.networkdb.all_info.items():
             all_station_names: List[str] = info['all_stations']
             all_stations: List[Station] = [self.all_stations[station] for station in all_station_names]
-            self.all_lines.append(Line(line, all_stations))
+            networkname: str = info['network']
+            self.all_lines.append(Line(line, all_stations, networkname))
     
     def deduce_lanes(self):
         for _, station in self.all_stations.items():
@@ -36,6 +39,13 @@ class Network:
         set_lanes = set(self.all_lanes)
         if len(set_lanes) != len(self.all_lanes):
             raise Exception("Nicht einzigartige Lanes im Netzwerk vorhanden.")
+
+    def deduce_subnets(self):
+        self.subnets: Dict[str, 'Network'] = {}
+        for networkname, network_all_info in self.networkdb.subnets.items():
+            networkdb = NetworkDb([])
+            networkdb.construct(network_all_info)
+            self.subnets[networkname] = Network(networkdb)
 
     def generate_networkx(self, line=None):
         import networkx as nx

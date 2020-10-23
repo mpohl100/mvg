@@ -56,20 +56,20 @@ class Simulation:
         nb_trains: int = 0
         for line in self.network.all_lines:
             nb_skip: int = self.config.nb_sbahn
-            if line.is_subway:
+            if line.networkname == 'U': #TODO ausbauen von U-Bahn aus der Config
                 nb_skip = self.config.nb_subway
             for i in range(0,len(line.all_stations), nb_skip):
                 start_minute = i*2 # TODO die richtigen Distanzen der Bahnhöfe einbauen
                 nb_trains = self.add_train(0, line, +1, nb_trains, start_minute)
                 nb_trains = self.add_train(-1, line, -1, nb_trains, start_minute)
 
-    def deduce_trains(self, is_subway):
+    def deduce_trains(self):
         dict_of_lines = {}
-        dict_of_lines = {line.name: line.all_stations for line in self.network.all_lines if line.is_subway == is_subway} 
-        self.schedule = Schedule(dict_of_lines)
+        dict_of_lines = {line.name: line.all_stations for line in self.network.all_lines} 
+        self.schedule = Schedule(dict_of_lines) #TODO pro Subnetwork den Schedule kreieren
         self.start_minutes.update(self.schedule.calc())
         nb_trains = 0
-        for line in [ line for line in self.network.all_lines if line.is_subway == is_subway]:
+        for line in [ line for line in self.network.all_lines ]:
             start_minute = self.start_minutes[line.name]
             line.set_start_minute(start_minute)
             for i in range(0, start_minute.taktoffset_p1.nb_trains()):
