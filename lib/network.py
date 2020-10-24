@@ -23,7 +23,7 @@ class Network:
 
     def read_all_lines(self):
         self.all_lines: List[Line] = []
-        for line, info in self.networkdb.all_info.items():
+        for line, info in self.networkdb.all_lines.items():
             all_station_names: List[str] = info['all_stations']
             all_stations: List[Station] = [self.all_stations[station] for station in all_station_names]
             networkname: str = info['network']

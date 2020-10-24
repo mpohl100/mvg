@@ -31,8 +31,7 @@ class Simulation:
         if not self.config.deduce_schedule:
             self.read_trains()
         else:
-            self.deduce_trains(True)
-            self.deduce_trains(False)
+            self.deduce_trains()
         self.all_routes = []
         self.passengers = None
         if config.num_passengers_per_route > 0:
@@ -64,10 +63,11 @@ class Simulation:
                 nb_trains = self.add_train(-1, line, -1, nb_trains, start_minute)
 
     def deduce_trains(self):
-        dict_of_lines = {}
-        dict_of_lines = {line.name: line.all_stations for line in self.network.all_lines} 
-        self.schedule = Schedule(dict_of_lines) #TODO pro Subnetwork den Schedule kreieren
-        self.start_minutes.update(self.schedule.calc())
+        for subnetname, subnet in self.network.subnets.items():
+            dict_of_lines = {}
+            dict_of_lines = {line.name: line.all_stations for line in subnet.all_lines} 
+            self.schedule = Schedule(dict_of_lines) #TODO pro Subnetwork den Schedule kreieren
+            self.start_minutes.update(self.schedule.calc())
         nb_trains = 0
         for line in [ line for line in self.network.all_lines ]:
             start_minute = self.start_minutes[line.name]

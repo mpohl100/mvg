@@ -13,7 +13,8 @@ def find_neighbour(lanes: Dict[str, List[str]], stations: List[str], index, line
     
 def find_neighbours(networkdb: 'NetworkDb', station: str):
     neighbours: Dict[str, List[str]] = {}
-    for line, stations in networkdb.all_lines.items():
+    for line, v in networkdb.all_lines.items():
+        stations = v['all_stations']
         index: int = find_index_in_list(stations, station)
         if index == -1:
             continue

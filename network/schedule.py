@@ -57,7 +57,8 @@ class SubSchedule:
         i = 0
         p1_offsets: List[TaktOffset] = []
         for linename, line in self.lines.items():
-            takt_offset_p1 = TaktOffset(linename, main_station, line, i*2, takt, +1) 
+            stations = line
+            takt_offset_p1 = TaktOffset(linename, main_station, stations, i*2, takt, +1) 
             i += 1
             takt_offset_p1.shift_ref_station(takt_offset_p1.all_stations[0])
             takt_offset_p1.shift_to_zero()
@@ -65,7 +66,8 @@ class SubSchedule:
         i = 0
         m1_offsets: List[TaktOffset] = []
         for linename, line in self.lines.items():
-            takt_offset_m1 = TaktOffset(linename, main_station, line, i*2, takt, -1) 
+            stations = line
+            takt_offset_m1 = TaktOffset(linename, main_station, stations, i*2, takt, -1) 
             i += 1
             takt_offset_m1.shift_ref_station(takt_offset_m1.all_stations[-1])
             takt_offset_m1.shift_to_zero()
