@@ -90,10 +90,10 @@ class TimeTable:
         self.result = [{'lines': [line], 'center': line.all_stations } for line in self.center_lines]
         prev_size = len(self.result)*2
         while len(self.result) >= 1 and prev_size != len(self.result):
-            for r in self.result:
-                print([line.name for line in r['lines']])
-                print(len(r['center']))
-            print()
+            #for r in self.result:
+            #    print([line.name for line in r['lines']])
+            #    print(len(r['center']))
+            #print()
             prev_size = len(self.result)
             self.result = deduce_local_centers(self.result, self.merge_type)
        
@@ -127,3 +127,17 @@ class TimeTable:
         #print(start_minutes)
         return start_minutes
             
+
+
+def calculate_startminutes(lines: List['Line'], merge_type: MergeType):
+    # in dieser Funktion werden Abhängigkeiten zwischen den unterschiedlichen Zentren nicht überprüft,
+    # das muss noch ausgedacht und eingebaut werden.
+    other_lines = lines
+    start_minutes = {}
+    while len(other_lines) > 0:
+        timetable = TimeTable(other_lines, merge_type)
+        result = timetable.get_startminutes()
+        start_minutes.update(result)
+        other_lines = timetable.other_lines
+    return start_minutes
+

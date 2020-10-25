@@ -6,6 +6,7 @@ from lib.passenger import Passenger, Passengers
 from lib.route import find_route_adj, AdjacencyList
 from lib.station import Station
 from lib.train import Train
+from lib.timetable import MergeType, calculate_startminutes
 from network.schedule import Schedule, StartMinute
 
 from typing import Dict, List
@@ -63,11 +64,12 @@ class Simulation:
                 nb_trains = self.add_train(-1, line, -1, nb_trains, start_minute)
 
     def deduce_trains(self):
-        for _, subnet in self.network.subnets.items():
-            dict_of_lines = {}
-            dict_of_lines = {line.name: line.all_stations for line in subnet.all_lines} 
-            self.schedule = Schedule(dict_of_lines) #TODO pro Subnetwork den Schedule kreieren
-            self.start_minutes.update(self.schedule.calc())
+        merge_type = MergeType.BEFORE
+        if len(self.network.subnets.keys()) > 0:
+            for _, subnet in self.network.subnets.items():
+                self.start_minutes.update(calculate_startminutes(subnet.all_lines, merge_type))
+        else:
+            self.start_minutes = calculate_startminutes(self.network.all_lines, merge_type)
         nb_trains = 0
         for line in [ line for line in self.network.all_lines ]:
             start_minute = self.start_minutes[line.name]
