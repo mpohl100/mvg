@@ -102,6 +102,8 @@ class TimeTable:
         start_minutes: Dict[str, StartMinute] = {}
         main_station = self.main_station
         takt = 2 * len(self.center_lines)
+        if takt < 10:
+            takt = 10
         i = 0
         p1_offsets: List[TaktOffset] = []
         for line in self.result[0]['lines']:
