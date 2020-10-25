@@ -63,7 +63,7 @@ class Simulation:
                 nb_trains = self.add_train(-1, line, -1, nb_trains, start_minute)
 
     def deduce_trains(self):
-        for subnetname, subnet in self.network.subnets.items():
+        for _, subnet in self.network.subnets.items():
             dict_of_lines = {}
             dict_of_lines = {line.name: line.all_stations for line in subnet.all_lines} 
             self.schedule = Schedule(dict_of_lines) #TODO pro Subnetwork den Schedule kreieren

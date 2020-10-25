@@ -1,5 +1,10 @@
-from typing import List
+from network.networkdb import find_index_in_list_pred
+from network.startminute import TaktOffset, StartMinute
+
+from typing import List, Dict
 from copy import copy
+from collections import defaultdict
+from operator import itemgetter
 
 class MergeType:
     BEFORE = 1
@@ -59,16 +64,66 @@ class TimeTable:
         # it is assumed that all the input lines have a common center
         self.lines = lines
         self.merge_type = merge_type
+        self.find_center()
         self.sort()
 
+    def filter_lines(self):
+        self.center_lines = []
+        self.other_lines = []
+        for line in self.lines:
+            index = find_index_in_list_pred(line.all_stations, lambda el: el.name == self.main_station.name)
+            if index == -1:
+                self.other_lines.append(line)
+            else:
+                self.center_lines.append(line)
+
+    def find_center(self):
+        occurences = defaultdict(int)
+        for line in self.lines:
+            for station in line.all_stations:
+                occurences[station] += 1
+        main_station_occurence = max(occurences.items(), key=itemgetter(1))
+        self.main_station = main_station_occurence[0]
+        self.filter_lines()
+
     def sort(self):
-        result = [{'lines': [line], 'center': line.all_stations } for line in self.lines]
-        prev_size = len(result)*2
-        while len(result) >= 1 and prev_size != len(result):
-            for r in result:
+        self.result = [{'lines': [line], 'center': line.all_stations } for line in self.center_lines]
+        prev_size = len(self.result)*2
+        while len(self.result) >= 1 and prev_size != len(self.result):
+            for r in self.result:
                 print([line.name for line in r['lines']])
                 print(len(r['center']))
             print()
-            prev_size = len(result)
-            result = deduce_local_centers(result, self.merge_type)
+            prev_size = len(self.result)
+            self.result = deduce_local_centers(self.result, self.merge_type)
+       
+
+    def get_startminutes(self):
+        start_minutes: Dict[str, StartMinute] = {}
+        main_station = self.main_station
+        takt = 2 * len(self.center_lines)
+        i = 0
+        p1_offsets: List[TaktOffset] = []
+        for line in self.result[0]['lines']:
+            stations = line.all_stations
+            takt_offset_p1 = TaktOffset(line.name, main_station, stations, i*2, takt, +1) 
+            i += 1
+            takt_offset_p1.shift_ref_station(takt_offset_p1.all_stations[0])
+            takt_offset_p1.shift_to_zero()
+            p1_offsets.append(takt_offset_p1)
+        i = 0
+        m1_offsets: List[TaktOffset] = []
+        for line in self.result[0]['lines']:
+            stations = line.all_stations
+            takt_offset_m1 = TaktOffset(line.name, main_station, stations, i*2, takt, -1) 
+            i += 1
+            takt_offset_m1.shift_ref_station(takt_offset_m1.all_stations[-1])
+            takt_offset_m1.shift_to_zero()
+            m1_offsets.append(takt_offset_m1)
+
+        start_minutes: Dict[str, StartMinute] = {}
+        for p1,m1 in zip(p1_offsets, m1_offsets):
+            start_minutes[p1.linename] = StartMinute(p1,m1)
+        #print(start_minutes)
+        return start_minutes
             
