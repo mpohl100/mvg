@@ -64,7 +64,7 @@ class Simulation:
                 nb_trains = self.add_train(-1, line, -1, nb_trains, start_minute)
 
     def deduce_trains(self):
-        merge_type = MergeType.BEFORE
+        merge_type = self.config.merge_type
         if len(self.network.subnets.keys()) > 0:
             for _, subnet in self.network.subnets.items():
                 self.start_minutes.update(calculate_startminutes(subnet.all_lines, merge_type))

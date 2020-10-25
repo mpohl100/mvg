@@ -36,8 +36,7 @@ if __name__=="__main__":
     #        print('from ' + from_station.name + ' to ' + to_station.name + ':')
     #        for r in route:
     #            print('    ' + str(r))
-    from lib.timetable import TimeTable, MergeType
-    timetable = TimeTable(simulation.network.all_lines, MergeType.ZIP_BEFORE)
-    start_minutes = timetable.get_startminutes()
+    from lib.timetable import calculate_startminutes, MergeType
+    start_minutes = calculate_startminutes(simulation.network.all_lines, MergeType.ZIP_BEFORE)
     for line, start_minute in start_minutes.items():
         print(start_minute)
