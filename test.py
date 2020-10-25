@@ -37,4 +37,4 @@ if __name__=="__main__":
     #        for r in route:
     #            print('    ' + str(r))
     from lib.timetable import TimeTable, MergeType
-    timetable = TimeTable(simulation.network.all_lines, MergeType.BEFORE)
+    timetable = TimeTable(simulation.network.all_lines, MergeType.ZIP_AFTER)

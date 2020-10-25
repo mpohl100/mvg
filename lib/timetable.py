@@ -1,7 +1,13 @@
 from typing import List
 from copy import copy
 
-def deduce_local_centers(line_centers):
+class MergeType:
+    BEFORE = 1
+    ZIP_BEFORE = 2
+    ZIP_AFTER = 3
+    AFTER = 4
+
+def deduce_local_centers(line_centers, merge_type: MergeType):
     all_centers = []
     for line1 in line_centers:
         for line2 in line_centers:
@@ -9,8 +15,25 @@ def deduce_local_centers(line_centers):
                 continue
             new_center = list(set(line1['center']).intersection(set(line2['center'])))
             # bisher ist das nur MergeType.BEFORE
-            new_lines = copy(line1['lines'])
-            new_lines.extend(copy(line2['lines']))
+            new_lines = []
+            if merge_type == MergeType.BEFORE:
+                new_lines = copy(line1['lines'])
+                new_lines.extend(copy(line2['lines']))
+            elif merge_type == MergeType.AFTER:
+                new_lines = copy(line2['lines'])
+                new_lines.extend(copy(line1['lines'])) 
+            elif merge_type == MergeType.ZIP_BEFORE:
+                for i in range(max(len(line1['lines']), len(line2['lines']))):
+                    if i < len(line1['lines']):
+                        new_lines.append(line1['lines'][i])
+                    if i < len(line2['lines']):
+                        new_lines.append(line2['lines'][i])
+            elif merge_type == MergeType.ZIP_AFTER:
+                for i in range(max(len(line1['lines']), len(line2['lines']))):
+                    if i < len(line2['lines']):
+                        new_lines.append(line2['lines'][i])
+                    if i < len(line1['lines']):
+                        new_lines.append(line1['lines'][i])
             all_centers.append({'lines': new_lines, 'center': new_center})
 
     result = []
@@ -31,11 +54,6 @@ def deduce_local_centers(line_centers):
 
     return result
 
-class MergeType:
-    BEFORE = 1
-    ZIP = 2
-    AFTER = 3
-
 class TimeTable:
     def __init__(self, lines: List['Line'], merge_type: MergeType):
         # it is assumed that all the input lines have a common center
@@ -52,5 +70,5 @@ class TimeTable:
                 print(len(r['center']))
             print()
             prev_size = len(result)
-            result = deduce_local_centers(result)
+            result = deduce_local_centers(result, self.merge_type)
             
