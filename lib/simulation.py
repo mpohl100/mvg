@@ -3,7 +3,7 @@ from lib.lane import Lane
 from lib.line import Line
 from lib.network import Network
 from lib.passenger import Passenger, Passengers
-from lib.route import find_route_adj, AdjacencyList
+from lib.route import find_route_adj, AdjacencyList, find_route
 from lib.station import Station
 from lib.train import Train
 from lib.timetable import MergeType, calculate_startminutes
@@ -84,10 +84,19 @@ class Simulation:
     def find_all_routes(self):
         all_routes: List[List['Route']] = []
         adj = AdjacencyList(self.network.all_lines)
+        index = 0
+        N = len(self.network.all_stations.keys())*len(self.network.all_stations.keys())
         for _, from_station in self.network.all_stations.items():
             for _, to_station in self.network.all_stations.items():
-                route = find_route_adj(from_station, to_station, adj)
+                if self.config.passengers_fast:
+                    route = find_route_adj(from_station, to_station, adj)
+                else:
+                    route = find_route(from_station, to_station, self.network.all_lines)
+                for i, r in enumerate(route):
+                    print(str(index) + "/" + str(N) + ": " + str(i) + ", " + str(r))
+                print()
                 all_routes.append(route)
+                index += 1
         return all_routes
 
     def create_passengers(self):

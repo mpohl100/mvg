@@ -10,6 +10,7 @@ class Config:
         self.show_net = show_net
         self.num_passengers_per_route = 0
         self.merge_type = MergeType.BEFORE
+        self.passengers_fast = True
         self.files = None
 
 def str2bool(v):
@@ -44,6 +45,7 @@ def parse_config():
     parser.add_argument('-s', '--show-network', type=str2bool, nargs='?', help='show an animation of the network.', default=False)
     parser.add_argument('-p', '--num-passengers-per-route', type=int, help='number of passengers per route', default=0)
     parser.add_argument('-dt', '--deduction-type', type=str2mergetype, help='merge type how the schedule for the network should be arranged at the main station of local centers.', default=MergeType.BEFORE)
+    parser.add_argument('-pf', '--passengers-fast', type=str2bool, help='a faster route finding algorithm is used with the trade off that not always the shortest route in terms of train switches is found.', default=True)
     args = vars(parser.parse_args())
     print(args)
     config = Config()
@@ -53,4 +55,5 @@ def parse_config():
     config.show_net = args['show_network']
     config.num_passengers_per_route = args['num_passengers_per_route']
     config.merge_type = args['deduction_type']
+    config.passengers_fast = args['passengers_fast']
     return config
