@@ -41,6 +41,7 @@ class Station:
         self.lanes: Dict[str, 'Lane'] = {}
         self.trains: List['Train'] = []
         self.passengers: List['Passenger'] = []
+        self.switch_lines: List['Line'] = []
 
     def __eq__(self, other: 'Station'):
         return self.name == other.name
@@ -50,7 +51,9 @@ class Station:
 
     def deduce_lanes(self, network: 'Network', all_stations: List['Station'], all_lines: List['Line']):
         self.lanes = find_lanes(self.name, network, all_stations, all_lines)
-
+        for _, lane in self.lanes.items():
+            self.switch_lines.extend(lane.lines)
+        self.switch_lines = list(set(self.switch_lines))
     def __str__(self):
         return self.name
 
@@ -80,10 +83,7 @@ class Station:
         return can_arrive
 
     def get_switch_lines(self):
-        switch_lines = []
-        for _, lane in self.lanes.items():
-            switch_lines.extend(lane.lines)
-        return list(set(switch_lines))
+        return self.switch_lines
 
     def enter_passenger(self, passenger: 'Passenger'):
         self.passengers.append(passenger)
