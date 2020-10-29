@@ -18,7 +18,7 @@ class Route:
         return str(self.from_station) + ' -> ' + str(self.to_station) + ' via lines ' + str(self.linenames)
 
 def find_lines(all_lines: List['Line'], station: 'Station'):
-    return [line for line in all_lines if station in line.all_stations]
+    return [line for line in all_lines if station in line.all_stations_set]
 
 
 class StationSwitch:
@@ -27,15 +27,15 @@ class StationSwitch:
         self.station = station
         self.into_line = into_line
 
-def find_all_possible_switches_per_line(line: 'Line', already_visited: List['Line'], starting_station: 'Station'):
+def find_all_possible_switches_per_line(line: 'Line', already_visited: Set['Line'], starting_station: 'Station'):
     ret: List[StationSwitch] = []
     for station in line.all_stations:
-        switch_lines = station.get_switch_lines()
+        switch_lines = station.get_switch_lines(already_visited)
         for switch_line in switch_lines:
             if switch_line in already_visited:
                 continue
             ret.append(StationSwitch(line, station, switch_line))
-            already_visited.append(switch_line)
+            already_visited.add(switch_line)
     return ret
 
 def find_all_possible_switches(lines: List['Line'], already_visited: List['Line'], starting_station: 'Station'):
@@ -59,19 +59,19 @@ class RouteFinder:
         self.result_route: List[Route] = []
         self.find_route_bfs()
 
-    def find_route_bfs(self):
+    def find_route_bfs(self,):
         from_lines = find_lines(self.all_lines, self.from_station)
         queue = Queue()
-        visited = []
+        visited: Set['Line'] = set()
         for from_line in from_lines:
             route = [StationSwitch(None, self.from_station, from_line)]
             queue.put(route)
         while not queue.empty():
             current_line = queue.get()
             into_line = current_line[-1].into_line
-            visited.append(into_line)
+            visited.add(into_line)
             # check wether the to_station can be reached via this line
-            if self.to_station in into_line.all_stations:
+            if self.to_station in into_line.all_stations_set:
                 current_line.append(StationSwitch(current_line, self.to_station, None))
                 route = current_line
                 break

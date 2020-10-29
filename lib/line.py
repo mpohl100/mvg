@@ -1,11 +1,12 @@
 
-from typing import Dict, List
+from typing import Dict, List, Set
 
 class Line:
     def __init__(self, name: str, all_stations: List['Station'], networkname: str):
         self.name: str = name
         self.networkname: str = networkname
         self.all_stations: List['Station'] = all_stations
+        self.all_stations_set: Set['Station'] = set(self.all_stations)
         self.trains: List['Train'] = []
         self.start_minute = None
 

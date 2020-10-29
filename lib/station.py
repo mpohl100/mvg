@@ -82,7 +82,7 @@ class Station:
         #         print("    No, because of " + reason)
         return can_arrive
 
-    def get_switch_lines(self):
+    def get_switch_lines(self, already_visited):
         return self.switch_lines
 
     def enter_passenger(self, passenger: 'Passenger'):
