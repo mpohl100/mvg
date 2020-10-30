@@ -73,7 +73,7 @@ class RouteFinder:
             route = [StationSwitch(None, self.from_station, from_line)]
             #print(route[0])
             current_lines.append(route)
-        while not self.result_routes:
+        while not self.result_routes and len(current_lines) > 0:
             for current_line in current_lines:
                 into_line = current_line[-1].into_line
                 visited.add(into_line)
@@ -95,12 +95,15 @@ class RouteFinder:
                     new_current_lines.append( copy.copy(current_line) + [switch])
                     #print([str(c) for c in new_current_lines[-1]])
             current_lines = new_current_lines
-        dict_of_routes = {}
-        for route in self.result_routes:
-            dict_of_routes[sum(s.travelled_from for s in route)] = convert_to_route(route)
-        ordered = OrderedDict(sorted(dict_of_routes.items(), key=lambda kv: kv[0]))
-        first = ordered.popitem(last=False)
-        self.result_route = first[1]
+        if not self.result_routes:
+            self.result_route = []
+        else:
+            dict_of_routes = {}
+            for route in self.result_routes:
+                dict_of_routes[sum(s.travelled_from for s in route)] = convert_to_route(route)
+            ordered = OrderedDict(sorted(dict_of_routes.items(), key=lambda kv: kv[0]))
+            first = ordered.popitem(last=False)
+            self.result_route = first[1]
             
 
 
