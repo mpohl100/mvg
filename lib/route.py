@@ -27,6 +27,9 @@ class StationSwitch:
         self.station = station
         self.into_line = into_line
 
+    def __str__(self):
+        return 'from ' + str(self.from_line) + ' at ' + str(self.station) + ' next ' + str(self.into_line)
+
 def find_all_possible_switches_per_line(line: 'Line', already_visited: Set['Line'], starting_station: 'Station'):
     ret: List[StationSwitch] = []
     for station in line.all_stations:
@@ -56,30 +59,38 @@ class RouteFinder:
         self.all_lines = all_lines
         self.from_station = from_station
         self.to_station = to_station
-        self.result_route: List[Route] = []
+        self.result_route: List[Route] = None
         self.find_route_bfs()
 
-    def find_route_bfs(self,):
+    def find_route_bfs(self):
         from_lines = find_lines(self.all_lines, self.from_station)
-        queue = Queue()
+        current_lines: List[StationSwitch] = []
         visited: Set['Line'] = set()
         for from_line in from_lines:
             route = [StationSwitch(None, self.from_station, from_line)]
-            queue.put(route)
-        while not queue.empty():
-            current_line = queue.get()
-            into_line = current_line[-1].into_line
-            visited.add(into_line)
-            # check wether the to_station can be reached via this line
-            if self.to_station in into_line.all_stations_set:
-                current_line.append(StationSwitch(current_line, self.to_station, None))
-                route = current_line
+            #print(route[0])
+            current_lines.append(route)
+        while not self.result_route:
+            for current_line in current_lines:
+                into_line = current_line[-1].into_line
+                visited.add(into_line)
+                # check wether the to_station can be reached via this line
+                if self.to_station in into_line.all_stations_set:
+                    current_line.append(StationSwitch(current_line, self.to_station, None))
+                    self.result_route = current_line
+                    break
+            if self.result_route:
                 break
-            possible_switches: List[StationSwitch] = find_all_possible_switches_per_line(into_line, visited, current_line[-1].station)
-            for switch in possible_switches:
-                queue.put( current_line + [switch])
-        self.result_route = convert_to_route(route)
-
+            new_current_lines: List[StationSwitch] = []
+            for current_line in current_lines:
+                possible_switches: List[StationSwitch] = find_all_possible_switches_per_line(current_line[-1].into_line, visited, current_line[-1].station)
+                #print()
+                #print([str(c) for c in current_line])
+                for switch in possible_switches:
+                    new_current_lines.append( copy.copy(current_line) + [switch])
+                    #print([str(c) for c in new_current_lines[-1]])
+            current_lines = new_current_lines
+        self.result_route = convert_to_route(self.result_route)
 
 
         

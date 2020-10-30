@@ -99,6 +99,7 @@ class Train:
 
     def get_station_index(self, station: 'Station'):
         station_index = find_index_in_list(self.stations, station)
+        #print(station)
         if station_index == -1:
-            raise ValueError("Station not found in stations of train")
+            raise ValueError("Station " + str(station) + " not found in stations of train (" + str([str(stat) for stat in self.stations]) + ")")
         return station_index

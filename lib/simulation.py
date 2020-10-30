@@ -92,10 +92,12 @@ class Simulation:
                     route = find_route_adj(from_station, to_station, adj)
                 else:
                     route = find_route(from_station, to_station, self.network.all_lines)
+                #print('from ' + str(from_station) + ' to ' + str(to_station) + ':')
                 for i, r in enumerate(route):
                     print(str(index) + "/" + str(N) + ": " + str(i) + ", " + str(r))
                 print()
-                all_routes.append(route)
+                if len(route) > 0:
+                    all_routes.append(route)
                 index += 1
         return all_routes
 

@@ -23,12 +23,12 @@ if __name__=="__main__":
     #print(start_minutes)
     from lib.route import find_route, find_route_adj, AdjacencyList
     from lib.station import Station
-    from_station = Station("Fasanenpark")
-    to_station = Station("Giselastraße")
+    from_station = Station("Ostbahnhof")
+    to_station = Station("Implerstraße")
     route = find_route(from_station, to_station, simulation.network.all_lines)
     print([str(r) for r in route])
-    route = find_route(to_station, from_station, simulation.network.all_lines)
-    print([str(r) for r in route])
+    #route = find_route(to_station, from_station, simulation.network.all_lines)
+    #print([str(r) for r in route])
     #adj = AdjacencyList(simulation.network.all_lines)
     #for _, from_station in simulation.network.all_stations.items():
     #    for _, to_station in simulation.network.all_stations.items():

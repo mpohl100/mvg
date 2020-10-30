@@ -37,6 +37,8 @@ class Passenger:
                 #noch überprüfen, dass es die richtige Richtung ist
                 train = self.current_station.trains[train_index]
                 end_station_index = train.get_end_station_index()
+                #print([str(r) for r in self.route])
+                #print(self.current_leg)
                 target_station_index = train.get_station_index(self.route[self.current_leg].to_station)
                 current_station_index = train.get_station_index(self.route[self.current_leg].from_station)
                 if float(target_station_index - current_station_index) / float(end_station_index - current_station_index) > 0:
