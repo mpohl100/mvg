@@ -1,7 +1,7 @@
 from network.networkdb import find_index_in_list, find_index_in_list_pred
 
 import copy
-from queue import Queue
+from collections import OrderedDict
 from typing import List, Dict, Tuple, Set
 
 class Route:
@@ -22,22 +22,24 @@ def find_lines(all_lines: List['Line'], station: 'Station'):
 
 
 class StationSwitch:
-    def __init__(self, from_line: 'Line', station: 'Station', into_line: 'Line'):
+    def __init__(self, from_line: 'Line', station: 'Station', into_line: 'Line', travelled_from: int = 0):
         self.from_line = from_line
         self.station = station
         self.into_line = into_line
+        self.travelled_from = travelled_from
 
     def __str__(self):
         return 'from ' + str(self.from_line) + ' at ' + str(self.station) + ' next ' + str(self.into_line)
 
 def find_all_possible_switches_per_line(line: 'Line', already_visited: Set['Line'], starting_station: 'Station'):
     ret: List[StationSwitch] = []
-    for station in line.all_stations:
+    starting_station_index = find_index_in_list(line.all_stations, starting_station)
+    for i, station in enumerate(line.all_stations):
         switch_lines = station.get_switch_lines(already_visited)
         for switch_line in switch_lines:
             if switch_line in already_visited:
                 continue
-            ret.append(StationSwitch(line, station, switch_line))
+            ret.append(StationSwitch(line, station, switch_line, abs(starting_station_index-i)))
             already_visited.add(switch_line)
     return ret
 
@@ -59,6 +61,7 @@ class RouteFinder:
         self.all_lines = all_lines
         self.from_station = from_station
         self.to_station = to_station
+        self.result_routes: List[List[Route]] = None
         self.result_route: List[Route] = None
         self.find_route_bfs()
 
@@ -70,16 +73,18 @@ class RouteFinder:
             route = [StationSwitch(None, self.from_station, from_line)]
             #print(route[0])
             current_lines.append(route)
-        while not self.result_route:
+        while not self.result_routes:
             for current_line in current_lines:
                 into_line = current_line[-1].into_line
                 visited.add(into_line)
                 # check wether the to_station can be reached via this line
                 if self.to_station in into_line.all_stations_set:
                     current_line.append(StationSwitch(current_line, self.to_station, None))
-                    self.result_route = current_line
-                    break
-            if self.result_route:
+                    if self.result_routes:
+                        self.result_routes.append(current_line)
+                    else:
+                        self.result_routes = [current_line]
+            if self.result_routes:
                 break
             new_current_lines: List[StationSwitch] = []
             for current_line in current_lines:
@@ -90,7 +95,13 @@ class RouteFinder:
                     new_current_lines.append( copy.copy(current_line) + [switch])
                     #print([str(c) for c in new_current_lines[-1]])
             current_lines = new_current_lines
-        self.result_route = convert_to_route(self.result_route)
+        dict_of_routes = {}
+        for route in self.result_routes:
+            dict_of_routes[sum(s.travelled_from for s in route)] = convert_to_route(route)
+        ordered = OrderedDict(sorted(dict_of_routes.items(), key=lambda kv: kv[0]))
+        first = ordered.popitem(last=False)
+        self.result_route = first[1]
+            
 
 
         
