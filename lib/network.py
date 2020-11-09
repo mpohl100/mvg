@@ -4,6 +4,7 @@ from lib.line import Line
 from lib.lane import Lane
 
 from typing import Dict, List
+import numpy as np
 
 class Network:
     def __init__(self, networkdb: 'NetworkDb'):
@@ -66,3 +67,42 @@ class Network:
                 graph.add_edge(l.all_stations[i+1].name, station.name)
         return graph
 
+
+def find_longest_common_subsequence(line1: List[Station], line2: List[Station]):
+    # algorithm from wikipedia longest common substring problem
+    L = np.zeros((len(line1),len(line2)))
+    z = 0
+    ret = []
+
+    for i in range(1, len(line1)):
+        for j in range(1, len(line2)):
+            if line1[i] == line2[j]:
+                if i == 1 or j == 1:
+                    L[i, j] = 1
+                else:
+                    L[i, j] = L[i-1, j-1] + 1
+
+                if L[i, j] > z:
+                    z = int(L[i, j])
+                    print(i)
+                    print(z)
+                    ret = line1[i-z+1:i]
+                elif L[i, j] == z:
+                    ret = ret + line1[i-z+1:i]
+            else:
+                L[i, j] = 0
+    return ret
+
+def find_cycles(lines: List[Line]):
+    N = len(lines)
+    adj_matrix = np.full((N, N), 0)
+    for i, line1 in enumerate(lines):
+        for j, line2 in enumerate(lines):
+            subs = find_longest_common_subsequence(line1.all_stations, line2.all_stations)
+            #print(subs)
+            k = len(subs)
+            if k == 1:
+                k = 0
+            adj_matrix[i, j] = k
+    print([line.name for line in lines])
+    print(adj_matrix)
