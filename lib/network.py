@@ -5,6 +5,8 @@ from lib.lane import Lane
 
 from typing import Dict, List
 import numpy as np
+import copy
+from collections import defaultdict
 
 class Network:
     def __init__(self, networkdb: 'NetworkDb'):
@@ -84,8 +86,6 @@ def find_longest_common_subsequence(line1: List[Station], line2: List[Station]):
 
                 if L[i, j] > z:
                     z = int(L[i, j])
-                    print(i)
-                    print(z)
                     ret = line1[i-z+1:i]
                 elif L[i, j] == z:
                     ret = ret + line1[i-z+1:i]
@@ -93,9 +93,23 @@ def find_longest_common_subsequence(line1: List[Station], line2: List[Station]):
                 L[i, j] = 0
     return ret
 
+
+def dfs(graph, node, visited, stack, cycles):
+    stack.append(node)
+    if node not in visited:
+        visited.append(node)
+        for n in graph[node]:
+            dfs(graph, n, visited, stack, cycles)
+    else:
+        cycles.append(copy.copy(stack))
+    stack.pop()
+    return visited
+
+
 def find_cycles(lines: List[Line]):
     N = len(lines)
     adj_matrix = np.full((N, N), 0)
+    adj_list = defaultdict(set)
     for i, line1 in enumerate(lines):
         for j, line2 in enumerate(lines):
             subs = find_longest_common_subsequence(line1.all_stations, line2.all_stations)
@@ -104,5 +118,17 @@ def find_cycles(lines: List[Line]):
             if k == 1:
                 k = 0
             adj_matrix[i, j] = k
+            if k > 0 and i != j:
+                adj_list[i].add(j)
+                adj_list[j].add(i)
+    for k, v in adj_list.items():
+        adj_list[k] = list(v)
     print([line.name for line in lines])
     print(adj_matrix)
+    print(adj_list)
+    stack = []
+    cycles = []
+    visited = []
+    dfs(adj_list, 0, visited, stack, cycles)
+    print(stack)
+    print(cycles)
