@@ -93,17 +93,54 @@ def find_longest_common_subsequence(line1: List[Station], line2: List[Station]):
                 L[i, j] = 0
     return ret
 
+class GraphColorer:
+    def __init__(self, adj_list):
+        self.adj_list = adj_list
+        self.marks = self.color_graph()
 
-def dfs(graph, node, visited, stack, cycles):
-    stack.append(node)
-    if node not in visited:
-        visited.append(node)
-        for n in graph[node]:
-            dfs(graph, n, visited, stack, cycles)
-    else:
-        cycles.append(copy.copy(stack))
-    stack.pop()
-    return visited
+    def color_graph(self):
+        color = [0] * len(self.adj_list)
+        par = [0] * len(self.adj_list)
+        mark = [0] * len(self.adj_list)
+        self.cycle_number = -1
+        self.dfs_cycle(1, 0, color, mark, par)
+        return mark
+
+    def dfs_cycle(self, u, p, color, mark, par):
+        # already completely visited vertex.
+        if color[u] == 2:
+            return
+        # seen vertex, but was not completely visited -> cycle detected.
+        # backtrack based on parents to find complete cycle.
+        if color[u] == 1:
+            self.cycle_number += 1
+            cur = p
+            mark[cur] = self.cycle_number
+            # backtrack the vertex which are in the current cycle thats found.
+            while cur != u:
+                cur = par[cur]
+                mark[cur] = self.cycle_number
+            return
+        par[u] = p
+        # partially visited
+        color[u] = 1
+        #simple dfs on graph
+        for v in self.adj_list[u]:
+            # if it has not been visited previously
+            if v == par[u]:
+                continue
+            self.dfs_cycle(v, u, color, mark, par)
+        # completely visited
+        color[u] = 2
+
+    def get_cycles(self):
+        cycles = []
+        for i in range(self.cycle_number+1):
+            cycles.append([])
+        for i, m in enumerate(self.marks):
+            if m != 0:
+                cycles[m].append(i)
+        return cycles
 
 
 def find_cycles(lines: List[Line]):
@@ -126,9 +163,6 @@ def find_cycles(lines: List[Line]):
     print([line.name for line in lines])
     print(adj_matrix)
     print(adj_list)
-    stack = []
-    cycles = []
-    visited = []
-    dfs(adj_list, 0, visited, stack, cycles)
-    print(stack)
+    graph_colorer = GraphColorer(adj_list)
+    cycles = graph_colorer.get_cycles()
     print(cycles)
