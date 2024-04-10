@@ -3,6 +3,7 @@ from network.networkdb import find_index_in_list, find_index_in_list_pred
 import copy
 from collections import OrderedDict
 from typing import List, Dict, Tuple, Set
+from queue import Queue
 
 class Route:
     def __init__(self, from_station: 'Station', to_station: 'Station', linenames: List[str]):
